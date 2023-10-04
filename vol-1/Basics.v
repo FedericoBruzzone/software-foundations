@@ -1241,6 +1241,7 @@ Proof.
     different kinds of bullets to mark goals on different "levels."
     For example: *)
 
+    (* From Hammer Require Import Hammer. *) (* MY COMMENT *)
 Theorem andb_commutative : forall b c, andb b c = andb c b.
 Proof.
   intros b c. destruct b eqn:Eb.
