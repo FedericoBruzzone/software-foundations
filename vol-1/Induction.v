@@ -75,7 +75,7 @@ From LF Require Export Basics.
 
     In particular, if you see a message like
 
-        Compiled library Foo makes inconsistent assumptions over
+make: *** No targets specified and no makefile found.  Stop.
         library Bar
 
     check whether you have multiple installations of Coq on your
