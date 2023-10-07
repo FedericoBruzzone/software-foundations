@@ -1913,7 +1913,6 @@ Inductive bin : Type :=
   | Z
   | B0 (n : bin)
   | B1 (n : bin).
-
 (** Complete the definitions below of an increment function [incr]
     for binary numbers, and a function [bin_to_nat] to convert
     binary numbers to unary numbers. *)
