@@ -4,6 +4,9 @@ Solutions (in Coq) of the exercises in the software foundation books.
 
 ## Useful links
 
+- [Coq Library 8.9](https://web.mit.edu/jgross/Public/tmp/doc/sphinx/_build/html/language/coq-library.html#)
+- [Coq Library 8.15](https://coq.inria.fr/doc/V8.15+rc1/refman/index.html#)
+
 - [Software foundations](https://softwarefoundations.cis.upenn.edu/)
     - [Volume 1](https://softwarefoundations.cis.upenn.edu/lf-current/toc.html)
 
