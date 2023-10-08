@@ -56,6 +56,8 @@ Definition month_len (m:month) (leap_year : bool) : nat :=
 1.3 State and prove a theorem for which the result of month_len is
 greater or equal to 28. You can use "leb", which is already defined in the library.
 *)
+(* Using (leb 28 (month_len m leap_year)) = true. in the theorem saves me from writing all: apply leb_complete. *)
+(* Using (28 <=? month_len m leap_year) = true. in the theorem saves me from writing all: apply leb_complete. *)
 Theorem month_len_geq28 : forall (m : month) (leap_year : bool), 28 <= month_len m leap_year.
 Proof.
   intros m leap_year.
@@ -84,7 +86,7 @@ Lemma Nat_add_succ_n : forall n m : nat, n + S m = S (n + m).
 Proof.
   intros n m.
   induction n as [| n' IHn'].
-  - reflexivity.
+  - simpl. reflexivity.
   - simpl. rewrite -> IHn'. reflexivity.
 Qed.
 
@@ -96,10 +98,9 @@ Proof.
   - simpl. rewrite <- IHn'. rewrite -> Nat_add_succ_n. reflexivity.
 Qed.
 
-Theorem plus_comm : forall n m : nat,  n + m = m + n.
+Theorem plus_comm : forall n m : nat,  n + m = m + n. (* apply Nat.add_comm. *)
 Proof.
   intros m n.
-  (* apply Nat.add_comm. *)
   apply Nat_add_comm.
 Qed.
 
@@ -112,8 +113,25 @@ write a math proof as in the notes.*)
 O's from a list of nats*)
 
 Fixpoint nonzeros (l:list nat) : list nat :=
-admit.
+  match l with
+  | [] => []
+  | h :: t =>
+      match h with
+      | 0 => nonzeros t
+      | x => x :: nonzeros t
+      end
+  end.
 
 (* 3.2 State and prove a lemma that says that nonzeros distributes
 over the concatenaton (append) of two lists. Remember that a nested match in
 the function definition corresponds to a destruct in the proof script. *)
+Lemma nonzeros_app : forall l1 l2 : list nat, nonzeros (l1 ++ l2) = nonzeros l1 ++ nonzeros l2.
+Proof.
+  intros l1 l2.
+  induction l1 as [| h t IHt].
+  - (*simpl. *) reflexivity.
+  - simpl. destruct h.
+    + rewrite -> IHt. reflexivity.
+    + rewrite -> IHt. reflexivity.
+Qed.
+

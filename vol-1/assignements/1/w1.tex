@@ -30,6 +30,12 @@
 }
 
 \usepackage{hyperref}
+% \hypersetup{
+%   colorlinks=true,
+%   linkcolor=black,
+%   filecolor=black,
+%   urlcolor=black,
+% }
 
 \textwidth=450pt
 \oddsidemargin=0pt
@@ -48,12 +54,6 @@
 \singlespacing
 % ===================
 \mathtoolsset{showonlyrefs}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    filecolor=black,
-    urlcolor=black,
-}
 
 \AtBeginDocument{\renewcommand\proofname{Proof}}
 
@@ -132,10 +132,70 @@
 \setlength{\parskip}{0.8em}
 
 
-\clearpage\null\newpage
+% \clearpage\null\newpage
 
+\section{Commutative sum in \(\mathbb{N}\)}
 
-\newpage
+\begin{lemma}\label{lemma:commutative_sum_zero}
+  \(\forall \ n \in \mathbb{N}\) it holds that \(n + 0 = n\).
+\end{lemma}
+
+\begin{proof}
+  We can proof this by induction on \(n\).
+
+  The base case is \(n = 0\), and we have to show that \(0 + 0 = 0\). This is trivially true.
+
+  The inductive step is to show that \(\forall \ n \in \mathbb{N}\) it holds that \(n + 0 = n\).
+  We can show that \((n + 1) + 0 = n + 1\) by using the inductive hypothesis.
+  \begin{align*}
+    (n + 1) + 0 &= n + (1 + 0) \quad \text{by associativity} \\
+                &= n + 1 \quad \text{by the inductive hypothesis}
+  \end{align*}
+\end{proof}
+
+\begin{lemma}\label{lemma:associative_sum}
+  \(\forall \ n, m \in \mathbb{N}\) it holds that \(n + (m + 1) = (n + m) + 1\).
+\end{lemma}
+
+\begin{proof}
+  We can proof this by induction on \(n\).
+
+  The base case is \(n = 0\), and we have to show that \(\forall \ m \in \mathbb{N}\) it holds that \(0 + (m + 1) = (0 + m) + 1\). This is trivially true.
+
+  The inductive step is to show that \(\forall \ n \in \mathbb{N}\) it holds that \(n + (m + 1) = (n + m) + 1\).
+  We can show that \((n + 1) + (m + 1) = ((n + 1) + m) + 1\) by using the inductive hypothesis.
+  \begin{align*}
+    (n + 1) + (m + 1) &= (n + (m + 1)) + 1 \quad \text{by associativity} \\
+                      &= ((n + m) + 1) + 1 \quad \text{by the inductive hypothesis} \\
+                      &= ((n + 1) + m) + 1 \quad \text{by associativity}
+  \end{align*}
+
+\end{proof}
+
+\begin{theorem}\label{theorem:commutative_sum}
+\(\forall \ n, m \in \mathbb{N}\) it holds that \(m + n = n + m\).
+\end{theorem}
+
+\begin{proof}
+  We can proof this by induction on \(n\).
+
+  The base case is \(n = 0\), and we have to show that \(\forall \ m \in \mathbb{N}\) it holds that \(m + 0 = 0 + m\).
+
+  \begin{align*}
+    m + 0 &= m \quad \text{by Lemma \ref{lemma:commutative_sum_zero}} \\
+  \end{align*}
+
+  The inductive step is to show that \(\forall \ n \in \mathbb{N}\) it holds that \(m + n = n + m\). We can show that \(m + (n + 1) = (n + 1) + m\) by using the inductive hypothesis.
+
+  \begin{align*}
+    m + (n + 1) &= (m + n) + 1 \quad \text{by Lemma \ref{lemma:associative_sum}} \\
+                &= (n + m) + 1 \quad \text{by the inductive hypothesis} \\
+                &= (n + 1) + m \quad \text{by Lemma \ref{lemma:associative_sum}}
+  \end{align*}
+
+\end{proof}
+
+% \newpage
 % \input{chapters/1_introduction.tex}
 % \input{chapters/2_nearest_neighbour.tex}
 % \input{chapters/3_tree_predictors.tex}
