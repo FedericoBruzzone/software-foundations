@@ -63,7 +63,7 @@ Proof.
   intros m leap_year.
   destruct m. (* as [n1 | n2 | n3 | n4 | n5 | n6 | n7 | n8 | n9 | n10 | n11 | n12 ] eqn:Em.*)
   all: destruct leap_year.
-  all: simpl.
+  (* all: simpl. *)
   all: apply leb_complete. (* Search leb. *)
   all: reflexivity.
 Qed.
