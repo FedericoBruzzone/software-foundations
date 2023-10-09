@@ -118,7 +118,7 @@
         \end{minipage}
 
         \vfill
-        Academic year of 2022/2023
+        Academic year of 2023/2024
 
     \end{center}
 \end{titlepage}
@@ -188,9 +188,12 @@
   The inductive step is to show that \(\forall \ n \in \mathbb{N}\) it holds that \(m + n = n + m\). We can show that \(m + (n + 1) = (n + 1) + m\) by using the inductive hypothesis.
 
   \begin{align*}
+    (n + 1) + m &= (n + m) + 1
+  \end{align*}
+
+  \begin{align*}
     m + (n + 1) &= (m + n) + 1 \quad \text{by Lemma \ref{lemma:associative_sum}} \\
                 &= (n + m) + 1 \quad \text{by the inductive hypothesis} \\
-                &= (n + 1) + m \quad \text{by Lemma \ref{lemma:associative_sum}}
   \end{align*}
 
 \end{proof}
