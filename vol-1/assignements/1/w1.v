@@ -45,7 +45,7 @@ Inductive month : Type :=
 keeping in mind that it could be a leap year, that is, month_len takes
 a month and a boolean flag as arguments and returns a nat.
  *)
-Definition month_len (m:month) (leap_year : bool) : nat :=
+Definition month_len (m : month) (leap_year : bool) : nat :=
   match m with
   | January | March | May | July | August | October | December => 31
   | February => if leap_year then 29 else 28
@@ -66,7 +66,11 @@ Proof.
   (* all: simpl. *)
   all: apply leb_complete. (* Search leb. *)
   all: reflexivity.
+  (* Restart.
+     intros []; try reflexivity.
+     intros []; reflexivity. *)
 Qed.
+
 
 (* 2.1. Prove the following theorem. You're going to need some
 lemma(s). You can either prove them directly (they are very easy), or
