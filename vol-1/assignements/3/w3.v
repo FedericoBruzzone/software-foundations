@@ -37,23 +37,48 @@ forall (P Q : Prop),  (P -> Q) -> (~Q -> ~P).
 Theorem dist_exists_or : forall (A : Type) (P Q : A -> Prop),
             (exists x, P x \/ Q x) <-> (exists x, P x) \/ (exists x, Q x).
 Proof.
-  (* Here *)
-Admitted.
+  intros A P Q.
+  split.
+  - intros H1.
+    destruct H1 as [H1A H1A'].
+    destruct H1A' as [H1B | H1C].
+    + left.
+      exists H1A.
+      apply H1B.
+    + right.
+      exists H1A.
+      apply H1C.
+  - intros H2.
+    destruct H2 as [H2A | H2B].
+    + destruct H2A as [H2C H2D].
+      exists H2C.
+      left.
+      apply H2D.
+    + destruct H2B as [H2C H2D].
+      exists H2C.
+      right.
+      apply H2D.
+Qed.
 
-(* the double negation principle requires the following classical axiom *)
 Axiom excluded_middle : forall P : Prop,
   P \/ ~ P.
 
 Theorem  dnn: forall P, ~~ P  -> P.
-  (* Here *)
-  Admitted.
+  intros P H.
+  destruct (excluded_middle P) as [H1 | H2].
+  - apply H1.
+  - destruct H.
+    apply H2.
+Qed.
 
   (* 3.2 State and prove the injectivity, disjointness and occur check property
 for polymorphic List, similarly to what we did in class (Logic.v) for Nats.
  To get you started, here is the statement for disjointness*)
 
-
 Theorem  list_disj: forall (X :Type) (x  : X) (xs  : list X),
     ( [] <> (x :: xs)) .
     (* Here *)
     Admitted.
+
+
+
