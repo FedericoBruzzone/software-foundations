@@ -44,7 +44,7 @@ Proof.
     destruct H1A' as [H1B | H1C].
     + left.
       exists H1A.
-      apply H1B.
+      apply H1B. (* assumption. *)
     + right.
       exists H1A.
       apply H1C.
@@ -64,21 +64,40 @@ Axiom excluded_middle : forall P : Prop,
   P \/ ~ P.
 
 Theorem  dnn: forall P, ~~ P  -> P.
+Proof.
   intros P H.
   destruct (excluded_middle P) as [H1 | H2].
   - apply H1.
-  - destruct H.
+  - destruct H. (* contradiction. *)
     apply H2.
 Qed.
 
-  (* 3.2 State and prove the injectivity, disjointness and occur check property
+(* 3.2 State and prove the injectivity, disjointness and occur check property
 for polymorphic List, similarly to what we did in class (Logic.v) for Nats.
  To get you started, here is the statement for disjointness*)
 
-Theorem  list_disj: forall (X :Type) (x  : X) (xs  : list X),
-    ( [] <> (x :: xs)) .
-    (* Here *)
-    Admitted.
+Theorem list_disj: forall (X :Type) (x  : X) (xs  : list X),
+    ([] <> (x :: xs)) .
+Proof.
+    intros X x l H.
+    discriminate.
+Qed.
 
+Theorem list_inje : forall (X : Type) (x y : X) (l1 l2 : list X),
+    x :: l1 = y :: l2 -> x = y /\ l1 = l2.
+Proof.
+    intros X x y l1 l2 H.
+    inversion H.
+    split.
+    - reflexivity.
+    - reflexivity.
+Qed.
 
+Theorem list_occur_check : forall (X : Type) (x : X) (l : list X),
+    not (* ~ *) (l = x :: l).
+Proof.
+    induction l as [| h t Hl'].
+    - intro H. discriminate H.
+    - intros H. injection H. intros H2 H3. rewrite -> H3 in H2. contradiction.
+Qed.
 
