@@ -83,14 +83,18 @@ Theorem n_le_m__Sn_le_Sm : forall n m,
     n <= m -> S n <= S m.
 Proof.
   intros n m H.
-  apply le_n_S. apply H.
+  induction H as [| m' H' IH].
+  - reflexivity.
+  - apply le_S. apply IH.
 Qed.
 
 Theorem Sn_le_Sm__n_le_m : forall n m,
     S n <= S m -> n <= m.
 Proof.
   intros n m H.
-  apply le_S_n. apply H.
+  inversion H.
+  - reflexivity.
+  - rewrite <- H1. apply le_S. apply le_n.
 Qed.
 
 (** Most of the results above are needed in the following, where I'll start the proof, since
@@ -102,10 +106,16 @@ Print Peano.lt.
 Theorem lt_ge_cases : forall  m n,
   n < m \/ n >= m.
 Proof.
-  (* ADMITTED *)
   intros m.
   induction m.
-Admitted.
+  - intros n. right. apply O_le_n.
+  - intros n. destruct n.
+    + left. apply n_le_m__Sn_le_Sm. apply O_le_n.
+    + destruct (IHm n) as [H1 | H2].
+      * left. apply n_le_m__Sn_le_Sm. apply H1.
+      * right. apply Sn_le_Sm__n_le_m.
+
+
 
 (**  Prove the following equivalence between boolean and
 propositional less-or-equal. You will need some of the above lemmas *)
