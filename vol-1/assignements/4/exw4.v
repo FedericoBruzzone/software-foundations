@@ -109,20 +109,27 @@ Proof.
   intros m.
   induction m.
   - intros n. right. apply O_le_n.
-  - intros n. destruct n.
+  - intros n. induction n.
     + left. apply n_le_m__Sn_le_Sm. apply O_le_n.
-    + destruct (IHm n) as [H1 | H2].
-      * left. apply n_le_m__Sn_le_Sm. apply H1.
-      * right. apply Sn_le_Sm__n_le_m.
-
-
+    + right. apply n_le_m__Sn_le_Sm. Print Coq.Init.Peano.
+    Admitted. (* ???* )
 
 (**  Prove the following equivalence between boolean and
 propositional less-or-equal. You will need some of the above lemmas *)
 
 Lemma leb_le : forall n m, (n <=? m) = true <-> n <= m.
-  Proof.
+Proof.
   intro n.
-  induction n .
-Admitted.
+  induction n.
+  - intros m. split.
+    + intros. apply le_O_n.
+    + intros. reflexivity.
+  - intros m. split.
+    + intros. induction m.
+      * inversion H.
+      * apply n_le_m__Sn_le_Sm. apply IHn. apply H.
+    + intros. induction m.
+      * inversion H.
+      * apply IHn. apply Sn_le_Sm__n_le_m. apply H.
+Qed.
 
