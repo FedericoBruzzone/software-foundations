@@ -112,7 +112,7 @@ Proof.
   - intros n. induction n.
     + left. apply n_le_m__Sn_le_Sm. apply O_le_n.
     + right. apply n_le_m__Sn_le_Sm. Print Coq.Init.Peano.
-    Admitted. (* ???* )
+    Admitted. (* ??? *)
 
 (**  Prove the following equivalence between boolean and
 propositional less-or-equal. You will need some of the above lemmas *)
