@@ -289,12 +289,18 @@ Proof. reflexivity. Qed.
     [countoddmembers] below. Have a look at the tests to understand
     what these functions should do. *)
 
-Fixpoint nonzeros (l:natlist) : natlist
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Fixpoint nonzeros (l:natlist) : natlist :=
+  match l with
+  | [] => []
+  | h :: t =>
+      if h =? 0 then
+        nonzeros (t)
+      else
+        h :: nonzeros (t)
+  end.
 
 Example test_nonzeros:
-  nonzeros [0;1;0;2;3;0;0] = [1;2;3].
-  (* FILL IN HERE *) Admitted.
+  nonzeros [0;1;0;2;3;0;0] = [1;2;3]. Proof. reflexivity. Qed.
 
 Fixpoint oddmembers (l:natlist) : natlist
   (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
@@ -817,19 +823,34 @@ Search (?x + ?y = ?y + ?x).
 Theorem app_nil_r : forall l : natlist,
   l ++ [] = l.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  induction l.
+  - reflexivity.
+  - simpl. rewrite IHl. reflexivity.
+Qed.
 
 Theorem rev_app_distr: forall l1 l2 : natlist,
   rev (l1 ++ l2) = rev l2 ++ rev l1.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  induction l1.
+  - simpl. rewrite -> app_nil_r. reflexivity.
+  - simpl. rewrite -> IHl1. rewrite -> app_assoc. reflexivity.
+Qed.
+
+Print List.
+Print app_assoc.
 
 (** An _involution_ is a function that is its own inverse. That is,
     applying the function twice yield the original input. *)
 Theorem rev_involutive : forall l : natlist,
   rev (rev l) = l.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  induction l.
+  -  reflexivity.
+  - simpl. rewrite -> rev_app_distr.  rewrite -> IHl. reflexivity.
+Qed.
 
 (** There is a short solution to the next one.  If you find yourself
     getting tangled up, step back and try to look for a simpler
@@ -838,14 +859,25 @@ Proof.
 Theorem app_assoc4 : forall l1 l2 l3 l4 : natlist,
   l1 ++ (l2 ++ (l3 ++ l4)) = ((l1 ++ l2) ++ l3) ++ l4.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  induction l1.
+  - simpl. rewrite -> app_assoc. reflexivity.
+  - simpl. rewrite -> IHl1. reflexivity.
+Qed.
 
 (** An exercise about your implementation of [nonzeros]: *)
 
 Lemma nonzeros_app : forall l1 l2 : natlist,
   nonzeros (l1 ++ l2) = (nonzeros l1) ++ (nonzeros l2).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  induction l1.
+  - reflexivity.
+  - destruct n.
+    + simpl. rewrite -> IHl1. reflexivity.
+    + simpl. rewrite -> IHl1. reflexivity.
+Qed.
+
 (** [] *)
 
 (** **** Exercise: 2 stars, standard (eqblist)
@@ -854,20 +886,21 @@ Proof.
     lists of numbers for equality.  Prove that [eqblist l l]
     yields [true] for every list [l]. *)
 
-Fixpoint eqblist (l1 l2 : natlist) : bool
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Fixpoint eqblist (l1 l2 : natlist) : bool :=
+  match l1, l2 with
+  | [], [] => true
+  | _, [] => false
+  | [], _ => false
+  | h1 :: t1, h2 :: t2 =>
+      if h1 =? h2 then
+        eqblist t1 t2
+      else
+        false
+  end.
 
-Example test_eqblist1 :
-  (eqblist nil nil = true).
- (* FILL IN HERE *) Admitted.
-
-Example test_eqblist2 :
-  eqblist [1;2;3] [1;2;3] = true.
-(* FILL IN HERE *) Admitted.
-
-Example test_eqblist3 :
-  eqblist [1;2;3] [1;2;4] = false.
- (* FILL IN HERE *) Admitted.
+Example test_eqblist1 : (eqblist nil nil = true). Proof. reflexivity. Qed.
+Example test_eqblist2 : eqblist [1;2;3] [1;2;3] = true. Proof. reflexivity. Qed.
+Example test_eqblist3 : eqblist [1;2;3] [1;2;4] = false. Proof. reflexivity. Qed.
 
 Theorem eqblist_refl : forall l:natlist,
   true = eqblist l l.
