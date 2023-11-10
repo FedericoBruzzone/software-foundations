@@ -379,13 +379,20 @@ Definition bag := natlist.
     Complete the following definitions for the functions [count],
     [sum], [add], and [member] for bags. *)
 
-Fixpoint count (v : nat) (s : bag) : nat
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Fixpoint count (v : nat) (s : bag) : nat := 
+  match s with
+  | [] => 0
+  | h :: t => 
+    if h =? v then
+      1 + count v t
+    else
+      count v t
+  end.
 
 (** All these proofs can be done just by [reflexivity]. *)
 
 Example test_count1:              count 1 [1;2;3;1;4;1] = 3.
- (* FILL IN HERE *) Admitted.
+ Proof. reflexivity. Qed.
 Example test_count2:              count 6 [1;2;3;1;4;1] = 0.
  (* FILL IN HERE *) Admitted.
 
@@ -432,36 +439,46 @@ Example test_member2:             member 2 [1;4;1] = false.
     to fill in the definition of [remove_one] for a later
     exercise.) *)
 
-Fixpoint remove_one (v : nat) (s : bag) : bag
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Fixpoint remove_one (v : nat) (s : bag) : bag :=
+  match s with
+  | [] => []
+  | h :: t => 
+    if v =? h then t
+    else h :: remove_one v t  
+  end.
 
 Example test_remove_one1:
   count 5 (remove_one 5 [2;1;5;4;1]) = 0.
-  (* FILL IN HERE *) Admitted.
+Proof. reflexivity. Qed.
 
 Example test_remove_one2:
   count 5 (remove_one 5 [2;1;4;1]) = 0.
-  (* FILL IN HERE *) Admitted.
+Proof. reflexivity. Qed.
 
 Example test_remove_one3:
   count 4 (remove_one 5 [2;1;4;5;1;4]) = 2.
-  (* FILL IN HERE *) Admitted.
+ Proof. reflexivity. Qed.
 
 Example test_remove_one4:
   count 5 (remove_one 5 [2;1;5;4;5;1;4]) = 1.
-  (* FILL IN HERE *) Admitted.
+Proof. reflexivity. Qed.
 
-Fixpoint remove_all (v:nat) (s:bag) : bag
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Fixpoint remove_all (v:nat) (s:bag) : bag :=
+  match s with
+  | [] => []
+  | h :: t => 
+    if v =? h then remove_all v t
+    else h :: remove_all v t  
+  end.
 
 Example test_remove_all1:  count 5 (remove_all 5 [2;1;5;4;1]) = 0.
- (* FILL IN HERE *) Admitted.
+Proof. reflexivity. Qed.
 Example test_remove_all2:  count 5 (remove_all 5 [2;1;4;1]) = 0.
- (* FILL IN HERE *) Admitted.
+Proof. reflexivity. Qed.
 Example test_remove_all3:  count 4 (remove_all 5 [2;1;4;5;1;4]) = 2.
- (* FILL IN HERE *) Admitted.
+Proof. reflexivity. Qed.
 Example test_remove_all4:  count 5 (remove_all 5 [2;1;5;4;5;1;4;5;1;4]) = 0.
- (* FILL IN HERE *) Admitted.
+Proof. reflexivity. Qed.
 
 Fixpoint included (s1 : bag) (s2 : bag) : bool
   (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
@@ -905,7 +922,13 @@ Example test_eqblist3 : eqblist [1;2;3] [1;2;4] = false. Proof. reflexivity. Qed
 Theorem eqblist_refl : forall l:natlist,
   true = eqblist l l.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  induction l.
+  - reflexivity.
+  - destruct n.
+    + simpl. rewrite <- IHl. reflexivity.
+    + simpl. rewrite <- IHl.
+Admitted.
 (** [] *)
 
 (* ================================================================= *)
@@ -914,12 +937,15 @@ Proof.
 (** Here are a couple of little theorems to prove about your
     definitions about bags above. *)
 
+Print bag.
+About bag.
 (** **** Exercise: 1 star, standard (count_member_nonzero) *)
 Theorem count_member_nonzero : forall (s : bag),
   1 <=? (count 1 (1 :: s)) = true.
 Proof.
-  (* FILL IN HERE *) Admitted.
-(** [] *)
+  intros s.
+  reflexivity.
+Qed.
 
 (** The following lemma about [leb] might help you in the next
     exercise (it will also be useful in later chapters). *)
@@ -939,8 +965,14 @@ Proof.
 Theorem remove_does_not_increase_count: forall (s : bag),
   (count 0 (remove_one 0 s)) <=? (count 0 s) = true.
 Proof.
-  (* FILL IN HERE *) Admitted.
-(** [] *)
+  intros.
+  induction s.
+  - reflexivity.
+  - induction n.
+    + simpl. rewrite leb_n_Sn. reflexivity.
+    + simpl. rewrite IHs. reflexivity.
+Qed.
+
 
 (** **** Exercise: 3 stars, standard, optional (bag_count_sum)
 
