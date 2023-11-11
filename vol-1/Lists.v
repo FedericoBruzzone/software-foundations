@@ -379,10 +379,10 @@ Definition bag := natlist.
     Complete the following definitions for the functions [count],
     [sum], [add], and [member] for bags. *)
 
-Fixpoint count (v : nat) (s : bag) : nat := 
+Fixpoint count (v : nat) (s : bag) : nat :=
   match s with
   | [] => 0
-  | h :: t => 
+  | h :: t =>
     if h =? v then
       1 + count v t
     else
@@ -442,9 +442,9 @@ Example test_member2:             member 2 [1;4;1] = false.
 Fixpoint remove_one (v : nat) (s : bag) : bag :=
   match s with
   | [] => []
-  | h :: t => 
+  | h :: t =>
     if v =? h then t
-    else h :: remove_one v t  
+    else h :: remove_one v t
   end.
 
 Example test_remove_one1:
@@ -466,9 +466,9 @@ Proof. reflexivity. Qed.
 Fixpoint remove_all (v:nat) (s:bag) : bag :=
   match s with
   | [] => []
-  | h :: t => 
+  | h :: t =>
     if v =? h then remove_all v t
-    else h :: remove_all v t  
+    else h :: remove_all v t
   end.
 
 Example test_remove_all1:  count 5 (remove_all 5 [2;1;5;4;1]) = 0.
@@ -997,7 +997,9 @@ Qed.
 Theorem involution_injective : forall (f : nat -> nat),
     (forall n : nat, n = f (f n)) -> (forall n1 n2 : nat, f n1 = f n2 -> n1 = n2).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  Admitted.
+
 
 (** [] *)
 
@@ -1011,7 +1013,10 @@ Proof.
 Theorem rev_injective : forall (l1 l2 : natlist),
   rev l1 = rev l2 -> l1 = l2.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  rewrite <- rev_involutive. rewrite <- H. rewrite -> rev_involutive. reflexivity.
+Qed.
+
 (** [] *)
 
 (* ################################################################# *)
@@ -1082,17 +1087,15 @@ Definition option_elim (d : nat) (o : natoption) : nat :=
     Using the same idea, fix the [hd] function from earlier so we don't
     have to pass a default element for the [nil] case.  *)
 
-Definition hd_error (l : natlist) : natoption
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Definition hd_error (l : natlist) : natoption :=
+  match l with
+  | [] => None
+  | h :: t => Some h
+  end.
 
-Example test_hd_error1 : hd_error [] = None.
- (* FILL IN HERE *) Admitted.
-
-Example test_hd_error2 : hd_error [1] = Some 1.
- (* FILL IN HERE *) Admitted.
-
-Example test_hd_error3 : hd_error [5;6] = Some 5.
- (* FILL IN HERE *) Admitted.
+Example test_hd_error1 : hd_error [] = None. Proof. reflexivity. Qed.
+Example test_hd_error2 : hd_error [1] = Some 1. Proof. reflexivity. Qed.
+Example test_hd_error3 : hd_error [5;6] = Some 5. Proof. reflexivity. Qed.
 
 (** [] *)
 
