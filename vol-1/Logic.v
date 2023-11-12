@@ -683,19 +683,55 @@ Qed.
 Theorem iff_refl : forall P : Prop,
   P <-> P.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  split.
+  - intros. assumption.
+  - intros. assumption.
+Qed.
 
 Theorem iff_trans : forall P Q R : Prop,
   (P <-> Q) -> (Q <-> R) -> (P <-> R).
+(* Proof. *)
+(*   intros.  *)
+(*   transitivity Q. *)
+(*   - assumption. *)
+(*   - assumption. *)
+(* Qed. *)
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  split.
+  - intros. apply H in H1. apply H0 in H1. assumption.
+  - intros. apply H0 in H1. apply H in H1. assumption.
+Qed.
+
 (** [] *)
 
 (** **** Exercise: 3 stars, standard (or_distributes_over_and) *)
 Theorem or_distributes_over_and : forall P Q R : Prop,
   P \/ (Q /\ R) <-> (P \/ Q) /\ (P \/ R).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  split.
+  - intros.
+    destruct H.
+    + split.
+      * left. assumption.
+      * left. assumption.
+    + destruct H.
+      * split.
+        ** right. assumption.
+        ** right. assumption.
+  - intros.
+    destruct H.
+    destruct H.
+    + left. assumption.
+    + destruct H0.
+      * left. assumption.
+      * right. split.
+        ** assumption.
+        ** assumption.
+Qed.
+
 (** [] *)
 
 (* ================================================================= *)
