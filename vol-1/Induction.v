@@ -508,7 +508,12 @@ Proof.
 Theorem mul_comm : forall m n : nat,
   m * n = n * m.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  induction m as [| m' IHm'].
+  - simpl. rewrite <- mult_n_O. reflexivity.
+  - simpl. rewrite IHm'. rewrite <- mult_n_Sm. rewrite add_comm. reflexivity.
+Qed.
+
 (** [] *)
 
 (** **** Exercise: 2 stars, standard, optional (plus_leb_compat_l)

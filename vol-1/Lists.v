@@ -998,8 +998,11 @@ Theorem involution_injective : forall (f : nat -> nat),
     (forall n : nat, n = f (f n)) -> (forall n1 n2 : nat, f n1 = f n2 -> n1 = n2).
 Proof.
   intros.
-  Admitted.
-
+  rewrite (H n1).
+  rewrite (H n2).
+  rewrite H0.
+  reflexivity.
+Qed.
 
 (** [] *)
 
