@@ -143,7 +143,17 @@ Qed.
 Example and_exercise :
   forall n m : nat, n + m = 0 -> n = 0 /\ m = 0.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  split.
+  - destruct n.
+    + reflexivity.
+    + discriminate H.
+  - destruct m.
+    + reflexivity.
+    + rewrite <- plus_n_Sm in H.
+      discriminate H.
+Qed.
+
+
 (** [] *)
 
 (** So much for proving conjunctive statements.  To go in the other
@@ -222,7 +232,11 @@ Proof.
 Lemma proj2 : forall P Q : Prop,
   P /\ Q -> Q.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  destruct H.
+  assumption.
+Qed.
+
 (** [] *)
 
 (** Finally, we sometimes need to rearrange the order of conjunctions
@@ -248,7 +262,13 @@ Theorem and_assoc : forall P Q R : Prop,
   P /\ (Q /\ R) -> (P /\ Q) /\ R.
 Proof.
   intros P Q R [HP [HQ HR]].
-  (* FILL IN HERE *) Admitted.
+  split.
+  - split.
+    + apply HP.
+    + apply HQ.
+  - apply HR.
+Qed.
+
 (** [] *)
 
 (** Finally, the infix notation [/\] is actually just syntactic sugar for
@@ -312,14 +332,28 @@ Qed.
 Lemma mult_is_O :
   forall n m, n * m = 0 -> n = 0 \/ m = 0.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  destruct n.
+  - destruct m.
+    + left. reflexivity.
+    + left. reflexivity.
+  - destruct m.
+    + right. reflexivity.
+    + discriminate H.
+Qed.
+
 (** [] *)
 
 (** **** Exercise: 1 star, standard (or_commut) *)
 Theorem or_commut : forall P Q : Prop,
   P \/ Q  -> Q \/ P.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  destruct H.
+  - right. assumption.
+  - left. assumption.
+Qed.
+
 (** [] *)
 
 (* ================================================================= *)
@@ -378,7 +412,11 @@ Proof.
 Theorem not_implies_our_not : forall (P:Prop),
   ~ P -> (forall (Q:Prop), P -> Q).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  destruct H.
+  assumption.
+Qed.
+
 (** [] *)
 
 (** Inequality is a very common form of negated statement, so there is a
@@ -447,15 +485,27 @@ Definition manual_grade_for_double_neg_inf : option (nat*string) := None.
 Theorem contrapositive : forall (P Q : Prop),
   (P -> Q) -> (~Q -> ~P).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  unfold not.
+  intros.
+  destruct H0.
+  apply H.
+  apply H1.
+Qed.
+
 (** [] *)
 
 (** **** Exercise: 1 star, standard (not_both_true_and_false) *)
 Theorem not_both_true_and_false : forall P : Prop,
   ~ (P /\ ~P).
 Proof.
-  (* FILL IN HERE *) Admitted.
-(** [] *)
+  intros.
+  unfold not.
+  intros.
+  destruct H.
+  apply H0.
+  apply H.
+Qed.
 
 (** **** Exercise: 1 star, advanced (informal_not_PNP)
 
@@ -479,7 +529,12 @@ Definition manual_grade_for_informal_not_PNP : option (nat*string) := None.
 Theorem de_morgan_not_or : forall (P Q : Prop),
     ~ (P \/ Q) -> ~P /\ ~Q.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  split.
+  - unfold not. intros. destruct H. left. assumption.
+  - unfold not. intros. destruct H. right. assumption.
+Qed.
+
 (** [] *)
 
 (** Since inequality involves a negation, it also requires a little

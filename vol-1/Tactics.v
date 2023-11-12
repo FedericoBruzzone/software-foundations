@@ -1045,7 +1045,8 @@ Theorem combine_split : forall X Y (l : list (X * Y)) l1 l2,
   split l = (l1, l2) ->
   combine l1 l2 = l.
 Proof.
-  (* FILL IN HERE *) Admitted.
+Admitted.
+
 (** [] *)
 
 (** The [eqn:] part of the [destruct] tactic is optional; although
@@ -1120,7 +1121,20 @@ Theorem bool_fn_applied_thrice :
   forall (f : bool -> bool) (b : bool),
   f (f (f b)) = f b.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  destruct b eqn:Eb.
+  - destruct (f true) eqn:Ef.
+    + rewrite Ef. rewrite Ef. reflexivity.
+    + destruct (f false) eqn:Ef'.
+      * rewrite Ef. reflexivity.
+      * rewrite Ef'. reflexivity.
+  - destruct (f false) eqn:Ef.
+    + destruct (f true) eqn:Ef'.
+      * rewrite Ef'. reflexivity.
+      * rewrite Ef. reflexivity.
+    + rewrite Ef. rewrite Ef. reflexivity.
+Qed.
+
 (** [] *)
 
 (* ################################################################# *)
@@ -1201,7 +1215,16 @@ Proof.
 Theorem eqb_sym : forall (n m : nat),
   (n =? m) = (m =? n).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros n.
+  induction n.
+  - destruct m.
+    + reflexivity.
+    + reflexivity.
+  - destruct m.
+    + reflexivity.
+    + simpl. apply IHn.
+Qed.
+
 (** [] *)
 
 (** **** Exercise: 3 stars, advanced, optional (eqb_sym_informal)
@@ -1222,7 +1245,15 @@ Theorem eqb_trans : forall n m p,
   m =? p = true ->
   n =? p = true.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  apply eqb_true in H.
+  apply eqb_true in H0.
+  rewrite H.
+  rewrite H0.
+  apply eqb_refl.
+Qed.
+
+
 (** [] *)
 
 (** **** Exercise: 3 stars, advanced (split_combine)
