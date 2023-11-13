@@ -88,11 +88,23 @@ Fixpoint opt_b (b : bexp) : bexp :=
 (* 2 Prove that the transformation over Booleans is sound.
    Use the tacticals we've seen so far to make the proof as
    short and modular as possible. *)
-Theorem opt_b_sound : forall (b : bexp), beval (opt_b b) = beval b.
-Proof.
-  intros.
-  destruct b; simpl; try reflexivity.
-  all: try destruct (optimize_0plus a0).
-Admitted.
+Theorem opt_0plus_sound: forall a,
+    aeval (optimize_0plus a) = aeval a.
+Proof. Admitted.
 
+Theorem opt_b_sound : forall b : bexp, beval b = beval(opt_b b).
+Proof.
+  induction b; try reflexivity;
+  try (simpl; destruct a;
+    try (
+    rewrite (opt_0plus_sound a0);
+    rewrite opt_0plus_sound;
+    reflexivity)
+  );
+  try(simpl; rewrite IHb; reflexivity);
+  try (destruct b1;
+    try(simpl; assumption);
+    try(simpl; repeat rewrite opt_0plus_sound; rewrite IHb2; reflexivity);
+    try(simpl; simpl in IHb1; rewrite IHb1; rewrite IHb2; reflexivity)).
+Qed.
 

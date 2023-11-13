@@ -846,11 +846,35 @@ Qed.
     Write a relation [bevalR] in the same style as
     [aevalR], and prove that it is equivalent to [beval]. *)
 
+
+  (* match b with *)
+  (* | BTrue       => true *)
+  (* | BFalse      => false *)
+  (* | BEq a1 a2   => (aeval a1) =? (aeval a2) *)
+  (* | BNeq a1 a2  => negb ((aeval a1) =? (aeval a2)) *)
+  (* | BLe a1 a2   => (aeval a1) <=? (aeval a2) *)
+  (* | BGt a1 a2   => negb ((aeval a1) <=? (aeval a2)) *)
+  (* | BNot b1     => negb (beval b1) *)
+  (* | BAnd b1 b2  => andb (beval b1) (beval b2) *)
+  (* end. *)
+
 Reserved Notation "e '==>b' b" (at level 90, left associativity).
 Inductive bevalR: bexp -> bool -> Prop :=
-(* FILL IN HERE *)
-where "e '==>b' b" := (bevalR e b) : type_scope
-.
+  | E_BTrue : BTrue ==>b true
+  | E_BFalse : BFalse ==>b false
+  | E_BEq (a1 a2 : aexp) (n1 n2 : nat) :
+      (a1 ==> n1) -> (a2 ==> n2) -> (BEq a1 a2) ==>b (n1 =? n2)
+  | E_BNeq (a1 a2 : aexp) (n1 n2 : nat) :
+      (a1 ==> n1) -> (a2 ==> n2) -> (BNeq a1 a2) ==>b (negb (n1 =? n2))
+  | E_BLe (a1 a2 : aexp) (n1 n2 : nat) :
+      (a1 ==> n1) -> (a2 ==> n2) -> (BLe a1 a2) ==>b (n1 <=? n2)
+  | E_BGt (a1 a2 : aexp) (n1 n2 : nat) :
+      (a1 ==> n1) -> (a2 ==> n2) -> (BGt a1 a2) ==>b (negb (n1 <=? n2))
+  | E_BNot (b1 : bexp) (b : bool) :
+      (b1 ==>b b) -> (BNot b1) ==>b (negb b)
+  | E_BAnd (b1 b2 : bexp) (b1' b2' : bool) :
+      (b1 ==>b b1') -> (b2 ==>b b2') -> (BAnd b1 b2) ==>b (andb b1' b2')
+where "e '==>b' b" := (bevalR e b) : type_scope .
 
 Lemma beval_iff_bevalR : forall b bv,
   b ==>b bv <-> beval b = bv.
