@@ -55,12 +55,14 @@ Fixpoint optimize_0plus (a:aexp) : aexp :=
       AMult (optimize_0plus e1) (optimize_0plus e2)
   end.
 
+
+
 (* 1 Define a similar optimization on Boolean expression:
 
 Fixpoint opt_b (b : bexp) : bexp :=
 ...
 
-such that 
+such that
 
   - on arithmetic sub-expressions, it applies the above optimization optimize_0plus
   - further, it performs the following optimization:
@@ -68,6 +70,29 @@ such that
         - (true and b) is optimized to to b
         - (false and b) is optimized  to false *)
 
+Fixpoint opt_b (b : bexp) : bexp :=
+  match b with
+  | BTrue       => BTrue
+  | BFalse      => BFalse
+  | BEq a1 a2   => BEq (optimize_0plus a1) (optimize_0plus a2)
+  | BLe a1 a2   => BLe (optimize_0plus a1) (optimize_0plus a2)
+  | BNot b1     => BNot b1
+  | BAnd b1 b2  =>
+      match b1 with
+      | BTrue => opt_b b2
+      | BFalse => BFalse
+      | _ => BAnd (opt_b b1) (opt_b b2)
+      end
+  end.
 
-(* 2 Prove that the transformation over Booleans is sound. Use the tacticals we've seen so
-    far to make the proof as short and modular as possible. *)
+(* 2 Prove that the transformation over Booleans is sound.
+   Use the tacticals we've seen so far to make the proof as
+   short and modular as possible. *)
+Theorem opt_b_sound : forall (b : bexp), beval (opt_b b) = beval b.
+Proof.
+  intros.
+  destruct b; simpl; try reflexivity.
+  all: try destruct (optimize_0plus a0).
+Admitted.
+
+
