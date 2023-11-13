@@ -868,12 +868,13 @@ Proof.
   - rewrite <- H1. apply le_S. reflexivity.
 Qed.
 
-
 Theorem lt_ge_cases : forall n m,
   n < m \/ n >= m.
 Proof.
   intros.
   induction n.
+  - destruct m.
+    + right. apply O_le_n.
 Admitted.
 
 Theorem le_plus_l : forall a b,
@@ -1037,18 +1038,31 @@ End R.
       is a subsequence of [l3], then [l1] is a subsequence of [l3]. *)
 
 Inductive subseq : list nat -> list nat -> Prop :=
-(* FILL IN HERE *)
+  subseq_nil : forall (l : list nat), subseq [] l
+| subseq_cons : forall (l1 l2 : list nat) (n : nat),
+    subseq l1 l2 -> subseq l1 (n :: l2)
+| subseq_cons2 : forall (l1 l2 : list nat) (n : nat),
+    subseq l1 l2 -> subseq (n :: l1) (n :: l2)
 .
 
 Theorem subseq_refl : forall (l : list nat), subseq l l.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  induction l.
+  - apply subseq_nil.
+  - apply subseq_cons2. apply IHl.
+Qed.
 
 Theorem subseq_app : forall (l1 l2 l3 : list nat),
   subseq l1 l2 ->
   subseq l1 (l2 ++ l3).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  induction H.
+  - apply subseq_nil.
+  - apply subseq_cons. apply IHsubseq.
+  - apply subseq_cons2. apply IHsubseq.
+Qed.
 
 Theorem subseq_trans : forall (l1 l2 l3 : list nat),
   subseq l1 l2 ->
@@ -1057,8 +1071,17 @@ Theorem subseq_trans : forall (l1 l2 l3 : list nat),
 Proof.
   (* Hint: be careful about what you are doing induction on and which
      other things need to be generalized... *)
-  (* FILL IN HERE *) Admitted.
-(** [] *)
+  intros.
+  generalize dependent l1.
+  induction H0.
+  - intros. inversion H. apply subseq_nil.
+  - intros. apply subseq_cons. apply IHsubseq. apply H.
+  - intros. inversion H.
+    + apply subseq_nil.
+    + apply subseq_cons. apply IHsubseq. apply H3.
+    + apply subseq_cons2. apply IHsubseq. apply H3.
+Qed.
+
 
 (** **** Exercise: 2 stars, standard, optional (R_provability2)
 
@@ -1307,13 +1330,22 @@ Qed.
 Lemma empty_is_empty : forall T (s : list T),
   ~ (s =~ EmptySet).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  unfold not.
+  intros.
+  inversion H.
+Qed.
+
 
 Lemma MUnion' : forall T (s : list T) (re1 re2 : reg_exp T),
   s =~ re1 \/ s =~ re2 ->
   s =~ Union re1 re2.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  destruct H.
+  - apply MUnionL. apply H.
+  - apply MUnionR. apply H.
+Qed.
 
 (** The next lemma is stated in terms of the [fold] function from the
     [Poly] chapter: If [ss : list (list T)] represents a sequence of
@@ -1324,7 +1356,14 @@ Lemma MStar' : forall T (ss : list (list T)) (re : reg_exp T),
   (forall s, In s ss -> s =~ re) ->
   fold app ss [] =~ Star re.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  induction ss.
+  - apply MStar0.
+  - simpl. apply MStarApp.
+    + apply H. simpl. left. reflexivity.
+    + apply IHss. intros. apply H. simpl. right. apply H0.
+Qed.
+
 (** [] *)
 
 (** Since the definition of [exp_match] has a recursive
@@ -1797,7 +1836,16 @@ Qed.
 (** **** Exercise: 2 stars, standard, especially useful (reflect_iff) *)
 Theorem reflect_iff : forall P b, reflect P b -> (P <-> b = true).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+  inversion H.
+  - split.
+    + intros. reflexivity.
+    + intros. apply H0.
+  - split.
+    + intros. destruct H0. apply H2.
+    + intros. discriminate.
+Qed.
+
 (** [] *)
 
 (** We can think of [reflect] as a variant of the usual "if and only
@@ -1856,7 +1904,10 @@ Theorem eqbP_practice : forall n l,
   count n l = 0 -> ~(In n l).
 Proof.
   intros n l Hcount. induction l as [| m l' IHl'].
-  (* FILL IN HERE *) Admitted.
+  - simpl. intros H. apply H.
+  - simpl. unfold not. intros H. destruct H.
+Admitted.
+
 (** [] *)
 
 (** This small example shows reflection giving us a small gain in
@@ -2094,7 +2145,11 @@ Lemma in_split : forall (X:Type) (x:X) (l:list X),
   In x l ->
   exists l1 l2, l = l1 ++ x :: l2.
 Proof.
-  (* FILL IN HERE *) Admitted.
+  intros.
+    induction l.
+  - simpl in H. destruct H.
+  - simpl in H.
+  Admitted.
 
 (** Now define a property [repeats] such that [repeats X l] asserts
     that [l] contains at least one repeated element (of type [X]).  *)
