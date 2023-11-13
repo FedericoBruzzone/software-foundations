@@ -153,6 +153,7 @@ Proof.
       discriminate H.
 Qed.
 
+Check plus_n_Sm.
 
 (** [] *)
 
