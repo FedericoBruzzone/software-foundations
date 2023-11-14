@@ -879,8 +879,19 @@ where "e '==>b' b" := (bevalR e b) : type_scope .
 Lemma beval_iff_bevalR : forall b bv,
   b ==>b bv <-> beval b = bv.
 Proof.
-  (* FILL IN HERE *) Admitted.
-(** [] *)
+  intros b bv.
+  split.
+  - intros. induction H;
+    try reflexivity;
+    try (simpl;
+      apply aeval_iff_aevalR' in H; apply aeval_iff_aevalR' in H0;
+      rewrite H; rewrite H0;
+      reflexivity).
+    + simpl. rewrite IHbevalR. reflexivity.
+    + simpl. rewrite IHbevalR1. rewrite IHbevalR2. reflexivity.
+  - Admitted.
+
+
 
 End AExp.
 
@@ -1580,7 +1591,13 @@ Example ceval_example2:
     Z := 2
   ]=> (Z !-> 2 ; Y !-> 1 ; X !-> 0).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  apply E_Seq with (X !-> 0).
+  - apply E_Asgn. reflexivity.
+  - apply E_Seq with (Y !-> 1 ; X !-> 0).
+    + apply E_Asgn. reflexivity.
+    + apply E_Asgn. reflexivity.
+Qed.
+
 (** [] *)
 
 Set Printing Implicit.
@@ -1594,15 +1611,23 @@ Check @ceval_example2.
     which you can reverse-engineer to discover the program you should
     write.  The proof of that theorem will be somewhat lengthy. *)
 
-Definition pup_to_n : com
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+Definition pup_to_n : com := <{
+  Y := 1;
+  while Y <= X do
+    Y := Y + 1
+  end
+}>.
 
 Theorem pup_to_2_ceval :
   (X !-> 2) =[
     pup_to_n
   ]=> (X !-> 0 ; Y !-> 3 ; X !-> 1 ; Y !-> 2 ; Y !-> 0 ; X !-> 2).
 Proof.
-  (* FILL IN HERE *) Admitted.
+  unfold pup_to_n.
+  apply E_Seq with (Y !-> 1; X !-> 2).
+  - apply E_Asgn. reflexivity.
+  - Admitted.
+
 (** [] *)
 
 (* ================================================================= *)
