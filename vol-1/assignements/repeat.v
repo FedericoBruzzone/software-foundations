@@ -72,7 +72,17 @@ Definition REP  (c : com) (b : bexp) : com :=
    lemmas.  *)
 
 
- End RepeatDefined.
+ Definition FOR (c : com) (n : nat) := <{
+     while (X <= n) do
+       c;
+       X := X + 1
+     end
+   }>.
 
+ Notation "'FOR' n 'DO' c 'END'" := (FOR c n)
+                                      (in custom com at level 0) : com_scope.
+
+
+End RepeatDefined.
 
 

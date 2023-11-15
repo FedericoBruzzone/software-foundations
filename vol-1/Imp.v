@@ -1703,7 +1703,9 @@ Proof.
 
     State and prove a specification of [XtimesYinZ]. *)
 
-(* FILL IN HERE *)
+Example iii : ceval XtimesYinZ (X !-> 2; Y !-> 3) (X !-> 2; Y !-> 3; Z !-> 6).
+Proof.
+Admitted.
 
 (* Do not modify the following line: *)
 Definition manual_grade_for_XtimesYinZ_spec : option (nat*string) := None.
@@ -1836,8 +1838,42 @@ Inductive sinstr : Type :=
 
 Fixpoint s_execute (st : state) (stack : list nat)
                    (prog : list sinstr)
-                 : list nat
-  (* REPLACE THIS LINE WITH ":= _your_definition_ ." *). Admitted.
+                 : list nat :=
+  match prog with
+  | [] => stack
+  | h :: t =>
+      match h with
+      | SPush n => s_execute st (n :: stack) t
+      | SLoad x => s_execute st (st x :: stack) t
+      | SPlus =>
+          match stack with
+          | [] => s_execute st stack t
+          | h1 :: t1 =>
+              match t1 with
+              | [] => s_execute st stack t
+              | h2 :: t2 => s_execute st (h1 + h2 :: t2) t
+              end
+          end
+      | SMinus =>
+          match stack with
+          | [] => s_execute st stack t
+          | h1 :: t1 =>
+              match t1 with
+              | [] => s_execute st stack t
+              | h2 :: t2 => s_execute st (h2 - h1 :: t2) t
+              end
+          end
+      | SMult =>
+          match stack with
+          | [] => s_execute st stack t
+          | h1 :: t1 =>
+              match t1 with
+              | [] => s_execute st stack t
+              | h2 :: t2 => s_execute st (h1 * h2 :: t2) t
+              end
+          end
+      end
+  end.
 
 Check s_execute.
 
@@ -1845,7 +1881,8 @@ Example s_execute1 :
      s_execute empty_st []
        [SPush 5; SPush 3; SPush 1; SMinus]
    = [2; 5].
-(* FILL IN HERE *) Admitted.
+Proof.
+Admitted.
 
 Example s_execute2 :
      s_execute (X !-> 3) [3;4]
@@ -2122,5 +2159,10 @@ End BreakImp.
 (* FILL IN HERE
 
     [] *)
+
+
+(* ################################################################# *)
+
+
 
 (* 2023-10-03 16:40 *)
