@@ -1,3 +1,6 @@
+(*
+  In order to run this file you have to move it to the `vol-1` (LF) directory.
+ *)
 
 Set Warnings "-notation-overridden,-parsing".
 From Coq Require Import Bool.Bool.

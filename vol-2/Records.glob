@@ -1,0 +1,1171 @@
+DIGEST a5d940922ffd6c70ecd7bae8db50cf5c
+FPLF.Records
+R146:159 Coq.Strings.String <> <> lib
+R186:189 PLF.Maps <> <> lib
+R216:224 PLF.Smallstep <> <> lib
+R251:254 PLF.Stlc <> <> lib
+mod 2344:2362 <> STLCExtendedRecords
+mod 2578:2585 <> STLCExtendedRecords.FirstTry
+def 2600:2604 STLCExtendedRecords.FirstTry alist
+binder 2607:2607 <> X:1
+R2620:2623 Coq.Init.Datatypes <> list ind
+R2632:2634 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R2626:2631 Coq.Strings.String <> string ind
+R2635:2635 PLF.Records <> X:1 var
+ind 2650:2651 STLCExtendedRecords.FirstTry ty
+constr 2667:2670 STLCExtendedRecords.FirstTry Base
+constr 2695:2699 STLCExtendedRecords.FirstTry Arrow
+constr 2725:2728 STLCExtendedRecords.FirstTry TRcd
+R2684:2687 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2678:2683 Coq.Strings.String <> string ind
+R2688:2689 PLF.Records <> ty:2 ind
+R2708:2711 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2706:2707 PLF.Records <> ty:2 ind
+R2714:2717 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2712:2713 PLF.Records <> ty:2 ind
+R2718:2719 PLF.Records <> ty:2 ind
+R2736:2736 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2745:2749 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R2737:2741 PLF.Records STLCExtendedRecords.FirstTry alist def
+R2743:2744 PLF.Records <> ty:2 ind
+R2750:2751 PLF.Records <> ty:2 ind
+R3373:3380 PLF.Records STLCExtendedRecords.FirstTry <> mod
+ind 3939:3940 STLCExtendedRecords ty
+constr 3956:3962 STLCExtendedRecords Ty_Base
+constr 3983:3990 STLCExtendedRecords Ty_Arrow
+constr 4013:4019 STLCExtendedRecords Ty_RNil
+constr 4030:4037 STLCExtendedRecords Ty_RCons
+R3972:3975 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3966:3971 Coq.Strings.String <> string ind
+R3976:3977 PLF.Records <> ty:4 ind
+R3996:3999 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R3994:3995 PLF.Records <> ty:4 ind
+R4002:4005 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4000:4001 PLF.Records <> ty:4 ind
+R4006:4007 PLF.Records <> ty:4 ind
+R4023:4024 PLF.Records <> ty:4 ind
+R4047:4050 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4041:4046 Coq.Strings.String <> string ind
+R4053:4056 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4051:4052 PLF.Records <> ty:4 ind
+R4059:4062 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4057:4058 PLF.Records <> ty:4 ind
+R4063:4064 PLF.Records <> ty:4 ind
+ind 4253:4254 STLCExtendedRecords tm
+constr 4270:4275 STLCExtendedRecords tm_var
+constr 4296:4301 STLCExtendedRecords tm_app
+constr 4324:4329 STLCExtendedRecords tm_abs
+constr 4378:4385 STLCExtendedRecords tm_rproj
+constr 4412:4418 STLCExtendedRecords tm_rnil
+constr 4430:4437 STLCExtendedRecords tm_rcons
+R4285:4288 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4279:4284 Coq.Strings.String <> string ind
+R4289:4290 PLF.Records <> tm:6 ind
+R4307:4310 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4305:4306 PLF.Records <> tm:6 ind
+R4313:4316 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4311:4312 PLF.Records <> tm:6 ind
+R4317:4318 PLF.Records <> tm:6 ind
+R4339:4342 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4333:4338 Coq.Strings.String <> string ind
+R4345:4348 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4343:4344 PLF.Records STLCExtendedRecords ty ind
+R4351:4354 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4349:4350 PLF.Records <> tm:6 ind
+R4355:4356 PLF.Records <> tm:6 ind
+R4391:4394 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4389:4390 PLF.Records <> tm:6 ind
+R4401:4404 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4395:4400 Coq.Strings.String <> string ind
+R4405:4406 PLF.Records <> tm:6 ind
+R4423:4424 PLF.Records <> tm:6 ind
+R4447:4450 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4441:4446 Coq.Strings.String <> string ind
+R4453:4456 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4451:4452 PLF.Records <> tm:6 ind
+R4459:4462 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R4457:4458 PLF.Records <> tm:6 ind
+R4463:4464 PLF.Records <> tm:6 ind
+not 4508:4508 STLCExtendedRecords :::'<{'_x_'}>'
+not 4561:4561 STLCExtendedRecords :::'<{{'_x_'}}>'
+not 4619:4619 STLCExtendedRecords :stlc::'('_x_')'
+not 4674:4674 STLCExtendedRecords :stlc_ty::'('_x_')'
+not 4732:4732 STLCExtendedRecords :stlc::x
+not 4800:4800 STLCExtendedRecords :stlc_ty::x
+R4884:4891 PLF.Records STLCExtendedRecords Ty_Arrow constr
+not 4871:4871 STLCExtendedRecords :stlc_ty::x_'->'_x
+R4971:4976 PLF.Records STLCExtendedRecords tm_app constr
+not 4961:4961 STLCExtendedRecords :stlc::x_x
+R5061:5066 PLF.Records STLCExtendedRecords tm_abs constr
+not 5041:5041 STLCExtendedRecords :stlc::'\'_x_':'_x_','_x
+R5260:5290 PLF.Records STLCExtendedRecords tm_var constr
+not 5303:5303 STLCExtendedRecords :stlc::'{'_x_'}'
+R5380:5386 PLF.Records STLCExtendedRecords Ty_Base constr
+not 5365:5365 STLCExtendedRecords :stlc_ty::'Base'_x
+R5459:5466 PLF.Records STLCExtendedRecords Ty_RCons constr
+not 5433:5433 STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x
+R5562:5569 PLF.Records STLCExtendedRecords tm_rcons constr
+not 5539:5539 STLCExtendedRecords :stlc::x_':='_x_'::'_x
+R5651:5657 PLF.Records STLCExtendedRecords Ty_RNil constr
+not 5639:5639 STLCExtendedRecords :stlc_ty::'nil'
+R5702:5708 PLF.Records STLCExtendedRecords tm_rnil constr
+not 5690:5690 STLCExtendedRecords :stlc::'nil'
+R5752:5759 PLF.Records STLCExtendedRecords tm_rproj constr
+not 5738:5738 STLCExtendedRecords :stlc::x_'-->'_x
+syndef 5855:5855 STLCExtendedRecords a
+syndef 5874:5874 STLCExtendedRecords f
+syndef 5893:5893 STLCExtendedRecords g
+syndef 5912:5912 STLCExtendedRecords l
+syndef 5931:5931 STLCExtendedRecords A
+R5936:5939 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R5948:5951 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R5940:5944 PLF.Records STLCExtendedRecords :stlc_ty::'Base'_x not
+syndef 5963:5963 STLCExtendedRecords B
+R5968:5971 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R5980:5983 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R5972:5976 PLF.Records STLCExtendedRecords :stlc_ty::'Base'_x not
+syndef 5995:5995 STLCExtendedRecords k
+syndef 6014:6015 STLCExtendedRecords i1
+syndef 6035:6036 STLCExtendedRecords i2
+def 6496:6505 STLCExtendedRecords weird_type
+R6510:6514 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R6526:6529 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R6516:6518 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R6520:6524 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R6515:6515 PLF.Records STLCExtendedRecords a syndef
+R6519:6519 PLF.Records STLCExtendedRecords A syndef
+R6525:6525 PLF.Records STLCExtendedRecords B syndef
+ind 7028:7036 STLCExtendedRecords record_ty
+constr 7058:7062 STLCExtendedRecords RTnil
+constr 7100:7105 STLCExtendedRecords RTcons
+R7042:7045 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7040:7041 PLF.Records STLCExtendedRecords ty ind
+R7074:7082 PLF.Records <> record_ty:8 ind
+R7084:7087 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R7091:7094 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R7088:7090 PLF.Records STLCExtendedRecords :stlc_ty::'nil' not
+binder 7116:7116 <> i:10
+binder 7118:7119 <> T1:11
+binder 7121:7122 <> T2:12
+R7133:7141 PLF.Records <> record_ty:8 ind
+R7143:7146 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R7159:7162 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R7148:7150 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R7153:7156 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R7147:7147 PLF.Records <> i:10 var
+R7151:7152 PLF.Records <> T1:11 var
+R7157:7158 PLF.Records <> T2:12 var
+ind 7228:7241 STLCExtendedRecords well_formed_ty
+constr 7263:7268 STLCExtendedRecords wfBase
+constr 7335:7341 STLCExtendedRecords wfArrow
+constr 7461:7466 STLCExtendedRecords wfRNil
+constr 7509:7515 STLCExtendedRecords wfRCons
+R7247:7250 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7245:7246 PLF.Records STLCExtendedRecords ty ind
+R7284:7289 Coq.Strings.String <> string ind
+binder 7280:7280 <> i:15
+R7301:7314 PLF.Records <> well_formed_ty:13 ind
+R7316:7319 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R7326:7329 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R7320:7324 PLF.Records STLCExtendedRecords :stlc_ty::'Base'_x not
+R7325:7325 PLF.Records <> i:15 var
+binder 7352:7353 <> T1:16
+binder 7355:7356 <> T2:17
+R7384:7395 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7367:7380 PLF.Records <> well_formed_ty:13 ind
+R7382:7383 PLF.Records <> T1:16 var
+R7413:7424 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7396:7409 PLF.Records <> well_formed_ty:13 ind
+R7411:7412 PLF.Records <> T2:17 var
+R7425:7438 PLF.Records <> well_formed_ty:13 ind
+R7440:7443 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R7452:7455 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R7446:7449 PLF.Records STLCExtendedRecords :stlc_ty::x_'->'_x not
+R7444:7445 PLF.Records <> T1:16 var
+R7450:7451 PLF.Records <> T2:17 var
+R7478:7491 PLF.Records <> well_formed_ty:13 ind
+R7493:7496 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R7500:7503 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R7497:7499 PLF.Records STLCExtendedRecords :stlc_ty::'nil' not
+binder 7526:7526 <> i:18
+binder 7528:7529 <> T1:19
+binder 7531:7532 <> T2:20
+R7560:7571 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7543:7556 PLF.Records <> well_formed_ty:13 ind
+R7558:7559 PLF.Records <> T1:19 var
+R7589:7600 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7572:7585 PLF.Records <> well_formed_ty:13 ind
+R7587:7588 PLF.Records <> T2:20 var
+R7613:7624 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R7601:7609 PLF.Records STLCExtendedRecords record_ty ind
+R7611:7612 PLF.Records <> T2:20 var
+R7625:7638 PLF.Records <> well_formed_ty:13 ind
+R7640:7643 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R7656:7659 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R7645:7647 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R7650:7653 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R7644:7644 PLF.Records <> i:18 var
+R7648:7649 PLF.Records <> T1:19 var
+R7654:7655 PLF.Records <> T2:20 var
+R7681:7689 PLF.Records <> record_ty ind
+R7691:7704 PLF.Records <> well_formed_ty ind
+ind 8384:8392 STLCExtendedRecords record_tm
+constr 8414:8418 STLCExtendedRecords rtnil
+constr 8454:8459 STLCExtendedRecords rtcons
+R8398:8401 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R8396:8397 PLF.Records STLCExtendedRecords tm ind
+R8430:8438 PLF.Records <> record_tm:21 ind
+R8440:8442 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R8446:8448 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R8443:8445 PLF.Records STLCExtendedRecords :stlc::'nil' not
+binder 8470:8470 <> i:23
+binder 8472:8473 <> t1:24
+binder 8475:8476 <> t2:25
+R8487:8495 PLF.Records <> record_tm:21 ind
+R8497:8499 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R8513:8515 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R8501:8504 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R8507:8510 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R8500:8500 PLF.Records <> i:23 var
+R8505:8506 PLF.Records <> t1:24 var
+R8511:8512 PLF.Records <> t2:25 var
+R8537:8545 PLF.Records <> record_tm ind
+def 8779:8783 STLCExtendedRecords subst
+R8790:8795 Coq.Strings.String <> string ind
+binder 8786:8786 <> x:26
+R8803:8804 PLF.Records STLCExtendedRecords tm ind
+binder 8799:8799 <> s:27
+R8812:8813 PLF.Records STLCExtendedRecords tm ind
+binder 8808:8808 <> t:28
+R8818:8819 PLF.Records STLCExtendedRecords tm ind
+R9220:9224 PLF.Records <> subst:29 def
+R8832:8832 PLF.Records <> t:28 var
+R8843:8848 PLF.Records STLCExtendedRecords tm_var constr
+R8864:8873 Coq.Strings.String <> eqb def
+R8875:8875 PLF.Records <> x:26 var
+R8891:8891 PLF.Records <> t:28 var
+R8884:8884 PLF.Records <> s:27 var
+R8897:8898 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R8907:8908 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R8899:8899 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R8901:8901 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R8903:8904 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R8922:8931 Coq.Strings.String <> eqb def
+R8933:8933 PLF.Records <> x:26 var
+R8949:8950 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R8966:8967 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R8951:8951 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R8953:8953 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R8955:8956 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R8957:8957 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R8959:8960 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R8962:8963 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R8958:8958 PLF.Records <> x:26 var
+R8961:8961 PLF.Records <> s:27 var
+R8942:8942 PLF.Records <> t:28 var
+R8973:8974 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R8980:8981 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R8977:8977 PLF.Records STLCExtendedRecords :stlc::x_x not
+R8992:8993 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9017:9018 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9005:9005 PLF.Records STLCExtendedRecords :stlc::x_x not
+R8994:8994 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R9004:9004 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R8995:8995 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R8997:8998 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R9000:9001 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R8996:8996 PLF.Records <> x:26 var
+R8999:8999 PLF.Records <> s:27 var
+R9006:9006 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R9016:9016 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R9007:9007 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R9009:9010 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R9012:9013 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R9008:9008 PLF.Records <> x:26 var
+R9011:9011 PLF.Records <> s:27 var
+R9024:9026 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9035:9037 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9029:9033 PLF.Records STLCExtendedRecords :stlc::x_'-->'_x not
+R9048:9050 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9071:9073 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9065:9069 PLF.Records STLCExtendedRecords :stlc::x_'-->'_x not
+R9051:9052 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R9064:9064 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R9053:9053 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R9055:9058 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R9060:9061 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R9054:9054 PLF.Records <> x:26 var
+R9059:9059 PLF.Records <> s:27 var
+R9079:9081 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9085:9087 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9082:9084 PLF.Records STLCExtendedRecords :stlc::'nil' not
+R9098:9100 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9104:9106 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9101:9103 PLF.Records STLCExtendedRecords :stlc::'nil' not
+R9112:9114 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9128:9130 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9116:9119 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R9122:9125 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R9140:9142 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9178:9180 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9144:9148 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R9160:9163 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R9149:9149 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R9151:9154 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R9156:9157 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R9150:9150 PLF.Records <> x:26 var
+R9155:9155 PLF.Records <> s:27 var
+R9164:9165 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R9177:9177 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R9166:9166 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R9168:9171 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R9173:9174 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R9167:9167 PLF.Records <> x:26 var
+R9172:9172 PLF.Records <> s:27 var
+R9220:9224 PLF.Records STLCExtendedRecords subst def
+not 9195:9195 STLCExtendedRecords :stlc::'['_x_':='_x_']'_x
+ind 9410:9414 STLCExtendedRecords value
+constr 9436:9440 STLCExtendedRecords v_abs
+constr 9496:9501 STLCExtendedRecords v_rnil
+constr 9525:9531 STLCExtendedRecords v_rcons
+R9420:9423 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R9418:9419 PLF.Records STLCExtendedRecords tm ind
+binder 9451:9451 <> x:33
+binder 9453:9454 <> T2:34
+binder 9456:9457 <> t1:35
+R9466:9470 PLF.Records <> value:31 ind
+R9473:9475 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9488:9490 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9476:9477 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R9479:9481 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R9484:9485 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R9478:9478 PLF.Records <> x:33 var
+R9482:9483 PLF.Records <> T2:34 var
+R9486:9487 PLF.Records <> t1:35 var
+R9505:9509 PLF.Records <> value:31 ind
+R9511:9513 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9517:9519 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9514:9516 PLF.Records STLCExtendedRecords :stlc::'nil' not
+binder 9542:9542 <> i:36
+binder 9544:9545 <> v1:37
+binder 9547:9548 <> vr:38
+R9565:9574 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R9557:9561 PLF.Records <> value:31 ind
+R9563:9564 PLF.Records <> v1:37 var
+R9583:9592 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R9575:9579 PLF.Records <> value:31 ind
+R9581:9582 PLF.Records <> vr:38 var
+R9593:9597 PLF.Records <> value:31 ind
+R9599:9601 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9615:9617 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9603:9606 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R9609:9612 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R9602:9602 PLF.Records <> i:36 var
+R9607:9608 PLF.Records <> v1:37 var
+R9613:9614 PLF.Records <> vr:38 var
+R9639:9643 PLF.Records <> value ind
+def 9769:9775 STLCExtendedRecords tlookup
+R9780:9785 Coq.Strings.String <> string ind
+binder 9778:9778 <> i:39
+R9792:9793 PLF.Records STLCExtendedRecords tm ind
+binder 9789:9790 <> tr:40
+R9798:9803 Coq.Init.Datatypes <> option ind
+R9805:9806 PLF.Records STLCExtendedRecords tm ind
+R9819:9820 PLF.Records <> tr:40 var
+R9831:9833 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9848:9849 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R9836:9839 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R9841:9844 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R9857:9866 Coq.Strings.String <> eqb def
+R9868:9868 PLF.Records <> i:39 var
+R9890:9896 PLF.Records <> tlookup:41 def
+R9898:9898 PLF.Records <> i:39 var
+R9878:9881 Coq.Init.Datatypes <> Some constr
+R9913:9916 Coq.Init.Datatypes <> None constr
+ind 10076:10079 STLCExtendedRecords step
+constr 10107:10115 STLCExtendedRecords ST_AppAbs
+constr 10211:10217 STLCExtendedRecords ST_App1
+constr 10300:10306 STLCExtendedRecords ST_App2
+constr 10411:10418 STLCExtendedRecords ST_Proj1
+constr 10508:10517 STLCExtendedRecords ST_ProjRcd
+constr 10625:10635 STLCExtendedRecords ST_Rcd_Head
+constr 10741:10751 STLCExtendedRecords ST_Rcd_Tail
+R10085:10088 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10083:10084 PLF.Records STLCExtendedRecords tm ind
+R10091:10094 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10089:10090 PLF.Records STLCExtendedRecords tm ind
+R10900:10903 PLF.Records <> step:44 ind
+binder 10126:10126 <> x:45
+binder 10128:10129 <> T2:46
+binder 10131:10132 <> t1:47
+binder 10134:10135 <> v2:48
+R10155:10167 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10147:10151 PLF.Records STLCExtendedRecords value ind
+R10153:10154 PLF.Records <> v2:48 var
+R10186:10190 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R10168:10169 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10184:10185 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10181:10181 PLF.Records STLCExtendedRecords :stlc::x_x not
+R10170:10170 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R10180:10180 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R10171:10171 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R10173:10173 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R10176:10177 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R10172:10172 PLF.Records <> x:45 var
+R10174:10175 PLF.Records <> T2:46 var
+R10178:10179 PLF.Records <> t1:47 var
+R10182:10183 PLF.Records <> v2:48 var
+R10191:10193 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10203:10205 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10194:10194 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R10196:10197 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R10200:10200 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R10195:10195 PLF.Records <> x:45 var
+R10198:10199 PLF.Records <> v2:48 var
+R10201:10202 PLF.Records <> t1:47 var
+binder 10228:10229 <> t1:49
+binder 10231:10233 <> t1':50
+binder 10235:10236 <> t2:51
+R10258:10270 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10250:10254 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R10248:10249 PLF.Records <> t1:49 var
+R10255:10257 PLF.Records <> t1':50 var
+R10280:10284 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R10271:10272 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10278:10279 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10275:10275 PLF.Records STLCExtendedRecords :stlc::x_x not
+R10273:10274 PLF.Records <> t1:49 var
+R10276:10277 PLF.Records <> t2:51 var
+R10285:10286 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10293:10294 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10290:10290 PLF.Records STLCExtendedRecords :stlc::x_x not
+R10287:10289 PLF.Records <> t1':50 var
+R10291:10292 PLF.Records <> t2:51 var
+binder 10317:10318 <> v1:52
+binder 10320:10321 <> t2:53
+binder 10323:10325 <> t2':54
+R10345:10357 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10337:10341 PLF.Records STLCExtendedRecords value ind
+R10343:10344 PLF.Records <> v1:52 var
+R10368:10380 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10360:10364 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R10358:10359 PLF.Records <> t2:53 var
+R10365:10367 PLF.Records <> t2':54 var
+R10390:10394 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R10381:10382 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10388:10389 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10385:10385 PLF.Records STLCExtendedRecords :stlc::x_x not
+R10383:10384 PLF.Records <> v1:52 var
+R10386:10387 PLF.Records <> t2:53 var
+R10395:10396 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10404:10405 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10399:10400 PLF.Records STLCExtendedRecords :stlc::x_x not
+R10397:10398 PLF.Records <> v1:52 var
+R10401:10403 PLF.Records <> t2':54 var
+binder 10429:10430 <> t1:55
+binder 10432:10434 <> t1':56
+binder 10436:10436 <> i:57
+R10457:10468 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10449:10453 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R10447:10448 PLF.Records <> t1:55 var
+R10454:10456 PLF.Records <> t1':56 var
+R10483:10487 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R10469:10471 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10480:10482 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10474:10478 PLF.Records STLCExtendedRecords :stlc::x_'-->'_x not
+R10472:10473 PLF.Records <> t1:55 var
+R10479:10479 PLF.Records <> i:57 var
+R10488:10490 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10500:10502 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10494:10498 PLF.Records STLCExtendedRecords :stlc::x_'-->'_x not
+R10491:10493 PLF.Records <> t1':56 var
+R10499:10499 PLF.Records <> i:57 var
+binder 10528:10529 <> tr:58
+binder 10531:10531 <> i:59
+binder 10533:10534 <> vi:60
+R10553:10564 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10545:10549 PLF.Records STLCExtendedRecords value ind
+R10551:10552 PLF.Records <> tr:58 var
+R10587:10598 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10577:10579 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R10565:10571 PLF.Records STLCExtendedRecords tlookup def
+R10573:10573 PLF.Records <> i:59 var
+R10575:10576 PLF.Records <> tr:58 var
+R10580:10583 Coq.Init.Datatypes <> Some constr
+R10585:10586 PLF.Records <> vi:60 var
+R10613:10617 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R10599:10601 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10610:10612 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10604:10608 PLF.Records STLCExtendedRecords :stlc::x_'-->'_x not
+R10602:10603 PLF.Records <> tr:58 var
+R10609:10609 PLF.Records <> i:59 var
+R10618:10619 PLF.Records <> vi:60 var
+binder 10646:10646 <> i:61
+binder 10648:10649 <> t1:62
+binder 10651:10653 <> t1':63
+binder 10655:10657 <> tr2:64
+R10678:10689 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10670:10674 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R10668:10669 PLF.Records <> t1:62 var
+R10675:10677 PLF.Records <> t1':63 var
+R10710:10714 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R10690:10692 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10707:10709 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10694:10697 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R10700:10703 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R10693:10693 PLF.Records <> i:61 var
+R10698:10699 PLF.Records <> t1:62 var
+R10704:10706 PLF.Records <> tr2:64 var
+R10715:10717 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10733:10735 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10719:10722 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R10726:10729 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R10718:10718 PLF.Records <> i:61 var
+R10723:10725 PLF.Records <> t1':63 var
+R10730:10732 PLF.Records <> tr2:64 var
+binder 10762:10762 <> i:65
+binder 10764:10765 <> v1:66
+binder 10767:10769 <> tr2:67
+binder 10771:10774 <> tr2':68
+R10793:10804 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10785:10789 PLF.Records STLCExtendedRecords value ind
+R10791:10792 PLF.Records <> v1:66 var
+R10817:10828 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10808:10812 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R10805:10807 PLF.Records <> tr2:67 var
+R10813:10816 PLF.Records <> tr2':68 var
+R10849:10853 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R10829:10831 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10846:10848 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10833:10836 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R10839:10842 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R10832:10832 PLF.Records <> i:65 var
+R10837:10838 PLF.Records <> v1:66 var
+R10843:10845 PLF.Records <> tr2:67 var
+R10854:10856 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10872:10874 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R10858:10861 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R10864:10867 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R10857:10857 PLF.Records <> i:65 var
+R10862:10863 PLF.Records <> v1:66 var
+R10868:10871 PLF.Records <> tr2':68 var
+R10900:10903 PLF.Records STLCExtendedRecords step ind
+not 10883:10883 STLCExtendedRecords :::x_'-->'_x
+syndef 10922:10930 STLCExtendedRecords multistep
+R10936:10940 PLF.Smallstep <> multi ind
+R10942:10945 PLF.Records STLCExtendedRecords step ind
+R10977:10985 PLF.Records STLCExtendedRecords multistep syndef
+not 10958:10958 STLCExtendedRecords :::x_'-->*'_x
+R11028:11031 PLF.Records <> step ind
+def 12329:12335 STLCExtendedRecords Tlookup
+R12340:12345 Coq.Strings.String <> string ind
+binder 12338:12338 <> i:69
+R12352:12353 PLF.Records STLCExtendedRecords ty ind
+binder 12349:12350 <> Tr:70
+R12358:12363 Coq.Init.Datatypes <> option ind
+R12365:12366 PLF.Records STLCExtendedRecords ty ind
+R12379:12380 PLF.Records <> Tr:70 var
+R12391:12394 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R12408:12411 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R12397:12399 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R12401:12404 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R12425:12434 Coq.Strings.String <> eqb def
+R12436:12436 PLF.Records <> i:69 var
+R12458:12464 PLF.Records <> Tlookup:71 def
+R12466:12466 PLF.Records <> i:69 var
+R12446:12449 Coq.Init.Datatypes <> Some constr
+R12481:12484 Coq.Init.Datatypes <> None constr
+def 12505:12511 STLCExtendedRecords context
+R12516:12526 PLF.Maps <> partial_map def
+R12528:12529 PLF.Records STLCExtendedRecords ty ind
+ind 12687:12694 STLCExtendedRecords has_type
+constr 12739:12743 STLCExtendedRecords T_Var
+constr 12839:12843 STLCExtendedRecords T_Abs
+constr 12992:12996 STLCExtendedRecords T_App
+constr 13139:13144 STLCExtendedRecords T_Proj
+constr 13262:13267 STLCExtendedRecords T_RNil
+constr 13303:13309 STLCExtendedRecords T_RCons
+R12705:12711 PLF.Records STLCExtendedRecords context def
+binder 12697:12701 <> Gamma:73
+R12717:12720 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12715:12716 PLF.Records STLCExtendedRecords tm ind
+R12723:12726 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12721:12722 PLF.Records STLCExtendedRecords ty ind
+R13519:13526 PLF.Records <> has_type:75 ind
+binder 12754:12754 <> x:76
+binder 12756:12756 <> T:77
+R12781:12790 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12772:12774 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R12765:12769 PLF.Records <> Gamma:73 var
+R12771:12771 PLF.Records <> x:76 var
+R12775:12778 Coq.Init.Datatypes <> Some constr
+R12780:12780 PLF.Records <> T:77 var
+R12807:12816 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12791:12804 PLF.Records STLCExtendedRecords well_formed_ty ind
+R12806:12806 PLF.Records <> T:77 var
+R12822:12826 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R12828:12832 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R12817:12821 PLF.Records <> Gamma:73 var
+R12827:12827 PLF.Records <> x:76 var
+R12833:12833 PLF.Records <> T:77 var
+binder 12854:12854 <> x:78
+binder 12856:12858 <> T11:79
+binder 12860:12862 <> T12:80
+binder 12864:12866 <> t12:81
+R12893:12902 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12875:12888 PLF.Records STLCExtendedRecords well_formed_ty ind
+R12890:12892 PLF.Records <> T11:79 var
+R12937:12946 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12903:12903 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R12920:12925 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R12929:12933 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R12905:12909 PLF.Maps <> :::x_'|->'_x_';'_x not
+R12913:12914 PLF.Maps <> :::x_'|->'_x_';'_x not
+R12915:12919 PLF.Records <> Gamma:73 var
+R12904:12904 PLF.Records <> x:78 var
+R12910:12912 PLF.Records <> T11:79 var
+R12926:12928 PLF.Records <> t12:81 var
+R12934:12936 PLF.Records <> T12:80 var
+R12952:12956 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R12970:12974 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R12947:12951 PLF.Records <> Gamma:73 var
+R12957:12957 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R12959:12961 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R12965:12966 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R12958:12958 PLF.Records <> x:78 var
+R12962:12964 PLF.Records <> T11:79 var
+R12967:12969 PLF.Records <> t12:81 var
+R12975:12975 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R12986:12986 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R12979:12982 PLF.Records STLCExtendedRecords :stlc_ty::x_'->'_x not
+R12976:12978 PLF.Records <> T11:79 var
+R12983:12985 PLF.Records <> T12:80 var
+binder 13007:13008 <> T1:82
+binder 13010:13011 <> T2:83
+binder 13013:13014 <> t1:84
+binder 13016:13017 <> t2:85
+R13053:13062 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R13031:13035 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13038:13042 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13026:13030 PLF.Records <> Gamma:73 var
+R13036:13037 PLF.Records <> t1:84 var
+R13043:13043 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R13052:13052 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R13046:13049 PLF.Records STLCExtendedRecords :stlc_ty::x_'->'_x not
+R13044:13045 PLF.Records <> T1:82 var
+R13050:13051 PLF.Records <> T2:83 var
+R13082:13091 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R13068:13072 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13075:13079 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13063:13067 PLF.Records <> Gamma:73 var
+R13073:13074 PLF.Records <> t2:85 var
+R13080:13081 PLF.Records <> T1:82 var
+R13097:13101 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13110:13114 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13092:13096 PLF.Records <> Gamma:73 var
+R13102:13103 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R13109:13109 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R13106:13106 PLF.Records STLCExtendedRecords :stlc::x_x not
+R13104:13105 PLF.Records <> t1:84 var
+R13107:13108 PLF.Records <> t2:85 var
+R13115:13116 PLF.Records <> T2:83 var
+binder 13155:13155 <> i:86
+binder 13157:13157 <> t:87
+binder 13159:13160 <> Ti:88
+binder 13162:13163 <> Tr:89
+R13190:13199 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R13177:13181 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13183:13187 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13172:13176 PLF.Records <> Gamma:73 var
+R13182:13182 PLF.Records <> t:87 var
+R13188:13189 PLF.Records <> Tr:89 var
+R13222:13231 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R13212:13214 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R13200:13206 PLF.Records STLCExtendedRecords Tlookup def
+R13208:13208 PLF.Records <> i:86 var
+R13210:13211 PLF.Records <> Tr:89 var
+R13215:13218 Coq.Init.Datatypes <> Some constr
+R13220:13221 PLF.Records <> Ti:88 var
+R13237:13241 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13251:13255 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13232:13236 PLF.Records <> Gamma:73 var
+R13242:13242 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R13250:13250 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R13244:13248 PLF.Records STLCExtendedRecords :stlc::x_'-->'_x not
+R13243:13243 PLF.Records <> t:87 var
+R13249:13249 PLF.Records <> i:86 var
+R13256:13257 PLF.Records <> Ti:88 var
+R13282:13286 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13290:13294 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13277:13281 PLF.Records <> Gamma:73 var
+R13287:13289 PLF.Records STLCExtendedRecords :stlc::'nil' not
+R13295:13297 PLF.Records STLCExtendedRecords :stlc_ty::'nil' not
+binder 13320:13320 <> i:90
+binder 13322:13322 <> t:91
+binder 13324:13324 <> T:92
+binder 13326:13327 <> tr:93
+binder 13329:13330 <> Tr:94
+R13356:13365 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R13344:13348 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13350:13354 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13339:13343 PLF.Records <> Gamma:73 var
+R13349:13349 PLF.Records <> t:91 var
+R13355:13355 PLF.Records <> T:92 var
+R13385:13394 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R13371:13375 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13378:13382 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13366:13370 PLF.Records <> Gamma:73 var
+R13376:13377 PLF.Records <> tr:93 var
+R13383:13384 PLF.Records <> Tr:94 var
+R13407:13416 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R13395:13403 PLF.Records STLCExtendedRecords record_ty ind
+R13405:13406 PLF.Records <> Tr:94 var
+R13429:13438 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R13417:13425 PLF.Records STLCExtendedRecords record_tm ind
+R13427:13428 PLF.Records <> tr:93 var
+R13444:13448 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13464:13468 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R13439:13443 PLF.Records <> Gamma:73 var
+R13449:13450 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R13463:13463 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R13452:13455 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R13457:13460 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R13451:13451 PLF.Records <> i:90 var
+R13456:13456 PLF.Records <> t:91 var
+R13461:13462 PLF.Records <> tr:93 var
+R13469:13470 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R13482:13482 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R13472:13474 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R13476:13479 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R13471:13471 PLF.Records <> i:90 var
+R13475:13475 PLF.Records <> T:92 var
+R13480:13481 PLF.Records <> Tr:94 var
+R13519:13526 PLF.Records STLCExtendedRecords has_type ind
+not 13491:13491 STLCExtendedRecords :::x_'|--'_x_'\in'_x
+R13559:13566 PLF.Records <> has_type ind
+prf 14148:14163 STLCExtendedRecords typing_example_2
+R14174:14178 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R14298:14303 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R14169:14173 PLF.Maps <> empty def
+R14236:14248 PLF.Records STLCExtendedRecords :stlc::x_x not
+R14179:14179 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14235:14235 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14180:14180 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14182:14184 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14225:14226 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14181:14181 PLF.Records STLCExtendedRecords a syndef
+R14185:14186 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R14224:14224 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R14189:14191 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R14200:14203 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R14187:14188 PLF.Records STLCExtendedRecords i1 syndef
+R14192:14192 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R14199:14199 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R14194:14197 PLF.Records STLCExtendedRecords :stlc_ty::x_'->'_x not
+R14193:14193 PLF.Records STLCExtendedRecords A syndef
+R14198:14198 PLF.Records STLCExtendedRecords A syndef
+R14206:14208 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R14217:14220 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R14204:14205 PLF.Records STLCExtendedRecords i2 syndef
+R14209:14209 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R14216:14216 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R14211:14214 PLF.Records STLCExtendedRecords :stlc_ty::x_'->'_x not
+R14210:14210 PLF.Records STLCExtendedRecords B syndef
+R14215:14215 PLF.Records STLCExtendedRecords B syndef
+R14221:14223 PLF.Records STLCExtendedRecords :stlc_ty::'nil' not
+R14228:14232 PLF.Records STLCExtendedRecords :stlc::x_'-->'_x not
+R14227:14227 PLF.Records STLCExtendedRecords a syndef
+R14233:14234 PLF.Records STLCExtendedRecords i2 syndef
+R14249:14250 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14296:14297 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14253:14256 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R14268:14271 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R14251:14252 PLF.Records STLCExtendedRecords i1 syndef
+R14257:14257 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14267:14267 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14258:14258 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14260:14262 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14264:14265 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14259:14259 PLF.Records STLCExtendedRecords a syndef
+R14263:14263 PLF.Records STLCExtendedRecords A syndef
+R14266:14266 PLF.Records STLCExtendedRecords a syndef
+R14274:14277 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R14289:14292 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R14272:14273 PLF.Records STLCExtendedRecords i2 syndef
+R14278:14278 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14287:14288 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14279:14279 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14281:14283 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14285:14285 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14280:14280 PLF.Records STLCExtendedRecords a syndef
+R14284:14284 PLF.Records STLCExtendedRecords B syndef
+R14286:14286 PLF.Records STLCExtendedRecords a syndef
+R14293:14295 PLF.Records STLCExtendedRecords :stlc::'nil' not
+R14304:14304 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R14311:14311 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R14306:14309 PLF.Records STLCExtendedRecords :stlc_ty::x_'->'_x not
+R14305:14305 PLF.Records STLCExtendedRecords B syndef
+R14310:14310 PLF.Records STLCExtendedRecords B syndef
+def 14361:14377 STLCExtendedRecords typing_nonexample
+R14383:14384 Coq.Init.Logic <> ::type_scope:'~'_x not
+R14385:14391 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R14393:14399 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 14392:14392 <> T:95
+R14400:14400 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R14438:14450 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R14477:14496 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R14402:14406 PLF.Maps <> :::x_'|->'_x not
+R14401:14401 PLF.Records STLCExtendedRecords a syndef
+R14407:14411 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R14432:14437 PLF.Records STLCExtendedRecords :::'<{{'_x_'}}>' not
+R14414:14416 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R14425:14428 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R14412:14413 PLF.Records STLCExtendedRecords i2 syndef
+R14417:14417 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R14424:14424 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R14419:14422 PLF.Records STLCExtendedRecords :stlc_ty::x_'->'_x not
+R14418:14418 PLF.Records STLCExtendedRecords A syndef
+R14423:14423 PLF.Records STLCExtendedRecords A syndef
+R14429:14431 PLF.Records STLCExtendedRecords :stlc_ty::'nil' not
+R14451:14452 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14475:14476 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14455:14458 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R14470:14473 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R14453:14454 PLF.Records STLCExtendedRecords i1 syndef
+R14459:14459 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14469:14469 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14460:14460 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14462:14464 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14466:14467 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14461:14461 PLF.Records STLCExtendedRecords a syndef
+R14465:14465 PLF.Records STLCExtendedRecords B syndef
+R14468:14468 PLF.Records STLCExtendedRecords a syndef
+R14474:14474 PLF.Records STLCExtendedRecords a syndef
+R14497:14497 PLF.Records <> T:95 var
+def 14547:14565 STLCExtendedRecords typing_nonexample_2
+binder 14576:14576 <> y:96
+R14581:14582 Coq.Init.Logic <> ::type_scope:'~'_x not
+R14583:14589 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R14591:14596 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 14590:14590 <> T:97
+R14597:14597 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R14605:14615 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R14688:14693 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R14599:14603 PLF.Maps <> :::x_'|->'_x not
+R14598:14598 PLF.Records <> y:96 var
+R14604:14604 PLF.Records STLCExtendedRecords A syndef
+R14652:14658 PLF.Records STLCExtendedRecords :stlc::x_x not
+R14616:14616 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14650:14651 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14617:14617 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14619:14621 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14640:14641 PLF.Records STLCExtendedRecords :stlc::'\'_x_':'_x_','_x not
+R14618:14618 PLF.Records STLCExtendedRecords a syndef
+R14622:14623 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R14638:14639 PLF.Records STLCExtendedRecords :stlc_ty::'('_x_')' not
+R14626:14628 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R14630:14634 PLF.Records STLCExtendedRecords :stlc_ty::x_':'_x_'::'_x not
+R14624:14625 PLF.Records STLCExtendedRecords i1 syndef
+R14629:14629 PLF.Records STLCExtendedRecords A syndef
+R14635:14637 PLF.Records STLCExtendedRecords :stlc_ty::'nil' not
+R14643:14647 PLF.Records STLCExtendedRecords :stlc::x_'-->'_x not
+R14642:14642 PLF.Records STLCExtendedRecords a syndef
+R14648:14649 PLF.Records STLCExtendedRecords i1 syndef
+R14659:14660 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14686:14687 PLF.Records STLCExtendedRecords :stlc::'('_x_')' not
+R14663:14666 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R14668:14671 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R14661:14662 PLF.Records STLCExtendedRecords i1 syndef
+R14667:14667 PLF.Records <> y:96 var
+R14674:14677 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R14679:14682 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R14672:14673 PLF.Records STLCExtendedRecords i2 syndef
+R14678:14678 PLF.Records <> y:96 var
+R14683:14685 PLF.Records STLCExtendedRecords :stlc::'nil' not
+R14694:14694 PLF.Records <> T:97 var
+prf 15159:15171 STLCExtendedRecords wf_rcd_lookup
+binder 15182:15182 <> i:98
+binder 15184:15184 <> T:99
+binder 15186:15187 <> Ti:100
+R15208:15213 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R15192:15205 PLF.Records STLCExtendedRecords well_formed_ty ind
+R15207:15207 PLF.Records <> T:99 var
+R15235:15240 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R15225:15227 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R15214:15220 PLF.Records STLCExtendedRecords Tlookup def
+R15222:15222 PLF.Records <> i:98 var
+R15224:15224 PLF.Records <> T:99 var
+R15228:15231 Coq.Init.Datatypes <> Some constr
+R15233:15234 PLF.Records <> Ti:100 var
+R15241:15254 PLF.Records STLCExtendedRecords well_formed_ty ind
+R15256:15257 PLF.Records <> Ti:100 var
+R15383:15389 PLF.Records STLCExtendedRecords Tlookup def
+R15412:15421 Coq.Strings.String <> eqb def
+R15412:15421 Coq.Strings.String <> eqb def
+prf 15471:15494 STLCExtendedRecords step_preserves_record_tm
+binder 15505:15506 <> tr:101
+binder 15508:15510 <> tr':102
+R15527:15532 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R15515:15523 PLF.Records STLCExtendedRecords record_tm ind
+R15525:15526 PLF.Records <> tr:101 var
+R15543:15548 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R15535:15539 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R15533:15534 PLF.Records <> tr:101 var
+R15540:15542 PLF.Records <> tr':102 var
+R15549:15557 PLF.Records STLCExtendedRecords record_tm ind
+R15559:15561 PLF.Records <> tr':102 var
+prf 15662:15673 STLCExtendedRecords has_type__wf
+binder 15684:15688 <> Gamma:103
+binder 15690:15690 <> t:104
+binder 15692:15692 <> T:105
+R15714:15717 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R15702:15706 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R15708:15712 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R15697:15701 PLF.Records <> Gamma:103 var
+R15707:15707 PLF.Records <> t:104 var
+R15713:15713 PLF.Records <> T:105 var
+R15718:15731 PLF.Records STLCExtendedRecords well_formed_ty ind
+R15733:15733 PLF.Records <> T:105 var
+R15868:15880 PLF.Records STLCExtendedRecords wf_rcd_lookup thm
+R15868:15880 PLF.Records STLCExtendedRecords wf_rcd_lookup thm
+prf 17050:17070 STLCExtendedRecords lookup_field_in_value
+binder 17081:17081 <> v:106
+binder 17083:17083 <> T:107
+binder 17085:17085 <> i:108
+binder 17087:17088 <> Ti:109
+R17100:17105 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R17093:17097 PLF.Records STLCExtendedRecords value ind
+R17099:17099 PLF.Records <> v:106 var
+R17123:17128 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R17111:17115 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R17117:17121 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R17106:17110 PLF.Maps <> empty def
+R17116:17116 PLF.Records <> v:106 var
+R17122:17122 PLF.Records <> T:107 var
+R17150:17155 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R17140:17142 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R17129:17135 PLF.Records STLCExtendedRecords Tlookup def
+R17137:17137 PLF.Records <> i:108 var
+R17139:17139 PLF.Records <> T:107 var
+R17143:17146 Coq.Init.Datatypes <> Some constr
+R17148:17149 PLF.Records <> Ti:109 var
+R17156:17162 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R17165:17166 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 17163:17164 <> ti:110
+R17188:17191 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R17178:17180 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R17167:17173 PLF.Records STLCExtendedRecords tlookup def
+R17175:17175 PLF.Records <> i:108 var
+R17177:17177 PLF.Records <> v:106 var
+R17181:17184 Coq.Init.Datatypes <> Some constr
+R17186:17187 PLF.Records <> ti:110 var
+R17197:17201 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R17204:17208 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R17192:17196 PLF.Maps <> empty def
+R17202:17203 PLF.Records <> ti:110 var
+R17209:17210 PLF.Records <> Ti:109 var
+R17276:17280 PLF.Maps <> empty def
+R17276:17280 PLF.Maps <> empty def
+R17394:17403 Coq.Strings.String <> eqb def
+R17394:17403 Coq.Strings.String <> eqb def
+prf 17698:17705 STLCExtendedRecords progress
+binder 17716:17716 <> t:111
+binder 17718:17718 <> T:112
+R17743:17751 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R17731:17735 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R17737:17741 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R17726:17730 PLF.Maps <> empty def
+R17736:17736 PLF.Records <> t:111 var
+R17742:17742 PLF.Records <> T:112 var
+R17759:17762 Coq.Init.Logic <> ::type_scope:x_'\/'_x not
+R17752:17756 PLF.Records STLCExtendedRecords value ind
+R17758:17758 PLF.Records <> t:111 var
+R17763:17769 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+R17772:17773 Coq.Init.Logic <> ::type_scope:'exists'_x_'..'_x_','_x not
+binder 17770:17771 <> t':113
+R17775:17779 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R17774:17774 PLF.Records <> t:111 var
+R17780:17781 PLF.Records <> t':113 var
+R18001:18005 PLF.Maps <> empty def
+R18001:18005 PLF.Maps <> empty def
+R19144:19146 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R19156:19158 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R19147:19147 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R19149:19150 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R19153:19153 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R19144:19146 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R19156:19158 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R19147:19147 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R19149:19150 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R19153:19153 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R19328:19330 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R19337:19339 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R19333:19333 PLF.Records STLCExtendedRecords :stlc::x_x not
+R19328:19330 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R19337:19339 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R19333:19333 PLF.Records STLCExtendedRecords :stlc::x_x not
+R19489:19491 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R19498:19500 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R19495:19495 PLF.Records STLCExtendedRecords :stlc::x_x not
+R19489:19491 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R19498:19500 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R19495:19495 PLF.Records STLCExtendedRecords :stlc::x_x not
+R19982:20002 PLF.Records STLCExtendedRecords lookup_field_in_value thm
+R19982:20002 PLF.Records STLCExtendedRecords lookup_field_in_value thm
+R20231:20233 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R20242:20244 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R20236:20240 PLF.Records STLCExtendedRecords :stlc::x_'-->'_x not
+R20231:20233 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R20242:20244 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R20236:20240 PLF.Records STLCExtendedRecords :stlc::x_'-->'_x not
+R21051:21053 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R21067:21068 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R21055:21058 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R21060:21063 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R21051:21053 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R21067:21068 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R21055:21058 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R21060:21063 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R21249:21251 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R21265:21267 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R21253:21256 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R21259:21262 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R21249:21251 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R21265:21267 PLF.Records STLCExtendedRecords :::'<{'_x_'}>' not
+R21253:21256 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+R21259:21262 PLF.Records STLCExtendedRecords :stlc::x_':='_x_'::'_x not
+prf 21433:21441 STLCExtendedRecords weakening
+binder 21452:21456 <> Gamma:114
+binder 21458:21463 <> Gamma':115
+binder 21465:21465 <> t:116
+binder 21467:21467 <> T:117
+R21498:21506 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R21475:21484 PLF.Maps <> includedin def
+R21492:21497 PLF.Records <> Gamma':115 var
+R21486:21490 PLF.Records <> Gamma:114 var
+R21525:21534 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R21512:21517 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R21519:21523 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R21507:21511 PLF.Records <> Gamma:114 var
+R21518:21518 PLF.Records <> t:116 var
+R21524:21524 PLF.Records <> T:117 var
+R21541:21545 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R21547:21551 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R21535:21540 PLF.Records <> Gamma':115 var
+R21546:21546 PLF.Records <> t:116 var
+R21552:21552 PLF.Records <> T:117 var
+R21653:21669 PLF.Maps <> includedin_update thm
+R21653:21669 PLF.Maps <> includedin_update thm
+R21653:21669 PLF.Maps <> includedin_update thm
+R21653:21669 PLF.Maps <> includedin_update thm
+R21653:21669 PLF.Maps <> includedin_update thm
+R21653:21669 PLF.Maps <> includedin_update thm
+R21653:21669 PLF.Maps <> includedin_update thm
+prf 21684:21698 STLCExtendedRecords weakening_empty
+binder 21709:21713 <> Gamma:118
+binder 21715:21715 <> t:119
+binder 21717:21717 <> T:120
+R21742:21751 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R21730:21734 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R21736:21740 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R21725:21729 PLF.Maps <> empty def
+R21735:21735 PLF.Records <> t:119 var
+R21741:21741 PLF.Records <> T:120 var
+R21757:21761 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R21763:21767 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R21752:21756 PLF.Records <> Gamma:118 var
+R21762:21762 PLF.Records <> t:119 var
+R21768:21768 PLF.Records <> T:120 var
+R21807:21815 PLF.Records STLCExtendedRecords weakening thm
+R21807:21815 PLF.Records STLCExtendedRecords weakening thm
+prf 22243:22271 STLCExtendedRecords substitution_preserves_typing
+binder 22282:22286 <> Gamma:121
+binder 22288:22288 <> x:122
+binder 22290:22290 <> U:123
+binder 22292:22292 <> t:124
+binder 22294:22294 <> v:125
+binder 22296:22296 <> T:126
+R22330:22335 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R22301:22301 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R22317:22322 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R22324:22328 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R22303:22307 PLF.Maps <> :::x_'|->'_x_';'_x not
+R22309:22311 PLF.Maps <> :::x_'|->'_x_';'_x not
+R22312:22316 PLF.Records <> Gamma:121 var
+R22302:22302 PLF.Records <> x:122 var
+R22308:22308 PLF.Records <> U:123 var
+R22323:22323 PLF.Records <> t:124 var
+R22329:22329 PLF.Records <> T:126 var
+R22353:22360 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R22341:22345 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R22347:22351 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R22336:22340 PLF.Maps <> empty def
+R22346:22346 PLF.Records <> v:125 var
+R22352:22352 PLF.Records <> U:123 var
+R22366:22370 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R22378:22382 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R22361:22365 PLF.Records <> Gamma:121 var
+R22371:22371 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R22373:22374 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R22376:22376 PLF.Records STLCExtendedRecords :stlc::'['_x_':='_x_']'_x not
+R22372:22372 PLF.Records <> x:122 var
+R22375:22375 PLF.Records <> v:125 var
+R22377:22377 PLF.Records <> t:124 var
+R22383:22383 PLF.Records <> T:126 var
+R22667:22674 Coq.Strings.String <> eqb_spec thm
+R22667:22674 Coq.Strings.String <> eqb_spec thm
+R22719:22727 PLF.Maps <> update_eq thm
+R22719:22727 PLF.Maps <> update_eq thm
+R22719:22727 PLF.Maps <> update_eq thm
+R22781:22795 PLF.Records STLCExtendedRecords weakening_empty thm
+R22781:22795 PLF.Records STLCExtendedRecords weakening_empty thm
+R22839:22843 PLF.Records STLCExtendedRecords T_Var constr
+R22839:22843 PLF.Records STLCExtendedRecords T_Var constr
+R22854:22863 PLF.Maps <> update_neq thm
+R22854:22863 PLF.Maps <> update_neq thm
+R22854:22863 PLF.Maps <> update_neq thm
+R22854:22863 PLF.Maps <> update_neq thm
+R22949:22956 Coq.Strings.String <> eqb_spec thm
+R22977:22981 PLF.Records STLCExtendedRecords T_Abs constr
+R22949:22956 Coq.Strings.String <> eqb_spec thm
+R22977:22981 PLF.Records STLCExtendedRecords T_Abs constr
+R22977:22981 PLF.Records STLCExtendedRecords T_Abs constr
+R23030:23042 PLF.Maps <> update_shadow thm
+R23030:23042 PLF.Maps <> update_shadow thm
+R23030:23042 PLF.Maps <> update_shadow thm
+R23111:23124 PLF.Maps <> update_permute thm
+R23111:23124 PLF.Maps <> update_permute thm
+R23111:23124 PLF.Maps <> update_permute thm
+R23111:23124 PLF.Maps <> update_permute thm
+R23209:23215 PLF.Records STLCExtendedRecords T_RCons constr
+R23209:23215 PLF.Records STLCExtendedRecords T_RCons constr
+prf 23278:23289 STLCExtendedRecords preservation
+binder 23300:23300 <> t:127
+binder 23302:23303 <> t':128
+binder 23305:23305 <> T:129
+R23327:23333 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R23315:23319 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R23321:23325 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R23310:23314 PLF.Maps <> empty def
+R23320:23320 PLF.Records <> t:127 var
+R23326:23326 PLF.Records <> T:129 var
+R23342:23348 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R23335:23339 PLF.Records STLCExtendedRecords :::x_'-->'_x not
+R23334:23334 PLF.Records <> t:127 var
+R23340:23341 PLF.Records <> t':128 var
+R23354:23358 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R23361:23365 PLF.Records STLCExtendedRecords :::x_'|--'_x_'\in'_x not
+R23349:23353 PLF.Maps <> empty def
+R23359:23360 PLF.Records <> t':128 var
+R23366:23366 PLF.Records <> T:129 var
+R23443:23447 PLF.Maps <> empty def
+R23443:23447 PLF.Maps <> empty def
+R23626:23654 PLF.Records STLCExtendedRecords substitution_preserves_typing thm
+R23626:23654 PLF.Records STLCExtendedRecords substitution_preserves_typing thm
+R24330:24350 PLF.Records STLCExtendedRecords lookup_field_in_value thm
+R24330:24350 PLF.Records STLCExtendedRecords lookup_field_in_value thm
+R24918:24924 PLF.Records STLCExtendedRecords T_RCons constr
+R24918:24924 PLF.Records STLCExtendedRecords T_RCons constr
+R24936:24959 PLF.Records STLCExtendedRecords step_preserves_record_tm thm
+R24936:24959 PLF.Records STLCExtendedRecords step_preserves_record_tm thm
+R24974:24992 PLF.Records STLCExtendedRecords <> mod

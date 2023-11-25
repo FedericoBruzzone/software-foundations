@@ -1,0 +1,1641 @@
+DIGEST 804f604ecbcd269f01b9bae43ae410e2
+FPLF.Hoare2
+R143:156 Coq.Strings.String <> <> lib
+R183:186 PLF.Maps <> <> lib
+R213:221 Coq.Bool.Bool <> <> lib
+R248:258 Coq.Arith.Arith <> <> lib
+R285:295 Coq.Arith.EqNat <> <> lib
+R322:335 Coq.Arith.PeanoNat <> <> lib
+R345:347 Coq.Arith.PeanoNat Nat <> mod
+R374:376 Coq.micromega.Lia <> <> lib
+R403:405 PLF.Imp <> <> lib
+R432:436 PLF.Hoare <> <> lib
+def 482:493 <> FILL_IN_HERE
+R498:499 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R504:505 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R500:503 Coq.Init.Logic <> True ind
+def 12186:12200 <> reduce_to_zero'
+R12204:12206 PLF.Imp <> com ind
+R12213:12215 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R12258:12260 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R12216:12221 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R12228:12238 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R12249:12257 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R12223:12226 PLF.Imp <> :com::x_'<>'_x not
+R12222:12222 PLF.Imp <> X def
+R12240:12243 PLF.Imp <> :com:com_scope:x_':='_x not
+R12239:12239 PLF.Imp <> X def
+R12245:12247 PLF.Imp <> :com::x_'-'_x not
+R12244:12244 PLF.Imp <> X def
+prf 12272:12294 <> reduce_to_zero_correct'
+R12300:12301 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R12306:12312 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R12328:12332 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R12338:12339 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R12302:12305 Coq.Init.Logic <> True ind
+R12313:12327 PLF.Hoare2 <> reduce_to_zero' def
+R12334:12336 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R12333:12333 PLF.Imp <> X def
+R12358:12372 PLF.Hoare2 <> reduce_to_zero' def
+R12474:12495 PLF.Hoare <> hoare_consequence_post thm
+R12474:12495 PLF.Hoare <> hoare_consequence_post thm
+R12508:12518 PLF.Hoare <> hoare_while thm
+R12508:12518 PLF.Hoare <> hoare_while thm
+R12633:12653 PLF.Hoare <> hoare_consequence_pre thm
+R12633:12653 PLF.Hoare <> hoare_consequence_pre thm
+R12670:12679 PLF.Hoare <> hoare_asgn thm
+R12670:12679 PLF.Hoare <> hoare_asgn thm
+R12751:12758 PLF.Hoare <> assn_sub def
+R12761:12765 PLF.Hoare <> assert_implies def
+R12797:12797 Coq.Init.Logic <> I constr
+R12797:12797 Coq.Init.Logic <> I constr
+R12892:12896 PLF.Hoare <> bassn def
+R12946:12963 Coq.Bool.Bool <> not_true_iff_false thm
+R12946:12963 Coq.Bool.Bool <> not_true_iff_false thm
+R12946:12963 Coq.Bool.Bool <> not_true_iff_false thm
+R12992:13005 Coq.Bool.Bool <> negb_false_iff thm
+R12992:13005 Coq.Bool.Bool <> negb_false_iff thm
+R12992:13005 Coq.Bool.Bool <> negb_false_iff thm
+R13032:13037 Coq.Arith.PeanoNat Nat eqb_eq thm
+R13032:13037 Coq.Arith.PeanoNat Nat eqb_eq thm
+R13853:13866 PLF.Hoare <> assert_implies def
+R13878:13879 PLF.Hoare <> ap def
+R13894:13896 PLF.Hoare <> ap2 def
+R13913:13917 PLF.Hoare <> bassn def
+R13932:13936 PLF.Imp <> beval def
+R13951:13955 PLF.Imp <> aeval def
+R13972:13979 PLF.Hoare <> assn_sub def
+R14068:14079 PLF.Maps <> t_update_neq prfax
+R14030:14040 PLF.Maps <> t_update_eq prfax
+R14173:14176 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R14173:14176 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R14246:14263 Coq.Bool.Bool <> not_true_iff_false thm
+R14288:14305 Coq.Bool.Bool <> not_false_iff_true thm
+R14330:14342 Coq.Bool.Bool <> negb_true_iff thm
+R14367:14380 Coq.Bool.Bool <> negb_false_iff thm
+R14405:14410 Coq.Arith.PeanoNat Nat eqb_eq thm
+R14435:14441 Coq.Arith.PeanoNat Nat eqb_neq thm
+R14466:14472 Coq.Arith.Compare_dec <> leb_iff syndef
+R14497:14508 Coq.Arith.Compare_dec <> leb_iff_conv thm
+R14584:14588 PLF.Imp <> state def
+R14584:14588 PLF.Imp <> state def
+R14642:14644 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14642:14644 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14711:14713 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R14711:14713 Coq.Init.Logic <> ::type_scope:x_'='_x not
+prf 14884:14908 <> reduce_to_zero_correct'''
+R14914:14915 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R14920:14926 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R14942:14946 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R14952:14953 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R14916:14919 Coq.Init.Logic <> True ind
+R14927:14941 PLF.Hoare2 <> reduce_to_zero' def
+R14948:14950 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R14947:14947 PLF.Imp <> X def
+R14972:14986 PLF.Hoare2 <> reduce_to_zero' def
+R14998:15019 PLF.Hoare <> hoare_consequence_post thm
+R14998:15019 PLF.Hoare <> hoare_consequence_post thm
+R15032:15042 PLF.Hoare <> hoare_while thm
+R15032:15042 PLF.Hoare <> hoare_while thm
+R15058:15078 PLF.Hoare <> hoare_consequence_pre thm
+R15058:15078 PLF.Hoare <> hoare_consequence_pre thm
+R15095:15104 PLF.Hoare <> hoare_asgn thm
+R15095:15104 PLF.Hoare <> hoare_asgn thm
+ind 18969:18972 <> dcom
+constr 18986:18991 <> DCSkip
+constr 19032:19036 <> DCSeq
+constr 19071:19076 <> DCAsgn
+constr 19143:19146 <> DCIf
+constr 19301:19307 <> DCWhile
+constr 19416:19420 <> DCPre
+constr 19473:19478 <> DCPost
+R18998:19006 PLF.Hoare <> Assertion def
+binder 18994:18994 <> Q:3
+R19047:19050 PLF.Hoare2 <> dcom:1 ind
+binder 19039:19040 <> d1:4
+binder 19042:19043 <> d2:5
+R19083:19088 Coq.Strings.String <> string ind
+binder 19079:19079 <> X:6
+R19096:19099 PLF.Imp <> aexp ind
+binder 19092:19092 <> a:7
+R19107:19115 PLF.Hoare <> Assertion def
+binder 19103:19103 <> Q:8
+R19153:19156 PLF.Imp <> bexp ind
+binder 19149:19149 <> b:9
+R19165:19173 PLF.Hoare <> Assertion def
+binder 19160:19161 <> P1:10
+R19182:19185 PLF.Hoare2 <> dcom:1 ind
+binder 19177:19178 <> d1:11
+R19201:19209 PLF.Hoare <> Assertion def
+binder 19196:19197 <> P2:12
+R19218:19221 PLF.Hoare2 <> dcom:1 ind
+binder 19213:19214 <> d2:13
+R19229:19237 PLF.Hoare <> Assertion def
+binder 19225:19225 <> Q:14
+R19314:19317 PLF.Imp <> bexp ind
+binder 19310:19310 <> b:15
+R19325:19333 PLF.Hoare <> Assertion def
+binder 19321:19321 <> P:16
+R19341:19344 PLF.Hoare2 <> dcom:1 ind
+binder 19337:19337 <> d:17
+R19362:19370 PLF.Hoare <> Assertion def
+binder 19358:19358 <> Q:18
+R19427:19435 PLF.Hoare <> Assertion def
+binder 19423:19423 <> P:19
+R19443:19446 PLF.Hoare2 <> dcom:1 ind
+binder 19439:19439 <> d:20
+R19485:19488 PLF.Hoare2 <> dcom:1 ind
+binder 19481:19481 <> d:21
+R19496:19504 PLF.Hoare <> Assertion def
+binder 19492:19492 <> Q:22
+ind 19676:19684 <> decorated
+constr 19700:19708 <> Decorated
+R19721:19724 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R19712:19720 PLF.Hoare <> Assertion def
+R19729:19732 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R19725:19728 PLF.Hoare2 <> dcom ind
+R19733:19741 PLF.Hoare2 <> decorated:23 ind
+R19963:19968 PLF.Hoare2 <> DCSkip constr
+not 19936:19936 <> :com:dcom_scope:'skip'_'{{'_x_'}}'
+R20068:20073 PLF.Hoare2 <> DCAsgn constr
+not 20039:20039 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}'
+R20282:20288 PLF.Hoare2 <> DCWhile constr
+not 20223:20223 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}'
+R20503:20506 PLF.Hoare2 <> DCIf constr
+not 20434:20434 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}'
+R20685:20689 PLF.Hoare2 <> DCPre constr
+not 20657:20657 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x
+R20812:20817 PLF.Hoare2 <> DCPost constr
+not 20784:20784 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}'
+R20933:20937 PLF.Hoare2 <> DCSeq constr
+not 20912:20912 <> :com:dcom_scope:x_';'_x
+R21045:21053 PLF.Hoare2 <> Decorated constr
+not 21023:21023 <> :com:dcom_scope:'{{'_x_'}}'_x
+def 21157:21160 <> dec0
+R21167:21169 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R21185:21187 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R21170:21177 PLF.Hoare2 <> :com:dcom_scope:'skip'_'{{'_x_'}}' not
+R21182:21184 PLF.Hoare2 <> :com:dcom_scope:'skip'_'{{'_x_'}}' not
+R21178:21181 Coq.Init.Logic <> True ind
+def 21198:21201 <> dec1
+R21208:21210 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R21268:21270 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R21211:21216 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R21221:21227 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R21232:21235 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R21251:21260 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R21265:21267 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R21217:21220 PLF.Imp <> :com::'true' not
+R21228:21231 Coq.Init.Logic <> True ind
+R21236:21243 PLF.Hoare2 <> :com:dcom_scope:'skip'_'{{'_x_'}}' not
+R21248:21250 PLF.Hoare2 <> :com:dcom_scope:'skip'_'{{'_x_'}}' not
+R21244:21247 Coq.Init.Logic <> True ind
+R21261:21264 Coq.Init.Logic <> True ind
+R21391:21394 PLF.Hoare2 <> dec1 ex
+def 21493:21501 <> dec_while
+R21505:21513 PLF.Hoare2 <> decorated ind
+R21520:21524 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R21692:21694 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R21525:21527 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R21532:21539 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R21528:21531 Coq.Init.Logic <> True ind
+R21674:21683 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R21689:21691 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R21540:21545 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R21552:21579 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R21596:21605 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R21644:21657 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R21672:21673 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R21547:21550 PLF.Imp <> :com::x_'<>'_x not
+R21546:21546 PLF.Imp <> X def
+R21584:21588 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R21595:21595 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R21580:21583 Coq.Init.Logic <> True ind
+R21590:21593 PLF.Hoare <> ::assertion_scope:x_'<>'_x not
+R21589:21589 PLF.Imp <> X def
+R21607:21610 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R21616:21636 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R21641:21643 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R21606:21606 PLF.Imp <> X def
+R21612:21614 PLF.Imp <> :com::x_'-'_x not
+R21611:21611 PLF.Imp <> X def
+R21637:21640 Coq.Init.Logic <> True ind
+R21662:21666 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R21658:21661 Coq.Init.Logic <> True ind
+R21668:21670 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R21667:21667 PLF.Imp <> X def
+R21685:21687 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R21684:21684 PLF.Imp <> X def
+def 21789:21795 <> extract
+R21802:21805 PLF.Hoare2 <> dcom ind
+binder 21798:21798 <> d:25
+R21810:21812 PLF.Imp <> com ind
+R21825:21825 PLF.Hoare2 <> d:25 var
+R21836:21841 PLF.Hoare2 <> DCSkip constr
+R21858:21862 PLF.Imp <> CSkip constr
+R21868:21872 PLF.Hoare2 <> DCSeq constr
+R21890:21893 PLF.Imp <> CSeq constr
+R21896:21902 PLF.Hoare2 <> extract:26 def
+R21909:21915 PLF.Hoare2 <> extract:26 def
+R21925:21930 PLF.Hoare2 <> DCAsgn constr
+R21932:21932 PLF.Imp <> X def
+R21947:21951 PLF.Imp <> CAsgn constr
+R21961:21964 PLF.Hoare2 <> DCIf constr
+R21983:21985 PLF.Imp <> CIf constr
+R21990:21996 PLF.Hoare2 <> extract:26 def
+R22003:22009 PLF.Hoare2 <> extract:26 def
+R22019:22025 PLF.Hoare2 <> DCWhile constr
+R22041:22046 PLF.Imp <> CWhile constr
+R22051:22057 PLF.Hoare2 <> extract:26 def
+R22059:22059 PLF.Hoare2 <> d:25 var
+R22066:22070 PLF.Hoare2 <> DCPre constr
+R22088:22094 PLF.Hoare2 <> extract:26 def
+R22096:22096 PLF.Hoare2 <> d:25 var
+R22102:22107 PLF.Hoare2 <> DCPost constr
+R22124:22130 PLF.Hoare2 <> extract:26 def
+R22132:22132 PLF.Hoare2 <> d:25 var
+def 22153:22163 <> extract_dec
+R22172:22180 PLF.Hoare2 <> decorated ind
+binder 22166:22168 <> dec:28
+R22185:22187 PLF.Imp <> com ind
+R22200:22202 PLF.Hoare2 <> dec:28 var
+R22213:22221 PLF.Hoare2 <> Decorated constr
+R22230:22236 PLF.Hoare2 <> extract def
+def 22256:22271 <> extract_while_ex
+R22300:22304 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R22279:22289 PLF.Hoare2 <> extract_dec def
+R22291:22299 PLF.Hoare2 <> dec_while ex
+R22305:22306 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R22337:22338 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R22307:22312 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22319:22322 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22333:22336 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22314:22317 PLF.Imp <> :com::x_'<>'_x not
+R22313:22313 PLF.Imp <> X def
+R22324:22327 PLF.Imp <> :com:com_scope:x_':='_x not
+R22323:22323 PLF.Imp <> X def
+R22329:22331 PLF.Imp <> :com::x_'-'_x not
+R22328:22328 PLF.Imp <> X def
+R22357:22365 PLF.Hoare2 <> dec_while ex
+def 22511:22517 <> pre_dec
+R22526:22534 PLF.Hoare2 <> decorated ind
+binder 22520:22522 <> dec:30
+R22539:22547 PLF.Hoare <> Assertion def
+R22560:22562 PLF.Hoare2 <> dec:30 var
+R22573:22581 PLF.Hoare2 <> Decorated constr
+def 22609:22612 <> post
+R22619:22622 PLF.Hoare2 <> dcom ind
+binder 22615:22615 <> d:32
+R22627:22635 PLF.Hoare <> Assertion def
+R22648:22648 PLF.Hoare2 <> d:32 var
+R22659:22664 PLF.Hoare2 <> DCSkip constr
+R22692:22696 PLF.Hoare2 <> DCSeq constr
+R22719:22722 PLF.Hoare2 <> post:33 def
+R22731:22736 PLF.Hoare2 <> DCAsgn constr
+R22764:22767 PLF.Hoare2 <> DCIf constr
+R22797:22803 PLF.Hoare2 <> DCWhile constr
+R22830:22834 PLF.Hoare2 <> DCPre constr
+R22857:22860 PLF.Hoare2 <> post:33 def
+R22862:22862 PLF.Hoare2 <> d:32 var
+R22868:22873 PLF.Hoare2 <> DCPost constr
+def 22916:22923 <> post_dec
+R22932:22940 PLF.Hoare2 <> decorated ind
+binder 22926:22928 <> dec:35
+R22945:22953 PLF.Hoare <> Assertion def
+R22966:22968 PLF.Hoare2 <> dec:35 var
+R22979:22987 PLF.Hoare2 <> Decorated constr
+R22996:22999 PLF.Hoare2 <> post def
+def 23019:23031 <> pre_dec_while
+R23052:23054 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R23035:23041 PLF.Hoare2 <> pre_dec def
+R23043:23051 PLF.Hoare2 <> dec_while ex
+R23055:23058 Coq.Init.Logic <> True ind
+def 23095:23108 <> post_dec_while
+R23130:23132 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R23112:23119 PLF.Hoare2 <> post_dec def
+R23121:23129 PLF.Hoare2 <> dec_while ex
+R23135:23137 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R23134:23134 PLF.Imp <> X def
+def 23285:23302 <> outer_triple_valid
+R23311:23319 PLF.Hoare2 <> decorated ind
+binder 23305:23307 <> dec:37
+R23327:23328 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R23340:23342 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R23358:23360 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R23373:23374 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R23329:23335 PLF.Hoare2 <> pre_dec def
+R23337:23339 PLF.Hoare2 <> dec:37 var
+R23354:23354 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R23355:23357 PLF.Hoare2 <> dec:37 var
+R23343:23353 PLF.Hoare2 <> extract_dec def
+R23361:23368 PLF.Hoare2 <> post_dec def
+R23370:23372 PLF.Hoare2 <> dec:37 var
+def 23386:23409 <> dec_while_triple_correct
+R23446:23456 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R23418:23435 PLF.Hoare2 <> outer_triple_valid def
+R23437:23445 PLF.Hoare2 <> dec_while ex
+R23457:23459 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R23464:23474 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R23505:23513 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R23519:23521 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R23460:23463 Coq.Init.Logic <> True ind
+R23475:23480 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R23487:23490 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R23501:23504 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R23482:23485 PLF.Imp <> :com::x_'<>'_x not
+R23481:23481 PLF.Imp <> X def
+R23492:23495 PLF.Imp <> :com:com_scope:x_':='_x not
+R23491:23491 PLF.Imp <> X def
+R23497:23499 PLF.Imp <> :com::x_'-'_x not
+R23496:23496 PLF.Imp <> X def
+R23515:23517 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R23514:23514 PLF.Imp <> X def
+def 26442:26464 <> verification_conditions
+R26471:26479 PLF.Hoare <> Assertion def
+binder 26467:26467 <> P:38
+R26487:26490 PLF.Hoare2 <> dcom ind
+binder 26483:26483 <> d:39
+R26511:26511 PLF.Hoare2 <> d:39 var
+R26522:26527 PLF.Hoare2 <> DCSkip constr
+R26542:26546 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R26541:26541 PLF.Hoare2 <> P:38 var
+R26554:26558 PLF.Hoare2 <> DCSeq constr
+R26603:26612 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R26575:26597 PLF.Hoare2 <> verification_conditions:40 def
+R26599:26599 PLF.Hoare2 <> P:38 var
+R26613:26635 PLF.Hoare2 <> verification_conditions:40 def
+R26638:26641 PLF.Hoare2 <> post def
+R26654:26659 PLF.Hoare2 <> DCAsgn constr
+R26661:26661 PLF.Imp <> X def
+R26678:26682 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R26677:26677 PLF.Hoare2 <> P:38 var
+R26684:26685 PLF.Hoare <> ::hoare_spec_scope:x_'['_x_'|->'_x_']' not
+R26687:26691 PLF.Hoare <> ::hoare_spec_scope:x_'['_x_'|->'_x_']' not
+R26693:26693 PLF.Hoare <> ::hoare_spec_scope:x_'['_x_'|->'_x_']' not
+R26700:26703 PLF.Hoare2 <> DCIf constr
+R26757:26766 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R26731:26731 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R26738:26743 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R26733:26736 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R26732:26732 PLF.Hoare2 <> P:38 var
+R26796:26805 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R26768:26768 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R26777:26782 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R26770:26773 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R26769:26769 PLF.Hoare2 <> P:38 var
+R26774:26775 PLF.Hoare <> ::assertion_scope:'~'_x not
+R26806:26806 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R26820:26824 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R26814:26818 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R26807:26810 PLF.Hoare2 <> post def
+R26825:26825 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R26839:26849 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R26833:26837 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R26826:26829 PLF.Hoare2 <> post def
+R26879:26888 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R26850:26872 PLF.Hoare2 <> verification_conditions:40 def
+R26889:26911 PLF.Hoare2 <> verification_conditions:40 def
+R26923:26929 PLF.Hoare2 <> DCWhile constr
+R27035:27035 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R27048:27058 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R27037:27041 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R27036:27036 PLF.Hoare2 <> P:38 var
+R27042:27045 PLF.Hoare2 <> post def
+R27047:27047 PLF.Hoare2 <> d:39 var
+R27095:27104 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R27060:27060 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R27073:27078 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R27067:27071 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R27061:27064 PLF.Hoare2 <> post def
+R27066:27066 PLF.Hoare2 <> d:39 var
+R27143:27152 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R27106:27106 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R27121:27126 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R27113:27117 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R27107:27110 PLF.Hoare2 <> post def
+R27112:27112 PLF.Hoare2 <> d:39 var
+R27118:27119 PLF.Hoare <> ::assertion_scope:'~'_x not
+R27153:27175 PLF.Hoare2 <> verification_conditions:40 def
+R27183:27183 PLF.Hoare2 <> d:39 var
+R27189:27193 PLF.Hoare2 <> DCPre constr
+R27209:27209 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R27218:27228 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R27211:27215 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R27210:27210 PLF.Hoare2 <> P:38 var
+R27229:27251 PLF.Hoare2 <> verification_conditions:40 def
+R27256:27256 PLF.Hoare2 <> d:39 var
+R27262:27267 PLF.Hoare2 <> DCPost constr
+R27309:27319 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R27332:27332 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R27282:27304 PLF.Hoare2 <> verification_conditions:40 def
+R27308:27308 PLF.Hoare2 <> d:39 var
+R27306:27306 PLF.Hoare2 <> P:38 var
+R27326:27330 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R27320:27323 PLF.Hoare2 <> post def
+R27325:27325 PLF.Hoare2 <> d:39 var
+prf 27536:27555 <> verification_correct
+binder 27566:27566 <> d:42
+binder 27568:27568 <> P:43
+R27600:27603 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R27573:27595 PLF.Hoare2 <> verification_conditions def
+R27597:27597 PLF.Hoare2 <> P:43 var
+R27599:27599 PLF.Hoare2 <> d:42 var
+R27604:27605 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R27607:27609 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R27619:27621 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R27628:27629 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R27606:27606 PLF.Hoare2 <> P:43 var
+R27617:27617 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R27618:27618 PLF.Hoare2 <> d:42 var
+R27610:27616 PLF.Hoare2 <> extract def
+R27622:27625 PLF.Hoare2 <> post def
+R27627:27627 PLF.Hoare2 <> d:42 var
+R27700:27720 PLF.Hoare <> hoare_consequence_pre thm
+R27700:27720 PLF.Hoare <> hoare_consequence_pre thm
+R27737:27746 PLF.Hoare <> hoare_skip thm
+R27737:27746 PLF.Hoare <> hoare_skip thm
+R27821:27829 PLF.Hoare <> hoare_seq thm
+R27821:27829 PLF.Hoare <> hoare_seq thm
+R27918:27938 PLF.Hoare <> hoare_consequence_pre thm
+R27918:27938 PLF.Hoare <> hoare_consequence_pre thm
+R27955:27964 PLF.Hoare <> hoare_asgn thm
+R27955:27964 PLF.Hoare <> hoare_asgn thm
+R28149:28156 PLF.Hoare <> hoare_if thm
+R28149:28156 PLF.Hoare <> hoare_if thm
+R28174:28190 PLF.Hoare <> hoare_consequence thm
+R28174:28190 PLF.Hoare <> hoare_consequence thm
+R28215:28231 PLF.Hoare <> hoare_consequence thm
+R28215:28231 PLF.Hoare <> hoare_consequence thm
+R28318:28334 PLF.Hoare <> hoare_consequence thm
+R28318:28334 PLF.Hoare <> hoare_consequence thm
+R28354:28364 PLF.Hoare <> hoare_while thm
+R28354:28364 PLF.Hoare <> hoare_while thm
+R28378:28398 PLF.Hoare <> hoare_consequence_pre thm
+R28378:28398 PLF.Hoare <> hoare_consequence_pre thm
+R28460:28480 PLF.Hoare <> hoare_consequence_pre thm
+R28460:28480 PLF.Hoare <> hoare_consequence_pre thm
+R28543:28564 PLF.Hoare <> hoare_consequence_post thm
+R28543:28564 PLF.Hoare <> hoare_consequence_post thm
+def 28698:28724 <> verification_conditions_dec
+R28747:28755 PLF.Hoare2 <> decorated ind
+binder 28741:28743 <> dec:44
+R28776:28778 PLF.Hoare2 <> dec:44 var
+R28789:28797 PLF.Hoare2 <> Decorated constr
+R28806:28828 PLF.Hoare2 <> verification_conditions def
+prf 28852:28875 <> verification_correct_dec
+binder 28886:28888 <> dec:46
+R28924:28929 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R28893:28919 PLF.Hoare2 <> verification_conditions_dec def
+R28921:28923 PLF.Hoare2 <> dec:46 var
+R28930:28947 PLF.Hoare2 <> outer_triple_valid def
+R28949:28951 PLF.Hoare2 <> dec:46 var
+R28983:29002 PLF.Hoare2 <> verification_correct thm
+R28983:29002 PLF.Hoare2 <> verification_correct thm
+R29259:29285 PLF.Hoare2 <> verification_conditions_dec def
+R29287:29295 PLF.Hoare2 <> dec_while ex
+def 29900:29911 <> vc_dec_while
+R29915:29941 PLF.Hoare2 <> verification_conditions_dec def
+R29943:29951 PLF.Hoare2 <> dec_while ex
+R30256:30275 PLF.Hoare2 <> verification_correct thm
+prf 30368:30384 <> dec_while_correct
+R30390:30407 PLF.Hoare2 <> outer_triple_valid def
+R30409:30417 PLF.Hoare2 <> dec_while ex
+def 30586:30593 <> swap_dec
+R30600:30602 Coq.Init.Datatypes <> nat ind
+binder 30596:30596 <> m:47
+binder 30598:30598 <> n:48
+R30607:30615 PLF.Hoare2 <> decorated ind
+R30622:30628 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R30863:30867 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R30629:30631 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R30646:30648 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R30637:30640 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R30633:30635 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R30632:30632 PLF.Imp <> X def
+R30636:30636 PLF.Hoare2 <> m:47 var
+R30642:30644 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R30641:30641 PLF.Imp <> Y def
+R30645:30645 PLF.Hoare2 <> n:48 var
+R30773:30778 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R30649:30664 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R30711:30718 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R30692:30695 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R30688:30690 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R30665:30665 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R30671:30675 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R30687:30687 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R30667:30669 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R30666:30666 PLF.Imp <> X def
+R30670:30670 PLF.Imp <> Y def
+R30676:30676 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R30682:30685 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R30678:30680 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R30677:30677 PLF.Imp <> X def
+R30681:30681 PLF.Imp <> Y def
+R30686:30686 PLF.Imp <> Y def
+R30691:30691 PLF.Hoare2 <> n:48 var
+R30707:30709 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R30696:30696 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R30702:30705 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R30698:30700 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R30697:30697 PLF.Imp <> X def
+R30701:30701 PLF.Imp <> Y def
+R30706:30706 PLF.Imp <> Y def
+R30710:30710 PLF.Hoare2 <> m:47 var
+R30720:30723 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R30729:30741 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R30770:30772 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R30719:30719 PLF.Imp <> X def
+R30725:30727 PLF.Imp <> :com::x_'+'_x not
+R30724:30724 PLF.Imp <> X def
+R30728:30728 PLF.Imp <> Y def
+R30757:30760 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R30753:30755 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R30743:30746 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R30752:30752 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R30742:30742 PLF.Imp <> X def
+R30748:30750 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R30747:30747 PLF.Imp <> X def
+R30751:30751 PLF.Imp <> Y def
+R30756:30756 PLF.Hoare2 <> n:48 var
+R30766:30768 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R30762:30764 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R30761:30761 PLF.Imp <> X def
+R30765:30765 PLF.Imp <> Y def
+R30769:30769 PLF.Hoare2 <> m:47 var
+R30823:30828 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R30780:30783 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R30789:30801 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R30820:30822 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R30779:30779 PLF.Imp <> Y def
+R30785:30787 PLF.Imp <> :com::x_'-'_x not
+R30784:30784 PLF.Imp <> X def
+R30788:30788 PLF.Imp <> Y def
+R30811:30814 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R30807:30809 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R30803:30805 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R30802:30802 PLF.Imp <> X def
+R30806:30806 PLF.Imp <> Y def
+R30810:30810 PLF.Hoare2 <> n:48 var
+R30816:30818 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R30815:30815 PLF.Imp <> Y def
+R30819:30819 PLF.Hoare2 <> m:47 var
+R30830:30833 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R30839:30846 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R30861:30862 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R30829:30829 PLF.Imp <> X def
+R30835:30837 PLF.Imp <> :com::x_'-'_x not
+R30834:30834 PLF.Imp <> X def
+R30838:30838 PLF.Imp <> Y def
+R30852:30855 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R30848:30850 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R30847:30847 PLF.Imp <> X def
+R30851:30851 PLF.Hoare2 <> n:48 var
+R30857:30859 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R30856:30856 PLF.Imp <> Y def
+R30860:30860 PLF.Hoare2 <> m:47 var
+prf 30879:30890 <> swap_correct
+binder 30901:30901 <> m:49
+binder 30903:30903 <> n:50
+R30908:30925 PLF.Hoare2 <> outer_triple_valid def
+R30928:30935 PLF.Hoare2 <> swap_dec def
+R30937:30937 PLF.Hoare2 <> m:49 var
+R30939:30939 PLF.Hoare2 <> n:50 var
+def 31079:31101 <> positive_difference_dec
+R31108:31114 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R31503:31507 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R31115:31116 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R31121:31127 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R31117:31120 Coq.Init.Logic <> True ind
+R31128:31130 PLF.Hoare2 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R31137:31154 PLF.Hoare2 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R31169:31171 PLF.Hoare2 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R31297:31318 PLF.Hoare2 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R31336:31338 PLF.Hoare2 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R31464:31478 PLF.Hoare2 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R31501:31502 PLF.Hoare2 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R31132:31135 PLF.Imp <> :com::x_'<='_x not
+R31131:31131 PLF.Imp <> X def
+R31136:31136 PLF.Imp <> Y def
+R31159:31162 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R31155:31158 Coq.Init.Logic <> True ind
+R31164:31167 PLF.Hoare <> ::assertion_scope:x_'<='_x not
+R31163:31163 PLF.Imp <> X def
+R31168:31168 PLF.Imp <> Y def
+R31172:31187 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R31241:31249 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R31203:31225 PLF.Hoare <> ::assertion_scope:x_'\/'_x not
+R31199:31201 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R31188:31188 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R31194:31197 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R31190:31192 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R31189:31189 PLF.Imp <> Y def
+R31193:31193 PLF.Imp <> X def
+R31198:31198 PLF.Imp <> X def
+R31202:31202 PLF.Imp <> Y def
+R31237:31239 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R31226:31226 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R31232:31235 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R31228:31230 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R31227:31227 PLF.Imp <> Y def
+R31231:31231 PLF.Imp <> X def
+R31236:31236 PLF.Imp <> Y def
+R31240:31240 PLF.Imp <> X def
+R31251:31254 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R31260:31272 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R31295:31296 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R31250:31250 PLF.Imp <> Z def
+R31256:31258 PLF.Imp <> :com::x_'-'_x not
+R31255:31255 PLF.Imp <> Y def
+R31259:31259 PLF.Imp <> X def
+R31282:31285 PLF.Hoare <> ::assertion_scope:x_'\/'_x not
+R31278:31280 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R31274:31276 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R31273:31273 PLF.Imp <> Z def
+R31277:31277 PLF.Imp <> X def
+R31281:31281 PLF.Imp <> Y def
+R31291:31293 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R31287:31289 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R31286:31286 PLF.Imp <> Z def
+R31290:31290 PLF.Imp <> Y def
+R31294:31294 PLF.Imp <> X def
+R31323:31326 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R31319:31322 Coq.Init.Logic <> True ind
+R31327:31328 PLF.Hoare <> ::assertion_scope:'~'_x not
+R31335:31335 PLF.Hoare <> ::assertion_scope:'~'_x not
+R31330:31333 PLF.Hoare <> ::assertion_scope:x_'<='_x not
+R31329:31329 PLF.Imp <> X def
+R31334:31334 PLF.Imp <> Y def
+R31339:31354 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R31408:31416 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R31370:31392 PLF.Hoare <> ::assertion_scope:x_'\/'_x not
+R31366:31368 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R31355:31355 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R31361:31364 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R31357:31359 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R31356:31356 PLF.Imp <> X def
+R31360:31360 PLF.Imp <> Y def
+R31365:31365 PLF.Imp <> X def
+R31369:31369 PLF.Imp <> Y def
+R31404:31406 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R31393:31393 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R31399:31402 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R31395:31397 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R31394:31394 PLF.Imp <> X def
+R31398:31398 PLF.Imp <> Y def
+R31403:31403 PLF.Imp <> Y def
+R31407:31407 PLF.Imp <> X def
+R31418:31421 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R31427:31439 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R31462:31463 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R31417:31417 PLF.Imp <> Z def
+R31423:31425 PLF.Imp <> :com::x_'-'_x not
+R31422:31422 PLF.Imp <> X def
+R31426:31426 PLF.Imp <> Y def
+R31449:31452 PLF.Hoare <> ::assertion_scope:x_'\/'_x not
+R31445:31447 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R31441:31443 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R31440:31440 PLF.Imp <> Z def
+R31444:31444 PLF.Imp <> X def
+R31448:31448 PLF.Imp <> Y def
+R31458:31460 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R31454:31456 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R31453:31453 PLF.Imp <> Z def
+R31457:31457 PLF.Imp <> Y def
+R31461:31461 PLF.Imp <> X def
+R31488:31491 PLF.Hoare <> ::assertion_scope:x_'\/'_x not
+R31484:31486 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R31480:31482 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R31479:31479 PLF.Imp <> Z def
+R31483:31483 PLF.Imp <> X def
+R31487:31487 PLF.Imp <> Y def
+R31497:31499 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R31493:31495 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R31492:31492 PLF.Imp <> Z def
+R31496:31496 PLF.Imp <> Y def
+R31500:31500 PLF.Imp <> X def
+prf 31519:31545 <> positive_difference_correct
+R31551:31568 PLF.Hoare2 <> outer_triple_valid def
+R31570:31592 PLF.Hoare2 <> positive_difference_dec def
+def 31996:32012 <> if_minus_plus_dec
+R32019:32023 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R32317:32319 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R32024:32025 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R32030:32034 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R32026:32029 Coq.Init.Logic <> True ind
+R32035:32037 PLF.Hoare2 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R32046:32068 PLF.Hoare2 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R32081:32084 PLF.Hoare2 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R32169:32193 PLF.Hoare2 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R32206:32209 PLF.Hoare2 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R32294:32305 PLF.Hoare2 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R32315:32316 PLF.Hoare2 <> :com:dcom_scope:'if'_x_'then'_'{{'_x_'}}'_x_'else'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R32038:32038 PLF.Imp <> :com:com_scope:'('_x_')' not
+R32045:32045 PLF.Imp <> :com:com_scope:'('_x_')' not
+R32040:32043 PLF.Imp <> :com::x_'<='_x not
+R32039:32039 PLF.Imp <> X def
+R32044:32044 PLF.Imp <> Y def
+R32069:32080 PLF.Hoare2 <> FILL_IN_HERE def
+R32085:32105 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R32118:32125 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R32106:32117 PLF.Hoare2 <> FILL_IN_HERE def
+R32127:32130 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32136:32153 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32166:32168 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32126:32126 PLF.Imp <> Z def
+R32132:32134 PLF.Imp <> :com::x_'-'_x not
+R32131:32131 PLF.Imp <> Y def
+R32135:32135 PLF.Imp <> X def
+R32154:32165 PLF.Hoare2 <> FILL_IN_HERE def
+R32194:32205 PLF.Hoare2 <> FILL_IN_HERE def
+R32210:32230 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R32243:32250 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R32231:32242 PLF.Hoare2 <> FILL_IN_HERE def
+R32252:32255 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32261:32278 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32291:32293 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32251:32251 PLF.Imp <> Y def
+R32257:32259 PLF.Imp <> :com::x_'+'_x not
+R32256:32256 PLF.Imp <> X def
+R32260:32260 PLF.Imp <> Z def
+R32279:32290 PLF.Hoare2 <> FILL_IN_HERE def
+R32307:32309 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R32306:32306 PLF.Imp <> Y def
+R32311:32313 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R32310:32310 PLF.Imp <> X def
+R32314:32314 PLF.Imp <> Z def
+prf 32331:32351 <> if_minus_plus_correct
+R32357:32374 PLF.Hoare2 <> outer_triple_valid def
+R32376:32392 PLF.Hoare2 <> if_minus_plus_dec def
+def 32608:32618 <> div_mod_dec
+R32627:32629 Coq.Init.Datatypes <> nat ind
+binder 32621:32621 <> a:51
+binder 32623:32623 <> b:52
+R32634:32642 PLF.Hoare2 <> decorated ind
+R32649:32653 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R33018:33020 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R32654:32656 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R32661:32664 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R32657:32660 Coq.Init.Logic <> True ind
+R32732:32737 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R32665:32673 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R32686:32693 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R32674:32685 PLF.Hoare2 <> FILL_IN_HERE def
+R32695:32698 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32700:32716 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32729:32731 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32694:32694 PLF.Imp <> X def
+R32699:32699 PLF.Hoare2 <> a:51 var
+R32717:32728 PLF.Hoare2 <> FILL_IN_HERE def
+R32776:32781 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R32739:32742 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32744:32760 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32773:32775 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32738:32738 PLF.Imp <> Y def
+R32761:32772 PLF.Hoare2 <> FILL_IN_HERE def
+R32993:33002 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R33015:33017 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R32782:32787 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R32794:32813 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R32826:32829 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R32964:32977 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R32990:32992 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R32789:32792 PLF.Imp <> :com::x_'<='_x not
+R32788:32788 PLF.Hoare2 <> b:52 var
+R32793:32793 PLF.Imp <> X def
+R32814:32825 PLF.Hoare2 <> FILL_IN_HERE def
+R32914:32921 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R32830:32849 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R32862:32871 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R32850:32861 PLF.Hoare2 <> FILL_IN_HERE def
+R32873:32876 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32882:32898 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32911:32913 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32872:32872 PLF.Imp <> X def
+R32878:32880 PLF.Imp <> :com::x_'-'_x not
+R32877:32877 PLF.Imp <> X def
+R32881:32881 PLF.Hoare2 <> b:52 var
+R32899:32910 PLF.Hoare2 <> FILL_IN_HERE def
+R32923:32926 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32932:32948 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32961:32963 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R32922:32922 PLF.Imp <> Y def
+R32928:32930 PLF.Imp <> :com::x_'+'_x not
+R32927:32927 PLF.Imp <> Y def
+R32949:32960 PLF.Hoare2 <> FILL_IN_HERE def
+R32978:32989 PLF.Hoare2 <> FILL_IN_HERE def
+R33003:33014 PLF.Hoare2 <> FILL_IN_HERE def
+prf 33032:33057 <> div_mod_outer_triple_valid
+binder 33068:33068 <> a:53
+binder 33070:33070 <> b:54
+R33075:33092 PLF.Hoare2 <> outer_triple_valid def
+R33095:33105 PLF.Hoare2 <> div_mod_dec def
+R33107:33107 PLF.Hoare2 <> a:53 var
+R33109:33109 PLF.Hoare2 <> b:54 var
+def 40953:40971 <> subtract_slowly_dec
+R40978:40980 Coq.Init.Datatypes <> nat ind
+binder 40974:40974 <> m:55
+R40988:40990 Coq.Init.Datatypes <> nat ind
+binder 40984:40984 <> p:56
+R40995:41003 PLF.Hoare2 <> decorated ind
+R41010:41014 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41367:41369 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41015:41017 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R41033:41036 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R41023:41027 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R41019:41021 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R41018:41018 PLF.Imp <> X def
+R41022:41022 PLF.Hoare2 <> m:55 var
+R41029:41031 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R41028:41028 PLF.Imp <> Z def
+R41032:41032 PLF.Hoare2 <> p:56 var
+R41037:41045 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R41059:41066 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R41051:41053 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R41047:41049 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41046:41046 PLF.Imp <> Z def
+R41050:41050 PLF.Imp <> X def
+R41055:41057 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41054:41054 PLF.Hoare2 <> p:56 var
+R41058:41058 PLF.Hoare2 <> m:55 var
+R41345:41354 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R41364:41366 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R41067:41072 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R41079:41103 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R41129:41132 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R41306:41319 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R41342:41344 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R41074:41077 PLF.Imp <> :com::x_'<>'_x not
+R41073:41073 PLF.Imp <> X def
+R41117:41120 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R41109:41111 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R41105:41107 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41104:41104 PLF.Imp <> Z def
+R41108:41108 PLF.Imp <> X def
+R41113:41115 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41112:41112 PLF.Hoare2 <> p:56 var
+R41116:41116 PLF.Hoare2 <> m:55 var
+R41122:41127 PLF.Hoare <> ::assertion_scope:x_'<>'_x not
+R41121:41121 PLF.Imp <> X def
+R41248:41257 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R41133:41157 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R41183:41193 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R41175:41177 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R41158:41158 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41164:41168 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41174:41174 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41160:41162 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41159:41159 PLF.Imp <> Z def
+R41170:41172 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41169:41169 PLF.Imp <> X def
+R41179:41181 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41178:41178 PLF.Hoare2 <> p:56 var
+R41182:41182 PLF.Hoare2 <> m:55 var
+R41195:41198 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R41204:41225 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R41245:41247 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R41194:41194 PLF.Imp <> Z def
+R41200:41202 PLF.Imp <> :com::x_'-'_x not
+R41199:41199 PLF.Imp <> Z def
+R41237:41239 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R41227:41230 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41236:41236 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41226:41226 PLF.Imp <> Z def
+R41232:41234 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41231:41231 PLF.Imp <> X def
+R41241:41243 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41240:41240 PLF.Hoare2 <> p:56 var
+R41244:41244 PLF.Hoare2 <> m:55 var
+R41259:41262 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R41268:41289 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R41303:41305 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R41258:41258 PLF.Imp <> X def
+R41264:41266 PLF.Imp <> :com::x_'-'_x not
+R41263:41263 PLF.Imp <> X def
+R41295:41297 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R41291:41293 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41290:41290 PLF.Imp <> Z def
+R41294:41294 PLF.Imp <> X def
+R41299:41301 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41298:41298 PLF.Hoare2 <> p:56 var
+R41302:41302 PLF.Hoare2 <> m:55 var
+R41333:41336 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R41325:41327 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R41321:41323 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41320:41320 PLF.Imp <> Z def
+R41324:41324 PLF.Imp <> X def
+R41329:41331 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41328:41328 PLF.Hoare2 <> p:56 var
+R41332:41332 PLF.Hoare2 <> m:55 var
+R41338:41340 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R41337:41337 PLF.Imp <> X def
+R41356:41358 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R41355:41355 PLF.Imp <> Z def
+R41360:41362 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R41359:41359 PLF.Hoare2 <> p:56 var
+R41363:41363 PLF.Hoare2 <> m:55 var
+prf 41381:41414 <> subtract_slowly_outer_triple_valid
+binder 41425:41425 <> m:57
+binder 41427:41427 <> p:58
+R41432:41449 PLF.Hoare2 <> outer_triple_valid def
+R41452:41470 PLF.Hoare2 <> subtract_slowly_dec ex
+R41472:41472 PLF.Hoare2 <> m:57 var
+R41474:41474 PLF.Hoare2 <> p:58 var
+def 42032:42050 <> slow_assignment_dec
+R42057:42059 Coq.Init.Datatypes <> nat ind
+binder 42053:42053 <> m:59
+R42064:42072 PLF.Hoare2 <> decorated ind
+R42079:42085 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R42471:42475 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R42086:42088 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R42094:42103 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R42090:42092 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R42089:42089 PLF.Imp <> X def
+R42093:42093 PLF.Hoare2 <> m:59 var
+R42192:42200 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R42149:42176 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R42189:42191 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R42105:42108 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R42110:42133 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R42146:42148 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R42104:42104 PLF.Imp <> Y def
+R42134:42145 PLF.Hoare2 <> FILL_IN_HERE def
+R42177:42188 PLF.Hoare2 <> FILL_IN_HERE def
+R42451:42462 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R42468:42470 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R42201:42206 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R42213:42239 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R42252:42255 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R42418:42435 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R42448:42450 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R42208:42211 PLF.Imp <> :com::x_'<>'_x not
+R42207:42207 PLF.Imp <> X def
+R42240:42251 PLF.Hoare2 <> FILL_IN_HERE def
+R42357:42368 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R42256:42282 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R42295:42307 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R42283:42294 PLF.Hoare2 <> FILL_IN_HERE def
+R42309:42312 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R42318:42341 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R42354:42356 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R42308:42308 PLF.Imp <> X def
+R42314:42316 PLF.Imp <> :com::x_'-'_x not
+R42313:42313 PLF.Imp <> X def
+R42342:42353 PLF.Hoare2 <> FILL_IN_HERE def
+R42370:42373 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R42379:42402 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R42415:42417 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R42369:42369 PLF.Imp <> Y def
+R42375:42377 PLF.Imp <> :com::x_'+'_x not
+R42374:42374 PLF.Imp <> Y def
+R42403:42414 PLF.Hoare2 <> FILL_IN_HERE def
+R42436:42447 PLF.Hoare2 <> FILL_IN_HERE def
+R42464:42466 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R42463:42463 PLF.Imp <> Y def
+R42467:42467 PLF.Hoare2 <> m:59 var
+prf 42487:42501 <> slow_assignment
+binder 42512:42512 <> m:60
+R42517:42534 PLF.Hoare2 <> outer_triple_valid def
+R42537:42555 PLF.Hoare2 <> slow_assignment_dec ex
+R42557:42557 PLF.Hoare2 <> m:60 var
+def 43026:43031 <> parity
+binder 43033:43033 <> x:61
+R43046:43046 PLF.Hoare2 <> x:61 var
+R43079:43079 Coq.Init.Datatypes <> S constr
+R43082:43082 Coq.Init.Datatypes <> S constr
+R43091:43096 PLF.Hoare2 <> parity:62 def
+def 44959:44968 <> parity_dec
+R44973:44975 Coq.Init.Datatypes <> nat ind
+binder 44971:44971 <> m:64
+R44980:44988 PLF.Hoare2 <> decorated ind
+R44995:44999 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R45242:45244 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R45000:45002 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R45008:45011 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R45004:45006 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R45003:45003 PLF.Imp <> X def
+R45007:45007 PLF.Hoare2 <> m:64 var
+R45012:45020 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R45033:45040 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R45021:45032 PLF.Hoare2 <> FILL_IN_HERE def
+R45217:45226 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R45239:45241 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R45041:45046 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R45053:45077 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R45090:45093 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R45188:45201 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R45214:45216 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R45048:45051 PLF.Imp <> :com::x_'<='_x not
+R45052:45052 PLF.Imp <> X def
+R45078:45089 PLF.Hoare2 <> FILL_IN_HERE def
+R45094:45118 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R45131:45140 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R45119:45130 PLF.Hoare2 <> FILL_IN_HERE def
+R45142:45145 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R45151:45172 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R45185:45187 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R45141:45141 PLF.Imp <> X def
+R45147:45149 PLF.Imp <> :com::x_'-'_x not
+R45146:45146 PLF.Imp <> X def
+R45173:45184 PLF.Hoare2 <> FILL_IN_HERE def
+R45202:45213 PLF.Hoare2 <> FILL_IN_HERE def
+R45228:45230 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R45227:45227 PLF.Imp <> X def
+R45231:45236 PLF.Hoare2 <> parity def
+R45238:45238 PLF.Hoare2 <> m:64 var
+prf 45391:45401 <> parity_ge_2
+binder 45412:45412 <> x:65
+R45423:45428 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R45418:45421 Coq.Init.Peano <> ::nat_scope:x_'<='_x not
+R45422:45422 PLF.Hoare2 <> x:65 var
+R45443:45445 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R45429:45434 PLF.Hoare2 <> parity def
+R45438:45440 Coq.Init.Nat <> ::nat_scope:x_'-'_x not
+R45437:45437 PLF.Hoare2 <> x:65 var
+R45446:45451 PLF.Hoare2 <> parity def
+R45453:45453 PLF.Hoare2 <> x:65 var
+R45557:45563 Coq.Arith.PeanoNat Nat sub_0_r thm
+R45557:45563 Coq.Arith.PeanoNat Nat sub_0_r thm
+R45557:45563 Coq.Arith.PeanoNat Nat sub_0_r thm
+prf 45591:45601 <> parity_lt_2
+binder 45612:45612 <> x:66
+R45625:45630 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R45617:45618 Coq.Init.Logic <> ::type_scope:'~'_x not
+R45620:45623 Coq.Init.Peano <> ::nat_scope:x_'<='_x not
+R45624:45624 PLF.Hoare2 <> x:66 var
+R45639:45641 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R45631:45636 PLF.Hoare2 <> parity def
+R45638:45638 PLF.Hoare2 <> x:66 var
+R45642:45642 PLF.Hoare2 <> x:66 var
+prf 45759:45783 <> parity_outer_triple_valid
+binder 45794:45794 <> m:67
+R45799:45816 PLF.Hoare2 <> outer_triple_valid def
+R45819:45828 PLF.Hoare2 <> parity_dec def
+R45830:45830 PLF.Hoare2 <> m:67 var
+def 48745:48752 <> sqrt_dec
+R48757:48759 Coq.Init.Datatypes <> nat ind
+binder 48755:48755 <> m:68
+R48764:48772 PLF.Hoare2 <> decorated ind
+R48779:48785 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R49118:49122 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R48786:48788 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R48794:48797 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R48790:48792 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R48789:48789 PLF.Imp <> X def
+R48793:48793 PLF.Hoare2 <> m:68 var
+R48875:48882 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R48798:48808 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R48821:48830 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R48809:48820 PLF.Hoare2 <> FILL_IN_HERE def
+R48832:48835 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R48837:48859 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R48872:48874 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R48831:48831 PLF.Imp <> Z def
+R48860:48871 PLF.Hoare2 <> FILL_IN_HERE def
+R49080:49091 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R49115:49117 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R48883:48888 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R48907:48932 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R48945:48948 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R49047:49064 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R49077:49079 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R48889:48889 PLF.Imp <> :com:com_scope:'('_x_')' not
+R48906:48906 PLF.Imp <> :com:com_scope:'('_x_')' not
+R48901:48904 PLF.Imp <> :com::x_'<='_x not
+R48895:48895 PLF.Imp <> :com::x_'*'_x not
+R48890:48890 PLF.Imp <> :com:com_scope:'('_x_')' not
+R48894:48894 PLF.Imp <> :com:com_scope:'('_x_')' not
+R48892:48892 PLF.Imp <> :com::x_'+'_x not
+R48891:48891 PLF.Imp <> Z def
+R48896:48896 PLF.Imp <> :com:com_scope:'('_x_')' not
+R48900:48900 PLF.Imp <> :com:com_scope:'('_x_')' not
+R48898:48898 PLF.Imp <> :com::x_'+'_x not
+R48897:48897 PLF.Imp <> Z def
+R48905:48905 PLF.Imp <> X def
+R48933:48944 PLF.Hoare2 <> FILL_IN_HERE def
+R48949:48974 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R48987:48998 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R48975:48986 PLF.Hoare2 <> FILL_IN_HERE def
+R49000:49003 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R49009:49031 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R49044:49046 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R48999:48999 PLF.Imp <> Z def
+R49005:49007 PLF.Imp <> :com::x_'+'_x not
+R49004:49004 PLF.Imp <> Z def
+R49032:49043 PLF.Hoare2 <> FILL_IN_HERE def
+R49065:49076 PLF.Hoare2 <> FILL_IN_HERE def
+R49098:49101 PLF.Hoare <> ::assertion_scope:x_'/\'_x not
+R49095:49096 PLF.Hoare <> ::assertion_scope:x_'<='_x not
+R49093:49093 PLF.Hoare <> ::assertion_scope:x_'*'_x not
+R49092:49092 PLF.Imp <> Z def
+R49094:49094 PLF.Imp <> Z def
+R49097:49097 PLF.Hoare2 <> m:68 var
+R49103:49103 PLF.Hoare <> ::assertion_scope:x_'<'_x not
+R49102:49102 PLF.Hoare2 <> m:68 var
+R49104:49104 PLF.Hoare <> ::assertion_scope:x_'*'_x not
+R49108:49110 PLF.Hoare <> ::assertion_scope:x_'*'_x not
+R49114:49114 PLF.Hoare <> ::assertion_scope:x_'*'_x not
+R49106:49106 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R49105:49105 PLF.Imp <> Z def
+R49112:49112 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R49111:49111 PLF.Imp <> Z def
+prf 49134:49145 <> sqrt_correct
+binder 49156:49156 <> m:69
+R49161:49178 PLF.Hoare2 <> outer_triple_valid def
+R49181:49188 PLF.Hoare2 <> sqrt_dec def
+R49190:49190 PLF.Hoare2 <> m:69 var
+R52430:52433 Coq.Arith.Factorial <> fact def
+def 53783:53795 <> factorial_dec
+R53800:53802 Coq.Init.Datatypes <> nat ind
+binder 53798:53798 <> m:70
+R53807:53815 PLF.Hoare2 <> decorated ind
+prf 53911:53927 <> factorial_correct
+binder 53937:53937 <> m:71
+R53942:53959 PLF.Hoare2 <> outer_triple_valid def
+R53962:53974 PLF.Hoare2 <> factorial_dec prfax
+R53976:53976 PLF.Hoare2 <> m:71 var
+def 54674:54684 <> minimum_dec
+R54693:54695 Coq.Init.Datatypes <> nat ind
+binder 54687:54687 <> a:72
+binder 54689:54689 <> b:73
+R54700:54708 PLF.Hoare2 <> decorated ind
+R54715:54721 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R55211:55215 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R54722:54724 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R54729:54732 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R54725:54728 Coq.Init.Logic <> True ind
+R54804:54811 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R54733:54743 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R54756:54765 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R54744:54755 PLF.Hoare2 <> FILL_IN_HERE def
+R54767:54770 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R54772:54788 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R54801:54803 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R54766:54766 PLF.Imp <> X def
+R54771:54771 PLF.Hoare2 <> a:72 var
+R54789:54800 PLF.Hoare2 <> FILL_IN_HERE def
+R54850:54857 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R54813:54816 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R54818:54834 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R54847:54849 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R54812:54812 PLF.Imp <> Y def
+R54817:54817 PLF.Hoare2 <> b:73 var
+R54835:54846 PLF.Hoare2 <> FILL_IN_HERE def
+R54896:54903 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R54859:54862 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R54864:54880 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R54893:54895 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R54858:54858 PLF.Imp <> Z def
+R54881:54892 PLF.Hoare2 <> FILL_IN_HERE def
+R55185:55196 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R55208:55210 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R54904:54909 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R54926:54945 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R54958:54961 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R55152:55169 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R55182:55184 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R54916:54919 PLF.Imp <> :com::x_'&&'_x not
+R54911:54914 PLF.Imp <> :com::x_'<>'_x not
+R54910:54910 PLF.Imp <> X def
+R54921:54924 PLF.Imp <> :com::x_'<>'_x not
+R54920:54920 PLF.Imp <> Y def
+R54946:54957 PLF.Hoare2 <> FILL_IN_HERE def
+R55048:55057 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R54962:54981 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R54994:55005 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R54982:54993 PLF.Hoare2 <> FILL_IN_HERE def
+R55007:55010 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R55016:55032 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R55045:55047 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R55006:55006 PLF.Imp <> X def
+R55012:55014 PLF.Imp <> :com::x_'-'_x not
+R55011:55011 PLF.Imp <> X def
+R55033:55044 PLF.Hoare2 <> FILL_IN_HERE def
+R55100:55109 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R55059:55062 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R55068:55084 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R55097:55099 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R55058:55058 PLF.Imp <> Y def
+R55064:55066 PLF.Imp <> :com::x_'-'_x not
+R55063:55063 PLF.Imp <> Y def
+R55085:55096 PLF.Hoare2 <> FILL_IN_HERE def
+R55111:55114 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R55120:55136 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R55149:55151 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R55110:55110 PLF.Imp <> Z def
+R55116:55118 PLF.Imp <> :com::x_'+'_x not
+R55115:55115 PLF.Imp <> Z def
+R55137:55148 PLF.Hoare2 <> FILL_IN_HERE def
+R55170:55181 PLF.Hoare2 <> FILL_IN_HERE def
+R55198:55200 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R55197:55197 PLF.Imp <> Z def
+R55201:55203 Coq.Arith.PeanoNat Nat min def
+R55205:55205 PLF.Hoare2 <> a:72 var
+R55207:55207 PLF.Hoare2 <> b:73 var
+prf 55227:55241 <> minimum_correct
+binder 55252:55252 <> a:74
+binder 55254:55254 <> b:75
+R55259:55276 PLF.Hoare2 <> outer_triple_valid def
+R55279:55289 PLF.Hoare2 <> minimum_dec def
+R55291:55291 PLF.Hoare2 <> a:74 var
+R55293:55293 PLF.Hoare2 <> b:75 var
+def 55833:55845 <> two_loops_dec
+R55856:55858 Coq.Init.Datatypes <> nat ind
+binder 55848:55848 <> a:76
+binder 55850:55850 <> b:77
+binder 55852:55852 <> c:78
+R55863:55871 PLF.Hoare2 <> decorated ind
+R55878:55884 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R56664:56668 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R55885:55887 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R55892:55895 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R55888:55891 Coq.Init.Logic <> True ind
+R55973:55980 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R55896:55906 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R55919:55928 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R55907:55918 PLF.Hoare2 <> FILL_IN_HERE def
+R55930:55933 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R55935:55957 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R55970:55972 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R55929:55929 PLF.Imp <> X def
+R55958:55969 PLF.Hoare2 <> FILL_IN_HERE def
+R56025:56032 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R55982:55985 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R55987:56009 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56022:56024 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R55981:55981 PLF.Imp <> Y def
+R56010:56021 PLF.Hoare2 <> FILL_IN_HERE def
+R56077:56084 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R56034:56037 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56039:56061 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56074:56076 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56033:56033 PLF.Imp <> Z def
+R56038:56038 PLF.Hoare2 <> c:78 var
+R56062:56073 PLF.Hoare2 <> FILL_IN_HERE def
+R56385:56392 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R56343:56369 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R56382:56384 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R56085:56090 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R56097:56122 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R56135:56138 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R56295:56327 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R56340:56342 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R56092:56095 PLF.Imp <> :com::x_'<>'_x not
+R56091:56091 PLF.Imp <> X def
+R56096:56096 PLF.Hoare2 <> a:76 var
+R56123:56134 PLF.Hoare2 <> FILL_IN_HERE def
+R56237:56246 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R56139:56164 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R56177:56188 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R56165:56176 PLF.Hoare2 <> FILL_IN_HERE def
+R56190:56193 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56199:56221 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56234:56236 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56189:56189 PLF.Imp <> X def
+R56195:56197 PLF.Imp <> :com::x_'+'_x not
+R56194:56194 PLF.Imp <> X def
+R56222:56233 PLF.Hoare2 <> FILL_IN_HERE def
+R56248:56251 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56257:56279 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56292:56294 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56247:56247 PLF.Imp <> Z def
+R56253:56255 PLF.Imp <> :com::x_'+'_x not
+R56252:56252 PLF.Imp <> Z def
+R56280:56291 PLF.Hoare2 <> FILL_IN_HERE def
+R56328:56339 PLF.Hoare2 <> FILL_IN_HERE def
+R56370:56381 PLF.Hoare2 <> FILL_IN_HERE def
+R56636:56647 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R56661:56663 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R56393:56398 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R56405:56430 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R56443:56446 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R56603:56620 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R56633:56635 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R56400:56403 PLF.Imp <> :com::x_'<>'_x not
+R56399:56399 PLF.Imp <> Y def
+R56404:56404 PLF.Hoare2 <> b:77 var
+R56431:56442 PLF.Hoare2 <> FILL_IN_HERE def
+R56545:56554 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R56447:56472 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R56485:56496 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R56473:56484 PLF.Hoare2 <> FILL_IN_HERE def
+R56498:56501 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56507:56529 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56542:56544 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56497:56497 PLF.Imp <> Y def
+R56503:56505 PLF.Imp <> :com::x_'+'_x not
+R56502:56502 PLF.Imp <> Y def
+R56530:56541 PLF.Hoare2 <> FILL_IN_HERE def
+R56556:56559 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56565:56587 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56600:56602 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R56555:56555 PLF.Imp <> Z def
+R56561:56563 PLF.Imp <> :com::x_'+'_x not
+R56560:56560 PLF.Imp <> Z def
+R56588:56599 PLF.Hoare2 <> FILL_IN_HERE def
+R56621:56632 PLF.Hoare2 <> FILL_IN_HERE def
+R56649:56651 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R56648:56648 PLF.Imp <> Z def
+R56657:56659 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R56653:56655 PLF.Hoare <> ::assertion_scope:x_'+'_x not
+R56652:56652 PLF.Hoare2 <> a:76 var
+R56656:56656 PLF.Hoare2 <> b:77 var
+R56660:56660 PLF.Hoare2 <> c:78 var
+prf 56680:56688 <> two_loops
+binder 56699:56699 <> a:79
+binder 56701:56701 <> b:80
+binder 56703:56703 <> c:81
+R56708:56725 PLF.Hoare2 <> outer_triple_valid def
+R56728:56740 PLF.Hoare2 <> two_loops_dec def
+R56742:56742 PLF.Hoare2 <> a:79 var
+R56744:56744 PLF.Hoare2 <> b:80 var
+R56746:56746 PLF.Hoare2 <> c:81 var
+def 57247:57250 <> pow2
+binder 57252:57252 <> n:82
+R57265:57265 PLF.Hoare2 <> n:82 var
+R57287:57287 Coq.Init.Datatypes <> S constr
+R57296:57299 Coq.Init.Nat <> ::nat_scope:x_'*'_x not
+R57307:57307 Coq.Init.Nat <> ::nat_scope:x_'*'_x not
+R57300:57303 PLF.Hoare2 <> pow2:83 def
+def 57328:57336 <> dpow2_dec
+R57343:57345 Coq.Init.Datatypes <> nat ind
+binder 57339:57339 <> n:85
+R57353:57359 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R57862:57866 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R57360:57362 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R57367:57370 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R57363:57366 Coq.Init.Logic <> True ind
+R57444:57451 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R57371:57381 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R57394:57403 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R57382:57393 PLF.Hoare2 <> FILL_IN_HERE def
+R57405:57408 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57410:57428 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57441:57443 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57404:57404 PLF.Imp <> X def
+R57429:57440 PLF.Hoare2 <> FILL_IN_HERE def
+R57492:57499 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R57453:57456 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57458:57476 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57489:57491 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57452:57452 PLF.Imp <> Y def
+R57477:57488 PLF.Hoare2 <> FILL_IN_HERE def
+R57540:57547 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R57501:57504 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57506:57524 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57537:57539 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57500:57500 PLF.Imp <> Z def
+R57525:57536 PLF.Hoare2 <> FILL_IN_HERE def
+R57829:57840 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R57859:57861 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R57548:57553 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R57560:57581 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R57594:57597 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R57796:57813 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R57826:57828 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R57555:57558 PLF.Imp <> :com::x_'<>'_x not
+R57554:57554 PLF.Imp <> X def
+R57559:57559 PLF.Hoare2 <> n:85 var
+R57582:57593 PLF.Hoare2 <> FILL_IN_HERE def
+R57688:57697 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R57598:57619 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R57632:57643 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R57620:57631 PLF.Hoare2 <> FILL_IN_HERE def
+R57645:57648 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57654:57672 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57685:57687 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57644:57644 PLF.Imp <> Z def
+R57650:57652 PLF.Imp <> :com::x_'*'_x not
+R57653:57653 PLF.Imp <> Z def
+R57673:57684 PLF.Hoare2 <> FILL_IN_HERE def
+R57742:57751 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R57699:57702 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57708:57726 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57739:57741 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57698:57698 PLF.Imp <> Y def
+R57704:57706 PLF.Imp <> :com::x_'+'_x not
+R57703:57703 PLF.Imp <> Y def
+R57707:57707 PLF.Imp <> Z def
+R57727:57738 PLF.Hoare2 <> FILL_IN_HERE def
+R57753:57756 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57762:57780 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57793:57795 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R57752:57752 PLF.Imp <> X def
+R57758:57760 PLF.Imp <> :com::x_'+'_x not
+R57757:57757 PLF.Imp <> X def
+R57781:57792 PLF.Hoare2 <> FILL_IN_HERE def
+R57814:57825 PLF.Hoare2 <> FILL_IN_HERE def
+R57842:57844 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R57841:57841 PLF.Imp <> Y def
+R57855:57857 PLF.Hoare <> ::assertion_scope:x_'-'_x not
+R57845:57848 PLF.Hoare2 <> pow2 def
+R57852:57852 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R57851:57851 PLF.Hoare2 <> n:85 var
+prf 57924:57934 <> pow2_plus_1
+binder 57945:57945 <> n:86
+R57960:57962 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R57950:57953 PLF.Hoare2 <> pow2 def
+R57957:57957 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R57956:57956 PLF.Hoare2 <> n:86 var
+R57969:57971 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R57963:57966 PLF.Hoare2 <> pow2 def
+R57968:57968 PLF.Hoare2 <> n:86 var
+R57972:57975 PLF.Hoare2 <> pow2 def
+R57977:57977 PLF.Hoare2 <> n:86 var
+prf 58047:58055 <> pow2_le_1
+binder 58066:58066 <> n:87
+R58075:58078 Coq.Init.Peano <> ::nat_scope:x_'>='_x not
+R58069:58072 PLF.Hoare2 <> pow2 def
+R58074:58074 PLF.Hoare2 <> n:87 var
+prf 58184:58201 <> dpow2_down_correct
+binder 58212:58212 <> n:88
+R58217:58234 PLF.Hoare2 <> outer_triple_valid def
+R58237:58245 PLF.Hoare2 <> dpow2_dec def
+R58247:58247 PLF.Hoare2 <> n:88 var
+def 60275:60279 <> is_wp
+binder 60281:60281 <> P:89
+binder 60283:60283 <> c:90
+binder 60285:60285 <> Q:91
+R60305:60310 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R60292:60293 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R60295:60297 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R60299:60301 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R60303:60304 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R60294:60294 PLF.Hoare2 <> P:89 var
+R60298:60298 PLF.Hoare2 <> c:90 var
+R60302:60302 PLF.Hoare2 <> Q:91 var
+binder 60318:60319 <> P':92
+R60336:60340 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R60349:60349 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R60322:60323 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R60326:60328 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R60330:60332 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R60334:60335 PLF.Hoare <> ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R60324:60325 PLF.Hoare2 <> P':92 var
+R60329:60329 PLF.Hoare2 <> c:90 var
+R60333:60333 PLF.Hoare2 <> Q:91 var
+R60343:60347 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R60341:60342 PLF.Hoare2 <> P':92 var
+R60348:60348 PLF.Hoare2 <> P:89 var
+prf 61072:61084 <> is_wp_example
+R61090:61094 PLF.Hoare2 <> is_wp def
+R61098:61101 PLF.Hoare <> ::assertion_scope:x_'<='_x not
+R61097:61097 PLF.Imp <> Y def
+R61105:61106 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R61117:61118 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R61108:61111 PLF.Imp <> :com:com_scope:x_':='_x not
+R61107:61107 PLF.Imp <> X def
+R61113:61115 PLF.Imp <> :com::x_'+'_x not
+R61112:61112 PLF.Imp <> Y def
+R61122:61125 PLF.Hoare <> ::assertion_scope:x_'<='_x not
+R61121:61121 PLF.Imp <> X def
+prf 61357:61374 <> hoare_asgn_weakest
+binder 61385:61385 <> Q:93
+binder 61387:61387 <> X:94
+binder 61389:61389 <> a:95
+R61394:61398 PLF.Hoare2 <> is_wp def
+R61402:61403 PLF.Hoare <> ::hoare_spec_scope:x_'['_x_'|->'_x_']' not
+R61405:61409 PLF.Hoare <> ::hoare_spec_scope:x_'['_x_'|->'_x_']' not
+R61411:61411 PLF.Hoare <> ::hoare_spec_scope:x_'['_x_'|->'_x_']' not
+R61404:61404 PLF.Hoare2 <> X:94 var
+R61410:61410 PLF.Hoare2 <> a:95 var
+R61401:61401 PLF.Hoare2 <> Q:93 var
+R61414:61416 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R61423:61425 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R61418:61421 PLF.Imp <> :com:com_scope:x_':='_x not
+R61417:61417 PLF.Hoare2 <> X:94 var
+R61422:61422 PLF.Hoare2 <> a:95 var
+R61427:61427 PLF.Hoare2 <> Q:93 var
+mod 61687:61691 <> Himp2
+R61701:61704 PLF.Hoare Himp <> mod
+prf 61714:61732 Himp2 hoare_havoc_weakest
+R61750:61758 PLF.Hoare <> Assertion def
+binder 61744:61744 <> P:96
+binder 61746:61746 <> Q:97
+R61766:61771 Coq.Strings.String <> string ind
+binder 61762:61762 <> X:98
+R61800:61805 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R61777:61779 PLF.Hoare Himp ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R61781:61784 PLF.Hoare Himp ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R61792:61795 PLF.Hoare Himp ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R61797:61799 PLF.Hoare Himp ::hoare_spec_scope:'{{'_x_'}}'_x_'{{'_x_'}}' not
+R61780:61780 PLF.Hoare2 <> P:96 var
+R61785:61790 PLF.Hoare Himp :com::'havoc'_x not
+R61791:61791 PLF.Hoare2 <> X:98 var
+R61796:61796 PLF.Hoare2 <> Q:97 var
+R61807:61811 PLF.Hoare <> ::hoare_spec_scope:x_'->>'_x not
+R61806:61806 PLF.Hoare2 <> P:96 var
+R61812:61820 PLF.Hoare Himp havoc_pre prfax
+R61822:61822 PLF.Hoare2 <> X:98 var
+R61824:61824 PLF.Hoare2 <> Q:97 var
+R61867:61871 PLF.Hoare2 Himp2 <> mod
+def 62262:62264 <> fib
+binder 62266:62266 <> n:99
+R62279:62279 PLF.Hoare2 <> n:99 var
+R62301:62301 Coq.Init.Datatypes <> S constr
+R62358:62358 Coq.Init.Datatypes <> S constr
+R62373:62375 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R62367:62369 PLF.Hoare2 <> fib:100 def
+R62376:62378 PLF.Hoare2 <> fib:100 def
+prf 62530:62536 <> fib_eqn
+binder 62547:62547 <> n:103
+R62557:62562 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R62553:62555 Coq.Init.Peano <> ::nat_scope:x_'>'_x not
+R62552:62552 PLF.Hoare2 <> n:103 var
+R62583:62585 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R62568:62570 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R62563:62565 PLF.Hoare2 <> fib def
+R62567:62567 PLF.Hoare2 <> n:103 var
+R62571:62573 PLF.Hoare2 <> fib def
+R62576:62579 Coq.Arith.PeanoNat Nat pred def
+R62581:62581 PLF.Hoare2 <> n:103 var
+R62586:62588 PLF.Hoare2 <> fib def
+R62592:62594 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R62595:62595 PLF.Hoare2 <> n:103 var
+def 63200:63200 <> T
+R63204:63209 Coq.Strings.String <> string ind
+def 63231:63234 <> dfib
+R63241:63243 Coq.Init.Datatypes <> nat ind
+binder 63237:63237 <> n:104
+R63248:63256 PLF.Hoare2 <> decorated ind
+R63263:63269 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R63819:63824 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R63270:63272 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R63277:63280 PLF.Hoare2 <> :com:dcom_scope:'{{'_x_'}}'_x not
+R63273:63276 Coq.Init.Logic <> True ind
+R63353:63359 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R63281:63291 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R63304:63311 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R63292:63303 PLF.Hoare2 <> FILL_IN_HERE def
+R63313:63316 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63318:63337 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63350:63352 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63312:63312 PLF.Imp <> X def
+R63338:63349 PLF.Hoare2 <> FILL_IN_HERE def
+R63401:63407 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R63361:63364 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63366:63385 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63398:63400 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63360:63360 PLF.Imp <> Y def
+R63386:63397 PLF.Hoare2 <> FILL_IN_HERE def
+R63449:63455 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R63409:63412 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63414:63433 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63446:63448 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63408:63408 PLF.Imp <> Z def
+R63434:63445 PLF.Hoare2 <> FILL_IN_HERE def
+R63795:63806 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R63816:63818 PLF.Hoare2 <> :com:dcom_scope:x_'->>'_'{{'_x_'}}' not
+R63456:63461 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R63472:63496 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R63509:63512 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R63764:63779 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R63792:63794 PLF.Hoare2 <> :com:dcom_scope:'while'_x_'do'_'{{'_x_'}}'_x_'end'_'{{'_x_'}}' not
+R63463:63466 PLF.Imp <> :com::x_'<>'_x not
+R63462:63462 PLF.Imp <> X def
+R63468:63470 PLF.Imp <> :com::x_'+'_x not
+R63471:63471 PLF.Hoare2 <> n:104 var
+R63497:63508 PLF.Hoare2 <> FILL_IN_HERE def
+R63603:63610 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R63513:63537 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R63550:63559 PLF.Hoare2 <> :com:dcom_scope:'->>'_'{{'_x_'}}'_x not
+R63538:63549 PLF.Hoare2 <> FILL_IN_HERE def
+R63561:63564 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63566:63587 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63600:63602 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63560:63560 PLF.Hoare2 <> T def
+R63565:63565 PLF.Imp <> Z def
+R63588:63599 PLF.Hoare2 <> FILL_IN_HERE def
+R63658:63665 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R63612:63615 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63621:63642 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63655:63657 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63611:63611 PLF.Imp <> Z def
+R63617:63619 PLF.Imp <> :com::x_'+'_x not
+R63616:63616 PLF.Imp <> Z def
+R63620:63620 PLF.Imp <> Y def
+R63643:63654 PLF.Hoare2 <> FILL_IN_HERE def
+R63709:63716 PLF.Hoare2 <> :com:dcom_scope:x_';'_x not
+R63667:63670 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63672:63693 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63706:63708 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63666:63666 PLF.Imp <> Y def
+R63671:63671 PLF.Hoare2 <> T def
+R63694:63705 PLF.Hoare2 <> FILL_IN_HERE def
+R63718:63721 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63727:63748 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63761:63763 PLF.Hoare2 <> :com:dcom_scope:x_':='_x_'{{'_x_'}}' not
+R63717:63717 PLF.Imp <> X def
+R63723:63725 PLF.Imp <> :com::x_'+'_x not
+R63726:63726 PLF.Imp <> X def
+R63749:63760 PLF.Hoare2 <> FILL_IN_HERE def
+R63780:63791 PLF.Hoare2 <> FILL_IN_HERE def
+R63808:63810 PLF.Hoare <> ::assertion_scope:x_'='_x not
+R63807:63807 PLF.Imp <> Y def
+R63811:63813 PLF.Hoare2 <> fib def
+R63815:63815 PLF.Hoare2 <> n:104 var
+prf 63836:63847 <> dfib_correct
+binder 63858:63858 <> n:105
+R63863:63880 PLF.Hoare2 <> outer_triple_valid def
+R63883:63886 PLF.Hoare2 <> dfib def
+R63888:63888 PLF.Hoare2 <> n:105 var

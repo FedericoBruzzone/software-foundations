@@ -1,0 +1,2545 @@
+DIGEST 5157e100f8f5f0525621d455c57c64dc
+FPLF.Equiv
+R141:144 PLF.Maps <> <> lib
+R171:179 Coq.Bool.Bool <> <> lib
+R206:216 Coq.Arith.Arith <> <> lib
+R243:250 Coq.Init.Nat <> <> lib
+R277:290 Coq.Arith.PeanoNat <> <> lib
+R300:302 Coq.Arith.PeanoNat Nat <> mod
+R329:339 Coq.Arith.EqNat <> <> lib
+R366:368 Coq.micromega.Lia <> <> lib
+R395:404 Coq.Lists.List <> <> lib
+R414:426 Coq.Lists.List ListNotations <> mod
+R453:482 Coq.Logic.FunctionalExtensionality <> <> lib
+R509:511 PLF.Imp <> <> lib
+def 4342:4347 <> aequiv
+R4358:4361 PLF.Imp <> aexp ind
+binder 4350:4351 <> a1:1
+binder 4353:4354 <> a2:2
+R4389:4393 PLF.Imp <> state def
+binder 4384:4385 <> st:3
+R4412:4414 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4401:4405 PLF.Imp <> aeval def
+R4407:4408 PLF.Equiv <> st:3 var
+R4410:4411 PLF.Equiv <> a1:1 var
+R4415:4419 PLF.Imp <> aeval def
+R4421:4422 PLF.Equiv <> st:3 var
+R4424:4425 PLF.Equiv <> a2:2 var
+def 4440:4445 <> bequiv
+R4456:4459 PLF.Imp <> bexp ind
+binder 4448:4449 <> b1:4
+binder 4451:4452 <> b2:5
+R4487:4491 PLF.Imp <> state def
+binder 4482:4483 <> st:6
+R4510:4512 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R4499:4503 PLF.Imp <> beval def
+R4505:4506 PLF.Equiv <> st:6 var
+R4508:4509 PLF.Equiv <> b1:4 var
+R4513:4517 PLF.Imp <> beval def
+R4519:4520 PLF.Equiv <> st:6 var
+R4522:4523 PLF.Equiv <> b2:5 var
+prf 4632:4645 <> aequiv_example
+R4650:4655 PLF.Equiv <> aequiv def
+R4661:4663 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R4669:4671 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R4665:4667 PLF.Imp <> :com::x_'-'_x not
+R4664:4664 PLF.Imp <> X def
+R4668:4668 PLF.Imp <> X def
+R4677:4679 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R4681:4683 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+prf 4732:4745 <> bequiv_example
+R4750:4755 PLF.Equiv <> bequiv def
+R4761:4763 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R4773:4775 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R4769:4771 PLF.Imp <> :com::x_'='_x not
+R4765:4767 PLF.Imp <> :com::x_'-'_x not
+R4764:4764 PLF.Imp <> X def
+R4768:4768 PLF.Imp <> X def
+R4781:4783 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R4788:4790 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R4784:4787 PLF.Imp <> :com::'true' not
+R4820:4824 PLF.Imp <> beval def
+R4837:4850 PLF.Equiv <> aequiv_example thm
+R4837:4850 PLF.Equiv <> aequiv_example thm
+R4837:4850 PLF.Equiv <> aequiv_example thm
+def 5548:5553 <> cequiv
+R5564:5566 PLF.Imp <> com ind
+binder 5556:5557 <> c1:7
+binder 5559:5560 <> c2:8
+R5598:5602 PLF.Imp <> state def
+binder 5589:5590 <> st:9
+binder 5592:5594 <> st':10
+R5610:5610 Coq.Init.Logic <> ::type_scope:x_'<->'_x not
+R5627:5633 Coq.Init.Logic <> ::type_scope:x_'<->'_x not
+R5650:5650 Coq.Init.Logic <> ::type_scope:x_'<->'_x not
+R5613:5616 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R5619:5623 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R5617:5618 PLF.Equiv <> c1:7 var
+R5611:5612 PLF.Equiv <> st:9 var
+R5624:5626 PLF.Equiv <> st':10 var
+R5636:5639 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R5642:5646 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R5640:5641 PLF.Equiv <> c2:8 var
+R5634:5635 PLF.Equiv <> st:9 var
+R5647:5649 PLF.Equiv <> st':10 var
+def 5665:5671 <> refines
+R5682:5684 PLF.Imp <> com ind
+binder 5674:5675 <> c1:11
+binder 5677:5678 <> c2:12
+R5716:5720 PLF.Imp <> state def
+binder 5707:5708 <> st:13
+binder 5710:5712 <> st':14
+R5728:5728 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5745:5750 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5767:5767 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R5731:5734 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R5737:5741 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R5735:5736 PLF.Equiv <> c1:11 var
+R5729:5730 PLF.Equiv <> st:13 var
+R5742:5744 PLF.Equiv <> st':14 var
+R5753:5756 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R5759:5763 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R5757:5758 PLF.Equiv <> c2:12 var
+R5751:5752 PLF.Equiv <> st:13 var
+R5764:5766 PLF.Equiv <> st':14 var
+prf 6005:6013 <> skip_left
+binder 6024:6024 <> c:15
+R6029:6034 PLF.Equiv <> cequiv def
+R6040:6042 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R6050:6052 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R6047:6048 PLF.Imp <> :com:com_scope:x_';'_x not
+R6043:6046 PLF.Imp <> :com:com_scope:'skip' not
+R6049:6049 PLF.Equiv <> c:15 var
+R6058:6058 PLF.Equiv <> c:15 var
+R6231:6235 PLF.Imp <> E_Seq constr
+R6231:6235 PLF.Imp <> E_Seq constr
+R6258:6263 PLF.Imp <> E_Skip constr
+R6258:6263 PLF.Imp <> E_Skip constr
+prf 6437:6446 <> skip_right
+binder 6457:6457 <> c:16
+R6462:6467 PLF.Equiv <> cequiv def
+R6473:6475 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R6484:6486 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R6477:6479 PLF.Imp <> :com:com_scope:x_';'_x not
+R6476:6476 PLF.Equiv <> c:16 var
+R6480:6483 PLF.Imp <> :com:com_scope:'skip' not
+R6492:6492 PLF.Equiv <> c:16 var
+prf 6634:6647 <> if_true_simple
+binder 6658:6659 <> c1:17
+binder 6661:6662 <> c2:18
+R6667:6672 PLF.Equiv <> cequiv def
+R6678:6680 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R6708:6710 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R6681:6683 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R6688:6693 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R6696:6701 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R6704:6707 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R6684:6687 PLF.Imp <> :com::'true' not
+R6694:6695 PLF.Equiv <> c1:17 var
+R6702:6703 PLF.Equiv <> c2:18 var
+R6716:6717 PLF.Equiv <> c1:17 var
+R6860:6867 PLF.Imp <> E_IfTrue constr
+R6860:6867 PLF.Imp <> E_IfTrue constr
+prf 8810:8816 <> if_true
+binder 8826:8826 <> b:19
+binder 8828:8829 <> c1:20
+binder 8831:8832 <> c2:21
+R8854:8860 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R8837:8842 PLF.Equiv <> bequiv def
+R8844:8844 PLF.Equiv <> b:19 var
+R8846:8847 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R8852:8853 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R8848:8851 PLF.Imp <> :com::'true' not
+R8861:8866 PLF.Equiv <> cequiv def
+R8872:8874 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R8899:8901 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R8875:8877 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R8879:8884 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R8887:8892 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R8895:8898 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R8878:8878 PLF.Equiv <> b:19 var
+R8885:8886 PLF.Equiv <> c1:20 var
+R8893:8894 PLF.Equiv <> c2:21 var
+R8907:8908 PLF.Equiv <> c1:20 var
+R9107:9112 PLF.Equiv <> bequiv def
+R9201:9208 PLF.Imp <> E_IfTrue constr
+R9201:9208 PLF.Imp <> E_IfTrue constr
+R9238:9243 PLF.Equiv <> bequiv def
+prf 9363:9370 <> if_false
+binder 9381:9381 <> b:22
+binder 9383:9384 <> c1:23
+binder 9386:9387 <> c2:24
+R9410:9415 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R9392:9397 PLF.Equiv <> bequiv def
+R9399:9399 PLF.Equiv <> b:22 var
+R9401:9402 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R9408:9409 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R9403:9407 PLF.Imp <> :com::'false' not
+R9416:9421 PLF.Equiv <> cequiv def
+R9427:9429 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R9454:9456 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R9430:9432 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R9434:9439 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R9442:9447 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R9450:9453 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R9433:9433 PLF.Equiv <> b:22 var
+R9440:9441 PLF.Equiv <> c1:23 var
+R9448:9449 PLF.Equiv <> c2:24 var
+R9462:9463 PLF.Equiv <> c2:24 var
+prf 9671:9686 <> swap_if_branches
+binder 9697:9697 <> b:25
+binder 9699:9700 <> c1:26
+binder 9702:9703 <> c2:27
+R9708:9713 PLF.Equiv <> cequiv def
+R9719:9721 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R9746:9748 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R9722:9724 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R9726:9731 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R9734:9739 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R9742:9745 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R9725:9725 PLF.Equiv <> b:25 var
+R9732:9733 PLF.Equiv <> c1:26 var
+R9740:9741 PLF.Equiv <> c2:27 var
+R9754:9756 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R9783:9785 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R9757:9759 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R9763:9768 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R9771:9776 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R9779:9782 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R9760:9761 PLF.Imp <> :com::'~'_x not
+R9762:9762 PLF.Equiv <> b:25 var
+R9769:9770 PLF.Equiv <> c2:27 var
+R9777:9778 PLF.Equiv <> c1:26 var
+prf 10167:10177 <> while_false
+binder 10188:10188 <> b:28
+binder 10190:10190 <> c:29
+R10213:10218 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R10195:10200 PLF.Equiv <> bequiv def
+R10202:10202 PLF.Equiv <> b:28 var
+R10204:10205 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R10211:10212 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R10206:10210 PLF.Imp <> :com::'false' not
+R10219:10224 PLF.Equiv <> cequiv def
+R10230:10232 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R10249:10251 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R10233:10238 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R10240:10243 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R10245:10248 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R10239:10239 PLF.Equiv <> b:28 var
+R10244:10244 PLF.Equiv <> c:29 var
+R10257:10259 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R10264:10266 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R10260:10263 PLF.Imp <> :com:com_scope:'skip' not
+R10384:10389 PLF.Imp <> E_Skip constr
+R10384:10389 PLF.Imp <> E_Skip constr
+R10501:10512 PLF.Imp <> E_WhileFalse constr
+R10501:10512 PLF.Imp <> E_WhileFalse constr
+prf 11897:11914 <> while_true_nonterm
+binder 11925:11925 <> b:30
+binder 11927:11927 <> c:31
+binder 11929:11930 <> st:32
+binder 11932:11934 <> st':33
+R11956:11961 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R11939:11944 PLF.Equiv <> bequiv def
+R11946:11946 PLF.Equiv <> b:30 var
+R11948:11949 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R11954:11955 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R11950:11953 PLF.Imp <> :com::'true' not
+R11962:11964 Coq.Init.Logic <> ::type_scope:'~'_x not
+R11995:11996 Coq.Init.Logic <> ::type_scope:'~'_x not
+R11967:11970 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R11987:11991 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R11971:11976 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R11978:11981 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R11983:11986 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R11977:11977 PLF.Equiv <> b:30 var
+R11982:11982 PLF.Equiv <> c:31 var
+R11965:11966 PLF.Equiv <> st:32 var
+R11992:11994 PLF.Equiv <> st':33 var
+R12077:12079 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R12096:12098 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R12080:12085 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R12087:12090 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R12092:12095 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R12077:12079 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R12096:12098 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R12080:12085 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R12087:12090 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R12092:12095 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R12373:12378 PLF.Equiv <> bequiv def
+prf 12929:12938 <> while_true
+binder 12949:12949 <> b:34
+binder 12951:12951 <> c:35
+R12973:12979 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R12956:12961 PLF.Equiv <> bequiv def
+R12963:12963 PLF.Equiv <> b:34 var
+R12965:12966 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R12971:12972 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R12967:12970 PLF.Imp <> :com::'true' not
+R12980:12985 PLF.Equiv <> cequiv def
+R12991:12993 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R13010:13012 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R12994:12999 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R13001:13004 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R13006:13009 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R13000:13000 PLF.Equiv <> b:34 var
+R13005:13005 PLF.Equiv <> c:35 var
+R13018:13020 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R13043:13045 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R13021:13026 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R13031:13034 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R13039:13042 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R13027:13030 PLF.Imp <> :com::'true' not
+R13035:13038 PLF.Imp <> :com:com_scope:'skip' not
+prf 13380:13393 <> loop_unrolling
+binder 13404:13404 <> b:36
+binder 13406:13406 <> c:37
+R13411:13416 PLF.Equiv <> cequiv def
+R13422:13424 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R13441:13443 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R13425:13430 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R13432:13435 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R13437:13440 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R13431:13431 PLF.Equiv <> b:36 var
+R13436:13436 PLF.Equiv <> c:37 var
+R13449:13451 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R13496:13498 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R13452:13454 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R13456:13461 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R13482:13487 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R13492:13495 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R13455:13455 PLF.Equiv <> b:36 var
+R13463:13465 PLF.Imp <> :com:com_scope:x_';'_x not
+R13462:13462 PLF.Equiv <> c:37 var
+R13466:13471 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R13473:13476 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R13478:13481 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R13472:13472 PLF.Equiv <> b:36 var
+R13477:13477 PLF.Equiv <> c:37 var
+R13488:13491 PLF.Imp <> :com:com_scope:'skip' not
+R13654:13662 PLF.Imp <> E_IfFalse constr
+R13654:13662 PLF.Imp <> E_IfFalse constr
+R13699:13704 PLF.Imp <> E_Skip constr
+R13699:13704 PLF.Imp <> E_Skip constr
+R13741:13748 PLF.Imp <> E_IfTrue constr
+R13741:13748 PLF.Imp <> E_IfTrue constr
+R13785:13789 PLF.Imp <> E_Seq constr
+R13785:13789 PLF.Imp <> E_Seq constr
+R13957:13967 PLF.Imp <> E_WhileTrue constr
+R13957:13967 PLF.Imp <> E_WhileTrue constr
+R14111:14122 PLF.Imp <> E_WhileFalse constr
+R14111:14122 PLF.Imp <> E_WhileFalse constr
+prf 14214:14222 <> seq_assoc
+binder 14233:14234 <> c1:38
+binder 14236:14237 <> c2:39
+binder 14239:14240 <> c3:40
+R14245:14250 PLF.Equiv <> cequiv def
+R14252:14253 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R14264:14265 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R14261:14261 PLF.Imp <> :com:com_scope:x_';'_x not
+R14254:14254 PLF.Imp <> :com:com_scope:'('_x_')' not
+R14260:14260 PLF.Imp <> :com:com_scope:'('_x_')' not
+R14257:14257 PLF.Imp <> :com:com_scope:x_';'_x not
+R14255:14256 PLF.Equiv <> c1:38 var
+R14258:14259 PLF.Equiv <> c2:39 var
+R14262:14263 PLF.Equiv <> c3:40 var
+R14267:14268 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R14279:14280 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R14271:14271 PLF.Imp <> :com:com_scope:x_';'_x not
+R14269:14270 PLF.Equiv <> c1:38 var
+R14272:14272 PLF.Imp <> :com:com_scope:'('_x_')' not
+R14278:14278 PLF.Imp <> :com:com_scope:'('_x_')' not
+R14275:14275 PLF.Imp <> :com:com_scope:x_';'_x not
+R14273:14274 PLF.Equiv <> c2:39 var
+R14276:14277 PLF.Equiv <> c3:40 var
+prf 14542:14560 <> identity_assignment
+binder 14571:14571 <> x:41
+R14576:14581 PLF.Equiv <> cequiv def
+R14587:14589 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R14596:14598 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R14591:14594 PLF.Imp <> :com:com_scope:x_':='_x not
+R14590:14590 PLF.Equiv <> x:41 var
+R14595:14595 PLF.Equiv <> x:41 var
+R14604:14606 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R14611:14613 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R14607:14610 PLF.Imp <> :com:com_scope:'skip' not
+R14705:14717 PLF.Maps <> t_update_same prfax
+R14705:14717 PLF.Maps <> t_update_same prfax
+R14705:14717 PLF.Maps <> t_update_same prfax
+R14730:14735 PLF.Imp <> E_Skip constr
+R14730:14735 PLF.Imp <> E_Skip constr
+R14771:14774 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R14781:14786 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R14804:14804 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R14776:14779 PLF.Imp <> :com:com_scope:x_':='_x not
+R14788:14792 PLF.Maps <> :::x_'!->'_x_';'_x not
+R14798:14800 PLF.Maps <> :::x_'!->'_x_';'_x not
+R14771:14774 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R14781:14786 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R14804:14804 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R14776:14779 PLF.Imp <> :com:com_scope:x_':='_x not
+R14788:14792 PLF.Maps <> :::x_'!->'_x_';'_x not
+R14798:14800 PLF.Maps <> :::x_'!->'_x_';'_x not
+R14820:14825 PLF.Imp <> E_Asgn constr
+R14820:14825 PLF.Imp <> E_Asgn constr
+R14855:14867 PLF.Maps <> t_update_same prfax
+R14855:14867 PLF.Maps <> t_update_same prfax
+R14855:14867 PLF.Maps <> t_update_same prfax
+prf 14979:14991 <> assign_aequiv
+R15007:15012 Coq.Strings.String <> string ind
+binder 15003:15003 <> X:42
+R15020:15023 PLF.Imp <> aexp ind
+binder 15016:15016 <> a:43
+R15045:15050 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R15029:15034 PLF.Equiv <> aequiv def
+R15036:15038 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R15040:15042 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R15039:15039 PLF.Equiv <> X:42 var
+R15044:15044 PLF.Equiv <> a:43 var
+R15051:15056 PLF.Equiv <> cequiv def
+R15058:15060 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R15065:15067 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R15061:15064 PLF.Imp <> :com:com_scope:'skip' not
+R15069:15071 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R15078:15080 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R15073:15076 PLF.Imp <> :com:com_scope:x_':='_x not
+R15072:15072 PLF.Equiv <> X:42 var
+R15077:15077 PLF.Equiv <> a:43 var
+def 15716:15721 <> prog_a
+R15725:15727 PLF.Imp <> com ind
+R15734:15736 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R15782:15784 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R15737:15742 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R15752:15762 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R15773:15781 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R15743:15743 PLF.Imp <> :com::'~'_x not
+R15744:15744 PLF.Imp <> :com:com_scope:'('_x_')' not
+R15751:15751 PLF.Imp <> :com:com_scope:'('_x_')' not
+R15746:15749 PLF.Imp <> :com::x_'<='_x not
+R15745:15745 PLF.Imp <> X def
+R15764:15767 PLF.Imp <> :com:com_scope:x_':='_x not
+R15763:15763 PLF.Imp <> X def
+R15769:15771 PLF.Imp <> :com::x_'+'_x not
+R15768:15768 PLF.Imp <> X def
+def 15799:15804 <> prog_b
+R15808:15810 PLF.Imp <> com ind
+R15817:15819 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R15931:15933 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R15901:15907 PLF.Imp <> :com:com_scope:x_';'_x not
+R15820:15822 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R15830:15842 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R15868:15885 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R15892:15900 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R15823:15823 PLF.Imp <> :com:com_scope:'('_x_')' not
+R15829:15829 PLF.Imp <> :com:com_scope:'('_x_')' not
+R15825:15827 PLF.Imp <> :com::x_'='_x not
+R15824:15824 PLF.Imp <> X def
+R15853:15861 PLF.Imp <> :com:com_scope:x_';'_x not
+R15844:15847 PLF.Imp <> :com:com_scope:x_':='_x not
+R15843:15843 PLF.Imp <> X def
+R15849:15851 PLF.Imp <> :com::x_'+'_x not
+R15848:15848 PLF.Imp <> X def
+R15863:15866 PLF.Imp <> :com:com_scope:x_':='_x not
+R15862:15862 PLF.Imp <> Y def
+R15887:15890 PLF.Imp <> :com:com_scope:x_':='_x not
+R15886:15886 PLF.Imp <> Y def
+R15918:15924 PLF.Imp <> :com:com_scope:x_';'_x not
+R15909:15912 PLF.Imp <> :com:com_scope:x_':='_x not
+R15908:15908 PLF.Imp <> X def
+R15914:15916 PLF.Imp <> :com::x_'-'_x not
+R15913:15913 PLF.Imp <> X def
+R15917:15917 PLF.Imp <> Y def
+R15926:15929 PLF.Imp <> :com:com_scope:x_':='_x not
+R15925:15925 PLF.Imp <> Y def
+def 15948:15953 <> prog_c
+R15957:15959 PLF.Imp <> com ind
+R15966:15968 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R15973:15975 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R15969:15972 PLF.Imp <> :com:com_scope:'skip' not
+def 15991:15996 <> prog_d
+R16000:16002 PLF.Imp <> com ind
+R16009:16011 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R16060:16062 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R16012:16017 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16024:16034 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16051:16059 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16019:16022 PLF.Imp <> :com::x_'<>'_x not
+R16018:16018 PLF.Imp <> X def
+R16036:16039 PLF.Imp <> :com:com_scope:x_':='_x not
+R16035:16035 PLF.Imp <> X def
+R16047:16049 PLF.Imp <> :com::x_'+'_x not
+R16040:16040 PLF.Imp <> :com:com_scope:'('_x_')' not
+R16046:16046 PLF.Imp <> :com:com_scope:'('_x_')' not
+R16042:16044 PLF.Imp <> :com::x_'*'_x not
+R16041:16041 PLF.Imp <> X def
+R16045:16045 PLF.Imp <> Y def
+def 16077:16082 <> prog_e
+R16086:16088 PLF.Imp <> com ind
+R16095:16097 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R16104:16106 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R16099:16102 PLF.Imp <> :com:com_scope:x_':='_x not
+R16098:16098 PLF.Imp <> Y def
+def 16121:16126 <> prog_f
+R16130:16132 PLF.Imp <> com ind
+R16139:16141 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R16201:16203 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R16152:16158 PLF.Imp <> :com:com_scope:x_';'_x not
+R16143:16146 PLF.Imp <> :com:com_scope:x_':='_x not
+R16142:16142 PLF.Imp <> Y def
+R16148:16150 PLF.Imp <> :com::x_'+'_x not
+R16147:16147 PLF.Imp <> X def
+R16159:16164 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16171:16181 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16192:16200 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16166:16169 PLF.Imp <> :com::x_'<>'_x not
+R16165:16165 PLF.Imp <> X def
+R16170:16170 PLF.Imp <> Y def
+R16183:16186 PLF.Imp <> :com:com_scope:x_':='_x not
+R16182:16182 PLF.Imp <> Y def
+R16188:16190 PLF.Imp <> :com::x_'+'_x not
+R16187:16187 PLF.Imp <> X def
+def 16218:16223 <> prog_g
+R16227:16229 PLF.Imp <> com ind
+R16236:16238 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R16273:16275 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R16239:16244 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16249:16259 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16264:16272 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16245:16248 PLF.Imp <> :com::'true' not
+R16260:16263 PLF.Imp <> :com:com_scope:'skip' not
+def 16290:16295 <> prog_h
+R16299:16301 PLF.Imp <> com ind
+R16308:16310 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R16353:16355 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R16311:16316 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16323:16333 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16344:16352 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16318:16321 PLF.Imp <> :com::x_'<>'_x not
+R16317:16317 PLF.Imp <> X def
+R16322:16322 PLF.Imp <> X def
+R16335:16338 PLF.Imp <> :com:com_scope:x_':='_x not
+R16334:16334 PLF.Imp <> X def
+R16340:16342 PLF.Imp <> :com::x_'+'_x not
+R16339:16339 PLF.Imp <> X def
+def 16370:16375 <> prog_i
+R16379:16381 PLF.Imp <> com ind
+R16388:16390 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R16433:16435 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R16391:16396 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16403:16413 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16424:16432 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R16398:16401 PLF.Imp <> :com::x_'<>'_x not
+R16397:16397 PLF.Imp <> X def
+R16402:16402 PLF.Imp <> Y def
+R16415:16418 PLF.Imp <> :com:com_scope:x_':='_x not
+R16414:16414 PLF.Imp <> X def
+R16420:16422 PLF.Imp <> :com::x_'+'_x not
+R16419:16419 PLF.Imp <> Y def
+def 16450:16462 <> equiv_classes
+R16466:16469 Coq.Init.Datatypes <> list ind
+R16472:16475 Coq.Init.Datatypes <> list ind
+R16477:16479 PLF.Imp <> com ind
+def 16601:16630 <> manual_grade_for_equiv_classes
+R16634:16639 Coq.Init.Datatypes <> option ind
+R16645:16645 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R16642:16644 Coq.Init.Datatypes <> nat ind
+R16646:16651 Coq.Strings.String <> string ind
+R16657:16660 Coq.Init.Datatypes <> None constr
+prf 17207:17217 <> refl_aequiv
+R17233:17236 PLF.Imp <> aexp ind
+binder 17229:17229 <> a:44
+R17242:17247 PLF.Equiv <> aequiv def
+R17249:17249 PLF.Equiv <> a:44 var
+R17251:17251 PLF.Equiv <> a:44 var
+prf 17302:17311 <> sym_aequiv
+R17331:17334 PLF.Imp <> aexp ind
+binder 17323:17324 <> a1:45
+binder 17326:17327 <> a2:46
+R17352:17355 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R17340:17345 PLF.Equiv <> aequiv def
+R17347:17348 PLF.Equiv <> a1:45 var
+R17350:17351 PLF.Equiv <> a2:46 var
+R17356:17361 PLF.Equiv <> aequiv def
+R17363:17364 PLF.Equiv <> a2:46 var
+R17366:17367 PLF.Equiv <> a1:45 var
+prf 17438:17449 <> trans_aequiv
+R17472:17475 PLF.Imp <> aexp ind
+binder 17461:17462 <> a1:47
+binder 17464:17465 <> a2:48
+binder 17467:17468 <> a3:49
+R17493:17496 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R17481:17486 PLF.Equiv <> aequiv def
+R17488:17489 PLF.Equiv <> a1:47 var
+R17491:17492 PLF.Equiv <> a2:48 var
+R17509:17512 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R17497:17502 PLF.Equiv <> aequiv def
+R17504:17505 PLF.Equiv <> a2:48 var
+R17507:17508 PLF.Equiv <> a3:49 var
+R17513:17518 PLF.Equiv <> aequiv def
+R17520:17521 PLF.Equiv <> a1:47 var
+R17523:17524 PLF.Equiv <> a3:49 var
+R17543:17548 PLF.Equiv <> aequiv def
+prf 17643:17653 <> refl_bequiv
+R17669:17672 PLF.Imp <> bexp ind
+binder 17665:17665 <> b:50
+R17678:17683 PLF.Equiv <> bequiv def
+R17685:17685 PLF.Equiv <> b:50 var
+R17687:17687 PLF.Equiv <> b:50 var
+R17706:17711 PLF.Equiv <> bequiv def
+prf 17753:17762 <> sym_bequiv
+R17782:17785 PLF.Imp <> bexp ind
+binder 17774:17775 <> b1:51
+binder 17777:17778 <> b2:52
+R17803:17806 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R17791:17796 PLF.Equiv <> bequiv def
+R17798:17799 PLF.Equiv <> b1:51 var
+R17801:17802 PLF.Equiv <> b2:52 var
+R17807:17812 PLF.Equiv <> bequiv def
+R17814:17815 PLF.Equiv <> b2:52 var
+R17817:17818 PLF.Equiv <> b1:51 var
+R17837:17842 PLF.Equiv <> bequiv def
+prf 17904:17915 <> trans_bequiv
+R17938:17941 PLF.Imp <> bexp ind
+binder 17927:17928 <> b1:53
+binder 17930:17931 <> b2:54
+binder 17933:17934 <> b3:55
+R17959:17962 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R17947:17952 PLF.Equiv <> bequiv def
+R17954:17955 PLF.Equiv <> b1:53 var
+R17957:17958 PLF.Equiv <> b2:54 var
+R17975:17978 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R17963:17968 PLF.Equiv <> bequiv def
+R17970:17971 PLF.Equiv <> b2:54 var
+R17973:17974 PLF.Equiv <> b3:55 var
+R17979:17984 PLF.Equiv <> bequiv def
+R17986:17987 PLF.Equiv <> b1:53 var
+R17989:17990 PLF.Equiv <> b3:55 var
+R18009:18014 PLF.Equiv <> bequiv def
+prf 18109:18119 <> refl_cequiv
+R18135:18137 PLF.Imp <> com ind
+binder 18131:18131 <> c:56
+R18143:18148 PLF.Equiv <> cequiv def
+R18150:18150 PLF.Equiv <> c:56 var
+R18152:18152 PLF.Equiv <> c:56 var
+R18171:18176 PLF.Equiv <> cequiv def
+prf 18222:18231 <> sym_cequiv
+R18251:18253 PLF.Imp <> com ind
+binder 18243:18244 <> c1:57
+binder 18246:18247 <> c2:58
+R18271:18274 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R18259:18264 PLF.Equiv <> cequiv def
+R18266:18267 PLF.Equiv <> c1:57 var
+R18269:18270 PLF.Equiv <> c2:58 var
+R18275:18280 PLF.Equiv <> cequiv def
+R18282:18283 PLF.Equiv <> c2:58 var
+R18285:18286 PLF.Equiv <> c1:57 var
+R18305:18310 PLF.Equiv <> cequiv def
+prf 18374:18385 <> trans_cequiv
+R18408:18410 PLF.Imp <> com ind
+binder 18397:18398 <> c1:59
+binder 18400:18401 <> c2:60
+binder 18403:18404 <> c3:61
+R18428:18431 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R18416:18421 PLF.Equiv <> cequiv def
+R18423:18424 PLF.Equiv <> c1:59 var
+R18426:18427 PLF.Equiv <> c2:60 var
+R18444:18447 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R18432:18437 PLF.Equiv <> cequiv def
+R18439:18440 PLF.Equiv <> c2:60 var
+R18442:18443 PLF.Equiv <> c3:61 var
+R18448:18453 PLF.Equiv <> cequiv def
+R18455:18456 PLF.Equiv <> c1:59 var
+R18458:18459 PLF.Equiv <> c3:61 var
+R18478:18483 PLF.Equiv <> cequiv def
+prf 19933:19948 <> CAsgn_congruence
+binder 19959:19959 <> x:62
+binder 19961:19961 <> a:63
+binder 19963:19964 <> a':64
+R19980:19985 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R19969:19974 PLF.Equiv <> aequiv def
+R19976:19976 PLF.Equiv <> a:63 var
+R19978:19979 PLF.Equiv <> a':64 var
+R19986:19991 PLF.Equiv <> cequiv def
+R19993:19994 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R20001:20002 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R19996:19999 PLF.Imp <> :com:com_scope:x_':='_x not
+R19995:19995 PLF.Equiv <> x:62 var
+R20000:20000 PLF.Equiv <> a:63 var
+R20004:20005 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R20013:20014 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R20007:20010 PLF.Imp <> :com:com_scope:x_':='_x not
+R20006:20006 PLF.Equiv <> x:62 var
+R20011:20012 PLF.Equiv <> a':64 var
+R20125:20130 PLF.Imp <> E_Asgn constr
+R20125:20130 PLF.Imp <> E_Asgn constr
+R20212:20217 PLF.Imp <> E_Asgn constr
+R20212:20217 PLF.Imp <> E_Asgn constr
+prf 22055:22071 <> CWhile_congruence
+binder 22082:22082 <> b:65
+binder 22084:22085 <> b':66
+binder 22087:22087 <> c:67
+binder 22089:22090 <> c':68
+R22106:22109 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R22095:22100 PLF.Equiv <> bequiv def
+R22102:22102 PLF.Equiv <> b:65 var
+R22104:22105 PLF.Equiv <> b':66 var
+R22121:22126 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R22110:22115 PLF.Equiv <> cequiv def
+R22117:22117 PLF.Equiv <> c:67 var
+R22119:22120 PLF.Equiv <> c':68 var
+R22127:22132 PLF.Equiv <> cequiv def
+R22134:22136 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R22153:22155 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R22137:22142 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22144:22147 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22149:22152 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22143:22143 PLF.Equiv <> b:65 var
+R22148:22148 PLF.Equiv <> c:67 var
+R22157:22159 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R22178:22180 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R22160:22165 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22168:22171 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22174:22177 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22166:22167 PLF.Equiv <> b':66 var
+R22172:22173 PLF.Equiv <> c':68 var
+R22338:22341 PLF.Imp <> bexp ind
+binder 22331:22331 <> b:69
+binder 22333:22334 <> b':70
+R22352:22354 PLF.Imp <> com ind
+binder 22345:22345 <> c:71
+binder 22347:22348 <> c':72
+R22367:22371 PLF.Imp <> state def
+binder 22358:22359 <> st:73
+binder 22361:22363 <> st':74
+R22399:22402 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R22388:22393 PLF.Equiv <> bequiv def
+R22395:22395 PLF.Equiv <> b:69 var
+R22397:22398 PLF.Equiv <> b':70 var
+R22414:22430 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R22403:22408 PLF.Equiv <> cequiv def
+R22410:22410 PLF.Equiv <> c:71 var
+R22412:22413 PLF.Equiv <> c':72 var
+R22461:22477 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R22433:22436 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R22453:22457 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R22437:22442 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22444:22447 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22449:22452 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22443:22443 PLF.Equiv <> b:69 var
+R22448:22448 PLF.Equiv <> c:71 var
+R22431:22432 PLF.Equiv <> st:73 var
+R22458:22460 PLF.Equiv <> st':74 var
+R22480:22483 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R22502:22506 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R22484:22489 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22492:22495 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22498:22501 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22490:22491 PLF.Equiv <> b':70 var
+R22496:22497 PLF.Equiv <> c':72 var
+R22478:22479 PLF.Equiv <> st:73 var
+R22507:22509 PLF.Equiv <> st':74 var
+R22338:22341 PLF.Imp <> bexp ind
+binder 22331:22331 <> b:75
+binder 22333:22334 <> b':76
+R22352:22354 PLF.Imp <> com ind
+binder 22345:22345 <> c:77
+binder 22347:22348 <> c':78
+R22367:22371 PLF.Imp <> state def
+binder 22358:22359 <> st:79
+binder 22361:22363 <> st':80
+R22399:22402 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R22388:22393 PLF.Equiv <> bequiv def
+R22395:22395 PLF.Equiv <> b:75 var
+R22397:22398 PLF.Equiv <> b':76 var
+R22414:22430 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R22403:22408 PLF.Equiv <> cequiv def
+R22410:22410 PLF.Equiv <> c:77 var
+R22412:22413 PLF.Equiv <> c':78 var
+R22461:22477 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R22433:22436 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R22453:22457 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R22437:22442 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22444:22447 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22449:22452 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22443:22443 PLF.Equiv <> b:75 var
+R22448:22448 PLF.Equiv <> c:77 var
+R22431:22432 PLF.Equiv <> st:79 var
+R22458:22460 PLF.Equiv <> st':80 var
+R22480:22483 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R22502:22506 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R22484:22489 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22492:22495 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22498:22501 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22490:22491 PLF.Equiv <> b':76 var
+R22496:22497 PLF.Equiv <> c':78 var
+R22478:22479 PLF.Equiv <> st:79 var
+R22507:22509 PLF.Equiv <> st':80 var
+R22524:22529 PLF.Equiv <> bequiv def
+R22531:22536 PLF.Equiv <> cequiv def
+R22594:22596 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R22613:22615 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R22597:22602 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22604:22607 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22609:22612 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22594:22596 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R22613:22615 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R22597:22602 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22604:22607 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22609:22612 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R22732:22743 PLF.Imp <> E_WhileFalse constr
+R22732:22743 PLF.Imp <> E_WhileFalse constr
+R22807:22817 PLF.Imp <> E_WhileTrue constr
+R22807:22817 PLF.Imp <> E_WhileTrue constr
+R23108:23117 PLF.Equiv <> sym_bequiv thm
+R23108:23117 PLF.Equiv <> sym_bequiv thm
+R23144:23153 PLF.Equiv <> sym_cequiv thm
+R23144:23153 PLF.Equiv <> sym_cequiv thm
+prf 23250:23264 <> CSeq_congruence
+binder 23275:23276 <> c1:81
+binder 23278:23280 <> c1':82
+binder 23282:23283 <> c2:83
+binder 23285:23287 <> c2':84
+R23305:23308 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R23292:23297 PLF.Equiv <> cequiv def
+R23299:23300 PLF.Equiv <> c1:81 var
+R23302:23304 PLF.Equiv <> c1':82 var
+R23322:23327 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R23309:23314 PLF.Equiv <> cequiv def
+R23316:23317 PLF.Equiv <> c2:83 var
+R23319:23321 PLF.Equiv <> c2':84 var
+R23328:23333 PLF.Equiv <> cequiv def
+R23335:23337 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R23343:23345 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R23340:23340 PLF.Imp <> :com:com_scope:x_';'_x not
+R23338:23339 PLF.Equiv <> c1:81 var
+R23341:23342 PLF.Equiv <> c2:83 var
+R23347:23349 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R23357:23359 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R23353:23353 PLF.Imp <> :com:com_scope:x_';'_x not
+R23350:23352 PLF.Equiv <> c1':82 var
+R23354:23356 PLF.Equiv <> c2':84 var
+prf 23476:23489 <> CIf_congruence
+binder 23500:23500 <> b:85
+binder 23502:23503 <> b':86
+binder 23505:23506 <> c1:87
+binder 23508:23510 <> c1':88
+binder 23512:23513 <> c2:89
+binder 23515:23517 <> c2':90
+R23533:23536 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R23522:23527 PLF.Equiv <> bequiv def
+R23529:23529 PLF.Equiv <> b:85 var
+R23531:23532 PLF.Equiv <> b':86 var
+R23550:23553 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R23537:23542 PLF.Equiv <> cequiv def
+R23544:23545 PLF.Equiv <> c1:87 var
+R23547:23549 PLF.Equiv <> c1':88 var
+R23567:23572 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R23554:23559 PLF.Equiv <> cequiv def
+R23561:23562 PLF.Equiv <> c2:89 var
+R23564:23566 PLF.Equiv <> c2':90 var
+R23573:23578 PLF.Equiv <> cequiv def
+R23580:23582 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R23607:23609 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R23583:23585 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23587:23592 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23595:23600 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23603:23606 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23586:23586 PLF.Equiv <> b:85 var
+R23593:23594 PLF.Equiv <> c1:87 var
+R23601:23602 PLF.Equiv <> c2:89 var
+R23620:23622 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R23650:23652 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R23623:23625 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23628:23633 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23637:23642 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23646:23649 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23626:23627 PLF.Equiv <> b':86 var
+R23634:23636 PLF.Equiv <> c1':88 var
+R23643:23645 PLF.Equiv <> c2':90 var
+def 23806:23823 <> congruence_example
+R23828:23833 PLF.Equiv <> cequiv def
+R23860:23862 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R23924:23926 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R23869:23877 PLF.Imp <> :com:com_scope:x_';'_x not
+R23864:23867 PLF.Imp <> :com:com_scope:x_':='_x not
+R23863:23863 PLF.Imp <> X def
+R23878:23880 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23888:23893 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23900:23912 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23920:23923 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23881:23881 PLF.Imp <> :com:com_scope:'('_x_')' not
+R23887:23887 PLF.Imp <> :com:com_scope:'('_x_')' not
+R23883:23885 PLF.Imp <> :com::x_'='_x not
+R23882:23882 PLF.Imp <> X def
+R23895:23898 PLF.Imp <> :com:com_scope:x_':='_x not
+R23894:23894 PLF.Imp <> Y def
+R23914:23917 PLF.Imp <> :com:com_scope:x_':='_x not
+R23913:23913 PLF.Imp <> Y def
+R23953:23955 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R24047:24049 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R23962:23970 PLF.Imp <> :com:com_scope:x_';'_x not
+R23957:23960 PLF.Imp <> :com:com_scope:x_':='_x not
+R23956:23956 PLF.Imp <> X def
+R23971:23973 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23981:23986 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23997:24035 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R24043:24046 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R23974:23974 PLF.Imp <> :com:com_scope:'('_x_')' not
+R23980:23980 PLF.Imp <> :com:com_scope:'('_x_')' not
+R23976:23978 PLF.Imp <> :com::x_'='_x not
+R23975:23975 PLF.Imp <> X def
+R23988:23991 PLF.Imp <> :com:com_scope:x_':='_x not
+R23987:23987 PLF.Imp <> Y def
+R23993:23995 PLF.Imp <> :com::x_'-'_x not
+R23992:23992 PLF.Imp <> X def
+R23996:23996 PLF.Imp <> X def
+R24037:24040 PLF.Imp <> :com:com_scope:x_':='_x not
+R24036:24036 PLF.Imp <> Y def
+R24067:24081 PLF.Equiv <> CSeq_congruence prfax
+R24067:24081 PLF.Equiv <> CSeq_congruence prfax
+R24094:24104 PLF.Equiv <> refl_cequiv thm
+R24094:24104 PLF.Equiv <> refl_cequiv thm
+R24117:24130 PLF.Equiv <> CIf_congruence prfax
+R24117:24130 PLF.Equiv <> CIf_congruence prfax
+R24145:24155 PLF.Equiv <> refl_bequiv thm
+R24145:24155 PLF.Equiv <> refl_bequiv thm
+R24170:24185 PLF.Equiv <> CAsgn_congruence thm
+R24170:24185 PLF.Equiv <> CAsgn_congruence thm
+R24195:24200 PLF.Equiv <> aequiv def
+R24232:24241 Coq.Arith.Minus <> minus_diag syndef
+R24232:24241 Coq.Arith.Minus <> minus_diag syndef
+R24256:24266 PLF.Equiv <> refl_cequiv thm
+R24256:24266 PLF.Equiv <> refl_cequiv thm
+def 24728:24753 <> manual_grade_for_not_congr
+R24757:24762 Coq.Init.Datatypes <> option ind
+R24768:24768 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R24765:24767 Coq.Init.Datatypes <> nat ind
+R24769:24774 Coq.Strings.String <> string ind
+R24780:24783 Coq.Init.Datatypes <> None constr
+def 25262:25273 <> atrans_sound
+R25289:25292 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R25285:25288 PLF.Imp <> aexp ind
+R25293:25296 PLF.Imp <> aexp ind
+binder 25276:25281 <> atrans:91
+R25323:25326 PLF.Imp <> aexp ind
+binder 25319:25319 <> a:92
+R25334:25339 PLF.Equiv <> aequiv def
+R25341:25341 PLF.Equiv <> a:92 var
+R25344:25349 PLF.Equiv <> atrans:91 var
+R25351:25351 PLF.Equiv <> a:92 var
+def 25367:25378 <> btrans_sound
+R25394:25397 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R25390:25393 PLF.Imp <> bexp ind
+R25398:25401 PLF.Imp <> bexp ind
+binder 25381:25386 <> btrans:93
+R25428:25431 PLF.Imp <> bexp ind
+binder 25424:25424 <> b:94
+R25439:25444 PLF.Equiv <> bequiv def
+R25446:25446 PLF.Equiv <> b:94 var
+R25449:25454 PLF.Equiv <> btrans:93 var
+R25456:25456 PLF.Equiv <> b:94 var
+def 25472:25483 <> ctrans_sound
+R25498:25501 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R25495:25497 PLF.Imp <> com ind
+R25502:25504 PLF.Imp <> com ind
+binder 25486:25491 <> ctrans:95
+R25531:25533 PLF.Imp <> com ind
+binder 25527:25527 <> c:96
+R25541:25546 PLF.Equiv <> cequiv def
+R25548:25548 PLF.Equiv <> c:96 var
+R25551:25556 PLF.Equiv <> ctrans:95 var
+R25558:25558 PLF.Equiv <> c:96 var
+def 25878:25896 <> fold_constants_aexp
+R25903:25906 PLF.Imp <> aexp ind
+binder 25899:25899 <> a:97
+R25911:25914 PLF.Imp <> aexp ind
+R25927:25927 PLF.Equiv <> a:97 var
+R25938:25941 PLF.Imp <> ANum constr
+R25954:25957 PLF.Imp <> ANum constr
+R25965:25967 PLF.Imp <> AId constr
+R25981:25983 PLF.Imp <> AId constr
+R25991:25993 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26001:26003 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R25996:25998 PLF.Imp <> :com::x_'+'_x not
+R26019:26019 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26042:26054 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26077:26077 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26020:26038 PLF.Equiv <> fold_constants_aexp:98 def
+R26055:26073 PLF.Equiv <> fold_constants_aexp:98 def
+R26094:26094 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26102:26103 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26111:26111 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26095:26098 PLF.Imp <> ANum constr
+R26104:26107 PLF.Imp <> ANum constr
+R26116:26119 PLF.Imp <> ANum constr
+R26124:26126 Coq.Init.Nat <> ::nat_scope:x_'+'_x not
+R26137:26137 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26141:26142 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26146:26146 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26151:26153 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26163:26165 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26157:26159 PLF.Imp <> :com::x_'+'_x not
+R26179:26181 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26189:26191 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26184:26186 PLF.Imp <> :com::x_'-'_x not
+R26206:26206 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26229:26241 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26264:26264 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26207:26225 PLF.Equiv <> fold_constants_aexp:98 def
+R26242:26260 PLF.Equiv <> fold_constants_aexp:98 def
+R26281:26281 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26289:26290 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26298:26298 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26282:26285 PLF.Imp <> ANum constr
+R26291:26294 PLF.Imp <> ANum constr
+R26303:26306 PLF.Imp <> ANum constr
+R26311:26313 Coq.Init.Nat <> ::nat_scope:x_'-'_x not
+R26324:26324 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26328:26329 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26333:26333 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26338:26340 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26350:26352 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26344:26346 PLF.Imp <> :com::x_'-'_x not
+R26366:26368 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26376:26378 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26371:26373 PLF.Imp <> :com::x_'*'_x not
+R26394:26394 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26417:26429 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26452:26452 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26395:26413 PLF.Equiv <> fold_constants_aexp:98 def
+R26430:26448 PLF.Equiv <> fold_constants_aexp:98 def
+R26469:26469 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26477:26478 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26486:26486 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26470:26473 PLF.Imp <> ANum constr
+R26479:26482 PLF.Imp <> ANum constr
+R26491:26494 PLF.Imp <> ANum constr
+R26499:26501 Coq.Init.Nat <> ::nat_scope:x_'*'_x not
+R26512:26512 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26516:26517 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26521:26521 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R26526:26528 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26538:26540 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26532:26534 PLF.Imp <> :com::x_'*'_x not
+def 26566:26578 <> fold_aexp_ex1
+R26623:26627 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R26586:26604 PLF.Equiv <> fold_constants_aexp def
+R26606:26608 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26620:26622 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26616:26618 PLF.Imp <> :com::x_'*'_x not
+R26609:26609 PLF.Imp <> :com:com_scope:'('_x_')' not
+R26615:26615 PLF.Imp <> :com:com_scope:'('_x_')' not
+R26611:26613 PLF.Imp <> :com::x_'+'_x not
+R26619:26619 PLF.Imp <> X def
+R26628:26630 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26636:26638 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R26632:26634 PLF.Imp <> :com::x_'*'_x not
+R26635:26635 PLF.Imp <> X def
+def 27102:27114 <> fold_aexp_ex2
+R27163:27165 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R27120:27138 PLF.Equiv <> fold_constants_aexp def
+R27140:27142 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27160:27162 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27144:27146 PLF.Imp <> :com::x_'-'_x not
+R27143:27143 PLF.Imp <> X def
+R27147:27147 PLF.Imp <> :com:com_scope:'('_x_')' not
+R27159:27159 PLF.Imp <> :com:com_scope:'('_x_')' not
+R27155:27157 PLF.Imp <> :com::x_'+'_x not
+R27148:27148 PLF.Imp <> :com:com_scope:'('_x_')' not
+R27154:27154 PLF.Imp <> :com:com_scope:'('_x_')' not
+R27150:27152 PLF.Imp <> :com::x_'*'_x not
+R27158:27158 PLF.Imp <> Y def
+R27166:27168 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27180:27182 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27170:27172 PLF.Imp <> :com::x_'-'_x not
+R27169:27169 PLF.Imp <> X def
+R27173:27173 PLF.Imp <> :com:com_scope:'('_x_')' not
+R27179:27179 PLF.Imp <> :com:com_scope:'('_x_')' not
+R27175:27177 PLF.Imp <> :com::x_'+'_x not
+R27178:27178 PLF.Imp <> Y def
+def 27419:27437 <> fold_constants_bexp
+R27444:27447 PLF.Imp <> bexp ind
+binder 27440:27440 <> b:100
+R27452:27455 PLF.Imp <> bexp ind
+R27468:27468 PLF.Equiv <> b:100 var
+R27479:27480 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27485:27486 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27481:27484 PLF.Imp <> :com::'true' not
+R27498:27499 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27504:27505 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27500:27503 PLF.Imp <> :com::'true' not
+R27511:27512 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27518:27519 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27513:27517 PLF.Imp <> :com::'false' not
+R27530:27531 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27537:27538 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27532:27536 PLF.Imp <> :com::'false' not
+R27544:27546 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27554:27556 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27549:27551 PLF.Imp <> :com::x_'='_x not
+R27574:27574 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27597:27611 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27634:27634 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27575:27593 PLF.Equiv <> fold_constants_aexp def
+R27612:27630 PLF.Equiv <> fold_constants_aexp def
+R27649:27649 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27657:27658 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27666:27666 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27650:27653 PLF.Imp <> ANum constr
+R27659:27662 PLF.Imp <> ANum constr
+R27686:27689 Coq.Init.Nat <> ::nat_scope:x_'=?'_x not
+R27712:27713 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27719:27720 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27714:27718 PLF.Imp <> :com::'false' not
+R27698:27699 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27704:27705 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27700:27703 PLF.Imp <> :com::'true' not
+R27730:27730 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27734:27735 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27739:27739 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27754:27756 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27766:27768 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27760:27762 PLF.Imp <> :com::x_'='_x not
+R27784:27786 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27795:27797 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27789:27792 PLF.Imp <> :com::x_'<>'_x not
+R27815:27815 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27838:27852 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27875:27875 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27816:27834 PLF.Equiv <> fold_constants_aexp def
+R27853:27871 PLF.Equiv <> fold_constants_aexp def
+R27890:27890 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27898:27899 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27907:27907 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27891:27894 PLF.Imp <> ANum constr
+R27900:27903 PLF.Imp <> ANum constr
+R27925:27928 Coq.Init.Datatypes <> negb def
+R27933:27936 Coq.Init.Nat <> ::nat_scope:x_'=?'_x not
+R27960:27961 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27967:27968 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27962:27966 PLF.Imp <> :com::'false' not
+R27946:27947 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27952:27953 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R27948:27951 PLF.Imp <> :com::'true' not
+R27978:27978 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27982:27983 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R27987:27987 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28002:28004 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28015:28017 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28008:28011 PLF.Imp <> :com::x_'<>'_x not
+R28033:28035 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28044:28046 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28038:28041 PLF.Imp <> :com::x_'<='_x not
+R28064:28064 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28087:28101 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28124:28124 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28065:28083 PLF.Equiv <> fold_constants_aexp def
+R28102:28120 PLF.Equiv <> fold_constants_aexp def
+R28139:28139 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28147:28148 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28156:28156 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28140:28143 PLF.Imp <> ANum constr
+R28149:28152 PLF.Imp <> ANum constr
+R28176:28180 Coq.Init.Nat <> ::nat_scope:x_'<=?'_x not
+R28203:28204 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28210:28211 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28205:28209 PLF.Imp <> :com::'false' not
+R28189:28190 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28195:28196 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28191:28194 PLF.Imp <> :com::'true' not
+R28221:28221 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28225:28226 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28230:28230 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28245:28247 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28258:28260 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28251:28254 PLF.Imp <> :com::x_'<='_x not
+R28276:28278 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28286:28288 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28281:28283 PLF.Imp <> :com::x_'>'_x not
+R28306:28306 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28329:28343 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28366:28366 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28307:28325 PLF.Equiv <> fold_constants_aexp def
+R28344:28362 PLF.Equiv <> fold_constants_aexp def
+R28381:28381 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28389:28390 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28398:28398 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28382:28385 PLF.Imp <> ANum constr
+R28391:28394 PLF.Imp <> ANum constr
+R28418:28422 Coq.Init.Nat <> ::nat_scope:x_'<=?'_x not
+R28446:28447 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28452:28453 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28448:28451 PLF.Imp <> :com::'true' not
+R28431:28432 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28438:28439 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28433:28437 PLF.Imp <> :com::'false' not
+R28463:28463 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28467:28468 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28472:28472 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28487:28489 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28499:28501 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28493:28495 PLF.Imp <> :com::x_'>'_x not
+R28517:28519 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28524:28526 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28520:28521 PLF.Imp <> :com::'~'_x not
+R28545:28563 PLF.Equiv <> fold_constants_bexp:101 def
+R28582:28583 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28588:28589 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28584:28587 PLF.Imp <> :com::'true' not
+R28594:28595 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28601:28602 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28596:28600 PLF.Imp <> :com::'false' not
+R28612:28613 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28619:28620 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28614:28618 PLF.Imp <> :com::'false' not
+R28625:28626 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28631:28632 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28627:28630 PLF.Imp <> :com::'true' not
+R28649:28651 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28657:28659 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28652:28653 PLF.Imp <> :com::'~'_x not
+R28675:28677 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28686:28688 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28680:28683 PLF.Imp <> :com::x_'&&'_x not
+R28706:28706 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28729:28743 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28766:28766 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28707:28725 PLF.Equiv <> fold_constants_bexp:101 def
+R28744:28762 PLF.Equiv <> fold_constants_bexp:101 def
+R28781:28781 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28790:28791 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28800:28800 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28782:28783 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28788:28789 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28784:28787 PLF.Imp <> :com::'true' not
+R28792:28793 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28798:28799 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28794:28797 PLF.Imp <> :com::'true' not
+R28805:28806 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28811:28812 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28807:28810 PLF.Imp <> :com::'true' not
+R28822:28822 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28831:28832 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28842:28842 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28823:28824 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28829:28830 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28825:28828 PLF.Imp <> :com::'true' not
+R28833:28834 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28840:28841 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28835:28839 PLF.Imp <> :com::'false' not
+R28847:28848 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28854:28855 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28849:28853 PLF.Imp <> :com::'false' not
+R28865:28865 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28875:28876 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28885:28885 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28866:28867 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28873:28874 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28868:28872 PLF.Imp <> :com::'false' not
+R28877:28878 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28883:28884 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28879:28882 PLF.Imp <> :com::'true' not
+R28890:28891 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28897:28898 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28892:28896 PLF.Imp <> :com::'false' not
+R28908:28908 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28918:28919 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28929:28929 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28909:28910 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28916:28917 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28911:28915 PLF.Imp <> :com::'false' not
+R28920:28921 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28927:28928 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28922:28926 PLF.Imp <> :com::'false' not
+R28934:28935 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28941:28942 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28936:28940 PLF.Imp <> :com::'false' not
+R28952:28952 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28956:28957 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28961:28961 Coq.Init.Datatypes <> ::core_scope:'('_x_','_x_','_'..'_','_x_')' not
+R28966:28968 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28979:28981 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R28972:28975 PLF.Imp <> :com::x_'&&'_x not
+def 29009:29021 <> fold_bexp_ex1
+R29077:29081 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R29027:29045 PLF.Equiv <> fold_constants_bexp def
+R29047:29049 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29074:29076 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29054:29057 PLF.Imp <> :com::x_'&&'_x not
+R29050:29053 PLF.Imp <> :com::'true' not
+R29058:29058 PLF.Imp <> :com::'~'_x not
+R29059:29059 PLF.Imp <> :com:com_scope:'('_x_')' not
+R29073:29073 PLF.Imp <> :com:com_scope:'('_x_')' not
+R29065:29068 PLF.Imp <> :com::x_'&&'_x not
+R29060:29064 PLF.Imp <> :com::'false' not
+R29069:29072 PLF.Imp <> :com::'true' not
+R29082:29084 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29089:29091 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29085:29088 PLF.Imp <> :com::'true' not
+def 29128:29140 <> fold_bexp_ex2
+R29202:29206 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R29146:29164 PLF.Equiv <> fold_constants_bexp def
+R29166:29168 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29199:29201 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29176:29179 PLF.Imp <> :com::x_'&&'_x not
+R29169:29169 PLF.Imp <> :com:com_scope:'('_x_')' not
+R29175:29175 PLF.Imp <> :com:com_scope:'('_x_')' not
+R29171:29173 PLF.Imp <> :com::x_'='_x not
+R29170:29170 PLF.Imp <> X def
+R29174:29174 PLF.Imp <> Y def
+R29180:29180 PLF.Imp <> :com:com_scope:'('_x_')' not
+R29198:29198 PLF.Imp <> :com:com_scope:'('_x_')' not
+R29182:29184 PLF.Imp <> :com::x_'='_x not
+R29185:29185 PLF.Imp <> :com:com_scope:'('_x_')' not
+R29197:29197 PLF.Imp <> :com:com_scope:'('_x_')' not
+R29187:29189 PLF.Imp <> :com::x_'-'_x not
+R29190:29190 PLF.Imp <> :com:com_scope:'('_x_')' not
+R29196:29196 PLF.Imp <> :com:com_scope:'('_x_')' not
+R29192:29194 PLF.Imp <> :com::x_'+'_x not
+R29207:29209 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29225:29227 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29217:29220 PLF.Imp <> :com::x_'&&'_x not
+R29210:29210 PLF.Imp <> :com:com_scope:'('_x_')' not
+R29216:29216 PLF.Imp <> :com:com_scope:'('_x_')' not
+R29212:29214 PLF.Imp <> :com::x_'='_x not
+R29211:29211 PLF.Imp <> X def
+R29215:29215 PLF.Imp <> Y def
+R29221:29224 PLF.Imp <> :com::'true' not
+def 29381:29398 <> fold_constants_com
+R29405:29407 PLF.Imp <> com ind
+binder 29401:29401 <> c:103
+R29412:29414 PLF.Imp <> com ind
+R29427:29427 PLF.Equiv <> c:103 var
+R29438:29440 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29445:29447 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29441:29444 PLF.Imp <> :com:com_scope:'skip' not
+R29458:29460 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29465:29467 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29461:29464 PLF.Imp <> :com:com_scope:'skip' not
+R29473:29475 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29482:29484 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29477:29480 PLF.Imp <> :com:com_scope:x_':='_x not
+R29495:29497 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29526:29528 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29499:29502 PLF.Imp <> :com:com_scope:x_':='_x not
+R29503:29503 PLF.Imp <> :com:com_scope:'('_x_')' not
+R29525:29525 PLF.Imp <> :com:com_scope:'('_x_')' not
+R29523:29523 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R29504:29522 PLF.Equiv <> fold_constants_aexp def
+R29534:29536 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29544:29546 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29539:29541 PLF.Imp <> :com:com_scope:x_';'_x not
+R29558:29560 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29606:29608 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29582:29584 PLF.Imp <> :com:com_scope:x_';'_x not
+R29579:29579 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R29561:29578 PLF.Equiv <> fold_constants_com:104 def
+R29603:29603 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R29585:29602 PLF.Equiv <> fold_constants_com:104 def
+R29614:29616 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29641:29643 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29617:29619 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R29621:29626 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R29629:29634 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R29637:29640 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R29660:29678 PLF.Equiv <> fold_constants_bexp def
+R29695:29696 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29701:29702 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29697:29700 PLF.Imp <> :com::'true' not
+R29708:29725 PLF.Equiv <> fold_constants_com:104 def
+R29738:29739 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29745:29746 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29740:29744 PLF.Imp <> :com::'false' not
+R29751:29768 PLF.Equiv <> fold_constants_com:104 def
+R29787:29789 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29876:29877 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29790:29792 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R29795:29800 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R29822:29850 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R29872:29875 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R29819:29819 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R29801:29818 PLF.Equiv <> fold_constants_com:104 def
+R29869:29869 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R29851:29868 PLF.Equiv <> fold_constants_com:104 def
+R29893:29895 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29913:29915 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29896:29901 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R29903:29906 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R29909:29912 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R29932:29950 PLF.Equiv <> fold_constants_bexp def
+R29967:29968 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29973:29974 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29969:29972 PLF.Imp <> :com::'true' not
+R29979:29981 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R30004:30006 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R29982:29987 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R29992:29995 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R30000:30003 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R29988:29991 PLF.Imp <> :com::'true' not
+R29996:29999 PLF.Imp <> :com:com_scope:'skip' not
+R30016:30017 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R30023:30024 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R30018:30022 PLF.Imp <> :com::'false' not
+R30029:30031 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R30036:30038 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R30032:30035 PLF.Imp <> :com:com_scope:'skip' not
+R30054:30056 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R30096:30098 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R30057:30062 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R30065:30068 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R30092:30095 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R30069:30069 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30091:30091 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30088:30088 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R30070:30087 PLF.Equiv <> fold_constants_com:104 def
+def 30126:30137 <> fold_com_ex1
+R30414:30452 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R30143:30160 PLF.Equiv <> fold_constants_com def
+R30194:30196 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R30411:30413 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R30207:30215 PLF.Imp <> :com:com_scope:x_';'_x not
+R30198:30201 PLF.Imp <> :com:com_scope:x_':='_x not
+R30197:30197 PLF.Imp <> X def
+R30203:30205 PLF.Imp <> :com::x_'+'_x not
+R30226:30234 PLF.Imp <> :com:com_scope:x_';'_x not
+R30217:30220 PLF.Imp <> :com:com_scope:x_':='_x not
+R30216:30216 PLF.Imp <> Y def
+R30222:30224 PLF.Imp <> :com::x_'-'_x not
+R30221:30221 PLF.Imp <> X def
+R30290:30298 PLF.Imp <> :com:com_scope:x_';'_x not
+R30235:30237 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R30257:30262 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R30267:30279 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R30286:30289 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R30238:30238 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30256:30256 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30246:30248 PLF.Imp <> :com::x_'='_x not
+R30239:30239 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30245:30245 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30241:30243 PLF.Imp <> :com::x_'-'_x not
+R30240:30240 PLF.Imp <> X def
+R30244:30244 PLF.Imp <> Y def
+R30249:30249 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30255:30255 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30251:30253 PLF.Imp <> :com::x_'+'_x not
+R30263:30266 PLF.Imp <> :com:com_scope:'skip' not
+R30281:30284 PLF.Imp <> :com:com_scope:x_':='_x not
+R30280:30280 PLF.Imp <> Y def
+R30355:30363 PLF.Imp <> :com:com_scope:x_';'_x not
+R30299:30301 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R30322:30327 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R30334:30346 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R30351:30354 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R30302:30302 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30321:30321 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30304:30307 PLF.Imp <> :com::x_'<='_x not
+R30308:30308 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30320:30320 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30310:30312 PLF.Imp <> :com::x_'-'_x not
+R30313:30313 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30319:30319 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30315:30317 PLF.Imp <> :com::x_'+'_x not
+R30329:30332 PLF.Imp <> :com:com_scope:x_':='_x not
+R30328:30328 PLF.Imp <> Y def
+R30347:30350 PLF.Imp <> :com:com_scope:'skip' not
+R30364:30369 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R30377:30389 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R30400:30410 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R30370:30370 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30376:30376 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30372:30374 PLF.Imp <> :com::x_'='_x not
+R30371:30371 PLF.Imp <> Y def
+R30391:30394 PLF.Imp <> :com:com_scope:x_':='_x not
+R30390:30390 PLF.Imp <> X def
+R30396:30398 PLF.Imp <> :com::x_'+'_x not
+R30395:30395 PLF.Imp <> X def
+R30453:30455 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R30610:30612 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R30462:30470 PLF.Imp <> :com:com_scope:x_';'_x not
+R30457:30460 PLF.Imp <> :com:com_scope:x_':='_x not
+R30456:30456 PLF.Imp <> X def
+R30481:30489 PLF.Imp <> :com:com_scope:x_';'_x not
+R30472:30475 PLF.Imp <> :com:com_scope:x_':='_x not
+R30471:30471 PLF.Imp <> Y def
+R30477:30479 PLF.Imp <> :com::x_'-'_x not
+R30476:30476 PLF.Imp <> X def
+R30539:30547 PLF.Imp <> :com:com_scope:x_';'_x not
+R30490:30492 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R30506:30511 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R30516:30528 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R30535:30538 PLF.Imp <> :com:com_scope:'if'_x_'then'_x_'else'_x_'end' not
+R30493:30493 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30505:30505 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30501:30503 PLF.Imp <> :com::x_'='_x not
+R30494:30494 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30500:30500 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30496:30498 PLF.Imp <> :com::x_'-'_x not
+R30495:30495 PLF.Imp <> X def
+R30499:30499 PLF.Imp <> Y def
+R30512:30515 PLF.Imp <> :com:com_scope:'skip' not
+R30530:30533 PLF.Imp <> :com:com_scope:x_':='_x not
+R30529:30529 PLF.Imp <> Y def
+R30554:30562 PLF.Imp <> :com:com_scope:x_';'_x not
+R30549:30552 PLF.Imp <> :com:com_scope:x_':='_x not
+R30548:30548 PLF.Imp <> Y def
+R30563:30568 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R30576:30588 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R30599:30609 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R30569:30569 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30575:30575 PLF.Imp <> :com:com_scope:'('_x_')' not
+R30571:30573 PLF.Imp <> :com::x_'='_x not
+R30570:30570 PLF.Imp <> Y def
+R30590:30593 PLF.Imp <> :com:com_scope:x_':='_x not
+R30589:30589 PLF.Imp <> X def
+R30595:30597 PLF.Imp <> :com::x_'+'_x not
+R30594:30594 PLF.Imp <> X def
+prf 30876:30900 <> fold_constants_aexp_sound
+R30906:30917 PLF.Equiv <> atrans_sound def
+R30919:30937 PLF.Equiv <> fold_constants_aexp def
+R30956:30967 PLF.Equiv <> atrans_sound def
+R30987:30992 PLF.Equiv <> aequiv def
+R31403:31421 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31403:31421 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31403:31421 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31403:31421 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+R31447:31465 PLF.Equiv <> fold_constants_aexp def
+prf 34394:34418 <> fold_constants_bexp_sound
+R34423:34434 PLF.Equiv <> btrans_sound def
+R34436:34454 PLF.Equiv <> fold_constants_bexp def
+R34473:34484 PLF.Equiv <> btrans_sound def
+R34504:34509 PLF.Equiv <> bequiv def
+R34637:34655 PLF.Equiv <> fold_constants_aexp def
+R34637:34655 PLF.Equiv <> fold_constants_aexp def
+R34694:34712 PLF.Equiv <> fold_constants_aexp def
+R34694:34712 PLF.Equiv <> fold_constants_aexp def
+R34750:34754 PLF.Imp <> aeval def
+R34769:34773 PLF.Imp <> aeval def
+R34816:34840 PLF.Equiv <> fold_constants_aexp_sound thm
+R34750:34754 PLF.Imp <> aeval def
+R34769:34773 PLF.Imp <> aeval def
+R34816:34840 PLF.Equiv <> fold_constants_aexp_sound thm
+R34816:34840 PLF.Equiv <> fold_constants_aexp_sound thm
+R34870:34874 PLF.Imp <> aeval def
+R34889:34893 PLF.Imp <> aeval def
+R34936:34960 PLF.Equiv <> fold_constants_aexp_sound thm
+R34870:34874 PLF.Imp <> aeval def
+R34889:34893 PLF.Imp <> aeval def
+R34936:34960 PLF.Equiv <> fold_constants_aexp_sound thm
+R34936:34960 PLF.Equiv <> fold_constants_aexp_sound thm
+R35147:35150 Coq.Init.Nat <> ::nat_scope:x_'=?'_x not
+R35147:35150 Coq.Init.Nat <> ::nat_scope:x_'=?'_x not
+R35209:35227 PLF.Equiv <> fold_constants_aexp def
+R35209:35227 PLF.Equiv <> fold_constants_aexp def
+R35266:35284 PLF.Equiv <> fold_constants_aexp def
+R35266:35284 PLF.Equiv <> fold_constants_aexp def
+R35322:35326 PLF.Imp <> aeval def
+R35341:35345 PLF.Imp <> aeval def
+R35388:35412 PLF.Equiv <> fold_constants_aexp_sound thm
+R35322:35326 PLF.Imp <> aeval def
+R35341:35345 PLF.Imp <> aeval def
+R35388:35412 PLF.Equiv <> fold_constants_aexp_sound thm
+R35388:35412 PLF.Equiv <> fold_constants_aexp_sound thm
+R35442:35446 PLF.Imp <> aeval def
+R35461:35465 PLF.Imp <> aeval def
+R35508:35532 PLF.Equiv <> fold_constants_aexp_sound thm
+R35442:35446 PLF.Imp <> aeval def
+R35461:35465 PLF.Imp <> aeval def
+R35508:35532 PLF.Equiv <> fold_constants_aexp_sound thm
+R35508:35532 PLF.Equiv <> fold_constants_aexp_sound thm
+R35719:35722 Coq.Init.Nat <> ::nat_scope:x_'=?'_x not
+R35719:35722 Coq.Init.Nat <> ::nat_scope:x_'=?'_x not
+R35865:35883 PLF.Equiv <> fold_constants_bexp def
+R35865:35883 PLF.Equiv <> fold_constants_bexp def
+R35992:36010 PLF.Equiv <> fold_constants_bexp def
+R35992:36010 PLF.Equiv <> fold_constants_bexp def
+R36049:36067 PLF.Equiv <> fold_constants_bexp def
+R36049:36067 PLF.Equiv <> fold_constants_bexp def
+prf 36340:36363 <> fold_constants_com_sound
+R36369:36380 PLF.Equiv <> ctrans_sound def
+R36382:36399 PLF.Equiv <> fold_constants_com def
+R36418:36429 PLF.Equiv <> ctrans_sound def
+R36485:36495 PLF.Equiv <> refl_cequiv thm
+R36485:36495 PLF.Equiv <> refl_cequiv thm
+R36517:36532 PLF.Equiv <> CAsgn_congruence thm
+R36517:36532 PLF.Equiv <> CAsgn_congruence thm
+R36555:36579 PLF.Equiv <> fold_constants_aexp_sound thm
+R36555:36579 PLF.Equiv <> fold_constants_aexp_sound thm
+R36600:36614 PLF.Equiv <> CSeq_congruence prfax
+R36600:36614 PLF.Equiv <> CSeq_congruence prfax
+R36654:36659 PLF.Equiv <> bequiv def
+R36664:36682 PLF.Equiv <> fold_constants_bexp def
+R36654:36659 PLF.Equiv <> bequiv def
+R36664:36682 PLF.Equiv <> fold_constants_bexp def
+R36703:36727 PLF.Equiv <> fold_constants_bexp_sound prfax
+R36703:36727 PLF.Equiv <> fold_constants_bexp_sound prfax
+R36746:36764 PLF.Equiv <> fold_constants_bexp def
+R36796:36809 PLF.Equiv <> CIf_congruence prfax
+R36746:36764 PLF.Equiv <> fold_constants_bexp def
+R36796:36809 PLF.Equiv <> CIf_congruence prfax
+R36796:36809 PLF.Equiv <> CIf_congruence prfax
+R36796:36809 PLF.Equiv <> CIf_congruence prfax
+R36796:36809 PLF.Equiv <> CIf_congruence prfax
+R36796:36809 PLF.Equiv <> CIf_congruence prfax
+R36796:36809 PLF.Equiv <> CIf_congruence prfax
+R36796:36809 PLF.Equiv <> CIf_congruence prfax
+R36796:36809 PLF.Equiv <> CIf_congruence prfax
+R37021:37032 PLF.Equiv <> trans_cequiv thm
+R37021:37032 PLF.Equiv <> trans_cequiv thm
+R37071:37077 PLF.Equiv <> if_true thm
+R37071:37077 PLF.Equiv <> if_true thm
+R37131:37142 PLF.Equiv <> trans_cequiv thm
+R37131:37142 PLF.Equiv <> trans_cequiv thm
+R37181:37188 PLF.Equiv <> if_false prfax
+R37181:37188 PLF.Equiv <> if_false prfax
+def 38285:38303 <> optimize_0plus_aexp
+R38310:38313 PLF.Imp <> aexp ind
+binder 38306:38306 <> a:106
+R38318:38321 PLF.Imp <> aexp ind
+def 38400:38418 <> optimize_0plus_bexp
+R38425:38428 PLF.Imp <> bexp ind
+binder 38421:38421 <> b:108
+R38433:38436 PLF.Imp <> bexp ind
+def 38515:38532 <> optimize_0plus_com
+R38539:38541 PLF.Imp <> com ind
+binder 38535:38535 <> c:110
+R38546:38548 PLF.Imp <> com ind
+def 38626:38644 <> test_optimize_0plus
+R38717:38724 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R38651:38668 PLF.Equiv <> optimize_0plus_com prfax
+R38677:38679 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R38714:38716 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R38680:38685 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R38692:38695 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R38710:38713 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R38687:38690 PLF.Imp <> :com::x_'<>'_x not
+R38686:38686 PLF.Imp <> X def
+R38697:38700 PLF.Imp <> :com:com_scope:x_':='_x not
+R38696:38696 PLF.Imp <> X def
+R38706:38708 PLF.Imp <> :com::x_'-'_x not
+R38702:38704 PLF.Imp <> :com::x_'+'_x not
+R38705:38705 PLF.Imp <> X def
+R38725:38727 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R38758:38760 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R38728:38733 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R38740:38743 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R38754:38757 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R38735:38738 PLF.Imp <> :com::x_'<>'_x not
+R38734:38734 PLF.Imp <> X def
+R38745:38748 PLF.Imp <> :com:com_scope:x_':='_x not
+R38744:38744 PLF.Imp <> X def
+R38750:38752 PLF.Imp <> :com::x_'-'_x not
+R38749:38749 PLF.Imp <> X def
+prf 39014:39038 <> optimize_0plus_aexp_sound
+R39043:39054 PLF.Equiv <> atrans_sound def
+R39056:39074 PLF.Equiv <> optimize_0plus_aexp prfax
+prf 39124:39148 <> optimize_0plus_bexp_sound
+R39154:39165 PLF.Equiv <> btrans_sound def
+R39167:39185 PLF.Equiv <> optimize_0plus_bexp prfax
+prf 39235:39258 <> optimize_0plus_com_sound
+R39264:39275 PLF.Equiv <> ctrans_sound def
+R39277:39294 PLF.Equiv <> optimize_0plus_com prfax
+def 39538:39546 <> optimizer
+R39553:39555 PLF.Imp <> com ind
+binder 39549:39549 <> c:112
+R39561:39578 PLF.Equiv <> optimize_0plus_com prfax
+R39581:39598 PLF.Equiv <> fold_constants_com def
+R39600:39600 PLF.Equiv <> c:112 var
+prf 39657:39671 <> optimizer_sound
+R39677:39688 PLF.Equiv <> ctrans_sound def
+R39690:39698 PLF.Equiv <> optimizer def
+def 40722:40731 <> subst_aexp
+R40738:40743 Coq.Strings.String <> string ind
+binder 40734:40734 <> x:113
+R40751:40754 PLF.Imp <> aexp ind
+binder 40747:40747 <> u:114
+R40762:40765 PLF.Imp <> aexp ind
+binder 40758:40758 <> a:115
+R40770:40773 PLF.Imp <> aexp ind
+R40786:40786 PLF.Equiv <> a:115 var
+R40797:40800 PLF.Imp <> ANum constr
+R40819:40822 PLF.Imp <> ANum constr
+R40830:40832 PLF.Imp <> AId constr
+R40855:40864 Coq.Strings.String <> eqb def
+R40866:40866 PLF.Equiv <> x:113 var
+R40883:40885 PLF.Imp <> AId constr
+R40876:40876 PLF.Equiv <> u:114 var
+R40894:40896 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R40904:40906 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R40899:40901 PLF.Imp <> :com::x_'+'_x not
+R40918:40920 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R40962:40964 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R40940:40942 PLF.Imp <> :com::x_'+'_x not
+R40921:40921 PLF.Imp <> :com:com_scope:'('_x_')' not
+R40939:40939 PLF.Imp <> :com:com_scope:'('_x_')' not
+R40932:40932 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R40934:40934 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R40936:40936 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R40935:40935 PLF.Equiv <> u:114 var
+R40933:40933 PLF.Equiv <> x:113 var
+R40922:40931 PLF.Equiv <> subst_aexp:116 def
+R40943:40943 PLF.Imp <> :com:com_scope:'('_x_')' not
+R40961:40961 PLF.Imp <> :com:com_scope:'('_x_')' not
+R40954:40954 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R40956:40956 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R40958:40958 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R40957:40957 PLF.Equiv <> u:114 var
+R40955:40955 PLF.Equiv <> x:113 var
+R40944:40953 PLF.Equiv <> subst_aexp:116 def
+R40970:40972 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R40980:40982 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R40975:40977 PLF.Imp <> :com::x_'-'_x not
+R40993:40995 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41037:41039 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41015:41017 PLF.Imp <> :com::x_'-'_x not
+R40996:40996 PLF.Imp <> :com:com_scope:'('_x_')' not
+R41014:41014 PLF.Imp <> :com:com_scope:'('_x_')' not
+R41007:41007 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41009:41009 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41011:41011 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41010:41010 PLF.Equiv <> u:114 var
+R41008:41008 PLF.Equiv <> x:113 var
+R40997:41006 PLF.Equiv <> subst_aexp:116 def
+R41018:41018 PLF.Imp <> :com:com_scope:'('_x_')' not
+R41036:41036 PLF.Imp <> :com:com_scope:'('_x_')' not
+R41029:41029 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41031:41031 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41033:41033 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41032:41032 PLF.Equiv <> u:114 var
+R41030:41030 PLF.Equiv <> x:113 var
+R41019:41028 PLF.Equiv <> subst_aexp:116 def
+R41045:41047 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41055:41057 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41050:41052 PLF.Imp <> :com::x_'*'_x not
+R41069:41071 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41113:41115 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41091:41093 PLF.Imp <> :com::x_'*'_x not
+R41072:41072 PLF.Imp <> :com:com_scope:'('_x_')' not
+R41090:41090 PLF.Imp <> :com:com_scope:'('_x_')' not
+R41083:41083 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41085:41085 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41087:41087 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41086:41086 PLF.Equiv <> u:114 var
+R41084:41084 PLF.Equiv <> x:113 var
+R41073:41082 PLF.Equiv <> subst_aexp:116 def
+R41094:41094 PLF.Imp <> :com:com_scope:'('_x_')' not
+R41112:41112 PLF.Imp <> :com:com_scope:'('_x_')' not
+R41105:41105 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41107:41107 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41109:41109 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41108:41108 PLF.Equiv <> u:114 var
+R41106:41106 PLF.Equiv <> x:113 var
+R41095:41104 PLF.Equiv <> subst_aexp:116 def
+def 41133:41145 <> subst_aexp_ex
+R41185:41189 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R41151:41160 PLF.Equiv <> subst_aexp def
+R41162:41162 PLF.Imp <> X def
+R41164:41165 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41173:41174 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41168:41170 PLF.Imp <> :com::x_'+'_x not
+R41176:41177 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41183:41184 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41179:41181 PLF.Imp <> :com::x_'+'_x not
+R41178:41178 PLF.Imp <> Y def
+R41182:41182 PLF.Imp <> X def
+R41190:41192 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41206:41207 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41194:41196 PLF.Imp <> :com::x_'+'_x not
+R41193:41193 PLF.Imp <> Y def
+R41197:41197 PLF.Imp <> :com:com_scope:'('_x_')' not
+R41205:41205 PLF.Imp <> :com:com_scope:'('_x_')' not
+R41200:41202 PLF.Imp <> :com::x_'+'_x not
+def 41409:41428 <> subst_equiv_property
+binder 41447:41448 <> x1:118
+binder 41450:41451 <> x2:119
+binder 41453:41454 <> a1:120
+binder 41456:41457 <> a2:121
+R41462:41467 PLF.Equiv <> cequiv def
+R41469:41471 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41490:41492 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41480:41481 PLF.Imp <> :com:com_scope:x_';'_x not
+R41474:41477 PLF.Imp <> :com:com_scope:x_':='_x not
+R41472:41473 PLF.Equiv <> x1:118 var
+R41478:41479 PLF.Equiv <> a1:120 var
+R41484:41487 PLF.Imp <> :com:com_scope:x_':='_x not
+R41482:41483 PLF.Equiv <> x2:119 var
+R41488:41489 PLF.Equiv <> a2:121 var
+R41503:41505 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41541:41543 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R41514:41515 PLF.Imp <> :com:com_scope:x_';'_x not
+R41508:41511 PLF.Imp <> :com:com_scope:x_':='_x not
+R41506:41507 PLF.Equiv <> x1:118 var
+R41512:41513 PLF.Equiv <> a1:120 var
+R41518:41521 PLF.Imp <> :com:com_scope:x_':='_x not
+R41516:41517 PLF.Equiv <> x2:119 var
+R41532:41532 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41535:41535 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41538:41538 PLF.Imp <> :com:com_scope:x_x_'..'_x not
+R41539:41540 PLF.Equiv <> a2:121 var
+R41536:41537 PLF.Equiv <> a1:120 var
+R41533:41534 PLF.Equiv <> x1:118 var
+R41522:41531 PLF.Equiv <> subst_aexp def
+prf 41777:41789 <> subst_inequiv
+R41795:41796 Coq.Init.Logic <> ::type_scope:'~'_x not
+R41797:41816 PLF.Equiv <> subst_equiv_property def
+R41835:41854 PLF.Equiv <> subst_equiv_property def
+R42036:42038 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R42071:42073 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R42049:42064 PLF.Imp <> :com:com_scope:x_';'_x not
+R42040:42043 PLF.Imp <> :com:com_scope:x_':='_x not
+R42039:42039 PLF.Imp <> X def
+R42045:42047 PLF.Imp <> :com::x_'+'_x not
+R42044:42044 PLF.Imp <> X def
+R42066:42069 PLF.Imp <> :com:com_scope:x_':='_x not
+R42065:42065 PLF.Imp <> Y def
+R42070:42070 PLF.Imp <> X def
+R42036:42038 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R42071:42073 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R42049:42064 PLF.Imp <> :com:com_scope:x_';'_x not
+R42040:42043 PLF.Imp <> :com:com_scope:x_':='_x not
+R42039:42039 PLF.Imp <> X def
+R42045:42047 PLF.Imp <> :com::x_'+'_x not
+R42044:42044 PLF.Imp <> X def
+R42066:42069 PLF.Imp <> :com:com_scope:x_':='_x not
+R42065:42065 PLF.Imp <> Y def
+R42070:42070 PLF.Imp <> X def
+R42099:42101 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R42138:42140 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R42112:42127 PLF.Imp <> :com:com_scope:x_';'_x not
+R42103:42106 PLF.Imp <> :com:com_scope:x_':='_x not
+R42102:42102 PLF.Imp <> X def
+R42108:42110 PLF.Imp <> :com::x_'+'_x not
+R42107:42107 PLF.Imp <> X def
+R42129:42132 PLF.Imp <> :com:com_scope:x_':='_x not
+R42128:42128 PLF.Imp <> Y def
+R42134:42136 PLF.Imp <> :com::x_'+'_x not
+R42133:42133 PLF.Imp <> X def
+R42099:42101 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R42138:42140 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R42112:42127 PLF.Imp <> :com:com_scope:x_';'_x not
+R42103:42106 PLF.Imp <> :com:com_scope:x_':='_x not
+R42102:42102 PLF.Imp <> X def
+R42108:42110 PLF.Imp <> :com::x_'+'_x not
+R42107:42107 PLF.Imp <> X def
+R42129:42132 PLF.Imp <> :com:com_scope:x_':='_x not
+R42128:42128 PLF.Imp <> Y def
+R42134:42136 PLF.Imp <> :com::x_'+'_x not
+R42133:42133 PLF.Imp <> X def
+R42165:42170 PLF.Equiv <> cequiv def
+R42165:42170 PLF.Equiv <> cequiv def
+R42406:42410 PLF.Maps <> :::x_'!->'_x_';'_x not
+R42412:42414 PLF.Maps <> :::x_'!->'_x_';'_x not
+R42416:42420 PLF.Imp <> :::x_'!->'_x not
+R42415:42415 PLF.Imp <> X def
+R42405:42405 PLF.Imp <> Y def
+R42406:42410 PLF.Maps <> :::x_'!->'_x_';'_x not
+R42412:42414 PLF.Maps <> :::x_'!->'_x_';'_x not
+R42416:42420 PLF.Imp <> :::x_'!->'_x not
+R42415:42415 PLF.Imp <> X def
+R42405:42405 PLF.Imp <> Y def
+R42445:42449 PLF.Maps <> :::x_'!->'_x_';'_x not
+R42451:42453 PLF.Maps <> :::x_'!->'_x_';'_x not
+R42455:42459 PLF.Imp <> :::x_'!->'_x not
+R42454:42454 PLF.Imp <> X def
+R42444:42444 PLF.Imp <> Y def
+R42445:42449 PLF.Maps <> :::x_'!->'_x_';'_x not
+R42451:42453 PLF.Maps <> :::x_'!->'_x_';'_x not
+R42455:42459 PLF.Imp <> :::x_'!->'_x not
+R42454:42454 PLF.Imp <> X def
+R42444:42444 PLF.Imp <> Y def
+R42494:42497 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R42500:42504 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R42486:42493 PLF.Imp <> empty_st def
+R42534:42537 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R42540:42544 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R42526:42533 PLF.Imp <> empty_st def
+R42599:42603 PLF.Imp <> :::x_'!->'_x not
+R42598:42598 PLF.Imp <> X def
+R42578:42582 PLF.Imp <> E_Seq constr
+R42622:42627 PLF.Imp <> E_Asgn constr
+R42494:42497 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R42500:42504 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R42486:42493 PLF.Imp <> empty_st def
+R42534:42537 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R42540:42544 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R42526:42533 PLF.Imp <> empty_st def
+R42534:42537 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R42540:42544 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R42526:42533 PLF.Imp <> empty_st def
+R42599:42603 PLF.Imp <> :::x_'!->'_x not
+R42598:42598 PLF.Imp <> X def
+R42578:42582 PLF.Imp <> E_Seq constr
+R42622:42627 PLF.Imp <> E_Asgn constr
+R42622:42627 PLF.Imp <> E_Asgn constr
+R42599:42603 PLF.Imp <> :::x_'!->'_x not
+R42598:42598 PLF.Imp <> X def
+R42578:42582 PLF.Imp <> E_Seq constr
+R42622:42627 PLF.Imp <> E_Asgn constr
+R42622:42627 PLF.Imp <> E_Asgn constr
+R42599:42603 PLF.Imp <> :::x_'!->'_x not
+R42598:42598 PLF.Imp <> X def
+R42578:42582 PLF.Imp <> E_Seq constr
+R42622:42627 PLF.Imp <> E_Asgn constr
+R42622:42627 PLF.Imp <> E_Asgn constr
+R42599:42603 PLF.Imp <> :::x_'!->'_x not
+R42598:42598 PLF.Imp <> X def
+R42578:42582 PLF.Imp <> E_Seq constr
+R42816:42818 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R42839:42857 PLF.Imp <> ceval_deterministic thm
+R42862:42869 PLF.Imp <> empty_st def
+R42816:42818 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R42839:42857 PLF.Imp <> ceval_deterministic thm
+R42862:42869 PLF.Imp <> empty_st def
+R42928:42930 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R42927:42927 PLF.Imp <> Y def
+R42935:42935 PLF.Imp <> Y def
+R42928:42930 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R42927:42927 PLF.Imp <> Y def
+R42935:42935 PLF.Imp <> Y def
+ind 43352:43371 <> var_not_used_in_aexp
+constr 43408:43413 <> VNUNum
+constr 43463:43467 <> VNUId
+constr 43526:43532 <> VNUPlus
+constr 43669:43676 <> VNUMinus
+constr 43813:43819 <> VNUMult
+R43378:43383 Coq.Strings.String <> string ind
+binder 43374:43374 <> x:122
+R43392:43395 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R43388:43391 PLF.Imp <> aexp ind
+binder 43424:43424 <> n:125
+R43427:43446 PLF.Equiv <> var_not_used_in_aexp:123 ind
+R43451:43454 PLF.Imp <> ANum constr
+R43456:43456 PLF.Equiv <> n:125 var
+R43448:43448 PLF.Equiv <> x:122 var
+binder 43478:43478 <> y:126
+R43487:43490 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R43482:43485 Coq.Init.Logic <> ::type_scope:x_'<>'_x not
+R43481:43481 PLF.Equiv <> x:122 var
+R43486:43486 PLF.Equiv <> y:126 var
+R43491:43510 PLF.Equiv <> var_not_used_in_aexp:123 ind
+R43515:43517 PLF.Imp <> AId constr
+R43519:43519 PLF.Equiv <> y:126 var
+R43512:43512 PLF.Equiv <> x:122 var
+binder 43543:43544 <> a1:127
+binder 43546:43547 <> a2:128
+R43581:43590 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R43556:43575 PLF.Equiv <> var_not_used_in_aexp:123 ind
+R43579:43580 PLF.Equiv <> a1:127 var
+R43577:43577 PLF.Equiv <> x:122 var
+R43616:43625 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R43591:43610 PLF.Equiv <> var_not_used_in_aexp:123 ind
+R43614:43615 PLF.Equiv <> a2:128 var
+R43612:43612 PLF.Equiv <> x:122 var
+R43626:43645 PLF.Equiv <> var_not_used_in_aexp:123 ind
+R43650:43652 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R43660:43662 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R43655:43657 PLF.Imp <> :com::x_'+'_x not
+R43653:43654 PLF.Equiv <> a1:127 var
+R43658:43659 PLF.Equiv <> a2:128 var
+R43647:43647 PLF.Equiv <> x:122 var
+binder 43687:43688 <> a1:129
+binder 43690:43691 <> a2:130
+R43725:43734 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R43700:43719 PLF.Equiv <> var_not_used_in_aexp:123 ind
+R43723:43724 PLF.Equiv <> a1:129 var
+R43721:43721 PLF.Equiv <> x:122 var
+R43760:43769 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R43735:43754 PLF.Equiv <> var_not_used_in_aexp:123 ind
+R43758:43759 PLF.Equiv <> a2:130 var
+R43756:43756 PLF.Equiv <> x:122 var
+R43770:43789 PLF.Equiv <> var_not_used_in_aexp:123 ind
+R43794:43796 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R43804:43806 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R43799:43801 PLF.Imp <> :com::x_'-'_x not
+R43797:43798 PLF.Equiv <> a1:129 var
+R43802:43803 PLF.Equiv <> a2:130 var
+R43791:43791 PLF.Equiv <> x:122 var
+binder 43830:43831 <> a1:131
+binder 43833:43834 <> a2:132
+R43868:43877 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R43843:43862 PLF.Equiv <> var_not_used_in_aexp:123 ind
+R43866:43867 PLF.Equiv <> a1:131 var
+R43864:43864 PLF.Equiv <> x:122 var
+R43903:43912 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R43878:43897 PLF.Equiv <> var_not_used_in_aexp:123 ind
+R43901:43902 PLF.Equiv <> a2:132 var
+R43899:43899 PLF.Equiv <> x:122 var
+R43913:43932 PLF.Equiv <> var_not_used_in_aexp:123 ind
+R43937:43939 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R43947:43949 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R43942:43944 PLF.Imp <> :com::x_'*'_x not
+R43940:43941 PLF.Equiv <> a1:131 var
+R43945:43946 PLF.Equiv <> a2:132 var
+R43934:43934 PLF.Equiv <> x:122 var
+prf 43960:43974 <> aeval_weakening
+binder 43985:43985 <> x:133
+binder 43987:43988 <> st:134
+binder 43990:43990 <> a:135
+binder 43992:43993 <> ni:136
+R44022:44027 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R43998:44017 PLF.Equiv <> var_not_used_in_aexp ind
+R44019:44019 PLF.Equiv <> x:133 var
+R44021:44021 PLF.Equiv <> a:135 var
+R44051:44053 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R44028:44032 PLF.Imp <> aeval def
+R44036:44040 PLF.Maps <> :::x_'!->'_x_';'_x not
+R44043:44045 PLF.Maps <> :::x_'!->'_x_';'_x not
+R44046:44047 PLF.Equiv <> st:134 var
+R44035:44035 PLF.Equiv <> x:133 var
+R44041:44042 PLF.Equiv <> ni:136 var
+R44050:44050 PLF.Equiv <> a:135 var
+R44054:44058 PLF.Imp <> aeval def
+R44060:44061 PLF.Equiv <> st:134 var
+R44063:44063 PLF.Equiv <> a:135 var
+prf 44369:44384 <> inequiv_exercise
+R44389:44390 Coq.Init.Logic <> ::type_scope:'~'_x not
+R44391:44396 PLF.Equiv <> cequiv def
+R44398:44400 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R44423:44425 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R44401:44406 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R44411:44414 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R44419:44422 PLF.Imp <> :com:com_scope:'while'_x_'do'_x_'end' not
+R44407:44410 PLF.Imp <> :com::'true' not
+R44415:44418 PLF.Imp <> :com:com_scope:'skip' not
+R44427:44429 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R44434:44436 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R44430:44433 PLF.Imp <> :com:com_scope:'skip' not
+mod 46543:46546 <> Himp
+ind 46644:46646 Himp com
+constr 46662:46666 Himp CSkip
+constr 46678:46682 Himp CAsgn
+constr 46712:46715 Himp CSeq
+constr 46741:46743 Himp CIf
+constr 46777:46782 Himp CWhile
+constr 46809:46814 Himp CHavoc
+R46670:46672 PLF.Equiv <> com:137 ind
+R46692:46695 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R46686:46691 Coq.Strings.String <> string ind
+R46700:46703 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R46696:46699 PLF.Imp <> aexp ind
+R46704:46706 PLF.Equiv <> com:137 ind
+R46722:46725 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R46719:46721 PLF.Equiv <> com:137 ind
+R46729:46732 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R46726:46728 PLF.Equiv <> com:137 ind
+R46733:46735 PLF.Equiv <> com:137 ind
+R46751:46754 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R46747:46750 PLF.Imp <> bexp ind
+R46758:46761 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R46755:46757 PLF.Equiv <> com:137 ind
+R46765:46768 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R46762:46764 PLF.Equiv <> com:137 ind
+R46769:46771 PLF.Equiv <> com:137 ind
+R46790:46793 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R46786:46789 PLF.Imp <> bexp ind
+R46797:46800 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R46794:46796 PLF.Equiv <> com:137 ind
+R46801:46803 PLF.Equiv <> com:137 ind
+R46824:46827 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R46818:46823 Coq.Strings.String <> string ind
+R46828:46830 PLF.Equiv <> com:137 ind
+R46889:46894 PLF.Equiv Himp CHavoc constr
+not 46873:46873 Himp :com::'havoc'_x
+R47006:47010 PLF.Equiv Himp CSkip constr
+not 46984:46984 Himp :com::'skip'
+R47072:47076 PLF.Equiv Himp CAsgn constr
+not 47049:47049 Himp :com::x_':='_x
+R47220:47223 PLF.Equiv Himp CSeq constr
+not 47199:47199 Himp :com::x_';'_x
+R47346:47348 PLF.Equiv Himp CIf constr
+not 47300:47300 Himp :com::'if'_x_'then'_x_'else'_x_'end'
+R47501:47506 PLF.Equiv Himp CWhile constr
+not 47463:47463 Himp :com::'while'_x_'do'_x_'end'
+ind 48049:48053 Himp ceval
+constr 48094:48099 Himp E_Skip
+constr 48142:48147 Himp E_Asgn
+constr 48235:48239 Himp E_Seq
+constr 48359:48366 Himp E_IfTrue
+constr 48495:48503 Himp E_IfFalse
+constr 48633:48644 Himp E_WhileFalse
+constr 48731:48741 Himp E_WhileTrue
+R48060:48063 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R48057:48059 PLF.Equiv Himp com ind
+R48069:48072 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R48064:48068 PLF.Imp <> state def
+R48078:48081 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R48073:48077 PLF.Imp <> state def
+R48953:48957 PLF.Equiv <> ceval:140 ind
+binder 48110:48111 <> st:141
+R48122:48125 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48130:48134 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48126:48129 PLF.Equiv Himp :com::'skip' not
+R48120:48121 PLF.Equiv <> st:141 var
+R48135:48136 PLF.Equiv <> st:141 var
+binder 48159:48160 <> st:142
+binder 48162:48162 <> a:143
+binder 48164:48164 <> n:144
+binder 48166:48166 <> x:145
+R48189:48198 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R48185:48187 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R48175:48179 PLF.Imp <> aeval def
+R48181:48182 PLF.Equiv <> st:142 var
+R48184:48184 PLF.Equiv <> a:143 var
+R48188:48188 PLF.Equiv <> n:144 var
+R48201:48204 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48211:48216 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48229:48229 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48206:48209 PLF.Equiv Himp :com::x_':='_x not
+R48205:48205 PLF.Equiv <> x:145 var
+R48210:48210 PLF.Equiv <> a:143 var
+R48199:48200 PLF.Equiv <> st:142 var
+R48218:48222 PLF.Maps <> :::x_'!->'_x_';'_x not
+R48224:48226 PLF.Maps <> :::x_'!->'_x_';'_x not
+R48227:48228 PLF.Equiv <> st:142 var
+R48217:48217 PLF.Equiv <> x:145 var
+R48223:48223 PLF.Equiv <> n:144 var
+binder 48250:48251 <> c1:146
+binder 48253:48254 <> c2:147
+binder 48256:48257 <> st:148
+binder 48259:48261 <> st':149
+binder 48263:48266 <> st'':150
+R48292:48302 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R48277:48281 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48284:48288 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48282:48283 PLF.Equiv <> c1:146 var
+R48275:48276 PLF.Equiv <> st:148 var
+R48289:48291 PLF.Equiv <> st':149 var
+R48321:48330 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R48306:48309 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48312:48316 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48310:48311 PLF.Equiv <> c2:147 var
+R48303:48305 PLF.Equiv <> st':149 var
+R48317:48320 PLF.Equiv <> st'':150 var
+R48333:48337 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48345:48349 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48340:48342 PLF.Equiv Himp :com::x_';'_x not
+R48338:48339 PLF.Equiv <> c1:146 var
+R48343:48344 PLF.Equiv <> c2:147 var
+R48331:48332 PLF.Equiv <> st:148 var
+R48350:48353 PLF.Equiv <> st'':150 var
+binder 48377:48378 <> st:151
+binder 48380:48382 <> st':152
+binder 48384:48384 <> b:153
+binder 48386:48387 <> c1:154
+binder 48389:48390 <> c2:155
+R48416:48425 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R48409:48411 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R48399:48403 PLF.Imp <> beval def
+R48405:48406 PLF.Equiv <> st:151 var
+R48408:48408 PLF.Equiv <> b:153 var
+R48412:48415 PLF.Imp <> :::'true' not
+R48442:48451 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R48428:48431 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48434:48438 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48432:48433 PLF.Equiv <> c1:154 var
+R48426:48427 PLF.Equiv <> st:151 var
+R48439:48441 PLF.Equiv <> st':152 var
+R48454:48457 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48482:48486 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48458:48460 PLF.Equiv Himp :com::'if'_x_'then'_x_'else'_x_'end' not
+R48462:48467 PLF.Equiv Himp :com::'if'_x_'then'_x_'else'_x_'end' not
+R48470:48475 PLF.Equiv Himp :com::'if'_x_'then'_x_'else'_x_'end' not
+R48478:48481 PLF.Equiv Himp :com::'if'_x_'then'_x_'else'_x_'end' not
+R48461:48461 PLF.Equiv <> b:153 var
+R48468:48469 PLF.Equiv <> c1:154 var
+R48476:48477 PLF.Equiv <> c2:155 var
+R48452:48453 PLF.Equiv <> st:151 var
+R48487:48489 PLF.Equiv <> st':152 var
+binder 48514:48515 <> st:156
+binder 48517:48519 <> st':157
+binder 48521:48521 <> b:158
+binder 48523:48524 <> c1:159
+binder 48526:48527 <> c2:160
+R48554:48563 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R48546:48548 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R48536:48540 PLF.Imp <> beval def
+R48542:48543 PLF.Equiv <> st:156 var
+R48545:48545 PLF.Equiv <> b:158 var
+R48549:48553 PLF.Imp <> :::'false' not
+R48580:48589 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R48566:48569 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48572:48576 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48570:48571 PLF.Equiv <> c2:160 var
+R48564:48565 PLF.Equiv <> st:156 var
+R48577:48579 PLF.Equiv <> st':157 var
+R48592:48595 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48620:48624 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48596:48598 PLF.Equiv Himp :com::'if'_x_'then'_x_'else'_x_'end' not
+R48600:48605 PLF.Equiv Himp :com::'if'_x_'then'_x_'else'_x_'end' not
+R48608:48613 PLF.Equiv Himp :com::'if'_x_'then'_x_'else'_x_'end' not
+R48616:48619 PLF.Equiv Himp :com::'if'_x_'then'_x_'else'_x_'end' not
+R48599:48599 PLF.Equiv <> b:158 var
+R48606:48607 PLF.Equiv <> c1:159 var
+R48614:48615 PLF.Equiv <> c2:160 var
+R48590:48591 PLF.Equiv <> st:156 var
+R48625:48627 PLF.Equiv <> st':157 var
+binder 48655:48655 <> b:161
+binder 48657:48658 <> st:162
+binder 48660:48660 <> c:163
+R48687:48696 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R48679:48681 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R48669:48673 PLF.Imp <> beval def
+R48675:48676 PLF.Equiv <> st:162 var
+R48678:48678 PLF.Equiv <> b:161 var
+R48682:48686 PLF.Imp <> :::'false' not
+R48699:48702 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48719:48723 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48703:48708 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R48710:48713 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R48715:48718 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R48709:48709 PLF.Equiv <> b:161 var
+R48714:48714 PLF.Equiv <> c:163 var
+R48697:48698 PLF.Equiv <> st:162 var
+R48724:48725 PLF.Equiv <> st:162 var
+binder 48752:48753 <> st:164
+binder 48755:48757 <> st':165
+binder 48759:48762 <> st'':166
+binder 48764:48764 <> b:167
+binder 48766:48766 <> c:168
+R48792:48801 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R48785:48787 Coq.Init.Logic <> ::type_scope:x_'='_x not
+R48775:48779 PLF.Imp <> beval def
+R48781:48782 PLF.Equiv <> st:164 var
+R48784:48784 PLF.Equiv <> b:167 var
+R48788:48791 PLF.Imp <> :::'true' not
+R48818:48827 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R48804:48808 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48810:48814 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48809:48809 PLF.Equiv <> c:168 var
+R48802:48803 PLF.Equiv <> st:164 var
+R48815:48817 PLF.Equiv <> st':165 var
+R48860:48869 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R48831:48834 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48851:48855 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48835:48840 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R48842:48845 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R48847:48850 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R48841:48841 PLF.Equiv <> b:167 var
+R48846:48846 PLF.Equiv <> c:168 var
+R48828:48830 PLF.Equiv <> st':165 var
+R48856:48859 PLF.Equiv <> st'':166 var
+R48872:48876 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48893:48897 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R48877:48882 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R48884:48887 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R48889:48892 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R48883:48883 PLF.Equiv <> b:167 var
+R48888:48888 PLF.Equiv <> c:168 var
+R48870:48871 PLF.Equiv <> st:164 var
+R48898:48901 PLF.Equiv <> st'':166 var
+R48953:48957 PLF.Equiv Himp ceval ind
+not 48931:48931 Himp :::x_'=['_x_']=>'_x
+def 49071:49084 Himp havoc_example1
+R49096:49099 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R49107:49112 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R49120:49120 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R49100:49105 PLF.Equiv Himp :com::'havoc'_x not
+R49106:49106 PLF.Imp <> X def
+R49088:49095 PLF.Imp <> empty_st def
+R49114:49118 PLF.Imp <> :::x_'!->'_x not
+R49113:49113 PLF.Imp <> X def
+def 49168:49181 Himp havoc_example2
+R49195:49198 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R49212:49217 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R49226:49226 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R49203:49204 PLF.Equiv Himp :com::x_';'_x not
+R49199:49202 PLF.Equiv Himp :com::'skip' not
+R49205:49210 PLF.Equiv Himp :com::'havoc'_x not
+R49211:49211 PLF.Imp <> Z def
+R49187:49194 PLF.Imp <> empty_st def
+R49219:49223 PLF.Imp <> :::x_'!->'_x not
+R49218:49218 PLF.Imp <> Z def
+def 49317:49353 Himp manual_grade_for_Check_rule_for_HAVOC
+R49357:49362 Coq.Init.Datatypes <> option ind
+R49368:49368 Coq.Init.Datatypes <> ::type_scope:x_'*'_x not
+R49365:49367 Coq.Init.Datatypes <> nat ind
+R49369:49374 Coq.Strings.String <> string ind
+R49380:49383 Coq.Init.Datatypes <> None constr
+def 49485:49490 Himp cequiv
+R49501:49503 PLF.Equiv Himp com ind
+binder 49493:49494 <> c1:169
+binder 49496:49497 <> c2:170
+R49532:49536 PLF.Imp <> state def
+binder 49523:49524 <> st:171
+binder 49526:49528 <> st':172
+R49557:49561 Coq.Init.Logic <> ::type_scope:x_'<->'_x not
+R49543:49546 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R49549:49553 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R49547:49548 PLF.Equiv <> c1:169 var
+R49541:49542 PLF.Equiv <> st:171 var
+R49554:49556 PLF.Equiv <> st':172 var
+R49564:49567 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R49570:49574 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R49568:49569 PLF.Equiv <> c2:170 var
+R49562:49563 PLF.Equiv <> st:171 var
+R49575:49577 PLF.Equiv <> st':172 var
+def 49801:49803 Himp pXY
+R49810:49812 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R49830:49832 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R49820:49822 PLF.Equiv Himp :com::x_';'_x not
+R49813:49818 PLF.Equiv Himp :com::'havoc'_x not
+R49819:49819 PLF.Imp <> X def
+R49823:49828 PLF.Equiv Himp :com::'havoc'_x not
+R49829:49829 PLF.Imp <> Y def
+def 49847:49849 Himp pYX
+R49856:49858 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R49875:49877 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R49866:49867 PLF.Equiv Himp :com::x_';'_x not
+R49859:49864 PLF.Equiv Himp :com::'havoc'_x not
+R49865:49865 PLF.Imp <> Y def
+R49868:49873 PLF.Equiv Himp :com::'havoc'_x not
+R49874:49874 PLF.Imp <> X def
+prf 49984:49997 Himp pXY_cequiv_pYX
+R50017:50020 Coq.Init.Logic <> ::type_scope:x_'\/'_x not
+R50003:50008 PLF.Equiv Himp cequiv def
+R50010:50012 PLF.Equiv Himp pXY def
+R50014:50016 PLF.Equiv Himp pYX def
+R50021:50021 Coq.Init.Logic <> ::type_scope:'~'_x not
+R50022:50027 PLF.Equiv Himp cequiv def
+R50029:50031 PLF.Equiv Himp pXY def
+R50033:50035 PLF.Equiv Himp pYX def
+def 50403:50408 Himp ptwice
+R50415:50417 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R50434:50436 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R50425:50426 PLF.Equiv Himp :com::x_';'_x not
+R50418:50423 PLF.Equiv Himp :com::'havoc'_x not
+R50424:50424 PLF.Imp <> X def
+R50427:50432 PLF.Equiv Himp :com::'havoc'_x not
+R50433:50433 PLF.Imp <> Y def
+def 50451:50455 Himp pcopy
+R50462:50464 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R50480:50482 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R50472:50473 PLF.Equiv Himp :com::x_';'_x not
+R50465:50470 PLF.Equiv Himp :com::'havoc'_x not
+R50471:50471 PLF.Imp <> X def
+R50475:50478 PLF.Equiv Himp :com::x_':='_x not
+R50474:50474 PLF.Imp <> Y def
+R50479:50479 PLF.Imp <> X def
+prf 50653:50671 Himp ptwice_cequiv_pcopy
+R50696:50699 Coq.Init.Logic <> ::type_scope:x_'\/'_x not
+R50677:50682 PLF.Equiv Himp cequiv def
+R50684:50689 PLF.Equiv Himp ptwice def
+R50691:50695 PLF.Equiv Himp pcopy def
+R50700:50700 Coq.Init.Logic <> ::type_scope:'~'_x not
+R50701:50706 PLF.Equiv Himp cequiv def
+R50708:50713 PLF.Equiv Himp ptwice def
+R50715:50719 PLF.Equiv Himp pcopy def
+def 51419:51420 Himp p1
+R51424:51426 PLF.Equiv Himp com ind
+R51433:51435 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R51497:51499 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R51436:51441 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R51451:51461 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R51488:51496 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R51442:51443 PLF.Imp <> :com::'~'_x not
+R51444:51444 PLF.Imp <> :com:com_scope:'('_x_')' not
+R51450:51450 PLF.Imp <> :com:com_scope:'('_x_')' not
+R51446:51448 PLF.Imp <> :com::x_'='_x not
+R51445:51445 PLF.Imp <> X def
+R51469:51477 PLF.Equiv Himp :com::x_';'_x not
+R51462:51467 PLF.Equiv Himp :com::'havoc'_x not
+R51468:51468 PLF.Imp <> Y def
+R51479:51482 PLF.Equiv Himp :com::x_':='_x not
+R51478:51478 PLF.Imp <> X def
+R51484:51486 PLF.Imp <> :com::x_'+'_x not
+R51483:51483 PLF.Imp <> X def
+def 51514:51515 Himp p2
+R51519:51521 PLF.Equiv Himp com ind
+R51528:51530 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R51570:51572 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R51531:51536 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R51546:51556 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R51561:51569 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R51537:51538 PLF.Imp <> :com::'~'_x not
+R51539:51539 PLF.Imp <> :com:com_scope:'('_x_')' not
+R51545:51545 PLF.Imp <> :com:com_scope:'('_x_')' not
+R51541:51543 PLF.Imp <> :com::x_'='_x not
+R51540:51540 PLF.Imp <> X def
+R51557:51560 PLF.Equiv Himp :com::'skip' not
+prf 51834:51847 Himp p1_may_diverge
+binder 51858:51859 <> st:173
+binder 51861:51863 <> st':174
+R51875:51880 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R51870:51873 Coq.Init.Logic <> ::type_scope:x_'<>'_x not
+R51866:51867 PLF.Equiv <> st:173 var
+R51869:51869 PLF.Imp <> X def
+R51881:51882 Coq.Init.Logic <> ::type_scope:'~'_x not
+R51885:51888 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R51891:51895 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R51889:51890 PLF.Equiv Himp p1 def
+R51883:51884 PLF.Equiv <> st:173 var
+R51896:51898 PLF.Equiv <> st':174 var
+prf 51944:51957 Himp p2_may_diverge
+binder 51968:51969 <> st:175
+binder 51971:51973 <> st':176
+R51985:51990 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R51980:51983 Coq.Init.Logic <> ::type_scope:x_'<>'_x not
+R51976:51977 PLF.Equiv <> st:175 var
+R51979:51979 PLF.Imp <> X def
+R51991:51992 Coq.Init.Logic <> ::type_scope:'~'_x not
+R51995:51998 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R52001:52005 PLF.Equiv Himp :::x_'=['_x_']=>'_x not
+R51999:52000 PLF.Equiv Himp p2 def
+R51993:51994 PLF.Equiv <> st:175 var
+R52006:52008 PLF.Equiv <> st':176 var
+prf 52204:52214 Himp p1_p2_equiv
+R52218:52223 PLF.Equiv Himp cequiv def
+R52225:52226 PLF.Equiv Himp p1 def
+R52228:52229 PLF.Equiv Himp p2 def
+def 52497:52498 Himp p3
+R52502:52504 PLF.Equiv Himp com ind
+R52511:52513 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R52582:52584 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R52520:52526 PLF.Equiv Himp :com::x_';'_x not
+R52515:52518 PLF.Equiv Himp :com::x_':='_x not
+R52514:52514 PLF.Imp <> Z def
+R52527:52532 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R52539:52549 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R52573:52581 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R52534:52537 PLF.Imp <> :com::x_'<>'_x not
+R52533:52533 PLF.Imp <> X def
+R52557:52565 PLF.Equiv Himp :com::x_';'_x not
+R52550:52555 PLF.Equiv Himp :com::'havoc'_x not
+R52556:52556 PLF.Imp <> X def
+R52566:52571 PLF.Equiv Himp :com::'havoc'_x not
+R52572:52572 PLF.Imp <> Z def
+def 52599:52600 Himp p4
+R52604:52606 PLF.Equiv Himp com ind
+R52613:52615 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R52635:52637 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R52622:52628 PLF.Equiv Himp :com::x_';'_x not
+R52617:52620 PLF.Equiv Himp :com::x_':='_x not
+R52616:52616 PLF.Imp <> X def
+R52630:52633 PLF.Equiv Himp :com::x_':='_x not
+R52629:52629 PLF.Imp <> Z def
+prf 52649:52661 Himp p3_p4_inequiv
+R52665:52666 Coq.Init.Logic <> ::type_scope:'~'_x not
+R52667:52672 PLF.Equiv Himp cequiv def
+R52674:52675 PLF.Equiv Himp p3 def
+R52677:52678 PLF.Equiv Himp p4 def
+def 53283:53284 Himp p5
+R53288:53290 PLF.Equiv Himp com ind
+R53297:53299 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R53339:53341 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R53300:53305 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R53312:53322 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R53330:53338 PLF.Equiv Himp :com::'while'_x_'do'_x_'end' not
+R53307:53310 PLF.Imp <> :com::x_'<>'_x not
+R53306:53306 PLF.Imp <> X def
+R53323:53328 PLF.Equiv Himp :com::'havoc'_x not
+R53329:53329 PLF.Imp <> X def
+def 53356:53357 Himp p6
+R53361:53363 PLF.Equiv Himp com ind
+R53370:53372 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R53379:53381 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R53374:53377 PLF.Equiv Himp :com::x_':='_x not
+R53373:53373 PLF.Imp <> X def
+prf 53393:53403 Himp p5_p6_equiv
+R53407:53412 PLF.Equiv Himp cequiv def
+R53414:53415 PLF.Equiv Himp p5 def
+R53417:53418 PLF.Equiv Himp p6 def
+R53472:53475 PLF.Equiv Himp <> mod
+prf 53742:53772 <> swap_noninterfering_assignments
+binder 53782:53783 <> l1:177
+binder 53785:53786 <> l2:178
+binder 53788:53789 <> a1:179
+binder 53791:53792 <> a2:180
+R53805:53810 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R53799:53802 Coq.Init.Logic <> ::type_scope:x_'<>'_x not
+R53797:53798 PLF.Equiv <> l1:177 var
+R53803:53804 PLF.Equiv <> l2:178 var
+R53837:53842 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R53811:53830 PLF.Equiv <> var_not_used_in_aexp ind
+R53832:53833 PLF.Equiv <> l1:177 var
+R53835:53836 PLF.Equiv <> a2:180 var
+R53869:53874 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R53843:53862 PLF.Equiv <> var_not_used_in_aexp ind
+R53864:53865 PLF.Equiv <> l2:178 var
+R53867:53868 PLF.Equiv <> a1:179 var
+R53875:53880 PLF.Equiv <> cequiv def
+R53886:53888 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R53907:53909 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R53897:53898 PLF.Imp <> :com:com_scope:x_';'_x not
+R53891:53894 PLF.Imp <> :com:com_scope:x_':='_x not
+R53889:53890 PLF.Equiv <> l1:177 var
+R53895:53896 PLF.Equiv <> a1:179 var
+R53901:53904 PLF.Imp <> :com:com_scope:x_':='_x not
+R53899:53900 PLF.Equiv <> l2:178 var
+R53905:53906 PLF.Equiv <> a2:180 var
+R53915:53917 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R53936:53938 PLF.Imp <> ::com_scope:'<{'_x_'}>' not
+R53926:53927 PLF.Imp <> :com:com_scope:x_';'_x not
+R53920:53923 PLF.Imp <> :com:com_scope:x_':='_x not
+R53918:53919 PLF.Equiv <> l2:178 var
+R53924:53925 PLF.Equiv <> a2:180 var
+R53930:53933 PLF.Imp <> :com:com_scope:x_':='_x not
+R53928:53929 PLF.Equiv <> l1:177 var
+R53934:53935 PLF.Equiv <> a1:179 var
+def 54856:54862 <> capprox
+R54873:54875 PLF.Imp <> com ind
+binder 54865:54866 <> c1:181
+binder 54868:54869 <> c2:182
+R54905:54909 PLF.Imp <> state def
+binder 54896:54897 <> st:183
+binder 54899:54901 <> st':184
+R54931:54934 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R54917:54920 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R54923:54927 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R54921:54922 PLF.Equiv <> c1:181 var
+R54915:54916 PLF.Equiv <> st:183 var
+R54928:54930 PLF.Equiv <> st':184 var
+R54937:54940 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R54943:54947 PLF.Imp <> :::x_'=['_x_']=>'_x not
+R54941:54942 PLF.Equiv <> c2:182 var
+R54935:54936 PLF.Equiv <> st:183 var
+R54948:54950 PLF.Equiv <> st':184 var
+def 55363:55364 <> c3
+R55368:55370 PLF.Imp <> com ind
+def 55450:55451 <> c4
+R55455:55457 PLF.Imp <> com ind
+prf 55535:55549 <> c3_c4_different
+R55568:55571 Coq.Init.Logic <> ::type_scope:x_'/\'_x not
+R55553:55554 Coq.Init.Logic <> ::type_scope:'~'_x not
+R55555:55561 PLF.Equiv <> capprox def
+R55563:55564 PLF.Equiv <> c3 prfax
+R55566:55567 PLF.Equiv <> c4 prfax
+R55572:55573 Coq.Init.Logic <> ::type_scope:'~'_x not
+R55574:55580 PLF.Equiv <> capprox def
+R55582:55583 PLF.Equiv <> c4 prfax
+R55585:55586 PLF.Equiv <> c3 prfax
+def 55706:55709 <> cmin
+R55713:55715 PLF.Imp <> com ind
+prf 55793:55804 <> cmin_minimal
+binder 55815:55815 <> c:185
+R55818:55824 PLF.Equiv <> capprox def
+R55826:55829 PLF.Equiv <> cmin prfax
+R55831:55831 PLF.Equiv <> c:185 var
+def 56008:56012 <> zprop
+R56019:56021 PLF.Imp <> com ind
+binder 56015:56015 <> c:186
+prf 56107:56122 <> zprop_preserving
+binder 56133:56133 <> c:187
+binder 56135:56136 <> c':188
+R56148:56151 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R56141:56145 PLF.Equiv <> zprop prfax
+R56147:56147 PLF.Equiv <> c:187 var
+R56164:56167 Coq.Init.Logic <> ::type_scope:x_'->'_x not
+R56152:56158 PLF.Equiv <> capprox def
+R56160:56160 PLF.Equiv <> c:187 var
+R56162:56163 PLF.Equiv <> c':188 var
+R56168:56172 PLF.Equiv <> zprop prfax
+R56174:56175 PLF.Equiv <> c':188 var
