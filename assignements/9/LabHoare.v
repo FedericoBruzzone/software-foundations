@@ -42,7 +42,7 @@ Ltac verify_assn :=
   try eauto; try lia.
 
 (** A. Prove that the following structural rule is derivable:*)
-Theorem spec_conj: forall P1 P2 Q1 Q2 C, 
+Theorem spec_conj: forall P1 P2 Q1 Q2 C,
 {{P1}}  C {{Q1}} ->
 {{P2}}  C {{Q2}} -> {{P1 /\ P2}}  C {{Q1 /\ Q2}}.
   unfold valid_hoare_triple.
@@ -59,13 +59,13 @@ Qed.
 (** B. Write a program that stores in a variable the max
 of two vars and prove it correct. You can use the library
 function _max_ for the spec. Either you write the post-condition
-with an explicit [fun st => ...] or you can use the below lifted version. *) 
+with an explicit [fun st => ...] or you can use the below lifted version. *)
 Definition MAX :=
   ap2 max X Y.
 
 
 (** Replace the bogus spec and skip with your own code*)
-Lemma max_correct: 
+Lemma max_correct:
 {{True}}
 <{ if X > Y then Z := X else Z := Y end}>
 {{ (fun st => st Z = max (st X) (st Y)) }} .
@@ -77,13 +77,13 @@ Proof.
     verify_assn.
 Qed.
 
-(** C.  The following program computes the substraction [p - n]. 
-Show that the triple is valid by _finding_ the right invariant. 
+(** C.  The following program computes the substraction [p - n].
+Show that the triple is valid by _finding_ the right invariant.
 We suggest you first do this on paper.*)
 
 Lemma subtract_slowly_correct: forall (m p : nat),
   {{ X = m /\ Z = p }}
-  <{ while (X <> 0)  do  
+  <{ while (X <> 0)  do
      Z := Z - 1 ;
      X := X - 1
      end }>
@@ -107,13 +107,13 @@ Print AMinus.
 
 Definition annotated_sub_slowly_correct (p m: nat) :=
   (CWhile (Z - X = p - m) (BNeq X 0)
-    (CSeq (CAsgn Z (AMinus (AId Z) (ANum 1))) 
+    (CSeq (CAsgn Z (AMinus (AId Z) (ANum 1)))
           (CAsgn X (AMinus (AId X) (ANum 1))))).
 
-Theorem annotated_sub_slow_sound : forall p m, 
+Theorem annotated_sub_slow_sound : forall p m,
  vc (annotated_sub_slowly_correct p m) (fun st => st Z = p - m).
 Proof.
   unfold annotated_sub_slowly_correct.
   verify_assn.
 Qed.
- 
+

@@ -63,10 +63,10 @@ Inductive ceval: state -> state -> com -> Prop :=
                 beval st b = false ->
                 ceval st st' c2 -> ceval st st' (CIf b c1 c2)
   | E_WhileFalse : forall (b : bexp) (st : state) (c : com),
-                   beval st b = false -> ceval st st (CWhile b c) 
+                   beval st b = false -> ceval st st (CWhile b c)
   | E_WhileTrue : forall (st st' st'' : state) (b : bexp) (c : com),
                   beval st b = true ->
                   ceval st st' c ->
-                  ceval st' st'' (CWhile b c) -> 
+                  ceval st' st'' (CWhile b c) ->
                   ceval st  st'' (CWhile b c).
 
