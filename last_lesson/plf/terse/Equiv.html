@@ -1,0 +1,876 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="common/css/sf.css" rel="stylesheet" type="text/css" />
+<title>Equiv: Program Equivalence</title>
+<link href="common/jquery-ui/jquery-ui.css" rel="stylesheet">
+<script src="common/jquery-ui/external/jquery/jquery.js"></script>
+<script src="common/jquery-ui/jquery-ui.js"></script>
+<script src="common/toggleproofs.js"></script>
+<link href="common/css/plf.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="common/slides.js"></script>
+<link href="common/css/slides.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+<div id='logoinheader'><a href='https://softwarefoundations.cis.upenn.edu'>
+<img src='common/media/image/sf_logo_sm.png' alt='Software Foundations Logo'></a></div>
+<div class='booktitleinheader'><a href='index.html'>Volume 2: Programming Language Foundations</a></div>
+<ul id='menu'>
+   <li class='section_name'><a href='toc.html'>Table of Contents</a></li>
+   <li class='section_name'><a href='coqindex.html'>Index</a></li>
+   <li class='section_name'><a href='deps.html'>Roadmap</a></li>
+</ul>
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Equiv<span class="subtitle">Program Equivalence</span></h1>
+
+
+
+<div class="doc">
+<a id="lab10"></a><h1 class="section">Behavioral Equivalence</h1>
+
+<div class="paragraph"> </div>
+
+ In the <a href="https://softwarefoundations.cis.upenn.edu/lf-current/Imp.html"><span class="inlineref">Imp</span></a>, we defined a simple optimization on
+    arithmetic expressions and showed that it was correct in the sense
+    that it preserved the value of the expressions.
+
+<div class="paragraph"> </div>
+
+    To play a similar game with programs involving mutable state,
+    we need a more sophisticated notion of correctness, called
+    <i>behavioral equivalence</i>. 
+<div class="paragraph"> </div>
+
+ For example:
+<ul class="doclist">
+<li> <span class="inlinecode"><span class="id" title="var">X</span></span> <span class="inlinecode">+</span> <span class="inlinecode">2</span> is behaviorally equivalent to <span class="inlinecode">1</span> <span class="inlinecode">+</span> <span class="inlinecode"><span class="id" title="var">X</span></span> <span class="inlinecode">+</span> <span class="inlinecode">1</span>
+
+</li>
+<li> <span class="inlinecode"><span class="id" title="var">X</span></span> <span class="inlinecode">-</span> <span class="inlinecode"><span class="id" title="var">X</span></span> is behaviorally equivalent to <span class="inlinecode">0</span>
+
+</li>
+<li> <span class="inlinecode">(<span class="id" title="var">X</span></span> <span class="inlinecode">-</span> <span class="inlinecode">1)</span> <span class="inlinecode">+</span> <span class="inlinecode">1</span> is <i>not</i> behaviorally equivalent to <span class="inlinecode"><span class="id" title="var">X</span></span>   
+
+</li>
+</ul>
+</div>
+
+<div class="doc">
+<a id="lab11"></a><h2 class="section">Definitions</h2>
+
+<div class="paragraph"> </div>
+
+ For <span class="inlinecode"><span class="id" title="var">aexp</span></span>s and <span class="inlinecode"><span class="id" title="var">bexp</span></span>s with variables, the definition we want is
+    clear: Two <span class="inlinecode"><span class="id" title="var">aexp</span></span>s or <span class="inlinecode"><span class="id" title="var">bexp</span></span>s are "behaviorally equivalent" if
+    they evaluate to the same result in every state. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Definition</span> <span class="id" title="var">aequiv</span> (<span class="id" title="var">a<sub>1</sub></span> <span class="id" title="var">a<sub>2</sub></span> : <span class="id" title="var">aexp</span>) : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">∀</span> (<span class="id" title="var">st</span> : <span class="id" title="var">state</span>),<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">aeval</span> <span class="id" title="var">st</span> <span class="id" title="var">a<sub>1</sub></span> = <span class="id" title="var">aeval</span> <span class="id" title="var">st</span> <span class="id" title="var">a<sub>2</sub></span>.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Definition</span> <span class="id" title="var">bequiv</span> (<span class="id" title="var">b<sub>1</sub></span> <span class="id" title="var">b<sub>2</sub></span> : <span class="id" title="var">bexp</span>) : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">∀</span> (<span class="id" title="var">st</span> : <span class="id" title="var">state</span>),<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">beval</span> <span class="id" title="var">st</span> <span class="id" title="var">b<sub>1</sub></span> = <span class="id" title="var">beval</span> <span class="id" title="var">st</span> <span class="id" title="var">b<sub>2</sub></span>.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">aequiv_example</span>:<br/>
+&nbsp;&nbsp;<span class="id" title="var">aequiv</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">X</span> - <span class="id" title="var">X</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ 0 }&gt;.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">bequiv_example</span>:<br/>
+&nbsp;&nbsp;<span class="id" title="var">bequiv</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">X</span> - <span class="id" title="var">X</span> = 0 }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">true</span> }&gt;.<br/>
+</div>
+
+<div class="doc">
+<a id="lab12"></a><h3 class="section"> </h3>
+
+<div class="paragraph"> </div>
+
+ For commands, we need to deal with the possibility of
+    nontermination.
+
+<div class="paragraph"> </div>
+
+    We do this by defining command equivalence as "if the first one
+    terminates in a particular state then so does the second, and vice
+    versa": 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Definition</span> <span class="id" title="var">cequiv</span> (<span class="id" title="var">c<sub>1</sub></span> <span class="id" title="var">c<sub>2</sub></span> : <span class="id" title="var">com</span>) : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">∀</span> (<span class="id" title="var">st</span> <span class="id" title="var">st'</span> : <span class="id" title="var">state</span>),<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="var">st</span> =[ <span class="id" title="var">c<sub>1</sub></span> ]=&gt; <span class="id" title="var">st'</span>) ↔ (<span class="id" title="var">st</span> =[ <span class="id" title="var">c<sub>2</sub></span> ]=&gt; <span class="id" title="var">st'</span>).<br/>
+</div>
+
+<div class="doc">
+<a id="lab13"></a><h3 class="section"> </h3>
+
+<div class="paragraph"> </div>
+
+ We can also define an asymmetric variant of this relation: We say
+    that <span class="inlinecode"><span class="id" title="var">c<sub>1</sub></span></span> <i>refines</i> <span class="inlinecode"><span class="id" title="var">c<sub>2</sub></span></span> if they produce the same final states
+    <i>when <span class="inlinecode"><span class="id" title="var">c<sub>1</sub></span></span> terminates</i> (but <span class="inlinecode"><span class="id" title="var">c<sub>1</sub></span></span> may not terminate in some cases
+    where <span class="inlinecode"><span class="id" title="var">c<sub>2</sub></span></span> does). 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Definition</span> <span class="id" title="var">refines</span> (<span class="id" title="var">c<sub>1</sub></span> <span class="id" title="var">c<sub>2</sub></span> : <span class="id" title="var">com</span>) : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">∀</span> (<span class="id" title="var">st</span> <span class="id" title="var">st'</span> : <span class="id" title="var">state</span>),<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="var">st</span> =[ <span class="id" title="var">c<sub>1</sub></span> ]=&gt; <span class="id" title="var">st'</span>) → (<span class="id" title="var">st</span> =[ <span class="id" title="var">c<sub>2</sub></span> ]=&gt; <span class="id" title="var">st'</span>).<br/><hr class='doublespaceincode'/>
+ <!-- /quiz -->
+</div><div class="quiz">
+
+
+<div class="doc">
+Are these two programs equivalent?
+<br/>
+<span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">X</span> := 1;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Y</span> := 2
+</span>    and
+<br/>
+<span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Y</span> := 2;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">X</span> := 1
+</span>
+<div class="paragraph"> </div>
+
+    (1) Yes
+
+<div class="paragraph"> </div>
+
+    (2) No
+
+<div class="paragraph"> </div>
+
+    (3) Not sure
+
+</div>
+</div> <!-- /quiz -->
+<div class="quiz">
+
+
+<div class="doc">
+What about these?
+<br/>
+<span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">X</span> := 1;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Y</span> := 2
+</span>    and
+<br/>
+<span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">X</span> := 2;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Y</span> := 1
+</span>
+<div class="paragraph"> </div>
+
+    (1) Yes
+
+<div class="paragraph"> </div>
+
+    (2) No
+
+<div class="paragraph"> </div>
+
+    (3) Not sure
+
+</div>
+</div> <!-- /quiz -->
+<div class="quiz">
+
+
+<div class="doc">
+What about these?
+<br/>
+<span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">while</span> 1 ≤ <span class="id" title="var">X</span> <span class="id" title="tactic">do</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">X</span> := <span class="id" title="var">X</span> + 1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span>
+</span>    and
+<br/>
+<span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">while</span> 2 ≤ <span class="id" title="var">X</span> <span class="id" title="tactic">do</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">X</span> := <span class="id" title="var">X</span> + 1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span>
+</span>
+<div class="paragraph"> </div>
+
+    (1) Yes
+
+<div class="paragraph"> </div>
+
+    (2) No
+
+<div class="paragraph"> </div>
+
+    (3) Not sure
+
+<div class="paragraph"> </div>
+
+
+</div>
+</div> <!-- /quiz -->
+<div class="quiz">
+
+
+<div class="doc">
+These?
+<br/>
+<span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">while</span> <span class="id" title="var">true</span> <span class="id" title="tactic">do</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">while</span> <span class="id" title="var">false</span> <span class="id" title="tactic">do</span> <span class="id" title="var">X</span> := <span class="id" title="var">X</span> + 1 <span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span>
+</span>    and
+<br/>
+<span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">while</span> <span class="id" title="var">false</span> <span class="id" title="tactic">do</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">while</span> <span class="id" title="var">true</span> <span class="id" title="tactic">do</span> <span class="id" title="var">X</span> := <span class="id" title="var">X</span> + 1 <span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span>
+</span>
+<div class="paragraph"> </div>
+
+    (1) Yes
+
+<div class="paragraph"> </div>
+
+    (2) No
+
+<div class="paragraph"> </div>
+
+    (3) Not sure
+
+</div>
+</div> <!-- /quiz -->
+
+<div class="doc">
+<a id="lab14"></a><h2 class="section">Simple Examples</h2>
+
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">skip_left</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">c</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">skip</span>; <span class="id" title="var">c</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">c</span>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="comment">(*&nbsp;WORK&nbsp;IN&nbsp;CLASS&nbsp;*)</span> <span class="id" title="var">Admitted</span>.<br/>
+</div>
+
+<div class="doc">
+<a id="lab15"></a><h3 class="section"> </h3>
+
+<div class="paragraph"> </div>
+
+ Similarly, here is a simple equivalence that optimizes <span class="inlinecode"><span class="id" title="keyword">if</span></span>
+    commands: 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">if_true_simple</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="var">c<sub>2</sub></span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="keyword">if</span> <span class="id" title="var">true</span> <span class="id" title="keyword">then</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="keyword">else</span> <span class="id" title="var">c<sub>2</sub></span> <span class="id" title="keyword">end</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">c<sub>1</sub></span>.<br/>
+</div>
+
+<div class="doc">
+<a id="lab16"></a><h3 class="section"> </h3>
+
+<div class="paragraph"> </div>
+
+ Of course, no (human) programmer would write a conditional whose
+    condition is literally <span class="inlinecode"><span class="id" title="var">true</span></span>.  But they might write one whose
+    condition is <i>equivalent</i> to true: 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">if_true</span>: <span class="id" title="keyword">∀</span> <span class="id" title="var">b</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="var">c<sub>2</sub></span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">bequiv</span> <span class="id" title="var">b</span> &lt;{<span class="id" title="var">true</span>}&gt;  →<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="keyword">if</span> <span class="id" title="var">b</span> <span class="id" title="keyword">then</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="keyword">else</span> <span class="id" title="var">c<sub>2</sub></span> <span class="id" title="keyword">end</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">c<sub>1</sub></span>.<br/>
+</div>
+
+<div class="doc">
+<a id="lab17"></a><h3 class="section"> </h3>
+ Similarly: 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">if_false</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">b</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="var">c<sub>2</sub></span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">bequiv</span> <span class="id" title="var">b</span> &lt;{<span class="id" title="var">false</span>}&gt; →<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="keyword">if</span> <span class="id" title="var">b</span> <span class="id" title="keyword">then</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="keyword">else</span> <span class="id" title="var">c<sub>2</sub></span> <span class="id" title="keyword">end</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">c<sub>2</sub></span>.<br/>
+</div>
+
+<div class="doc">
+<a id="lab18"></a><h3 class="section"> </h3>
+
+<div class="paragraph"> </div>
+
+ For <span class="inlinecode"><span class="id" title="var">while</span></span> loops, we can give a similar pair of theorems.  A loop
+    whose guard is equivalent to <span class="inlinecode"><span class="id" title="var">false</span></span> is equivalent to <span class="inlinecode"><span class="id" title="var">skip</span></span>,
+    while a loop whose guard is equivalent to <span class="inlinecode"><span class="id" title="var">true</span></span> is equivalent to
+    <span class="inlinecode"><span class="id" title="var">while</span></span> <span class="inlinecode"><span class="id" title="var">true</span></span> <span class="inlinecode"><span class="id" title="tactic">do</span></span> <span class="inlinecode"><span class="id" title="var">skip</span></span> <span class="inlinecode"><span class="id" title="keyword">end</span></span> (or any other non-terminating program). 
+<div class="paragraph"> </div>
+
+<a id="lab19"></a><h3 class="section"> </h3>
+ The first of these facts is easy. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">while_false</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">b</span> <span class="id" title="var">c</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">bequiv</span> <span class="id" title="var">b</span> &lt;{<span class="id" title="var">false</span>}&gt; →<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">while</span> <span class="id" title="var">b</span> <span class="id" title="tactic">do</span> <span class="id" title="var">c</span> <span class="id" title="keyword">end</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">skip</span> }&gt;.<br/>
+</div>
+
+<div class="doc">
+<a id="lab20"></a><h3 class="section"> </h3>
+
+<div class="paragraph"> </div>
+
+ To prove the second fact, we need an auxiliary lemma stating that
+    <span class="inlinecode"><span class="id" title="var">while</span></span> loops whose guards are equivalent to <span class="inlinecode"><span class="id" title="var">true</span></span> never
+    terminate. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">while_true_nonterm</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">b</span> <span class="id" title="var">c</span> <span class="id" title="var">st</span> <span class="id" title="var">st'</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">bequiv</span> <span class="id" title="var">b</span> &lt;{<span class="id" title="var">true</span>}&gt; →<br/>
+&nbsp;&nbsp;~( <span class="id" title="var">st</span> =[ <span class="id" title="var">while</span> <span class="id" title="var">b</span> <span class="id" title="tactic">do</span> <span class="id" title="var">c</span> <span class="id" title="keyword">end</span> ]=&gt; <span class="id" title="var">st'</span> ).<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="comment">(*&nbsp;WORK&nbsp;IN&nbsp;CLASS&nbsp;*)</span> <span class="id" title="var">Admitted</span>.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">while_true</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">b</span> <span class="id" title="var">c</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">bequiv</span> <span class="id" title="var">b</span> &lt;{<span class="id" title="var">true</span>}&gt;  →<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">while</span> <span class="id" title="var">b</span> <span class="id" title="tactic">do</span> <span class="id" title="var">c</span> <span class="id" title="keyword">end</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">while</span> <span class="id" title="var">true</span> <span class="id" title="tactic">do</span> <span class="id" title="var">skip</span> <span class="id" title="keyword">end</span> }&gt;.<br/>
+</div>
+
+<div class="doc">
+<a id="lab21"></a><h3 class="section"> </h3>
+
+<div class="paragraph"> </div>
+
+ A more interesting fact about <span class="inlinecode"><span class="id" title="var">while</span></span> commands is that any number
+    of copies of the body can be "unrolled" without changing meaning.
+
+<div class="paragraph"> </div>
+
+    Loop unrolling is an important transformation in any real
+    compiler: its correctness is of more than academic interest! 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">loop_unrolling</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">b</span> <span class="id" title="var">c</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">while</span> <span class="id" title="var">b</span> <span class="id" title="tactic">do</span> <span class="id" title="var">c</span> <span class="id" title="keyword">end</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="keyword">if</span> <span class="id" title="var">b</span> <span class="id" title="keyword">then</span> <span class="id" title="var">c</span> ; <span class="id" title="var">while</span> <span class="id" title="var">b</span> <span class="id" title="tactic">do</span> <span class="id" title="var">c</span> <span class="id" title="keyword">end</span> <span class="id" title="keyword">else</span> <span class="id" title="var">skip</span> <span class="id" title="keyword">end</span> }&gt;.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="comment">(*&nbsp;WORK&nbsp;IN&nbsp;CLASS&nbsp;*)</span> <span class="id" title="var">Admitted</span>.<br/>
+</div>
+
+<div class="doc">
+<a id="lab22"></a><h1 class="section">Properties of Behavioral Equivalence</h1>
+
+<div class="paragraph"> </div>
+
+ We next consider some fundamental properties of program
+    equivalence. 
+</div>
+
+<div class="doc">
+<a id="lab23"></a><h2 class="section">Behavioral Equivalence Is an Equivalence</h2>
+
+<div class="paragraph"> </div>
+
+ First, let's verify that the equivalences on <span class="inlinecode"><span class="id" title="var">aexps</span></span>, <span class="inlinecode"><span class="id" title="var">bexps</span></span>, and
+    <span class="inlinecode"><span class="id" title="var">com</span></span>s really are <i>equivalences</i> -- i.e., that they are reflexive,
+    symmetric, and transitive.  The proofs are all easy. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">refl_aequiv</span> : <span class="id" title="keyword">∀</span> (<span class="id" title="var">a</span> : <span class="id" title="var">aexp</span>),<br/>
+&nbsp;&nbsp;<span class="id" title="var">aequiv</span> <span class="id" title="var">a</span> <span class="id" title="var">a</span>.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">sym_aequiv</span> : <span class="id" title="keyword">∀</span> (<span class="id" title="var">a<sub>1</sub></span> <span class="id" title="var">a<sub>2</sub></span> : <span class="id" title="var">aexp</span>),<br/>
+&nbsp;&nbsp;<span class="id" title="var">aequiv</span> <span class="id" title="var">a<sub>1</sub></span> <span class="id" title="var">a<sub>2</sub></span> → <span class="id" title="var">aequiv</span> <span class="id" title="var">a<sub>2</sub></span> <span class="id" title="var">a<sub>1</sub></span>.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">trans_aequiv</span> : <span class="id" title="keyword">∀</span> (<span class="id" title="var">a<sub>1</sub></span> <span class="id" title="var">a<sub>2</sub></span> <span class="id" title="var">a<sub>3</sub></span> : <span class="id" title="var">aexp</span>),<br/>
+&nbsp;&nbsp;<span class="id" title="var">aequiv</span> <span class="id" title="var">a<sub>1</sub></span> <span class="id" title="var">a<sub>2</sub></span> → <span class="id" title="var">aequiv</span> <span class="id" title="var">a<sub>2</sub></span> <span class="id" title="var">a<sub>3</sub></span> → <span class="id" title="var">aequiv</span> <span class="id" title="var">a<sub>1</sub></span> <span class="id" title="var">a<sub>3</sub></span>.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">refl_bequiv</span> : <span class="id" title="keyword">∀</span> (<span class="id" title="var">b</span> : <span class="id" title="var">bexp</span>),<br/>
+&nbsp;&nbsp;<span class="id" title="var">bequiv</span> <span class="id" title="var">b</span> <span class="id" title="var">b</span>.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">sym_bequiv</span> : <span class="id" title="keyword">∀</span> (<span class="id" title="var">b<sub>1</sub></span> <span class="id" title="var">b<sub>2</sub></span> : <span class="id" title="var">bexp</span>),<br/>
+&nbsp;&nbsp;<span class="id" title="var">bequiv</span> <span class="id" title="var">b<sub>1</sub></span> <span class="id" title="var">b<sub>2</sub></span> → <span class="id" title="var">bequiv</span> <span class="id" title="var">b<sub>2</sub></span> <span class="id" title="var">b<sub>1</sub></span>.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">trans_bequiv</span> : <span class="id" title="keyword">∀</span> (<span class="id" title="var">b<sub>1</sub></span> <span class="id" title="var">b<sub>2</sub></span> <span class="id" title="var">b<sub>3</sub></span> : <span class="id" title="var">bexp</span>),<br/>
+&nbsp;&nbsp;<span class="id" title="var">bequiv</span> <span class="id" title="var">b<sub>1</sub></span> <span class="id" title="var">b<sub>2</sub></span> → <span class="id" title="var">bequiv</span> <span class="id" title="var">b<sub>2</sub></span> <span class="id" title="var">b<sub>3</sub></span> → <span class="id" title="var">bequiv</span> <span class="id" title="var">b<sub>1</sub></span> <span class="id" title="var">b<sub>3</sub></span>.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">refl_cequiv</span> : <span class="id" title="keyword">∀</span> (<span class="id" title="var">c</span> : <span class="id" title="var">com</span>),<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span> <span class="id" title="var">c</span> <span class="id" title="var">c</span>.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">sym_cequiv</span> : <span class="id" title="keyword">∀</span> (<span class="id" title="var">c<sub>1</sub></span> <span class="id" title="var">c<sub>2</sub></span> : <span class="id" title="var">com</span>),<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="var">c<sub>2</sub></span> → <span class="id" title="var">cequiv</span> <span class="id" title="var">c<sub>2</sub></span> <span class="id" title="var">c<sub>1</sub></span>.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">trans_cequiv</span> : <span class="id" title="keyword">∀</span> (<span class="id" title="var">c<sub>1</sub></span> <span class="id" title="var">c<sub>2</sub></span> <span class="id" title="var">c<sub>3</sub></span> : <span class="id" title="var">com</span>),<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="var">c<sub>2</sub></span> → <span class="id" title="var">cequiv</span> <span class="id" title="var">c<sub>2</sub></span> <span class="id" title="var">c<sub>3</sub></span> → <span class="id" title="var">cequiv</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="var">c<sub>3</sub></span>.<br/>
+</div>
+
+<div class="doc">
+<a id="lab24"></a><h2 class="section">Behavioral Equivalence Is a Congruence</h2>
+
+<div class="paragraph"> </div>
+
+ Less obviously, behavioral equivalence is also a <i>congruence</i>.
+    That is, the equivalence of two subprograms implies the
+    equivalence of the larger programs in which they are embedded:
+<center><table class="infrule">
+<tr class="infruleassumption">
+  <td class="infrule">aequiv a a'</td>
+  <td class="infrulenamecol" rowspan="3">
+    &nbsp;
+  </td></tr>
+<tr class="infrulemiddle">
+  <td class="infrule"><hr /></td>
+</tr>
+<tr class="infruleassumption">
+  <td class="infrule">cequiv (x := a) (x := a')</td>
+  <td></td>
+</tr>
+</table></center><center><table class="infrule">
+<tr class="infruleassumption">
+  <td class="infrule">cequiv c<sub>1</sub> c<sub>1</sub>'</td>
+  <td></td>
+</tr>
+<tr class="infruleassumption">
+  <td class="infrule">cequiv c<sub>2</sub> c<sub>2</sub>'</td>
+  <td class="infrulenamecol" rowspan="3">
+    &nbsp;
+  </td></tr>
+<tr class="infrulemiddle">
+  <td class="infrule"><hr /></td>
+</tr>
+<tr class="infruleassumption">
+  <td class="infrule">cequiv (c<sub>1</sub>;c<sub>2</sub>) (c<sub>1</sub>';c<sub>2</sub>')</td>
+  <td></td>
+</tr>
+</table></center>    ... and so on for the other forms of commands. 
+<div class="paragraph"> </div>
+
+<a id="lab25"></a><h3 class="section"> </h3>
+ These properties allow us to reason that a large program
+    behaves the same when we replace a small part with something
+    equivalent. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">CAsgn_congruence</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">x</span> <span class="id" title="var">a</span> <span class="id" title="var">a'</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">aequiv</span> <span class="id" title="var">a</span> <span class="id" title="var">a'</span> →<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span> &lt;{<span class="id" title="var">x</span> := <span class="id" title="var">a</span>}&gt; &lt;{<span class="id" title="var">x</span> := <span class="id" title="var">a'</span>}&gt;.<br/>
+</div>
+
+<div class="doc">
+<a id="lab26"></a><h3 class="section"> </h3>
+
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">CWhile_congruence</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">b</span> <span class="id" title="var">b'</span> <span class="id" title="var">c</span> <span class="id" title="var">c'</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">bequiv</span> <span class="id" title="var">b</span> <span class="id" title="var">b'</span> → <span class="id" title="var">cequiv</span> <span class="id" title="var">c</span> <span class="id" title="var">c'</span> →<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span> &lt;{ <span class="id" title="var">while</span> <span class="id" title="var">b</span> <span class="id" title="tactic">do</span> <span class="id" title="var">c</span> <span class="id" title="keyword">end</span> }&gt; &lt;{ <span class="id" title="var">while</span> <span class="id" title="var">b'</span> <span class="id" title="tactic">do</span> <span class="id" title="var">c'</span> <span class="id" title="keyword">end</span> }&gt;.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="comment">(*&nbsp;WORK&nbsp;IN&nbsp;CLASS&nbsp;*)</span> <span class="id" title="var">Admitted</span>.<br/>
+</div>
+
+<div class="doc">
+<a id="lab27"></a><h3 class="section"> </h3>
+
+</div>
+<div class="code">
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">CSeq_congruence</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="var">c<sub>1</sub>'</span> <span class="id" title="var">c<sub>2</sub></span> <span class="id" title="var">c<sub>2</sub>'</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="var">c<sub>1</sub>'</span> → <span class="id" title="var">cequiv</span> <span class="id" title="var">c<sub>2</sub></span> <span class="id" title="var">c<sub>2</sub>'</span> →<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span> &lt;{ <span class="id" title="var">c<sub>1</sub></span>;<span class="id" title="var">c<sub>2</sub></span> }&gt; &lt;{ <span class="id" title="var">c<sub>1</sub>'</span>;<span class="id" title="var">c<sub>2</sub>'</span> }&gt;.<br/>
+</div>
+
+<div class="doc">
+<a id="lab28"></a><h3 class="section"> </h3>
+
+</div>
+<div class="code">
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">CIf_congruence</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">b</span> <span class="id" title="var">b'</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="var">c<sub>1</sub>'</span> <span class="id" title="var">c<sub>2</sub></span> <span class="id" title="var">c<sub>2</sub>'</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">bequiv</span> <span class="id" title="var">b</span> <span class="id" title="var">b'</span> → <span class="id" title="var">cequiv</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="var">c<sub>1</sub>'</span> → <span class="id" title="var">cequiv</span> <span class="id" title="var">c<sub>2</sub></span> <span class="id" title="var">c<sub>2</sub>'</span> →<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span> &lt;{ <span class="id" title="keyword">if</span> <span class="id" title="var">b</span> <span class="id" title="keyword">then</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="keyword">else</span> <span class="id" title="var">c<sub>2</sub></span> <span class="id" title="keyword">end</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="keyword">if</span> <span class="id" title="var">b'</span> <span class="id" title="keyword">then</span> <span class="id" title="var">c<sub>1</sub>'</span> <span class="id" title="keyword">else</span> <span class="id" title="var">c<sub>2</sub>'</span> <span class="id" title="keyword">end</span> }&gt;.<br/>
+</div>
+
+<div class="doc">
+<a id="lab29"></a><h3 class="section"> </h3>
+
+<div class="paragraph"> </div>
+
+ For example, here are two equivalent programs and a proof of their
+    equivalence using these congruence theorems... 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Example</span> <span class="id" title="var">congruence_example</span>:<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">(*&nbsp;Program&nbsp;1:&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">X</span> := 0;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">if</span> <span class="id" title="var">X</span> = 0 <span class="id" title="keyword">then</span> <span class="id" title="var">Y</span> := 0<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">else</span> <span class="id" title="var">Y</span> := 42 <span class="id" title="keyword">end</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">(*&nbsp;Program&nbsp;2:&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">X</span> := 0;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">if</span> <span class="id" title="var">X</span> = 0 <span class="id" title="keyword">then</span> <span class="id" title="var">Y</span> := <span class="id" title="var">X</span> - <span class="id" title="var">X</span>   <span class="comment">(*&nbsp;&lt;---&nbsp;Changed&nbsp;here&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">else</span> <span class="id" title="var">Y</span> := 42 <span class="id" title="keyword">end</span> }&gt;.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <span class="id" title="var">CSeq_congruence</span>.<br/>
+&nbsp;&nbsp;- <span class="id" title="tactic">apply</span> <span class="id" title="var">refl_cequiv</span>.<br/>
+&nbsp;&nbsp;- <span class="id" title="tactic">apply</span> <span class="id" title="var">CIf_congruence</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="id" title="tactic">apply</span> <span class="id" title="var">refl_bequiv</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="id" title="tactic">apply</span> <span class="id" title="var">CAsgn_congruence</span>. <span class="id" title="tactic">unfold</span> <span class="id" title="var">aequiv</span>. <span class="id" title="tactic">simpl</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">symmetry</span>. <span class="id" title="tactic">apply</span> <span class="id" title="var">sub_diag</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="id" title="tactic">apply</span> <span class="id" title="var">refl_cequiv</span>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+</div>
+
+<div class="doc">
+<a id="lab30"></a><h1 class="section">Program Transformations</h1>
+
+<div class="paragraph"> </div>
+
+ A <i>program transformation</i> is a function that takes a program as
+    input and produces a modified program as output.  Compiler
+    optimizations such as constant folding are a canonical example,
+    but there are many others. 
+<div class="paragraph"> </div>
+
+<a id="lab31"></a><h3 class="section"> </h3>
+ A program transformation is said to be <i>sound</i> if it preserves the
+    behavior of the original program. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Definition</span> <span class="id" title="var">atrans_sound</span> (<span class="id" title="var">atrans</span> : <span class="id" title="var">aexp</span> → <span class="id" title="var">aexp</span>) : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">∀</span> (<span class="id" title="var">a</span> : <span class="id" title="var">aexp</span>),<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">aequiv</span> <span class="id" title="var">a</span> (<span class="id" title="var">atrans</span> <span class="id" title="var">a</span>).<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Definition</span> <span class="id" title="var">btrans_sound</span> (<span class="id" title="var">btrans</span> : <span class="id" title="var">bexp</span> → <span class="id" title="var">bexp</span>) : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">∀</span> (<span class="id" title="var">b</span> : <span class="id" title="var">bexp</span>),<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">bequiv</span> <span class="id" title="var">b</span> (<span class="id" title="var">btrans</span> <span class="id" title="var">b</span>).<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Definition</span> <span class="id" title="var">ctrans_sound</span> (<span class="id" title="var">ctrans</span> : <span class="id" title="var">com</span> → <span class="id" title="var">com</span>) : <span class="id" title="keyword">Prop</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">∀</span> (<span class="id" title="var">c</span> : <span class="id" title="var">com</span>),<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">cequiv</span> <span class="id" title="var">c</span> (<span class="id" title="var">ctrans</span> <span class="id" title="var">c</span>).<br/>
+</div>
+
+<div class="doc">
+<a id="lab32"></a><h2 class="section">The Constant-Folding Transformation</h2>
+
+<div class="paragraph"> </div>
+
+ An expression is <i>constant</i> if it contains no variable references.
+
+<div class="paragraph"> </div>
+
+    Constant folding is an optimization that finds constant
+    expressions and replaces them by their values. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Fixpoint</span> <span class="id" title="var">fold_constants_aexp</span> (<span class="id" title="var">a</span> : <span class="id" title="var">aexp</span>) : <span class="id" title="var">aexp</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="var">a</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">ANum</span> <span class="id" title="var">n</span>       ⇒ <span class="id" title="var">ANum</span> <span class="id" title="var">n</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">AId</span> <span class="id" title="var">x</span>        ⇒ <span class="id" title="var">AId</span> <span class="id" title="var">x</span><br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">a<sub>1</sub></span> + <span class="id" title="var">a<sub>2</sub></span> }&gt;  ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> (<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a<sub>1</sub></span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a<sub>2</sub></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">ANum</span> <span class="id" title="var">n<sub>1</sub></span>, <span class="id" title="var">ANum</span> <span class="id" title="var">n<sub>2</sub></span>) ⇒ <span class="id" title="var">ANum</span> (<span class="id" title="var">n<sub>1</sub></span> + <span class="id" title="var">n<sub>2</sub></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">a<sub>1</sub>'</span>, <span class="id" title="var">a<sub>2</sub>'</span>) ⇒ &lt;{ <span class="id" title="var">a<sub>1</sub>'</span> + <span class="id" title="var">a<sub>2</sub>'</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">a<sub>1</sub></span> - <span class="id" title="var">a<sub>2</sub></span> }&gt; ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> (<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a<sub>1</sub></span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a<sub>2</sub></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">ANum</span> <span class="id" title="var">n<sub>1</sub></span>, <span class="id" title="var">ANum</span> <span class="id" title="var">n<sub>2</sub></span>) ⇒ <span class="id" title="var">ANum</span> (<span class="id" title="var">n<sub>1</sub></span> - <span class="id" title="var">n<sub>2</sub></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">a<sub>1</sub>'</span>, <span class="id" title="var">a<sub>2</sub>'</span>) ⇒ &lt;{ <span class="id" title="var">a<sub>1</sub>'</span> - <span class="id" title="var">a<sub>2</sub>'</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">a<sub>1</sub></span> × <span class="id" title="var">a<sub>2</sub></span> }&gt;  ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> (<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a<sub>1</sub></span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a<sub>2</sub></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">ANum</span> <span class="id" title="var">n<sub>1</sub></span>, <span class="id" title="var">ANum</span> <span class="id" title="var">n<sub>2</sub></span>) ⇒ <span class="id" title="var">ANum</span> (<span class="id" title="var">n<sub>1</sub></span> × <span class="id" title="var">n<sub>2</sub></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">a<sub>1</sub>'</span>, <span class="id" title="var">a<sub>2</sub>'</span>) ⇒ &lt;{ <span class="id" title="var">a<sub>1</sub>'</span> × <span class="id" title="var">a<sub>2</sub>'</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+</div>
+
+<div class="doc">
+<a id="lab33"></a><h3 class="section"> </h3>
+
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Example</span> <span class="id" title="var">fold_aexp_ex<sub>1</sub></span> :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">fold_constants_aexp</span> &lt;{ (1 + 2) × <span class="id" title="var">X</span> }&gt;<br/>
+&nbsp;&nbsp;= &lt;{ 3 × <span class="id" title="var">X</span> }&gt;.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Example</span> <span class="id" title="var">fold_aexp_ex<sub>2</sub></span> :<br/>
+&nbsp;&nbsp;<span class="id" title="var">fold_constants_aexp</span> &lt;{ <span class="id" title="var">X</span> - ((0 × 6) + <span class="id" title="var">Y</span>) }&gt; = &lt;{ <span class="id" title="var">X</span> - (0 + <span class="id" title="var">Y</span>) }&gt;.<br/>
+</div>
+
+<div class="doc">
+<a id="lab34"></a><h3 class="section"> </h3>
+ Not only can we lift <span class="inlinecode"><span class="id" title="var">fold_constants_aexp</span></span> to <span class="inlinecode"><span class="id" title="var">bexp</span></span>s (in the
+    <span class="inlinecode"><span class="id" title="var">BEq</span></span>, <span class="inlinecode"><span class="id" title="var">BNeq</span></span>, and <span class="inlinecode"><span class="id" title="var">BLe</span></span> cases); we can also look for constant
+    <i>boolean</i> expressions and evaluate them in-place as well. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Fixpoint</span> <span class="id" title="var">fold_constants_bexp</span> (<span class="id" title="var">b</span> : <span class="id" title="var">bexp</span>) : <span class="id" title="var">bexp</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="var">b</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| &lt;{<span class="id" title="var">true</span>}&gt;        ⇒ &lt;{<span class="id" title="var">true</span>}&gt;<br/>
+&nbsp;&nbsp;| &lt;{<span class="id" title="var">false</span>}&gt;       ⇒ &lt;{<span class="id" title="var">false</span>}&gt;<br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">a<sub>1</sub></span> = <span class="id" title="var">a<sub>2</sub></span> }&gt;  ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> (<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a<sub>1</sub></span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a<sub>2</sub></span>) <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">ANum</span> <span class="id" title="var">n<sub>1</sub></span>, <span class="id" title="var">ANum</span> <span class="id" title="var">n<sub>2</sub></span>) ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">if</span> <span class="id" title="var">n<sub>1</sub></span> =? <span class="id" title="var">n<sub>2</sub></span> <span class="id" title="keyword">then</span> &lt;{<span class="id" title="var">true</span>}&gt; <span class="id" title="keyword">else</span> &lt;{<span class="id" title="var">false</span>}&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">a<sub>1</sub>'</span>, <span class="id" title="var">a<sub>2</sub>'</span>) ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">a<sub>1</sub>'</span> = <span class="id" title="var">a<sub>2</sub>'</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">a<sub>1</sub></span> ≠ <span class="id" title="var">a<sub>2</sub></span> }&gt;  ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> (<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a<sub>1</sub></span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a<sub>2</sub></span>) <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">ANum</span> <span class="id" title="var">n<sub>1</sub></span>, <span class="id" title="var">ANum</span> <span class="id" title="var">n<sub>2</sub></span>) ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">if</span> <span class="id" title="var">negb</span> (<span class="id" title="var">n<sub>1</sub></span> =? <span class="id" title="var">n<sub>2</sub></span>) <span class="id" title="keyword">then</span> &lt;{<span class="id" title="var">true</span>}&gt; <span class="id" title="keyword">else</span> &lt;{<span class="id" title="var">false</span>}&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">a<sub>1</sub>'</span>, <span class="id" title="var">a<sub>2</sub>'</span>) ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">a<sub>1</sub>'</span> ≠ <span class="id" title="var">a<sub>2</sub>'</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">a<sub>1</sub></span> ≤ <span class="id" title="var">a<sub>2</sub></span> }&gt;  ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> (<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a<sub>1</sub></span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a<sub>2</sub></span>) <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">ANum</span> <span class="id" title="var">n<sub>1</sub></span>, <span class="id" title="var">ANum</span> <span class="id" title="var">n<sub>2</sub></span>) ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">if</span> <span class="id" title="var">n<sub>1</sub></span> &lt;=? <span class="id" title="var">n<sub>2</sub></span> <span class="id" title="keyword">then</span> &lt;{<span class="id" title="var">true</span>}&gt; <span class="id" title="keyword">else</span> &lt;{<span class="id" title="var">false</span>}&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">a<sub>1</sub>'</span>, <span class="id" title="var">a<sub>2</sub>'</span>) ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">a<sub>1</sub>'</span> ≤ <span class="id" title="var">a<sub>2</sub>'</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">a<sub>1</sub></span> &gt; <span class="id" title="var">a<sub>2</sub></span> }&gt;  ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> (<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a<sub>1</sub></span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a<sub>2</sub></span>) <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">ANum</span> <span class="id" title="var">n<sub>1</sub></span>, <span class="id" title="var">ANum</span> <span class="id" title="var">n<sub>2</sub></span>) ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">if</span> <span class="id" title="var">n<sub>1</sub></span> &lt;=? <span class="id" title="var">n<sub>2</sub></span> <span class="id" title="keyword">then</span> &lt;{<span class="id" title="var">false</span>}&gt; <span class="id" title="keyword">else</span> &lt;{<span class="id" title="var">true</span>}&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">a<sub>1</sub>'</span>, <span class="id" title="var">a<sub>2</sub>'</span>) ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">a<sub>1</sub>'</span> &gt; <span class="id" title="var">a<sub>2</sub>'</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;| &lt;{ ¬<span class="id" title="var">b<sub>1</sub></span> }&gt;  ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> (<span class="id" title="var">fold_constants_bexp</span> <span class="id" title="var">b<sub>1</sub></span>) <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &lt;{<span class="id" title="var">true</span>}&gt; ⇒ &lt;{<span class="id" title="var">false</span>}&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &lt;{<span class="id" title="var">false</span>}&gt; ⇒ &lt;{<span class="id" title="var">true</span>}&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">b<sub>1</sub>'</span> ⇒ &lt;{ ¬<span class="id" title="var">b<sub>1</sub>'</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">b<sub>1</sub></span> &amp;&amp; <span class="id" title="var">b<sub>2</sub></span> }&gt;  ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> (<span class="id" title="var">fold_constants_bexp</span> <span class="id" title="var">b<sub>1</sub></span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">fold_constants_bexp</span> <span class="id" title="var">b<sub>2</sub></span>) <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (&lt;{<span class="id" title="var">true</span>}&gt;, &lt;{<span class="id" title="var">true</span>}&gt;) ⇒ &lt;{<span class="id" title="var">true</span>}&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (&lt;{<span class="id" title="var">true</span>}&gt;, &lt;{<span class="id" title="var">false</span>}&gt;) ⇒ &lt;{<span class="id" title="var">false</span>}&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (&lt;{<span class="id" title="var">false</span>}&gt;, &lt;{<span class="id" title="var">true</span>}&gt;) ⇒ &lt;{<span class="id" title="var">false</span>}&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (&lt;{<span class="id" title="var">false</span>}&gt;, &lt;{<span class="id" title="var">false</span>}&gt;) ⇒ &lt;{<span class="id" title="var">false</span>}&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id" title="var">b<sub>1</sub>'</span>, <span class="id" title="var">b<sub>2</sub>'</span>) ⇒ &lt;{ <span class="id" title="var">b<sub>1</sub>'</span> &amp;&amp; <span class="id" title="var">b<sub>2</sub>'</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+</div>
+
+<div class="doc">
+<a id="lab35"></a><h3 class="section"> </h3>
+
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Example</span> <span class="id" title="var">fold_bexp_ex<sub>1</sub></span> :<br/>
+&nbsp;&nbsp;<span class="id" title="var">fold_constants_bexp</span> &lt;{ <span class="id" title="var">true</span> &amp;&amp; ~(<span class="id" title="var">false</span> &amp;&amp; <span class="id" title="var">true</span>) }&gt;<br/>
+&nbsp;&nbsp;= &lt;{ <span class="id" title="var">true</span> }&gt;.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Example</span> <span class="id" title="var">fold_bexp_ex<sub>2</sub></span> :<br/>
+&nbsp;&nbsp;<span class="id" title="var">fold_constants_bexp</span> &lt;{ (<span class="id" title="var">X</span> = <span class="id" title="var">Y</span>) &amp;&amp; (0 = (2 - (1 + 1))) }&gt;<br/>
+&nbsp;&nbsp;= &lt;{ (<span class="id" title="var">X</span> = <span class="id" title="var">Y</span>) &amp;&amp; <span class="id" title="var">true</span> }&gt;.<br/>
+</div>
+
+<div class="doc">
+<a id="lab36"></a><h3 class="section"> </h3>
+ To fold constants in a command, we apply the appropriate folding
+    functions on all embedded expressions. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Fixpoint</span> <span class="id" title="var">fold_constants_com</span> (<span class="id" title="var">c</span> : <span class="id" title="var">com</span>) : <span class="id" title="var">com</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="var">c</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">skip</span> }&gt; ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">skip</span> }&gt;<br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">x</span> := <span class="id" title="var">a</span> }&gt; ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">x</span> := (<span class="id" title="var">fold_constants_aexp</span> <span class="id" title="var">a</span>) }&gt;<br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">c<sub>1</sub></span> ; <span class="id" title="var">c<sub>2</sub></span> }&gt;  ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">fold_constants_com</span> <span class="id" title="var">c<sub>1</sub></span> ; <span class="id" title="var">fold_constants_com</span> <span class="id" title="var">c<sub>2</sub></span> }&gt;<br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="keyword">if</span> <span class="id" title="var">b</span> <span class="id" title="keyword">then</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="keyword">else</span> <span class="id" title="var">c<sub>2</sub></span> <span class="id" title="keyword">end</span> }&gt; ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="var">fold_constants_bexp</span> <span class="id" title="var">b</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &lt;{<span class="id" title="var">true</span>}&gt;  ⇒ <span class="id" title="var">fold_constants_com</span> <span class="id" title="var">c<sub>1</sub></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &lt;{<span class="id" title="var">false</span>}&gt; ⇒ <span class="id" title="var">fold_constants_com</span> <span class="id" title="var">c<sub>2</sub></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">b'</span> ⇒ &lt;{ <span class="id" title="keyword">if</span> <span class="id" title="var">b'</span> <span class="id" title="keyword">then</span> <span class="id" title="var">fold_constants_com</span> <span class="id" title="var">c<sub>1</sub></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">else</span> <span class="id" title="var">fold_constants_com</span> <span class="id" title="var">c<sub>2</sub></span> <span class="id" title="keyword">end</span>}&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">while</span> <span class="id" title="var">b</span> <span class="id" title="tactic">do</span> <span class="id" title="var">c<sub>1</sub></span> <span class="id" title="keyword">end</span> }&gt; ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="var">fold_constants_bexp</span> <span class="id" title="var">b</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &lt;{<span class="id" title="var">true</span>}&gt; ⇒ &lt;{ <span class="id" title="var">while</span> <span class="id" title="var">true</span> <span class="id" title="tactic">do</span> <span class="id" title="var">skip</span> <span class="id" title="keyword">end</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &lt;{<span class="id" title="var">false</span>}&gt; ⇒ &lt;{ <span class="id" title="var">skip</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" title="var">b'</span> ⇒ &lt;{ <span class="id" title="var">while</span> <span class="id" title="var">b'</span> <span class="id" title="tactic">do</span> (<span class="id" title="var">fold_constants_com</span> <span class="id" title="var">c<sub>1</sub></span>) <span class="id" title="keyword">end</span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span><br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/>
+</div>
+
+<div class="doc">
+<a id="lab37"></a><h3 class="section"> </h3>
+
+</div>
+<div class="code">
+<span class="id" title="keyword">Example</span> <span class="id" title="var">fold_com_ex<sub>1</sub></span> :<br/>
+&nbsp;&nbsp;<span class="id" title="var">fold_constants_com</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">(*&nbsp;Original&nbsp;program:&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">X</span> := 4 + 5;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Y</span> := <span class="id" title="var">X</span> - 3;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">if</span> (<span class="id" title="var">X</span> - <span class="id" title="var">Y</span>) = (2 + 4) <span class="id" title="keyword">then</span> <span class="id" title="var">skip</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">else</span> <span class="id" title="var">Y</span> := 0 <span class="id" title="keyword">end</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">if</span> 0 ≤ (4 - (2 + 1)) <span class="id" title="keyword">then</span> <span class="id" title="var">Y</span> := 0<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">else</span> <span class="id" title="var">skip</span> <span class="id" title="keyword">end</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">while</span> <span class="id" title="var">Y</span> = 0 <span class="id" title="tactic">do</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">X</span> := <span class="id" title="var">X</span> + 1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span> }&gt;<br/>
+&nbsp;&nbsp;= <span class="comment">(*&nbsp;After&nbsp;constant&nbsp;folding:&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">X</span> := 9;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Y</span> := <span class="id" title="var">X</span> - 3;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">if</span> (<span class="id" title="var">X</span> - <span class="id" title="var">Y</span>) = 6 <span class="id" title="keyword">then</span> <span class="id" title="var">skip</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">else</span> <span class="id" title="var">Y</span> := 0 <span class="id" title="keyword">end</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Y</span> := 0;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">while</span> <span class="id" title="var">Y</span> = 0 <span class="id" title="tactic">do</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">X</span> := <span class="id" title="var">X</span> + 1<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">end</span> }&gt;.<br/>
+</div>
+
+<div class="doc">
+<a id="lab38"></a><h2 class="section">Soundness of Constant Folding</h2>
+
+<div class="paragraph"> </div>
+
+ Now we need to show that what we've done is correct. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">fold_constants_aexp_sound</span> :<br/>
+&nbsp;&nbsp;<span class="id" title="var">atrans_sound</span> <span class="id" title="var">fold_constants_aexp</span>.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">fold_constants_bexp_sound</span>:<br/>
+&nbsp;&nbsp;<span class="id" title="var">btrans_sound</span> <span class="id" title="var">fold_constants_bexp</span>.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">fold_constants_com_sound</span> :<br/>
+&nbsp;&nbsp;<span class="id" title="var">ctrans_sound</span> <span class="id" title="var">fold_constants_com</span>.<br/>
+</div>
+
+<div class="doc">
+<a id="lab39"></a><h1 class="section">Proving Inequivalence</h1>
+
+<div class="paragraph"> </div>
+
+ Next, let's look at some programs that are <i>not</i> equivalent. 
+<div class="paragraph"> </div>
+
+<a id="lab40"></a><h3 class="section"> </h3>
+
+<div class="paragraph"> </div>
+
+ Suppose that <span class="inlinecode"><span class="id" title="var">c<sub>1</sub></span></span> is a command of the form
+<br/>
+<span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">X</span> := <span class="id" title="var">a<sub>1</sub></span>; <span class="id" title="var">Y</span> := <span class="id" title="var">a<sub>2</sub></span>
+</span>    and <span class="inlinecode"><span class="id" title="var">c<sub>2</sub></span></span> is the command
+<br/>
+<span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">X</span> := <span class="id" title="var">a<sub>1</sub></span>; <span class="id" title="var">Y</span> := <span class="id" title="var">a<sub>2</sub>'</span>
+</span>    where <span class="inlinecode"><span class="id" title="var">a<sub>2</sub>'</span></span> is formed by substituting <span class="inlinecode"><span class="id" title="var">a<sub>1</sub></span></span> for all occurrences
+    of <span class="inlinecode"><span class="id" title="var">X</span></span> in <span class="inlinecode"><span class="id" title="var">a<sub>2</sub></span></span>.
+
+<div class="paragraph"> </div>
+
+    For example, <span class="inlinecode"><span class="id" title="var">c<sub>1</sub></span></span> and <span class="inlinecode"><span class="id" title="var">c<sub>2</sub></span></span> might be:
+<br/>
+<span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">c<sub>1</sub></span>  =  (<span class="id" title="var">X</span> := 42 + 53;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Y</span> := <span class="id" title="var">Y</span> + <span class="id" title="var">X</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">c<sub>2</sub></span>  =  (<span class="id" title="var">X</span> := 42 + 53;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Y</span> := <span class="id" title="var">Y</span> + (42 + 53))
+</span>    Clearly, this <i>particular</i> <span class="inlinecode"><span class="id" title="var">c<sub>1</sub></span></span> and <span class="inlinecode"><span class="id" title="var">c<sub>2</sub></span></span> are equivalent.  Is this
+    true in general? 
+<div class="paragraph"> </div>
+
+<a id="lab41"></a><h3 class="section"> </h3>
+
+<div class="paragraph"> </div>
+
+ More formally, here is the function that substitutes an arithmetic
+    expression <span class="inlinecode"><span class="id" title="var">u</span></span> for each occurrence of a given variable <span class="inlinecode"><span class="id" title="var">x</span></span> in
+    another expression <span class="inlinecode"><span class="id" title="var">a</span></span>: 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Fixpoint</span> <span class="id" title="var">subst_aexp</span> (<span class="id" title="var">x</span> : <span class="id" title="var">string</span>) (<span class="id" title="var">u</span> : <span class="id" title="var">aexp</span>) (<span class="id" title="var">a</span> : <span class="id" title="var">aexp</span>) : <span class="id" title="var">aexp</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">match</span> <span class="id" title="var">a</span> <span class="id" title="keyword">with</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">ANum</span> <span class="id" title="var">n</span>       ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">ANum</span> <span class="id" title="var">n</span><br/>
+&nbsp;&nbsp;| <span class="id" title="var">AId</span> <span class="id" title="var">x'</span>       ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">if</span> <span class="id" title="var">String.eqb</span> <span class="id" title="var">x</span> <span class="id" title="var">x'</span> <span class="id" title="keyword">then</span> <span class="id" title="var">u</span> <span class="id" title="keyword">else</span> <span class="id" title="var">AId</span> <span class="id" title="var">x'</span><br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">a<sub>1</sub></span> + <span class="id" title="var">a<sub>2</sub></span> }&gt;  ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ (<span class="id" title="var">subst_aexp</span> <span class="id" title="var">x</span> <span class="id" title="var">u</span> <span class="id" title="var">a<sub>1</sub></span>) + (<span class="id" title="var">subst_aexp</span> <span class="id" title="var">x</span> <span class="id" title="var">u</span> <span class="id" title="var">a<sub>2</sub></span>) }&gt;<br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">a<sub>1</sub></span> - <span class="id" title="var">a<sub>2</sub></span> }&gt; ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ (<span class="id" title="var">subst_aexp</span> <span class="id" title="var">x</span> <span class="id" title="var">u</span> <span class="id" title="var">a<sub>1</sub></span>) - (<span class="id" title="var">subst_aexp</span> <span class="id" title="var">x</span> <span class="id" title="var">u</span> <span class="id" title="var">a<sub>2</sub></span>) }&gt;<br/>
+&nbsp;&nbsp;| &lt;{ <span class="id" title="var">a<sub>1</sub></span> × <span class="id" title="var">a<sub>2</sub></span> }&gt;  ⇒<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ (<span class="id" title="var">subst_aexp</span> <span class="id" title="var">x</span> <span class="id" title="var">u</span> <span class="id" title="var">a<sub>1</sub></span>) × (<span class="id" title="var">subst_aexp</span> <span class="id" title="var">x</span> <span class="id" title="var">u</span> <span class="id" title="var">a<sub>2</sub></span>) }&gt;<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">end</span>.<br/><hr class='doublespaceincode'/>
+<span class="id" title="keyword">Example</span> <span class="id" title="var">subst_aexp_ex</span> :<br/>
+&nbsp;&nbsp;<span class="id" title="var">subst_aexp</span> <span class="id" title="var">X</span> &lt;{42 + 53}&gt; &lt;{<span class="id" title="var">Y</span> + <span class="id" title="var">X</span>}&gt;<br/>
+&nbsp;&nbsp;= &lt;{ <span class="id" title="var">Y</span> + (42 + 53)}&gt;.<br/>
+</div>
+
+<div class="doc">
+<a id="lab42"></a><h3 class="section"> </h3>
+
+<div class="paragraph"> </div>
+
+ And here is the property we are interested in, expressing the
+    claim that commands <span class="inlinecode"><span class="id" title="var">c<sub>1</sub></span></span> and <span class="inlinecode"><span class="id" title="var">c<sub>2</sub></span></span> as described above are
+    always equivalent.  
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Definition</span> <span class="id" title="var">subst_equiv_property</span> : <span class="id" title="keyword">Prop</span> := <span class="id" title="keyword">∀</span> <span class="id" title="var">x<sub>1</sub></span> <span class="id" title="var">x<sub>2</sub></span> <span class="id" title="var">a<sub>1</sub></span> <span class="id" title="var">a<sub>2</sub></span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">cequiv</span> &lt;{ <span class="id" title="var">x<sub>1</sub></span> := <span class="id" title="var">a<sub>1</sub></span>; <span class="id" title="var">x<sub>2</sub></span> := <span class="id" title="var">a<sub>2</sub></span> }&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;{ <span class="id" title="var">x<sub>1</sub></span> := <span class="id" title="var">a<sub>1</sub></span>; <span class="id" title="var">x<sub>2</sub></span> := <span class="id" title="var">subst_aexp</span> <span class="id" title="var">x<sub>1</sub></span> <span class="id" title="var">a<sub>1</sub></span> <span class="id" title="var">a<sub>2</sub></span> }&gt;.<br/>
+</div>
+
+<div class="doc">
+<a id="lab43"></a><h3 class="section"> </h3>
+ Sadly, the property does <i>not</i> always hold.
+
+<div class="paragraph"> </div>
+
+    Here is a counterexample:
+<br/>
+<span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">X</span> := <span class="id" title="var">X</span> + 1; <span class="id" title="var">Y</span> := <span class="id" title="var">X</span>
+</span>    If we perform the substitution, we get
+<br/>
+<span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">X</span> := <span class="id" title="var">X</span> + 1; <span class="id" title="var">Y</span> := <span class="id" title="var">X</span> + 1
+</span>    which clearly isn't equivalent. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">subst_inequiv</span> :<br/>
+&nbsp;&nbsp;¬<span class="id" title="var">subst_equiv_property</span>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="coqindex.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

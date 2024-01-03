@@ -1,0 +1,381 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="common/css/sf.css" rel="stylesheet" type="text/css" />
+<title>Table of contents</title>
+<link href="common/jquery-ui/jquery-ui.css" rel="stylesheet">
+<script src="common/jquery-ui/external/jquery/jquery.js"></script>
+<script src="common/jquery-ui/jquery-ui.js"></script>
+<script src="common/toggleproofs.js"></script>
+<link href="common/css/plf.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="common/slides.js"></script>
+<link href="common/css/slides.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body><script>
+$( function() {
+    var icons = {
+      header: "ui-icon-circle-arrow-e",
+      activeHeader: "ui-icon-circle-arrow-s"
+    };
+
+    $("#accordion").accordion({
+      collapsible : true,
+      active : false,
+      icons : icons,
+      heightStyle : 'content'
+    });
+
+    // Enable navigation links in section headers
+    $('#accordion').each(function() {
+      this.addEventListener('click', ev => {
+        if ($(ev.target).closest('a').length > 0) ev.stopPropagation();
+      }, {capture: true});
+    });
+  } );
+</script>
+
+
+<div id="page">
+
+<div id="header">
+<div id='logoinheader'><a href='https://softwarefoundations.cis.upenn.edu'>
+<img src='common/media/image/sf_logo_sm.png' alt='Software Foundations Logo'></a></div>
+<div class='booktitleinheader'><a href='index.html'>Volume 2: Programming Language Foundations</a></div>
+<ul id='menu'>
+   <li class='section_name'><a href='toc.html'>Table of Contents</a></li>
+   <li class='section_name'><a href='coqindex.html'>Index</a></li>
+   <li class='section_name'><a href='deps.html'>Roadmap</a></li>
+</ul>
+</div>
+</div>
+
+<div id="main">
+
+<div id="toc">
+<div id="accordion">
+<h2><a href="Preface.html">Preface</a></h2>
+<div>
+<ul class="doclist">
+<li><a href="Preface.html#lab1">Welcome</a>
+
+</li>
+<li><a href="Preface.html#lab2">Overview</a>
+<div>
+<ul class="doclist">
+<li><a href="Preface.html#lab3">Program Verification</a>
+
+</li>
+<li><a href="Preface.html#lab4">Type Systems</a>
+
+</li>
+<li><a href="Preface.html#lab5">Further Reading</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+<li><a href="Preface.html#lab6">Practicalities</a>
+<div>
+<ul class="doclist">
+<li><a href="Preface.html#lab7">Recommended Citation Format</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+<li><a href="Preface.html#lab8">Note for Instructors</a>
+
+</li>
+<li><a href="Preface.html#lab9">Thanks</a>
+
+</li>
+</ul>
+</div>
+<h2><a href="Equiv.html">Program Equivalence &nbsp;&nbsp; (<i>Equiv</i>)</a></h2>
+<div>
+<ul class="doclist">
+<li><a href="Equiv.html#lab10">Behavioral Equivalence</a>
+<div>
+<ul class="doclist">
+<li><a href="Equiv.html#lab11">Definitions</a>
+
+</li>
+<li><a href="Equiv.html#lab14">Simple Examples</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+<li><a href="Equiv.html#lab22">Properties of Behavioral Equivalence</a>
+<div>
+<ul class="doclist">
+<li><a href="Equiv.html#lab23">Behavioral Equivalence Is an Equivalence</a>
+
+</li>
+<li><a href="Equiv.html#lab24">Behavioral Equivalence Is a Congruence</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+<li><a href="Equiv.html#lab30">Program Transformations</a>
+<div>
+<ul class="doclist">
+<li><a href="Equiv.html#lab32">The Constant-Folding Transformation</a>
+
+</li>
+<li><a href="Equiv.html#lab38">Soundness of Constant Folding</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+<li><a href="Equiv.html#lab39">Proving Inequivalence</a>
+
+</li>
+</ul>
+</div>
+<h2><a href="Hoare.html">Hoare Logic, Part I &nbsp;&nbsp; (<i>Hoare</i>)</a></h2>
+<div>
+<ul class="doclist">
+<li><a href="Hoare.html#lab45">Assertions</a>
+<div>
+<ul class="doclist">
+<li><a href="Hoare.html#lab48">Notations for Assertions</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+<li><a href="Hoare.html#lab50">Hoare Triples, Informally</a>
+
+</li>
+<li><a href="Hoare.html#lab52">Hoare Triples, Formally</a>
+
+</li>
+<li><a href="Hoare.html#lab55">Proof Rules</a>
+<div>
+<ul class="doclist">
+<li><a href="Hoare.html#lab56">Skip</a>
+
+</li>
+<li><a href="Hoare.html#lab57">Sequencing</a>
+
+</li>
+<li><a href="Hoare.html#lab58">Assignment</a>
+
+</li>
+<li><a href="Hoare.html#lab69">Consequence</a>
+
+</li>
+<li><a href="Hoare.html#lab76">Automation</a>
+
+</li>
+<li><a href="Hoare.html#lab88">Sequencing + Assignment</a>
+
+</li>
+<li><a href="Hoare.html#lab90">Conditionals</a>
+
+</li>
+<li><a href="Hoare.html#lab100">While Loops</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+<li><a href="Hoare.html#lab106">Summary</a>
+
+</li>
+</ul>
+</div>
+<h2><a href="Vcg.html">Vcg</a></h2>
+<div>
+<ul class="doclist">
+<li><a href="Vcg.html#lab108">Verification Condition Generation</a>
+<div>
+<ul class="doclist">
+<li><a href="Vcg.html#lab111">Annotated commands</a>
+
+</li>
+<li><a href="Vcg.html#lab120">Soundness</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+</ul>
+</div>
+<h2><a href="SmallstepAM.html">SmallstepAM</a></h2>
+<div>
+<ul class="doclist">
+<li><a href="SmallstepAM.html#lab124">Smallstep: Small-step Operational Semantics</a>
+<div>
+<ul class="doclist">
+<li><a href="SmallstepAM.html#lab125">Big-step Evaluation</a>
+
+</li>
+<li><a href="SmallstepAM.html#lab126">Small-step Evaluation</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+<li><a href="SmallstepAM.html#lab127">A Toy Language</a>
+
+</li>
+<li><a href="SmallstepAM.html#lab132">Relations</a>
+<div>
+<ul class="doclist">
+<li><a href="SmallstepAM.html#lab136">Values</a>
+
+</li>
+<li><a href="SmallstepAM.html#lab141">Strong Progress and Normal Forms</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+<li><a href="SmallstepAM.html#lab144">Multi-Step Reduction</a>
+<div>
+<ul class="doclist">
+<li><a href="SmallstepAM.html#lab151">Examples</a>
+
+</li>
+<li><a href="SmallstepAM.html#lab152">Normal Forms Again</a>
+
+</li>
+<li><a href="SmallstepAM.html#lab155">Equivalence of Big-Step and Small-Step</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+<li><a href="SmallstepAM.html#lab160">Small-Step Imp</a>
+
+</li>
+<li><a href="SmallstepAM.html#lab166">Concurrent Imp</a>
+
+</li>
+</ul>
+</div>
+<h2><a href="TypesAM.html">TypesAM</a></h2>
+<div>
+<ul class="doclist">
+<li><a href="TypesAM.html#lab170">Types: Type Systems</a>
+
+</li>
+<li><a href="TypesAM.html#lab171">Typed Arithmetic Expressions</a>
+<div>
+<ul class="doclist">
+<li><a href="TypesAM.html#lab172">Syntax</a>
+
+</li>
+<li><a href="TypesAM.html#lab175">Operational Semantics</a>
+
+</li>
+<li><a href="TypesAM.html#lab176">Normal Forms and Values</a>
+
+</li>
+<li><a href="TypesAM.html#lab178">Typing</a>
+
+</li>
+<li><a href="TypesAM.html#lab179">Typing Relations</a>
+
+</li>
+<li><a href="TypesAM.html#lab183">Progress</a>
+
+</li>
+<li><a href="TypesAM.html#lab184">Type Preservation</a>
+
+</li>
+<li><a href="TypesAM.html#lab185">Type Soundness</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+</ul>
+</div>
+<h2><a href="StlcAM.html">StlcAM</a></h2>
+<div>
+<ul class="doclist">
+<li><a href="StlcAM.html#lab186">Stlc: The Simply Typed Lambda-Calculus</a>
+
+</li>
+<li><a href="StlcAM.html#lab187">Overview</a>
+
+</li>
+<li><a href="StlcAM.html#lab192">Syntax</a>
+<div>
+<ul class="doclist">
+<li><a href="StlcAM.html#lab193">Types</a>
+
+</li>
+<li><a href="StlcAM.html#lab194">Terms</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+<li><a href="StlcAM.html#lab198">Operational Semantics</a>
+<div>
+<ul class="doclist">
+<li><a href="StlcAM.html#lab199">Values</a>
+
+</li>
+<li><a href="StlcAM.html#lab202">STLC Programs</a>
+
+</li>
+<li><a href="StlcAM.html#lab203">Substitution</a>
+
+</li>
+<li><a href="StlcAM.html#lab209">Reduction</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+<li><a href="StlcAM.html#lab212">Typing</a>
+<div>
+<ul class="doclist">
+<li><a href="StlcAM.html#lab213">Contexts</a>
+
+</li>
+<li><a href="StlcAM.html#lab214">Typing Relation</a>
+
+</li>
+<li><a href="StlcAM.html#lab215">Examples</a>
+
+</li>
+</ul>
+</div>
+
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</body>
+</html>
