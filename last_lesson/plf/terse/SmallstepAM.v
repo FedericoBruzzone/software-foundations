@@ -8,8 +8,8 @@ From Coq Require Import Lia.
 From Coq Require Import Lists.List. Import ListNotations.
 From PLF Require Import Maps.
 From PLF Require Import Imp.
-(* From Hammer Require Import Hammer. *)
-(* Unset Hammer Vampire. *)
+From Hammer Require Import Hammer.
+Unset Hammer Vampire.
 Definition FILL_IN_HERE := <{True}>.
 
 (* ================================================================= *)
