@@ -210,7 +210,7 @@ Inductive ty : Type :=
 (** The _typing relation_ [|- t \in T] relates terms to the types
     of their results:
 
-    
+
                            ---------------                     (T_True)
                            |- true \in Bool
 
@@ -395,16 +395,16 @@ Corollary type_soundness : forall t t' T,
   |- t' \in T.
 Proof.
   intros t t' T HT P. induction P; eauto using preservation.
-  Qed.   
-  
+  Qed.
+
 Corollary soundness : forall t t' T,
   |- t \in T ->
   t -->* t' ->
   ~(stuck t').
 Proof.
-  intros t t' T HT P. 
-  apply (type_soundness _ t' T) in HT; try assumption. 
-  unfold stuck. intros [R S].  
+  intros t t' T HT P.
+  apply (type_soundness _ t' T) in HT; try assumption.
+  unfold stuck. intros [R S].
   apply progress in HT. destruct HT; auto.
 Qed.
 
