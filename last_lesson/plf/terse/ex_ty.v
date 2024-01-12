@@ -14,31 +14,32 @@ Part 1.1: define a relational big step semantics for evaluating  [tm].
 *)
 
 Inductive eval : tm -> tm -> Prop :=
-  | E_true : eval tru tru
-  | E_false : eval fls fls
-  | E_zero : eval zro zro
-  | E_Iszero0 : forall n, eval n zro -> eval (iszro n) tru
-  | E_IszeroSucc : forall n m, eval n (scc m) -> eval (iszro n) fls
-  | E_Succ : forall n m, eval n m -> eval (scc n) (scc m)
-  | E_Pred0 : eval (prd zro) zro
-  | E_PredSucc : forall n m, eval n m -> eval (prd (scc n)) m
-  | E_IfTrue : forall b tb fb v, eval b tru -> eval tb v -> eval (ite b tb fb) v
-  | E_IfFalse : forall b tb fb v, eval b fls -> eval fb v -> eval (ite b tb fb) v
-  .
+  | E_true: eval tru tru
+  | E_false: eval fls fls
+  | E_zero: eval zro zro
+  | E_iszero_true: forall n, eval n zro -> eval (iszro n) tru
+  | E_iszero_false: forall n p, eval n (scc p) -> eval (iszro n) fls
+  | E_succ: forall n m, nvalue n -> eval n m -> eval (scc n) (scc m)
+  | E_pred_zero: eval (prd zro) zro
+  | E_pred_succ: forall n m, nvalue n -> eval n m -> eval (prd (scc n)) m
+  (*ite constructor -> if then else*)
+  | E_if_tru: forall b x y r, eval b tru -> eval x r -> eval (ite b x y) r
+  | E_if_false: forall b x y r, eval b fls -> eval y r -> eval (ite b x y) r.
 
 (** Part 1.2. now prove the value soundness theorem: *)
+
+Inductive value: tm -> Prop :=
+  | vb_tru: value tru
+  | vb_fls: value fls
+  | vn_zro: value zro
+  | vn_succ: forall n, value n -> value (scc n).
+
 Theorem vs: forall t v, eval t v -> value v.
 Proof.
   intros.
-  induction H; subst.
-  - unfold value. left. constructor.
-  - unfold value. left. constructor.
-  - unfold value. right. constructor.
-  - unfold value. left. constructor.
-  - unfold value. left. constructor.
-  - unfold value. left.
+  induction H; auto; constructor.
+  - apply IHeval.
 Qed.
-
 
 (** If you have problems, perhaps
 you need a different notion of [value]*)
