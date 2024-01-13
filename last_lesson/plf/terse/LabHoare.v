@@ -1,4 +1,3 @@
-
 Set Warnings "-notation-overridden,-parsing,-deprecated-hint-without-locality".
 From PLF Require Import Maps.
 From Coq Require Import Bool.Bool.
@@ -41,7 +40,7 @@ Ltac verify_assn :=
   try eauto; try lia.
 
 (** A. Prove that the following structural rule is derivable:*)
-Theorem spec_conj: forall P1 P2 Q1 Q2 C, 
+Theorem spec_conj: forall P1 P2 Q1 Q2 C,
 {{P1}}  C {{Q1}} ->
 {{P2}}  C {{Q2}} -> {{P1 /\ P2}}  C {{Q1 /\ Q2}}.
 Admitted.
@@ -49,24 +48,24 @@ Admitted.
 (** B. Write a program that stores in a variable the max
 of two vars and prove it correct. You can use the library
 function _max_ for the spec. Either you write the post-condition
-with an explicit [fun st => ...] or you can use the below lifted version. *) 
+with an explicit [fun st => ...] or you can use the below lifted version. *)
 Definition MAX :=
   ap2 max X Y.
 
 (** Replace the bogus spec and skip with your own code*)
-Lemma max_correct: 
+Lemma max_correct:
 {{True}}
 <{ skip}>
 {{ True }} .
 Admitted.
 
-(** C.  The following program computes the substraction [p - n]. 
-Show that the triple is valid by _finding_ the right invariant. 
+(** C.  The following program computes the substraction [p - n].
+Show that the triple is valid by _finding_ the right invariant.
 We suggest you first do this on paper.*)
 
 Example subtract_slowly_correct (m p :  nat)  :
   {{ X = m /\  Z = p }}
-  <{ while (X <> 0)  do  
+  <{ while (X <> 0)  do
      Z := Z - 1 ;
      X := X - 1
      end }>

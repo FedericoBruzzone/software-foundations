@@ -39,34 +39,96 @@ of assigment via [Do].
 
 Print state.
 
-Inductive com :=
-    CDo : (state -> state) -> com
-  | CSeq : com -> com -> com
-  | CIf : bexp -> com -> com -> com
-  | CWhile : bexp -> com -> com.
+Inductive com2 : Type :=
+  | CDo (f : (state -> state))
+  (* | CSkip *)
+  (* | CAsgn (x : string) (a : aexp) *)
+  | CSeq (c1 c2 : com2)
+  | CIf (b : bexp) (c1 c2 : com2)
+  | CWhile (b : bexp) (c : com2).
 
-Definition skip := CDo (fun st => st).
+Definition skip2 := CDo (fun st => st).
+Definition assgn2 (s: string) (a: aexp) := CDo (fun st => s !-> (aeval st a) ; st).
 
-Definition assgn (var: string) (expr: aexp) :=
-  CDo (fun st => var !-> (aeval st expr); st).
+Reserved Notation
+  "st '==[' c ']=>' st'"
+  (at level 40, c custom com at level 99,
+  st constr, st' constr at next level).
 
-Print ceval.
+Inductive ceval2 : com2 -> state -> state -> Prop :=
+  (* | E_Skip : forall st, *)
+  (*     st =[ skip ]=> st *)
+  (* | E_Asgn  : forall st a n x, *)
+  (*     aeval st a = n -> *)
+  (*     st =[ x := a ]=> (x !-> n ; st) *)
+  | E_CDo : forall f st st',
+      st' = f st ->
+      st ==[ CDo f ]=> st'
+  | E_Seq : forall c1 c2 st st' st'',
+      st  ==[ c1 ]=> st'  ->
+      st' ==[ c2 ]=> st'' ->
+      st  ==[ CSeq c1 c2 ]=> st''
+  | E_IfTrue : forall st st' b c1 c2,
+      beval st b = true ->
+      st ==[ c1 ]=> st' ->
+      st ==[ CIf b c1 c2 ]=> st'
+  | E_IfFalse : forall st st' b c1 c2,
+      beval st b = false ->
+      st ==[ c2 ]=> st' ->
+      st ==[ CIf b c1 c2 ]=> st'
+  | E_WhileFalse : forall b st c,
+      beval st b = false ->
+      st ==[ CWhile b c ]=> st
+  | E_WhileTrue : forall st st' st'' b c,
+      beval st b = true ->
+      st  ==[ c ]=> st' ->
+      st' ==[ CWhile b c ]=> st'' ->
+      st  ==[ CWhile b c ]=> st''
+    where "st ==[ c ]=> st'" := (ceval2 c st st').
 
-Inductive ceval: state -> state -> com -> Prop :=
-    E_Do: forall st f, ceval st (f st) (CDo f)
-  | E_Seq : forall (c1 c2 : com) (st st' st'' : state),
-            ceval st st' c1 -> ceval st' st'' c2 -> ceval st st'' (CSeq c1 c2)
-  | E_IfTrue : forall (st st' : state) (b : bexp) (c1 c2 : com),
-               beval st b = true ->
-               ceval st st' c1 -> ceval st st' (CIf b c1 c2)
-  | E_IfFalse : forall (st st' : state) (b : bexp) (c1 c2 : com),
-                beval st b = false ->
-                ceval st st' c2 -> ceval st st' (CIf b c1 c2)
-  | E_WhileFalse : forall (b : bexp) (st : state) (c : com),
-                   beval st b = false -> ceval st st (CWhile b c)
-  | E_WhileTrue : forall (st st' st'' : state) (b : bexp) (c : com),
-                  beval st b = true ->
-                  ceval st st' c ->
-                  ceval st' st'' (CWhile b c) ->
-                  ceval st  st'' (CWhile b c).
+Theorem der_skip: forall st,
+  st ==[ skip2 ]=> st. (* = st =[ skip]=> st. *)
+Proof.
+  intros.
+  apply E_CDo.
+  trivial.
+Qed.
+
+Theorem der_assign: forall st s a,
+  st ==[ assgn2 s a ]=> (s !-> (aeval st a) ; st).
+Proof.
+  intros.
+  apply E_CDo.
+  trivial.
+Qed.
+
+Definition Assertion := state -> Prop.
+Definition valid_hoare_triple
+           (P : Assertion) (c : com2) (Q : Assertion) : Prop :=
+  forall st st',
+     st ==[ c ]=> st' ->
+     P st  ->
+     Q st'.
+
+Notation "{{ P }} c {{ Q }}" := (valid_hoare_triple P c Q) (at level 90, c custom com at level 99).
+Check ({{fun st => True}} skip2  {{fun st => True}}).
+
+Theorem hoare_do : forall Q f (st : state),
+     {{ fun st => Q (f(st)) }} CDo f {{ Q }}.
+Proof.
+  intros.
+  unfold valid_hoare_triple.
+  intros.
+  inversion H; subst.
+  trivial.
+Qed.
+
+Example assertion_true_x1 :
+  {{fun st => True}} assgn2 X 2 {{fun st => (st X) = 2}}.
+Proof.
+  unfold valid_hoare_triple.
+  intros.
+  inversion H; subst.
+  trivial.
+Qed.
 

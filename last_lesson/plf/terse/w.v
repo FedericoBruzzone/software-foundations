@@ -71,8 +71,10 @@ Proof.
   (* info_auto. *)
   (* Show Proof. *)
   simple apply eq_refl.
+  (* simpl. *)
+  (* reflexivity. *)
 Qed.
-(* Print eq_refl. *)
+Print eq_refl.
 
 
 (** What you have to do is state and prove a very similar result for
@@ -91,7 +93,7 @@ Proof.
   inversion H4; subst.
   inversion H7; subst.
   split.
-  - apply eq_refl.
+  - reflexivity.
   - apply eq_refl.
   (* info_auto. *)
 Qed.
