@@ -38,6 +38,7 @@ Theorem vs: forall t v, eval t v -> value v.
 Proof.
   intros.
   induction H; auto; constructor.
+  (* assumption. *)
   - apply IHeval.
 Qed.
 
@@ -48,7 +49,12 @@ you need a different notion of [value]*)
 
 (* Locate deterministic. *)
 Theorem eval_det: deterministic eval.
-Admitted.
+Proof.
+  unfold deterministic.
+  intros.
+  sauto.
+Qed.
+
 
 (** 1.4. Prove preservation: *)
 

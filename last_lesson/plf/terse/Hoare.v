@@ -944,18 +944,18 @@ Theorem hoare_asg_conseq:   forall P Q X a,
     - apply hoare_asgn.
     - assumption.
   Qed.
-  
-  (** A derived rule for [while] modulo weakening the postcondition:*) 
+
+  (** A derived rule for [while] modulo weakening the postcondition:*)
   Theorem hoare_while_conseq : forall P Q(b:bexp) c,
     {{P /\ b}} c {{P}} -> (fun st => P st /\ ~ (bassertion b st)) ->> Q ->
     {{P}} while b do c end {{Q}}.
     Proof.
     intros P Q b C H Himp.
     eapply hoare_consequence_post; try apply hoare_while; assumption.
-    Qed. 
-  
+    Qed.
+
 Print     subtract_slowly_body.
-    
+
 Theorem  subtract_slowly_body_spec:  forall n m : nat,
     {{X = n /\  Z = m}}
       subtract_slowly_body
@@ -967,22 +967,22 @@ Proof.
   - eapply hoare_asgn.
   -  eapply hoare_asg_conseq.
      assertion_auto .
-Qed.       
+Qed.
 
-      
+
 Definition reduce_to_zero : com :=
   <{ while X <> 0 do X := X - 1 end }>.
 
 Lemma reduce_to_zero_correct_:
   {{True}}
     reduce_to_zero
-  {{X = 0}}.  
+  {{X = 0}}.
 Proof.
   unfold reduce_to_zero.
   eapply hoare_while_conseq.
   - eapply hoare_asg_conseq.
     assertion_auto.
-  - assertion_auto''. 
+  - assertion_auto''.
     destruct H.  apply eq_true_negb_classical in H0.
     apply eqb_eq. assumption.
 Qed.
