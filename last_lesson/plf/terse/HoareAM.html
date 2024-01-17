@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="common/css/sf.css" rel="stylesheet" type="text/css" />
-<title>Hoare: Hoare Logic, Part I</title>
+<title>HoareAM</title>
 <link href="common/jquery-ui/jquery-ui.css" rel="stylesheet">
 <script src="common/jquery-ui/external/jquery/jquery.js"></script>
 <script src="common/jquery-ui/jquery-ui.js"></script>
@@ -31,9 +31,13 @@
 
 <div id="main">
 
-<h1 class="libtitle">Hoare<span class="subtitle">Hoare Logic, Part I</span></h1>
+<h1 class="libtitle">HoareAM</h1>
 
 
+<div class="doc">
+<a id="lab44"></a><h1 class="section">Hoare: Hoare Logic, Part I</h1>
+
+</div>
 
 <div class="doc">
 Our goal in this chapter is to carry out some simple examples of
@@ -50,7 +54,7 @@ Our goal in this chapter is to carry out some simple examples of
     correctness of programs involving this construct. 
 <div class="paragraph"> </div>
 
-<a id="lab44"></a><h3 class="section"> </h3>
+<a id="lab45"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -63,7 +67,7 @@ Our goal in this chapter is to carry out some simple examples of
 </div>
 
 <div class="doc">
-<a id="lab45"></a><h1 class="section">Assertions</h1>
+<a id="lab46"></a><h1 class="section">Assertions</h1>
 
 <div class="paragraph"> </div>
 
@@ -100,7 +104,7 @@ For example,
 
 <div class="paragraph"> </div>
 
-<a id="lab46"></a><h3 class="section"> </h3>
+<a id="lab47"></a><h3 class="section"> </h3>
  We'll use Coq's notation features to make assertions
     look as much like informal math as possible.
 
@@ -115,7 +119,7 @@ For example,
 </span>
 <div class="paragraph"> </div>
 
-<a id="lab47"></a><h3 class="section"> </h3>
+<a id="lab48"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -142,7 +146,7 @@ We'll also want the "iff" variant of implication between
 </div>
 
 <div class="doc">
-<a id="lab50"></a><h1 class="section">Hoare Triples, Informally</h1>
+<a id="lab51"></a><h1 class="section">Hoare Triples, Informally</h1>
 
 <div class="paragraph"> </div>
 
@@ -171,7 +175,7 @@ We'll also want the "iff" variant of implication between
 
     Assertion <span class="inlinecode"><span class="id" title="var">P</span></span> is called the <i>precondition</i> of the triple, and <span class="inlinecode"><span class="id" title="var">Q</span></span>
     is the <i>postcondition</i>.
-<a id="lab51"></a><h3 class="section"> </h3>
+<a id="lab52"></a><h3 class="section"> </h3>
  For example,
 
 <div class="paragraph"> </div>
@@ -197,7 +201,7 @@ We'll also want the "iff" variant of implication between
 </div>
 
 <div class="doc">
-<a id="lab52"></a><h1 class="section">Hoare Triples, Formally</h1>
+<a id="lab53"></a><h1 class="section">Hoare Triples, Formally</h1>
 
 <div class="paragraph"> </div>
 
@@ -219,7 +223,7 @@ We'll also want the "iff" variant of implication between
 </div>
 
 <div class="doc">
-<a id="lab55"></a><h1 class="section">Proof Rules</h1>
+<a id="lab56"></a><h1 class="section">Proof Rules</h1>
 
 <div class="paragraph"> </div>
 
@@ -244,7 +248,7 @@ We'll also want the "iff" variant of implication between
 </div>
 
 <div class="doc">
-<a id="lab56"></a><h2 class="section">Skip</h2>
+<a id="lab57"></a><h2 class="section">Skip</h2>
 
 <div class="paragraph"> </div>
 
@@ -278,7 +282,7 @@ We'll also want the "iff" variant of implication between
 </div>
 
 <div class="doc">
-<a id="lab57"></a><h2 class="section">Sequencing</h2>
+<a id="lab58"></a><h2 class="section">Sequencing</h2>
 
 <div class="paragraph"> </div>
 
@@ -323,7 +327,7 @@ We'll also want the "iff" variant of implication between
 </div>
 
 <div class="doc">
-<a id="lab58"></a><h2 class="section">Assignment</h2>
+<a id="lab59"></a><h2 class="section">Assignment</h2>
 
 <div class="paragraph"> </div>
 
@@ -340,7 +344,7 @@ We'll also want the "iff" variant of implication between
     by <span class="inlinecode"><span class="id" title="var">Y</span></span>. 
 <div class="paragraph"> </div>
 
-<a id="lab59"></a><h3 class="section"> </h3>
+<a id="lab60"></a><h3 class="section"> </h3>
  How about this one?
 <br/>
 <span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='letter-spacing:-.4em;'>{</span>{ ??? <span style='letter-spacing:-.4em;'>}</span>}  <span class="id" title="var">X</span> := <span class="id" title="var">X</span> + <span class="id" title="var">Y</span>  <span style='letter-spacing:-.4em;'>{</span>{ <span class="id" title="var">X</span> = 1 <span style='letter-spacing:-.4em;'>}</span>}
@@ -352,7 +356,7 @@ We'll also want the "iff" variant of implication between
     assigned to <span class="inlinecode"><span class="id" title="var">X</span></span>. 
 <div class="paragraph"> </div>
 
-<a id="lab60"></a><h3 class="section"> </h3>
+<a id="lab61"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -362,7 +366,7 @@ We'll also want the "iff" variant of implication between
 <br/>
 <span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='letter-spacing:-.4em;'>{</span>{ ??? <span style='letter-spacing:-.4em;'>}</span>}  <span class="id" title="var">X</span> := <span class="id" title="var">a</span>  <span style='letter-spacing:-.4em;'>{</span>{ <span class="id" title="var">Q</span> <span style='letter-spacing:-.4em;'>}</span>}
 </span>    The precondition would then be <span class="inlinecode"><span class="id" title="var">Q</span></span>, but with any occurrences of
-    <span class="inlinecode"><span class="id" title="var">X</span></span> in it replaced by <span class="inlinecode"><span class="id" title="var">a</span></span>. <a id="lab61"></a><h3 class="section"> </h3>
+    <span class="inlinecode"><span class="id" title="var">X</span></span> in it replaced by <span class="inlinecode"><span class="id" title="var">a</span></span>. <a id="lab62"></a><h3 class="section"> </h3>
  Let's introduce a notation for this idea of replacing occurrences:
     Define <span class="inlinecode"><span class="id" title="var">Q</span></span> <span class="inlinecode">[<span class="id" title="var">X</span></span> <span class="inlinecode"><span class="nowrap"><span style='font-size:85%;'><span style='vertical-align:5%;'><span style='letter-spacing:-.2em;'>&#x22A2;</span><span style='font-size:90%;'>&gt;</span></span></span></span></span> <span class="inlinecode"><span class="id" title="var">a</span>]</span> to mean "<span class="inlinecode"><span class="id" title="var">Q</span></span> where <span class="inlinecode"><span class="id" title="var">a</span></span> is substituted in
     place of <span class="inlinecode"><span class="id" title="var">X</span></span>".
@@ -378,7 +382,7 @@ We'll also want the "iff" variant of implication between
     where <span class="inlinecode"><span class="id" title="var">a</span></span> is substituted for every occurrence of <span class="inlinecode"><span class="id" title="var">X</span></span>. 
 <div class="paragraph"> </div>
 
-<a id="lab62"></a><h3 class="section"> </h3>
+<a id="lab63"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -398,7 +402,7 @@ We'll also want the "iff" variant of implication between
 </span>
 <div class="paragraph"> </div>
 
-<a id="lab63"></a><h3 class="section"> </h3>
+<a id="lab64"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -411,7 +415,7 @@ We'll also want the "iff" variant of implication between
     <span class="inlinecode"><span class="id" title="var">a</span></span> wherever <span class="inlinecode"><span class="id" title="var">P</span></span> mentions <span class="inlinecode"><span class="id" title="var">X</span></span>. 
 <div class="paragraph"> </div>
 
-<a id="lab64"></a><h3 class="section"> </h3>
+<a id="lab65"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -422,7 +426,7 @@ We'll also want the "iff" variant of implication between
     "edit" its text. 
 <div class="paragraph"> </div>
 
-<a id="lab65"></a><h3 class="section"> </h3>
+<a id="lab66"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -445,7 +449,7 @@ That is, <span class="inlinecode"><span class="id" title="var">P</span></span> <
     of the expression <span class="inlinecode"><span class="id" title="var">a</span></span>. 
 <div class="paragraph"> </div>
 
-<a id="lab66"></a><h3 class="section"> </h3>
+<a id="lab67"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -484,7 +488,7 @@ That is, <span class="inlinecode"><span class="id" title="var">P</span></span> <
 </div>
 
 <div class="doc">
-<a id="lab67"></a><h3 class="section"> </h3>
+<a id="lab68"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -501,7 +505,7 @@ That is, <span class="inlinecode"><span class="id" title="var">P</span></span> <
 </div>
 
 <div class="doc">
-<a id="lab68"></a><h3 class="section"> </h3>
+<a id="lab69"></a><h3 class="section"> </h3>
  Of course, what we'd probably prefer is to prove this
     simpler triple:
 <br/>
@@ -510,7 +514,7 @@ That is, <span class="inlinecode"><span class="id" title="var">P</span></span> <
 </div>
 
 <div class="doc">
-<a id="lab69"></a><h2 class="section">Consequence</h2>
+<a id="lab70"></a><h2 class="section">Consequence</h2>
 
 <div class="paragraph"> </div>
 
@@ -522,7 +526,7 @@ That is, <span class="inlinecode"><span class="id" title="var">P</span></span> <
     preconditions) or stronger (for postconditions) than what we need. 
 <div class="paragraph"> </div>
 
-<a id="lab70"></a><h3 class="section"> </h3>
+<a id="lab71"></a><h3 class="section"> </h3>
  For instance,
 <br/>
 <span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style='letter-spacing:-.4em;'>{</span>{(<span class="id" title="var">X</span> = 3) [<span class="id" title="var">X</span> <span class="nowrap"><span style='font-size:85%;'><span style='vertical-align:5%;'><span style='letter-spacing:-.2em;'>&#x22A2;</span><span style='font-size:90%;'>&gt;</span></span></span></span> 3]<span style='letter-spacing:-.4em;'>}</span>} <span class="id" title="var">X</span> := 3 <span style='letter-spacing:-.4em;'>{</span>{<span class="id" title="var">X</span> = 3<span style='letter-spacing:-.4em;'>}</span>},
@@ -558,7 +562,7 @@ That is, <span class="inlinecode"><span class="id" title="var">P</span></span> <
 </table></center>
 <div class="paragraph"> </div>
 
-<a id="lab71"></a><h3 class="section"> </h3>
+<a id="lab72"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -603,7 +607,7 @@ That is, <span class="inlinecode"><span class="id" title="var">P</span></span> <
 </table></center>
 <div class="paragraph"> </div>
 
-<a id="lab72"></a><h3 class="section"> </h3>
+<a id="lab73"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -645,7 +649,7 @@ That is, <span class="inlinecode"><span class="id" title="var">P</span></span> <
 </div>
 
 <div class="doc">
-<a id="lab73"></a><h3 class="section"> </h3>
+<a id="lab74"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -666,7 +670,7 @@ That is, <span class="inlinecode"><span class="id" title="var">P</span></span> <
 </div>
 
 <div class="doc">
-<a id="lab74"></a><h3 class="section"> </h3>
+<a id="lab75"></a><h3 class="section"> </h3>
  We can also use it to prove the example mentioned earlier.
 <br/>
 <span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;<span style='letter-spacing:-.4em;'>{</span>{ <span class="id" title="var">X</span> &lt; 4 <span style='letter-spacing:-.4em;'>}</span>} <span class="nowrap"><span style='font-size:85%;'><span style='vertical-align:5%;'><span style='letter-spacing:-.2em;'>-</span></span><span style='letter-spacing:-.2em;'>></span>></span></span><br/>
@@ -686,7 +690,7 @@ That is, <span class="inlinecode"><span class="id" title="var">P</span></span> <
 </div>
 
 <div class="doc">
-<a id="lab75"></a><h3 class="section"> </h3>
+<a id="lab76"></a><h3 class="section"> </h3>
  Finally, here is a combined rule of consequence that allows us to
     vary both the precondition and the postcondition.
 <center><table class="infrule">
@@ -733,7 +737,7 @@ That is, <span class="inlinecode"><span class="id" title="var">P</span></span> <
 </div>
 
 <div class="doc">
-<a id="lab76"></a><h2 class="section">Automation</h2>
+<a id="lab77"></a><h2 class="section">Automation</h2>
 
 <div class="paragraph"> </div>
 
@@ -761,7 +765,7 @@ Also recall that <span class="inlinecode"><span class="id" title="tactic">auto</
     database. 
 <div class="paragraph"> </div>
 
-<a id="lab77"></a><h3 class="section"> </h3>
+<a id="lab78"></a><h3 class="section"> </h3>
  Here's a good candidate for automation: 
 </div>
 <div class="code">
@@ -780,7 +784,7 @@ Also recall that <span class="inlinecode"><span class="id" title="tactic">auto</
 </div>
 
 <div class="doc">
-<a id="lab78"></a><h3 class="section"> </h3>
+<a id="lab79"></a><h3 class="section"> </h3>
  Tactic <span class="inlinecode"><span class="id" title="tactic">eapply</span></span> will find <span class="inlinecode"><span class="id" title="var">st</span></span> for us. 
 </div>
 <div class="code">
@@ -799,7 +803,7 @@ Also recall that <span class="inlinecode"><span class="id" title="tactic">auto</
 </div>
 
 <div class="doc">
-<a id="lab79"></a><h3 class="section"> </h3>
+<a id="lab80"></a><h3 class="section"> </h3>
  The <span class="inlinecode"><span class="id" title="tactic">eauto</span></span> tactic will use <span class="inlinecode"><span class="id" title="tactic">eapply</span></span> as part of its proof search.
     So, the entire proof can actually be done in just one line. 
 </div>
@@ -815,7 +819,7 @@ Also recall that <span class="inlinecode"><span class="id" title="tactic">auto</
 </div>
 
 <div class="doc">
-<a id="lab80"></a><h3 class="section"> </h3>
+<a id="lab81"></a><h3 class="section"> </h3>
  ...as can the proof for the postcondition consequence
     rule. 
 </div>
@@ -831,7 +835,7 @@ Also recall that <span class="inlinecode"><span class="id" title="tactic">auto</
 </div>
 
 <div class="doc">
-<a id="lab81"></a><h3 class="section"> </h3>
+<a id="lab82"></a><h3 class="section"> </h3>
  We can also use <span class="inlinecode"><span class="id" title="tactic">eapply</span></span> to streamline a
     proof (<span class="inlinecode"><span class="id" title="var">hoare_asgn_example1</span></span>), that we did earlier as an example
     of using the consequence rule: 
@@ -849,7 +853,7 @@ Also recall that <span class="inlinecode"><span class="id" title="tactic">auto</
 </div>
 
 <div class="doc">
-<a id="lab82"></a><h3 class="section"> </h3>
+<a id="lab83"></a><h3 class="section"> </h3>
  The final bullet of that proof also looks like a candidate for
     automation. 
 </div>
@@ -870,7 +874,7 @@ Now we have quite a nice proof script: it simply identifies the
     low-level details up to Coq to figure out. 
 <div class="paragraph"> </div>
 
-<a id="lab83"></a><h3 class="section"> </h3>
+<a id="lab84"></a><h3 class="section"> </h3>
  The other example of using consequence that we did earlier,
     <span class="inlinecode"><span class="id" title="var">hoare_asgn_example2</span></span>, requires a little more work to automate.
     We can streamline the first line with <span class="inlinecode"><span class="id" title="tactic">eapply</span></span>, but we can't just use
@@ -892,7 +896,7 @@ Now we have quite a nice proof script: it simply identifies the
 </div>
 
 <div class="doc">
-<a id="lab84"></a><h3 class="section"> </h3>
+<a id="lab85"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -908,7 +912,7 @@ Now we have quite a nice proof script: it simply identifies the
 </div>
 
 <div class="doc">
-<a id="lab85"></a><h3 class="section"> </h3>
+<a id="lab86"></a><h3 class="section"> </h3>
 
 </div>
 <div class="code">
@@ -924,7 +928,7 @@ Now we have quite a nice proof script: it simply identifies the
 </div>
 
 <div class="doc">
-<a id="lab86"></a><h3 class="section"> </h3>
+<a id="lab87"></a><h3 class="section"> </h3>
 
 </div>
 <div class="code">
@@ -939,7 +943,7 @@ Now we have quite a nice proof script: it simply identifies the
 </div>
 
 <div class="doc">
-<a id="lab87"></a><h3 class="section"> </h3>
+<a id="lab88"></a><h3 class="section"> </h3>
  Again, we have quite a nice proof script.  All the low-level
     details of proofs about assertions have been taken care of
     automatically. Of course, <span class="inlinecode"><span class="id" title="var">assertion_auto</span></span> isn't able to prove
@@ -948,7 +952,7 @@ Now we have quite a nice proof script: it simply identifies the
 </div>
 
 <div class="doc">
-<a id="lab88"></a><h2 class="section">Sequencing + Assignment</h2>
+<a id="lab89"></a><h2 class="section">Sequencing + Assignment</h2>
 
 <div class="paragraph"> </div>
 
@@ -975,7 +979,7 @@ Now we have quite a nice proof script: it simply identifies the
 </div>
 
 <div class="doc">
-<a id="lab89"></a><h3 class="section"> </h3>
+<a id="lab90"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -993,7 +997,7 @@ Now we have quite a nice proof script: it simply identifies the
 </div>
 
 <div class="doc">
-<a id="lab90"></a><h2 class="section">Conditionals</h2>
+<a id="lab91"></a><h2 class="section">Conditionals</h2>
 
 <div class="paragraph"> </div>
 
@@ -1025,7 +1029,7 @@ Now we have quite a nice proof script: it simply identifies the
 </table></center>
 <div class="paragraph"> </div>
 
-<a id="lab91"></a><h3 class="section"> </h3>
+<a id="lab92"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -1042,7 +1046,7 @@ Now we have quite a nice proof script: it simply identifies the
    assignments take place in the "then" and "else" branches. 
 <div class="paragraph"> </div>
 
-<a id="lab92"></a><h3 class="section"> </h3>
+<a id="lab93"></a><h3 class="section"> </h3>
  Better: 
 <div class="paragraph"> </div>
 
@@ -1066,7 +1070,7 @@ Now we have quite a nice proof script: it simply identifies the
 </table></center>
 <div class="paragraph"> </div>
 
-<a id="lab93"></a><h3 class="section"> </h3>
+<a id="lab94"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -1085,7 +1089,7 @@ Now we have quite a nice proof script: it simply identifies the
 </div>
 
 <div class="doc">
-<a id="lab94"></a><h3 class="section"> </h3>
+<a id="lab95"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -1120,7 +1124,7 @@ That is (unwrapping the notations):
 </div>
 
 <div class="doc">
-<a id="lab95"></a><h3 class="section">Example</h3>
+<a id="lab96"></a><h3 class="section">Example</h3>
 
 </div>
 <div class="code">
@@ -1149,7 +1153,7 @@ That is (unwrapping the notations):
 </div>
 
 <div class="doc">
-<a id="lab96"></a><h3 class="section"> </h3>
+<a id="lab97"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -1171,7 +1175,7 @@ That is (unwrapping the notations):
 </div>
 
 <div class="doc">
-<a id="lab97"></a><h3 class="section"> </h3>
+<a id="lab98"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -1198,7 +1202,7 @@ That is (unwrapping the notations):
 </div>
 
 <div class="doc">
-<a id="lab98"></a><h3 class="section"> </h3>
+<a id="lab99"></a><h3 class="section"> </h3>
  We can even shorten it a little bit more. 
 </div>
 <div class="code">
@@ -1217,7 +1221,7 @@ That is (unwrapping the notations):
 </div>
 
 <div class="doc">
-<a id="lab99"></a><h3 class="section"> </h3>
+<a id="lab100"></a><h3 class="section"> </h3>
  For later proofs, it will help to extend <span class="inlinecode"><span class="id" title="var">assertion_auto'</span></span> to handle
     inequalities, too. 
 </div>
@@ -1234,7 +1238,7 @@ That is (unwrapping the notations):
 
 
 <div class="doc">
-<a id="lab100"></a><h2 class="section">While Loops</h2>
+<a id="lab101"></a><h2 class="section">While Loops</h2>
 
 <div class="paragraph"> </div>
 
@@ -1253,7 +1257,7 @@ That is (unwrapping the notations):
     must be restored. 
 <div class="paragraph"> </div>
 
-<a id="lab101"></a><h3 class="section"> </h3>
+<a id="lab102"></a><h3 class="section"> </h3>
  The Hoare while rule combines the idea of a command invariant with
      information about when guard <span class="inlinecode"><span class="id" title="var">b</span></span> does or does not hold.
 <center><table class="infrule">
@@ -1294,7 +1298,7 @@ That is (unwrapping the notations):
 </div>
 
 <div class="doc">
-<a id="lab102"></a><h3 class="section"> </h3>
+<a id="lab103"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -1317,7 +1321,7 @@ That is (unwrapping the notations):
 </span>    since the program will never enter the loop. 
 <div class="paragraph"> </div>
 
-<a id="lab103"></a><h3 class="section">EXAMPLES</h3>
+<a id="lab104"></a><h3 class="section">EXAMPLES</h3>
 
 <div class="paragraph"> </div>
 
@@ -1350,7 +1354,7 @@ A derived rule for <span class="inlinecode"><span class="id" title="var">while</
 </div>
 
 <div class="doc">
-<a id="lab104"></a><h3 class="section"> </h3>
+<a id="lab105"></a><h3 class="section"> </h3>
 
 </div>
 <div class="code">
@@ -1371,7 +1375,7 @@ A derived rule for <span class="inlinecode"><span class="id" title="var">while</
 </div>
 
 <div class="doc">
-<a id="lab105"></a><h3 class="section"> </h3>
+<a id="lab106"></a><h3 class="section"> </h3>
 
 </div>
 <div class="code">
@@ -1394,7 +1398,7 @@ A derived rule for <span class="inlinecode"><span class="id" title="var">while</
 </div>
 
 <div class="doc">
-<a id="lab106"></a><h1 class="section">Summary</h1>
+<a id="lab107"></a><h1 class="section">Summary</h1>
 
 <div class="paragraph"> </div>
 
@@ -1496,7 +1500,7 @@ A derived rule for <span class="inlinecode"><span class="id" title="var">while</
 </table></center> 
 <div class="paragraph"> </div>
 
-<a id="lab107"></a><h3 class="section"> </h3>
+<a id="lab108"></a><h3 class="section"> </h3>
  Our task in this chapter has been to <i>define</i> the rules of Hoare
     logic, and prove that the definitions are sound.  Having done so,
     we can now work <i>within</i> Hoare logic to prove that particular

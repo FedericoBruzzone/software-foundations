@@ -35,12 +35,12 @@
 
 
 <div class="doc">
-<a id="lab124"></a><h1 class="section">Smallstep: Small-step Operational Semantics</h1>
+<a id="lab125"></a><h1 class="section">Smallstep: Small-step Operational Semantics</h1>
 
 </div>
 
 <div class="doc">
-<a id="lab125"></a><h2 class="section">Big-step Evaluation</h2>
+<a id="lab126"></a><h2 class="section">Big-step Evaluation</h2>
  Our semantics for Imp is written in the so-called
     "big-step" style...
 
@@ -64,7 +64,7 @@
 
 <div class="paragraph"> </div>
 
-<a id="lab126"></a><h2 class="section">Small-step Evaluation</h2>
+<a id="lab127"></a><h2 class="section">Small-step Evaluation</h2>
  <i>Small-step</i> style: Alternatively, we can show how to "reduce"
     an expression to a simpler form by performing a single step
     of computation:
@@ -104,7 +104,7 @@
 </div>
 
 <div class="doc">
-<a id="lab127"></a><h1 class="section">A Toy Language</h1>
+<a id="lab128"></a><h1 class="section">A Toy Language</h1>
 
 <div class="paragraph"> </div>
 
@@ -130,7 +130,7 @@ Big-step evaluation as a function
 </div>
 
 <div class="doc">
-<a id="lab128"></a><h3 class="section">Big-step evaluation as a relation</h3>
+<a id="lab129"></a><h3 class="section">Big-step evaluation as a relation</h3>
 
 <div class="paragraph"> </div>
 
@@ -179,7 +179,7 @@ Big-step evaluation as a function
 </div>
 
 <div class="doc">
-<a id="lab129"></a><h3 class="section">Small-step evaluation relation</h3>
+<a id="lab130"></a><h3 class="section">Small-step evaluation relation</h3>
  <center><table class="infrule">
 <tr class="infruleassumption">
   <td class="infrule">&nbsp;&nbsp;</td>
@@ -249,7 +249,7 @@ Big-step evaluation as a function
 
 </li>
 </ul>
-<a id="lab130"></a><h3 class="section">Small-step evaluation in Coq</h3>
+<a id="lab131"></a><h3 class="section">Small-step evaluation in Coq</h3>
 
 </div>
 <div class="code">
@@ -267,7 +267,7 @@ Big-step evaluation as a function
 </div>
 
 <div class="doc">
-<a id="lab131"></a><h3 class="section">Examples</h3>
+<a id="lab132"></a><h3 class="section">Examples</h3>
 
 <div class="paragraph"> </div>
 
@@ -292,7 +292,7 @@ Big-step evaluation as a function
 </div>
 
 <div class="doc">
-<a id="lab132"></a><h1 class="section">Relations</h1>
+<a id="lab133"></a><h1 class="section">Relations</h1>
 
 <div class="paragraph"> </div>
 
@@ -309,7 +309,7 @@ Big-step evaluation as a function
 The step relation <span class="inlinecode"><span class="nowrap"><span style='font-size:85%;'><span style='vertical-align:6%;'><span style='letter-spacing:-.2em;'>-</span><span style='letter-spacing:-.2em;'>-</span></span>&gt;</span></span></span> is an example of a relation on <span class="inlinecode"><span class="id" title="var">tm</span></span>. 
 <div class="paragraph"> </div>
 
-<a id="lab133"></a><h3 class="section">Determinism</h3>
+<a id="lab134"></a><h3 class="section">Determinism</h3>
 
 <div class="paragraph"> </div>
 
@@ -335,7 +335,7 @@ The step relation <span class="inlinecode"><span class="nowrap"><span style='fon
 </div>
 
 <div class="doc">
-<a id="lab134"></a><h3 class="section"> </h3>
+<a id="lab135"></a><h3 class="section"> </h3>
 
 </div>
 <div class="code">
@@ -365,7 +365,7 @@ The step relation <span class="inlinecode"><span class="nowrap"><span style='fon
 </div>
 
 <div class="doc">
-<a id="lab135"></a><h3 class="section"> </h3>
+<a id="lab136"></a><h3 class="section"> </h3>
  The proof of the previous theorem can now be simplified if we use <span class="inlinecode"><span class="id" title="var">sauto</span></span> 
 </div>
 <div class="code">
@@ -378,7 +378,7 @@ The step relation <span class="inlinecode"><span class="nowrap"><span style='fon
 </div>
 
 <div class="doc">
-<a id="lab136"></a><h2 class="section">Values</h2>
+<a id="lab137"></a><h2 class="section">Values</h2>
 
 <div class="paragraph"> </div>
 
@@ -405,7 +405,7 @@ The step relation <span class="inlinecode"><span class="nowrap"><span style='fon
         more computation to be done. 
 </li>
 </ul>
-<a id="lab137"></a><h3 class="section"> </h3>
+<a id="lab138"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -435,7 +435,7 @@ The step relation <span class="inlinecode"><span class="nowrap"><span style='fon
 
 <div class="paragraph"> </div>
 
-<a id="lab138"></a><h3 class="section"> </h3>
+<a id="lab139"></a><h3 class="section"> </h3>
  Final states of the machine are terms of the form
     <span class="inlinecode"><span class="id" title="var">C</span></span> <span class="inlinecode"><span class="id" title="var">n</span></span> for some <span class="inlinecode"><span class="id" title="var">n</span></span>.  We call such terms <i>values</i>. 
 </div>
@@ -492,7 +492,7 @@ This gives a more elegant way of writing the <span class="inlinecode"><span clas
 </table></center> 
 <div class="paragraph"> </div>
 
-<a id="lab139"></a><h3 class="section"> </h3>
+<a id="lab140"></a><h3 class="section"> </h3>
  Again, variable names carry important information:
 <ul class="doclist">
 <li> <span class="inlinecode"><span class="id" title="var">v<sub>1</sub></span></span> ranges only over values
@@ -511,7 +511,7 @@ This gives a more elegant way of writing the <span class="inlinecode"><span clas
     it for now, but in later chapters we'll elide it. 
 <div class="paragraph"> </div>
 
-<a id="lab140"></a><h3 class="section"> </h3>
+<a id="lab141"></a><h3 class="section"> </h3>
   Here are the formal rules: 
 </div>
 <div class="code">
@@ -531,7 +531,7 @@ This gives a more elegant way of writing the <span class="inlinecode"><span clas
 </div>
 
 <div class="doc">
-<a id="lab141"></a><h2 class="section">Strong Progress and Normal Forms</h2>
+<a id="lab142"></a><h2 class="section">Strong Progress and Normal Forms</h2>
 
 <div class="paragraph"> </div>
 
@@ -611,7 +611,7 @@ This gives a more elegant way of writing the <span class="inlinecode"><span clas
 </div>
 
 <div class="doc">
-<a id="lab142"></a><h3 class="section">Normal forms</h3>
+<a id="lab143"></a><h3 class="section">Normal forms</h3>
 
 <div class="paragraph"> </div>
 
@@ -633,7 +633,7 @@ This gives a more elegant way of writing the <span class="inlinecode"><span clas
 </div>
 
 <div class="doc">
-<a id="lab143"></a><h3 class="section">Values vs. normal forms</h3>
+<a id="lab144"></a><h3 class="section">Values vs. normal forms</h3>
  (In this language, though not generally) normal forms and
     values coincide: 
 </div>
@@ -686,7 +686,7 @@ Why is this interesting?
 </div>
 
 <div class="doc">
-<a id="lab144"></a><h1 class="section">Multi-Step Reduction</h1>
+<a id="lab145"></a><h1 class="section">Multi-Step Reduction</h1>
 
 <div class="paragraph"> </div>
 
@@ -700,7 +700,7 @@ Why is this interesting?
 </div>
 
 <div class="doc">
-<a id="lab145"></a><h3 class="section"> </h3>
+<a id="lab146"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -747,7 +747,7 @@ Why is this interesting?
 
 <div class="paragraph"> </div>
 
-<a id="lab146"></a><h3 class="section"> </h3>
+<a id="lab147"></a><h3 class="section"> </h3>
 
 </div>
 <div class="code">
@@ -761,7 +761,7 @@ Why is this interesting?
 </div>
 
 <div class="doc">
-<a id="lab147"></a><h3 class="section"> </h3>
+<a id="lab148"></a><h3 class="section"> </h3>
  The effect of this definition is that <span class="inlinecode"><span class="id" title="var">multi</span></span> <span class="inlinecode"><span class="id" title="var">R</span></span> relates two
     elements <span class="inlinecode"><span class="id" title="var">x</span></span> and <span class="inlinecode"><span class="id" title="var">y</span></span> if
 
@@ -788,7 +788,7 @@ Why is this interesting?
     us from <span class="inlinecode"><span class="id" title="var">x</span></span> to <span class="inlinecode"><span class="id" title="var">y</span></span>. 
 <div class="paragraph"> </div>
 
-<a id="lab148"></a><h3 class="section"> </h3>
+<a id="lab149"></a><h3 class="section"> </h3>
  We write <span class="inlinecode"><span class="nowrap"><span style='font-size:85%;'><span style='vertical-align:6%;'><span style='letter-spacing:-.2em;'>-</span><span style='letter-spacing:-.2em;'>-</span></span><span style='letter-spacing:-.2em;'>&gt;</span><span style='vertical-align:15%;'>*</span></span></span></span> for the <span class="inlinecode"><span class="id" title="var">multi</span></span> <span class="inlinecode"><span class="id" title="var">step</span></span> relation on terms. 
 </div>
 <div class="code">
@@ -807,7 +807,7 @@ The relation <span class="inlinecode"><span class="id" title="var">multi</span><
     steps of execution. 
 <div class="paragraph"> </div>
 
-<a id="lab149"></a><h3 class="section"> </h3>
+<a id="lab150"></a><h3 class="section"> </h3>
  Second, it contains <span class="inlinecode"><span class="id" title="var">R</span></span> -- that is, single-step executions are a
     particular case of multi-step executions.  (It is this fact that
     justifies the word "closure" in the term "multi-step closure of
@@ -827,7 +827,7 @@ The relation <span class="inlinecode"><span class="id" title="var">multi</span><
 </div>
 
 <div class="doc">
-<a id="lab150"></a><h3 class="section"> </h3>
+<a id="lab151"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -859,7 +859,7 @@ In particular, for the <span class="inlinecode"><span class="id" title="var">mul
 </div>
 
 <div class="doc">
-<a id="lab151"></a><h2 class="section">Examples</h2>
+<a id="lab152"></a><h2 class="section">Examples</h2>
 
 <div class="paragraph"> </div>
 
@@ -888,7 +888,7 @@ In particular, for the <span class="inlinecode"><span class="id" title="var">mul
 </div>
 
 <div class="doc">
-<a id="lab152"></a><h2 class="section">Normal Forms Again</h2>
+<a id="lab153"></a><h2 class="section">Normal Forms Again</h2>
 
 <div class="paragraph"> </div>
 
@@ -903,7 +903,7 @@ In particular, for the <span class="inlinecode"><span class="id" title="var">mul
 </div>
 
 <div class="doc">
-<a id="lab153"></a><h3 class="section"> </h3>
+<a id="lab154"></a><h3 class="section"> </h3>
  Notice:
 
 <div class="paragraph"> </div>
@@ -928,7 +928,7 @@ In particular, for the <span class="inlinecode"><span class="id" title="var">mul
 
 <div class="paragraph"> </div>
 
-<a id="lab154"></a><h3 class="section"> </h3>
+<a id="lab155"></a><h3 class="section"> </h3>
  Indeed, something stronger is true (for this language):
 
 <div class="paragraph"> </div>
@@ -966,7 +966,7 @@ The not too difficult proof can be found in the full version of the book.
 </div>
 
 <div class="doc">
-<a id="lab155"></a><h2 class="section">Equivalence of Big-Step and Small-Step</h2>
+<a id="lab156"></a><h2 class="section">Equivalence of Big-Step and Small-Step</h2>
 
 <div class="paragraph"> </div>
 
@@ -982,7 +982,7 @@ The not too difficult proof can be found in the full version of the book.
 </div>
 
 <div class="doc">
-<a id="lab156"></a><h3 class="section"> </h3>
+<a id="lab157"></a><h3 class="section"> </h3>
  The key ideas in the proof can be seen in the following picture:
 <br/>
 <span class="inlinecode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">P</span> <span class="id" title="var">t<sub>1</sub></span> <span class="id" title="var">t<sub>2</sub></span> <span class="nowrap"><span style='font-size:85%;'><span style='vertical-align:6%;'><span style='letter-spacing:-.2em;'>-</span><span style='letter-spacing:-.2em;'>-</span></span>&gt;</span></span>            (<span class="id" title="tactic">by</span> <span class="id" title="var">ST_Plus1</span>)<br/>
@@ -998,7 +998,7 @@ The not too difficult proof can be found in the full version of the book.
 </span>     
 <div class="paragraph"> </div>
 
-<a id="lab157"></a><h3 class="section"> </h3>
+<a id="lab158"></a><h3 class="section"> </h3>
  That is, the multistep reduction of a term of the form <span class="inlinecode"><span class="id" title="var">P</span></span> <span class="inlinecode"><span class="id" title="var">t<sub>1</sub></span></span> <span class="inlinecode"><span class="id" title="var">t<sub>2</sub></span></span>
     proceeds in three phases:
 <ul class="doclist">
@@ -1035,7 +1035,7 @@ To formalize this intuition, you'll need  some congruence
 </div>
 
 <div class="doc">
-<a id="lab158"></a><h3 class="section"> </h3>
+<a id="lab159"></a><h3 class="section"> </h3>
  For the other direction, we need one lemma, which establishes a
     relation between single-step reduction and big-step evaluation. 
 </div>
@@ -1054,7 +1054,7 @@ To formalize this intuition, you'll need  some congruence
 </div>
 
 <div class="doc">
-<a id="lab159"></a><h3 class="section"> </h3>
+<a id="lab160"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -1078,7 +1078,7 @@ To formalize this intuition, you'll need  some congruence
 </div>
 
 <div class="doc">
-<a id="lab160"></a><h1 class="section">Small-Step Imp</h1>
+<a id="lab161"></a><h1 class="section">Small-Step Imp</h1>
 
 <div class="paragraph"> </div>
 
@@ -1102,7 +1102,7 @@ Then we introduce relational definitions for small-step reduction relations for 
 </div>
 
 <div class="doc">
-<a id="lab161"></a><h3 class="section">Small-step evaluation relation for arithmetic expressions</h3>
+<a id="lab162"></a><h3 class="section">Small-step evaluation relation for arithmetic expressions</h3>
 <center><table class="infrule">
 <tr class="infruleassumption">
   <td class="infrule">&nbsp;&nbsp;</td>
@@ -1237,7 +1237,7 @@ Then we introduce relational definitions for small-step reduction relations for 
 </div>
 
 <div class="doc">
-<a id="lab162"></a><h3 class="section">Small-step evaluation relation for boolean expressions</h3>
+<a id="lab163"></a><h3 class="section">Small-step evaluation relation for boolean expressions</h3>
 <center><table class="infrule">
 <tr class="infruleassumption">
   <td class="infrule">a<sub>1</sub> / st <span class="nowrap"><span style='font-size:85%;'><span style='vertical-align:6%;'><span style='letter-spacing:-.2em;'>-</span><span style='letter-spacing:-.2em;'>-</span></span>&gt;</span></span> a<sub>1</sub>'</td>
@@ -1424,7 +1424,7 @@ Then we introduce relational definitions for small-step reduction relations for 
 </div>
 
 <div class="doc">
-<a id="lab163"></a><h3 class="section"> </h3>
+<a id="lab164"></a><h3 class="section"> </h3>
 
 <div class="paragraph"> </div>
 
@@ -1487,7 +1487,7 @@ arithmetic and boolean expressions.
 
 <div class="paragraph"> </div>
 
-<a id="lab164"></a><h3 class="section">Small-step evaluation relation for commands</h3>
+<a id="lab165"></a><h3 class="section">Small-step evaluation relation for commands</h3>
 <center><table class="infrule">
 <tr class="infruleassumption">
   <td class="infrule">a<sub>1</sub> / st <span class="nowrap"><span style='font-size:85%;'><span style='vertical-align:6%;'><span style='letter-spacing:-.2em;'>-</span><span style='letter-spacing:-.2em;'>-</span></span>&gt;</span></span> a<sub>1</sub>'</td>
@@ -1603,7 +1603,7 @@ arithmetic and boolean expressions.
 </table></center>
 <div class="paragraph"> </div>
 
-<a id="lab165"></a><h3 class="section"> </h3>
+<a id="lab166"></a><h3 class="section"> </h3>
  We can distinguish different outcomes of the computation
 
 <div class="paragraph"> </div>
@@ -1647,7 +1647,7 @@ We can show that this relation is
 </div>
 
 <div class="doc">
-<a id="lab166"></a><h1 class="section">Concurrent Imp</h1>
+<a id="lab167"></a><h1 class="section">Concurrent Imp</h1>
 
 <div class="paragraph"> </div>
 
@@ -1666,7 +1666,7 @@ We can show that this relation is
 </div>
 
 <div class="doc">
-<a id="lab167"></a><h3 class="section">New small-step evaluation relation for commands</h3>
+<a id="lab168"></a><h3 class="section">New small-step evaluation relation for commands</h3>
 <center><table class="infrule">
 <tr class="infruleassumption">
   <td class="infrule">c<sub>1</sub> / st <span class="nowrap"><span style='font-size:85%;'><span style='vertical-align:6%;'><span style='letter-spacing:-.2em;'>-</span><span style='letter-spacing:-.2em;'>-</span></span>&gt;</span></span> c<sub>1</sub>' / st'</td>
@@ -1710,7 +1710,7 @@ We can show that this relation is
 </div>
 
 <div class="doc">
-<a id="lab168"></a><h3 class="section"> </h3>
+<a id="lab169"></a><h3 class="section"> </h3>
 
 </div>
 <div class="code">
@@ -1826,7 +1826,7 @@ How about this one?
 </div> <!-- /quiz -->
 
 <div class="doc">
-<a id="lab169"></a><h3 class="section"> </h3>
+<a id="lab170"></a><h3 class="section"> </h3>
  Among the many interesting properties of this language is the fact
     that the following program can terminate with the variable <span class="inlinecode"><span class="id" title="var">X</span></span> set
     to any value. 

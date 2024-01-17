@@ -160,7 +160,7 @@
     title        =   "Programming Language Foundations",
     series       =   "Software Foundations",
     volume       =   "2",
-    year         =   "2023",
+    year         =   "2024",
     publisher    =   "Electronic textbook",
     note         =   {Version 6.5,
                       \URL{http://softwarefoundations.cis.upenn.edu} },

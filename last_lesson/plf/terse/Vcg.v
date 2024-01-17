@@ -7,7 +7,7 @@ From Coq Require Import Arith.EqNat.
 From Coq Require Import Arith.PeanoNat. Import Nat.
 From Coq Require Import Lia.
 From PLF Require Export   Imp.
-From PLF Require Export Hoare.
+From PLF Require Export HoareAM.
 Ltac verify_assn :=
   repeat split;
   simpl; unfold assert_implies;
@@ -51,7 +51,7 @@ Proof.
   - assumption.
 Qed.
 
-(** A derived rule for [while] modulo weakening the postcondition:*)
+(** A derived rule for [while] modulo weakening the postcondition:*) 
 
 Theorem hoare_while_conseq' : forall P Q(b:bexp) c,
   {{P /\ b}} c {{P}} -> (fun st => P st /\ ~ (bassertion b st)) ->> Q ->
@@ -59,7 +59,7 @@ Theorem hoare_while_conseq' : forall P Q(b:bexp) c,
   Proof.
   intros P Q b C H Himp.
   eapply hoare_consequence_post; try apply hoare_while; assumption.
-  Qed.
+  Qed. 
 
 Theorem hoare_skip_conseq : forall P Q,
     P ->> Q -> {{P}} skip {{Q}}.
@@ -152,13 +152,13 @@ Summary:
 
 (* ================================================================= *)
 (** ** Annotated commands *)
-
+ 
  (**
-
+ 
 An annotated command is a command with _assertions_ embedded within
 it.  This may vary from _full_ decoration (every command has pre and
 post conditions), to more economical ones.
-
+ 
  We choose the least invasive: we only annotate [while] loops with
  their invariants.
 
@@ -183,7 +183,7 @@ Fixpoint  strip (acm : acom)  : com  :=
   match acm with
   |CSkip =>  Imp.CSkip
   |CAsgn x e =>  Imp.CAsgn x e
-  |CSeq c1 c2 =>  Imp.CSeq (strip c1) (strip c2)
+  |CSeq c1 c2 =>  Imp.CSeq (strip c1) (strip c2) 
   |CIf b c1 c2 =>  Imp.CIf b (strip c1) (strip c2)
   |CWhile _ b c =>  Imp.CWhile b (strip c)
   end.
@@ -224,9 +224,9 @@ that satisfies the postcondition [Q].  Original intuition (Dijkstra,
 Fixpoint  wpre (acm : acom) (Q: Assertion) : Assertion  :=
   match acm with
   | CSkip => Q
-  | CAsgn x e => fun st => Q [x |-> e] st
+  | CAsgn x e => fun st => Q [x |-> e] st 
   | CSeq c1 c2 => wpre c1 (wpre c2 Q)
-  | CIf b c1 c2 => fun st => if beval  st b then wpre c1 Q st else wpre c2 Q st
+  | CIf b c1 c2 => fun st => if beval  st b then wpre c1 Q st else wpre c2 Q st 
   | CWhile inv _ _ => inv
   end.
 
@@ -259,9 +259,9 @@ Fixpoint  vc (acm : acom) (Q: Assertion) : Prop  :=
   | CSkip => True
   | CAsgn x e => True
   | CSeq c1 c2 => (vc c1 (wpre c2 Q) /\ vc c2 Q)
-  | CIf _ c1 c2 => vc c1 Q  /\  vc c2 Q
+  | CIf _ c1 c2 => vc c1 Q  /\  vc c2 Q 
   | CWhile inv b c => (forall s, (inv s /\ (beval s b = true) -> wpre c inv s) /\
-                                  (inv s /\ beval s b = false -> Q s))  /\
+                                  (inv s /\ beval s b = false -> Q s))  /\ 
                                    vc c inv  end.
 
 (**
@@ -285,7 +285,7 @@ while {{True}} X <> 0 do
   X := X - 1
 {{X = 0}}
 *)
-
+   
 Definition reduce_to_zero : acom :=
   CWhile (fun s => True)
          (BNeq X O)
@@ -294,7 +294,7 @@ Definition reduce_to_zero : acom :=
 (** The post condition: *)
 Definition reduce_to_zero_post := fun st => st X = 0.
 
-Eval simpl in (vc
+Eval simpl in (vc 
                  (CWhile (fun s => True)
                          (BNeq X O)
                          (CAsgn X (AMinus X (S O))))
@@ -335,14 +335,14 @@ induction c; intros;simpl; simpl in H; try destruct H.
 - eapply hoare_seq; eauto.
 (* if *)
 - apply IHc1 in H.  apply IHc2 in H0. clear IHc1. clear IHc2.
-apply hoare_if; unfold bassertion.
- + eapply hoare_consequence_pre. eassumption.
+apply hoare_if; unfold bassertion. 
+ + eapply hoare_consequence_pre. eassumption. 
  unfold "->>". intros.
   destruct (beval st b); destruct H1; auto; try congruence.
- + eapply hoare_consequence_pre. eassumption.
+ + eapply hoare_consequence_pre. eassumption. 
  unfold "->>". intros.
   destruct (beval st b); destruct H1; auto; try congruence.
-(* while *)
+(* while *) 
 - apply IHc in H0.  eapply hoare_while_conseq;  unfold bassertion.
  eapply hoare_consequence_pre. eassumption.
  + unfold "->>". intros.
@@ -354,10 +354,10 @@ apply hoare_if; unfold bassertion.
 Definition vcgen (P: Assertion) (a: acom) (Q: Assertion) : Prop :=
    P ->> (wpre a Q) /\ vc a Q.
 
-Corollary vcg_s: forall c P Q,
+Corollary vcg_s: forall c P Q, 
   vcgen P c Q -> {{P}} (strip c) {{Q}}.
 Proof.
-unfold vcgen.  intros c P Q [H1 H2].
+unfold vcgen.  intros c P Q [H1 H2]. 
 eapply hoare_consequence_pre; try apply vc_sound; auto.
 Qed.
 
@@ -380,7 +380,7 @@ Proof.
   -- verify_assn.
  - apply lp.
  - verify_assn.
- Qed.
+ Qed. 
 
 (** However, if we annotate it with a wrong loop invariant, it generates
 an unprovable verification condition: *)
@@ -412,7 +412,7 @@ Proof.
   tauto.
   Qed.
 
-Lemma swap_corr_v : forall (x y : nat),
+Lemma swap_corr_v : forall (x y : nat), 
   vc
   swap_program
   (fun st => st X = y /\ st Y = x).
@@ -426,7 +426,7 @@ Definition R : string := "R".
 Definition Q : string := "Q".
 
 Definition div_inv : Assertion :=
-  fun st => st X = st R + (st Y * st Q).
+  fun st => st X = st R + (st Y * st Q).  
 
 Definition div : acom :=
  CSeq (CAsgn R X)
@@ -434,10 +434,10 @@ Definition div : acom :=
      (CWhile div_inv (BLe Y R)
         (CSeq
            (CAsgn R (AMinus R Y))
-           (CAsgn Q (APlus Q (S O)))))).
-
+           (CAsgn Q (APlus Q (S O)))))).  
+    
 Definition div_post :=
-fun st => st R < st Y /\ div_inv st.
+fun st => st R < st Y /\ div_inv st.    
 
 Lemma div_correct_vcg: (vc div div_post).
 unfold div, div_post,div_inv. simpl. verify_assn.

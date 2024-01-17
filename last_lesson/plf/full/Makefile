@@ -1,6 +1,6 @@
 COQMFFLAGS := -Q . PLF  
 
-ALLVFILES := Maps.v Imp.v Preface.v Equiv.v Hoare.v Vcg.v SmallstepAM.v TypesAM.v StlcAM.v
+ALLVFILES := Maps.v Imp.v Preface.v Equiv.v HoareAM.v Vcg.v SmallstepAM.v TypesAM.v Stlc.v StlcPropAM.v
 
 build: Makefile.coq
 	$(MAKE) -f Makefile.coq

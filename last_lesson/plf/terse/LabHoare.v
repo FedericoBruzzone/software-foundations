@@ -93,7 +93,6 @@ Proof.
   apply hoare_if; try (apply hoare_asg_conseq; verify_assn).
 Qed.
 
-
 (** C.  The following program computes the substraction [p - n].
 Show that the triple is valid by _finding_ the right invariant.
 We suggest you first do this on paper.*)
@@ -142,6 +141,4 @@ Restart.
   verify_assn.
   Show Proof.
 Qed.
-
-
 

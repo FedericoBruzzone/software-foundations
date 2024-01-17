@@ -1,0 +1,412 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="common/css/sf.css" rel="stylesheet" type="text/css" />
+<title>StlcPropAM</title>
+<link href="common/jquery-ui/jquery-ui.css" rel="stylesheet">
+<script src="common/jquery-ui/external/jquery/jquery.js"></script>
+<script src="common/jquery-ui/jquery-ui.js"></script>
+<script src="common/toggleproofs.js"></script>
+<link href="common/css/plf.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="common/slides.js"></script>
+<link href="common/css/slides.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+<div id='logoinheader'><a href='https://softwarefoundations.cis.upenn.edu'>
+<img src='common/media/image/sf_logo_sm.png' alt='Software Foundations Logo'></a></div>
+<div class='booktitleinheader'><a href='index.html'>Volume 2: Programming Language Foundations</a></div>
+<ul id='menu'>
+   <li class='section_name'><a href='toc.html'>Table of Contents</a></li>
+   <li class='section_name'><a href='coqindex.html'>Index</a></li>
+   <li class='section_name'><a href='deps.html'>Roadmap</a></li>
+</ul>
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">StlcPropAM</h1>
+
+
+<div class="doc">
+<a id="lab222"></a><h1 class="section">StlcProp: Properties of STLC</h1>
+
+</div>
+
+<div class="doc">
+In this chapter, we develop the fundamental theory of the Simply
+    Typed Lambda Calculus -- in particular, the type safety
+    theorem. 
+</div>
+
+<div class="doc">
+<a id="lab223"></a><h1 class="section">Canonical Forms</h1>
+
+<div class="paragraph"> </div>
+
+ The first step in establishing basic properties of
+    reduction and types is to identify the possible <i>canonical
+    forms</i> belonging to each type.  For
+    <span class="inlinecode"><span class="id" title="var">Bool</span></span>, these are again the boolean values <span class="inlinecode"><span class="id" title="var">true</span></span> and <span class="inlinecode"><span class="id" title="var">false</span></span>; for
+    arrow types, they are lambda-abstractions.
+
+<div class="paragraph"> </div>
+
+    Formally, we will need these lemmas only for terms that are not
+    only well typed but <i>closed</i> -- well typed in the empty
+    context. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">canonical_forms_bool</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">t</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">empty</span> <span class="nowrap">&vert;--</span>  <span class="id" title="var">t</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">Bool</span> →<br/>
+&nbsp;&nbsp;<span class="id" title="var">value</span> <span class="id" title="var">t</span> →<br/>
+&nbsp;&nbsp;(<span class="id" title="var">t</span> = &lt;{<span class="id" title="var">true</span>}&gt;) ∨ (<span class="id" title="var">t</span> = &lt;{<span class="id" title="var">false</span>}&gt;).<br/>
+<div class="togglescript" id="proofcontrol1" onclick="toggleDisplay('proof1');toggleDisplay('proofcontrol1')"><span class="show"></span></div>
+<div class="proofscript" id="proof1" onclick="toggleDisplay('proof1');toggleDisplay('proofcontrol1')">
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">t</span> <span class="id" title="var">HT</span> <span class="id" title="var">HVal</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <span class="id" title="var">HVal</span>; <span class="id" title="tactic">inversion</span> <span class="id" title="var">HT</span>; <span class="id" title="tactic">auto</span>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+</div>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">canonical_forms_fun</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">t</span> <span class="id" title="var">T<sub>1</sub></span> <span class="id" title="var">T<sub>2</sub></span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">empty</span> <span class="nowrap">&vert;--</span>  <span class="id" title="var">t</span> \<span class="id" title="keyword">in</span> (<span class="id" title="var">T<sub>1</sub></span> → <span class="id" title="var">T<sub>2</sub></span>) →<br/>
+&nbsp;&nbsp;<span class="id" title="var">value</span> <span class="id" title="var">t</span> →<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">∃</span> <span class="id" title="var">x</span> <span class="id" title="var">u</span>, <span class="id" title="var">t</span> = &lt;{\<span class="id" title="var">x</span>:<span class="id" title="var">T<sub>1</sub></span>, <span class="id" title="var">u</span>}&gt;.<br/>
+<div class="togglescript" id="proofcontrol2" onclick="toggleDisplay('proof2');toggleDisplay('proofcontrol2')"><span class="show"></span></div>
+<div class="proofscript" id="proof2" onclick="toggleDisplay('proof2');toggleDisplay('proofcontrol2')">
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">t</span> <span class="id" title="var">T<sub>1</sub></span> <span class="id" title="var">T<sub>2</sub></span> <span class="id" title="var">HT</span> <span class="id" title="var">HVal</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <span class="id" title="var">HVal</span>; <span class="id" title="tactic">inversion</span> <span class="id" title="var">HT</span>; <span class="id" title="tactic">subst</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">eauto</span>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+</div>
+</div>
+
+<div class="doc">
+<a id="lab224"></a><h1 class="section">Progress</h1>
+
+<div class="paragraph"> </div>
+
+ The <i>progress</i> theorem tells us that closed, well-typed
+    terms are not stuck. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Theorem</span> <span class="id" title="tactic">progress</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">t</span> <span class="id" title="var">T</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">empty</span> <span class="nowrap">&vert;--</span>  <span class="id" title="var">t</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">T</span> →<br/>
+&nbsp;&nbsp;<span class="id" title="var">value</span> <span class="id" title="var">t</span> ∨ <span class="id" title="tactic">∃</span> <span class="id" title="var">t'</span>, <span class="id" title="var">t</span> <span class="nowrap"><span style='font-size:85%;'><span style='vertical-align:6%;'><span style='letter-spacing:-.2em;'>-</span><span style='letter-spacing:-.2em;'>-</span></span>&gt;</span></span> <span class="id" title="var">t'</span>.<br/>
+<div class="togglescript" id="proofcontrol3" onclick="toggleDisplay('proof3');toggleDisplay('proofcontrol3')"><span class="show"></span></div>
+<div class="proofscript" id="proof3" onclick="toggleDisplay('proof3');toggleDisplay('proofcontrol3')">
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">t</span> <span class="id" title="var">T</span> <span class="id" title="var">Ht</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">remember</span> <span class="id" title="var">empty</span> <span class="id" title="keyword">as</span> <span class="id" title="var">Gamma</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">Ht</span>; <span class="id" title="tactic">subst</span>; <span class="id" title="tactic">auto</span>.<br/>
+&nbsp;&nbsp;<span class="comment">(*&nbsp;auto&nbsp;solves&nbsp;all&nbsp;three&nbsp;cases&nbsp;in&nbsp;which&nbsp;t&nbsp;is&nbsp;a&nbsp;value&nbsp;*)</span><br/>
+&nbsp;&nbsp;- <span class="comment">(*&nbsp;T_Var&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">(*&nbsp;contradictory:&nbsp;variables&nbsp;cannot&nbsp;be&nbsp;typed&nbsp;in&nbsp;an<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;empty&nbsp;context&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">inversion</span> <span class="id" title="var">H</span>.<br/>
+&nbsp;&nbsp;- <span class="comment">(*&nbsp;T_App&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">(*&nbsp;<span class="inlinecode"><span class="id" title="var">t</span></span>&nbsp;=&nbsp;<span class="inlinecode"><span class="id" title="var">t<sub>1</sub></span></span> <span class="inlinecode"><span class="id" title="var">t<sub>2</sub></span></span>.&nbsp;&nbsp;Proceed&nbsp;by&nbsp;cases&nbsp;on&nbsp;whether&nbsp;<span class="inlinecode"><span class="id" title="var">t<sub>1</sub></span></span>&nbsp;is&nbsp;a<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value&nbsp;or&nbsp;steps...&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">right</span>. <span class="id" title="tactic">destruct</span> <span class="id" title="var">IHHt1</span>; <span class="id" title="tactic">trivial</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="comment">(*&nbsp;t<sub>1</sub>&nbsp;is&nbsp;a&nbsp;value&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <span class="id" title="var">IHHt2</span>; <span class="id" title="tactic">trivial</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;× <span class="comment">(*&nbsp;t<sub>2</sub>&nbsp;is&nbsp;also&nbsp;a&nbsp;value&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">eapply</span> <span class="id" title="var">canonical_forms_fun</span> <span class="id" title="keyword">in</span> <span class="id" title="var">Ht<sub>1</sub></span>; <span class="id" title="tactic">try</span> <span class="id" title="tactic">assumption</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <span class="id" title="var">Ht<sub>1</sub></span> <span class="id" title="keyword">as</span> [<span class="id" title="var">x</span> [<span class="id" title="var">t<sub>0</sub></span> <span class="id" title="var">H<sub>1</sub></span>]]. <span class="id" title="tactic">subst</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">eauto</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;× <span class="comment">(*&nbsp;t<sub>2</sub>&nbsp;steps&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <span class="id" title="var">H<sub>0</sub></span> <span class="id" title="keyword">as</span> [<span class="id" title="var">t<sub>2</sub>'</span> <span class="id" title="var">Hstp</span>]. <span class="id" title="tactic">eauto</span> .<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="comment">(*&nbsp;t<sub>1</sub>&nbsp;steps&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <span class="id" title="var">H</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">t<sub>1</sub>'</span> <span class="id" title="var">Hstp</span>]. <span class="id" title="tactic">eauto</span>.<br/>
+&nbsp;&nbsp;- <span class="comment">(*&nbsp;T_If&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">right</span>. <span class="id" title="tactic">destruct</span> <span class="id" title="var">IHHt1</span>; <span class="id" title="tactic">trivial</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="comment">(*&nbsp;t<sub>1</sub>&nbsp;is&nbsp;a&nbsp;value&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> (<span class="id" title="var">canonical_forms_bool</span> <span class="id" title="var">t<sub>1</sub></span>); <span class="id" title="tactic">subst</span>; <span class="id" title="tactic">eauto</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="comment">(*&nbsp;t<sub>1</sub>&nbsp;also&nbsp;steps&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> <span class="id" title="var">H</span> <span class="id" title="keyword">as</span> [<span class="id" title="var">t<sub>1</sub>'</span> <span class="id" title="var">Hstp</span>]. <span class="id" title="tactic">eauto</span>.<br/><hr class='doublespaceincode'/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
+</div>
+</div>
+
+<div class="doc">
+<a id="lab225"></a><h1 class="section">Preservation</h1>
+
+<div class="paragraph"> </div>
+
+ For preservation, we need some technical machinery for
+    reasoning about variables and substitution.
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> The <i>preservation theorem</i> is proved by induction on a typing
+        derivation, pretty much as we did in the <a href="Types.html"><span class="inlineref">Types</span></a> chapter.
+
+<div class="paragraph"> </div>
+
+        Main novelty: <span class="inlinecode"><span class="id" title="var">ST_AppAbs</span></span> uses the substitution operation.
+
+<div class="paragraph"> </div>
+
+        To see that this step preserves typing, we need to know that
+        the substitution itself does.  So we prove a...
+
+<div class="paragraph"> </div>
+
+
+</li>
+<li> <i>substitution lemma</i>, stating that substituting a (closed,
+        well-typed) term <span class="inlinecode"><span class="id" title="var">s</span></span> for a variable <span class="inlinecode"><span class="id" title="var">x</span></span> in a term <span class="inlinecode"><span class="id" title="var">t</span></span>
+        preserves the type of <span class="inlinecode"><span class="id" title="var">t</span></span>.
+
+<div class="paragraph"> </div>
+
+        The proof goes by induction on the form of <span class="inlinecode"><span class="id" title="var">t</span></span> and requires
+        looking at all the different cases in the definition of
+        substitition.
+
+<div class="paragraph"> </div>
+
+        Tricky case: variables.
+        In this case, we need to deduce from the fact that a term <span class="inlinecode"><span class="id" title="var">s</span></span>
+        has type S in the empty context the fact that <span class="inlinecode"><span class="id" title="var">s</span></span> has type S
+        in every context. For this we prove a...
+
+<div class="paragraph"> </div>
+
+
+</li>
+<li> <i>weakening</i> lemma, showing that typing is preserved under
+        "extensions" to the context <span class="inlinecode"><span class="id" title="var">Gamma</span></span>.
+
+</li>
+</ul>
+
+</div>
+
+<div class="doc">
+<a id="lab226"></a><h2 class="section">The Weakening Lemma</h2>
+
+<div class="paragraph"> </div>
+
+ Typing is preserved under "extensions" to the context <span class="inlinecode"><span class="id" title="var">Gamma</span></span>.
+    (Recall the definition of "includedin" from Maps.v.) 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">weakening</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">Gamma</span> <span class="id" title="var">Gamma'</span> <span class="id" title="var">t</span> <span class="id" title="var">T</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">includedin</span> <span class="id" title="var">Gamma</span> <span class="id" title="var">Gamma'</span> →<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Gamma</span>  <span class="nowrap">&vert;--</span>  <span class="id" title="var">t</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">T</span>  →<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Gamma'</span> <span class="nowrap">&vert;--</span>  <span class="id" title="var">t</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">T</span>.<br/>
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">Gamma</span> <span class="id" title="var">Gamma'</span> <span class="id" title="var">t</span> <span class="id" title="var">T</span> <span class="id" title="var">H</span> <span class="id" title="var">Ht</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">generalize</span> <span class="id" title="tactic">dependent</span> <span class="id" title="var">Gamma'</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">Ht</span>; <span class="id" title="tactic">eauto</span> <span class="id" title="keyword">using</span> <span class="id" title="var">includedin_update</span>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+</div>
+
+<div class="doc">
+The following simple corollary is what we actually need below. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">weakening_empty</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">Gamma</span> <span class="id" title="var">t</span> <span class="id" title="var">T</span>,<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">empty</span> <span class="nowrap">&vert;--</span>  <span class="id" title="var">t</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">T</span>  →    <span class="id" title="var">Gamma</span> <span class="nowrap">&vert;--</span>  <span class="id" title="var">t</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">T</span>.<br/>
+<div class="togglescript" id="proofcontrol4" onclick="toggleDisplay('proof4');toggleDisplay('proofcontrol4')"><span class="show"></span></div>
+<div class="proofscript" id="proof4" onclick="toggleDisplay('proof4');toggleDisplay('proofcontrol4')">
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">Gamma</span> <span class="id" title="var">t</span> <span class="id" title="var">T</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">eapply</span> <span class="id" title="var">weakening</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">discriminate</span>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+</div>
+</div>
+
+<div class="doc">
+<a id="lab227"></a><h2 class="section">A Substitution Lemma</h2>
+
+<div class="paragraph"> </div>
+
+   Now we come to the conceptual heart of the proof that reduction
+    preserves types -- namely, the observation that <i>substitution</i>
+    preserves types. 
+<div class="paragraph"> </div>
+
+ The <i>substitution lemma</i> says:
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> Suppose we have a term <span class="inlinecode"><span class="id" title="var">t</span></span> with a free variable <span class="inlinecode"><span class="id" title="var">x</span></span>, and
+      suppose we've been able to assign a type <span class="inlinecode"><span class="id" title="var">T</span></span> to <span class="inlinecode"><span class="id" title="var">t</span></span> under the
+      assumption that <span class="inlinecode"><span class="id" title="var">x</span></span> has some type <span class="inlinecode"><span class="id" title="var">U</span></span>.
+
+<div class="paragraph"> </div>
+
+
+</li>
+<li> Also, suppose that we have some other <i>program</i> <span class="inlinecode"><span class="id" title="var">v</span></span> (closed term) and that we've
+      shown that <span class="inlinecode"><span class="id" title="var">v</span></span> has type <span class="inlinecode"><span class="id" title="var">U</span></span>.
+
+<div class="paragraph"> </div>
+
+
+</li>
+<li> Then we can substitute <span class="inlinecode"><span class="id" title="var">v</span></span> for each of the occurrences of
+      <span class="inlinecode"><span class="id" title="var">x</span></span> in <span class="inlinecode"><span class="id" title="var">t</span></span> and obtain a new term that still has type <span class="inlinecode"><span class="id" title="var">T</span></span>. 
+
+</li>
+</ul>
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">substitution_preserves_typing</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">Gamma</span> <span class="id" title="var">x</span> <span class="id" title="var">U</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">T</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">x</span> <span class="nowrap"><span style='font-size:85%;'><span style='vertical-align:5%;'><span style='letter-spacing:-.2em;'>&#x22A2;</span><span style='font-size:90%;'>&gt;</span></span></span></span> <span class="id" title="var">U</span> ; <span class="id" title="var">Gamma</span> <span class="nowrap">&vert;--</span>  <span class="id" title="var">t</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">T</span> →<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">empty</span> <span class="nowrap">&vert;--</span>  <span class="id" title="var">v</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">U</span>   →<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Gamma</span> <span class="nowrap">&vert;--</span>  [<span class="id" title="var">x</span>:=<span class="id" title="var">v</span>]<span class="id" title="var">t</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">T</span>.<br/>
+<div class="togglescript" id="proofcontrol5" onclick="toggleDisplay('proof5');toggleDisplay('proofcontrol5')"><span class="show"></span></div>
+<div class="proofscript" id="proof5" onclick="toggleDisplay('proof5');toggleDisplay('proofcontrol5')">
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">Gamma</span> <span class="id" title="var">x</span> <span class="id" title="var">U</span> <span class="id" title="var">t</span> <span class="id" title="var">v</span> <span class="id" title="var">T</span> <span class="id" title="var">Ht</span> <span class="id" title="var">Hv</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">generalize</span> <span class="id" title="tactic">dependent</span> <span class="id" title="var">Gamma</span>. <span class="id" title="tactic">generalize</span> <span class="id" title="tactic">dependent</span> <span class="id" title="var">T</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">t</span>; <span class="id" title="tactic">intros</span> <span class="id" title="var">T</span> <span class="id" title="var">Gamma</span> <span class="id" title="var">H</span>;<br/>
+&nbsp;&nbsp;<span class="comment">(*&nbsp;in&nbsp;each&nbsp;case,&nbsp;we'll&nbsp;want&nbsp;to&nbsp;get&nbsp;at&nbsp;the&nbsp;derivation&nbsp;of&nbsp;H&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">inversion</span> <span class="id" title="var">H</span>; <span class="id" title="tactic">clear</span> <span class="id" title="var">H</span>; <span class="id" title="tactic">subst</span>; <span class="id" title="tactic">simpl</span>; <span class="id" title="tactic">eauto</span>.<br/>
+&nbsp;&nbsp;- <span class="comment">(*&nbsp;var&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rename</span> <span class="id" title="var">s</span> <span class="id" title="var">into</span> <span class="id" title="var">y</span>. <span class="id" title="tactic">destruct</span> (<span class="id" title="var">eqb_spec</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>); <span class="id" title="tactic">subst</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="comment">(*&nbsp;x=y&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <span class="id" title="var">update_eq</span> <span class="id" title="keyword">in</span> <span class="id" title="var">H<sub>2</sub></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">inversion</span> <span class="id" title="var">H<sub>2</sub></span>; <span class="id" title="tactic">subst</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <span class="id" title="var">weakening_empty</span>. <span class="id" title="tactic">assumption</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="comment">(*&nbsp;x&lt;&gt;y&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <span class="id" title="var">update_neq</span> <span class="id" title="keyword">in</span> <span class="id" title="var">H<sub>2</sub></span>; <span class="id" title="tactic">auto</span>.<br/>
+&nbsp;&nbsp;- <span class="comment">(*&nbsp;abs&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rename</span> <span class="id" title="var">s</span> <span class="id" title="var">into</span> <span class="id" title="var">y</span>, <span class="id" title="var">t</span> <span class="id" title="var">into</span> <span class="id" title="var">S</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">destruct</span> (<span class="id" title="var">eqb_spec</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span>); <span class="id" title="tactic">subst</span>; <span class="id" title="tactic">apply</span> <span class="id" title="var">T_Abs</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="comment">(*&nbsp;x=y&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <span class="id" title="var">update_shadow</span> <span class="id" title="keyword">in</span> <span class="id" title="var">H<sub>5</sub></span>. <span class="id" title="tactic">assumption</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="comment">(*&nbsp;x&lt;&gt;y&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <span class="id" title="var">IHt</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <span class="id" title="var">update_permute</span>; <span class="id" title="tactic">auto</span>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+</div>
+</div>
+
+<div class="doc">
+<a id="lab228"></a><h2 class="section">Proof of Preservation</h2>
+
+<div class="paragraph"> </div>
+
+ We now have the ingredients we need to prove preservation: if a
+    closed, well-typed term <span class="inlinecode"><span class="id" title="var">t</span></span> has type <span class="inlinecode"><span class="id" title="var">T</span></span> and takes a step to <span class="inlinecode"><span class="id" title="var">t'</span></span>,
+    then <span class="inlinecode"><span class="id" title="var">t'</span></span> is also a closed term with type <span class="inlinecode"><span class="id" title="var">T</span></span>.  In other words,
+    the small-step reduction relation preserves types. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">preservation</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">t</span> <span class="id" title="var">t'</span> <span class="id" title="var">T</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">empty</span> <span class="nowrap">&vert;--</span>  <span class="id" title="var">t</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">T</span>  →<br/>
+&nbsp;&nbsp;<span class="id" title="var">t</span> <span class="nowrap"><span style='font-size:85%;'><span style='vertical-align:6%;'><span style='letter-spacing:-.2em;'>-</span><span style='letter-spacing:-.2em;'>-</span></span>&gt;</span></span> <span class="id" title="var">t'</span>  →<br/>
+&nbsp;&nbsp;<span class="id" title="var">empty</span> <span class="nowrap">&vert;--</span>  <span class="id" title="var">t'</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">T</span>.<br/><hr class='doublespaceincode'/>
+<div class="togglescript" id="proofcontrol6" onclick="toggleDisplay('proof6');toggleDisplay('proofcontrol6')"><span class="show"></span></div>
+<div class="proofscript" id="proof6" onclick="toggleDisplay('proof6');toggleDisplay('proofcontrol6')">
+
+<br/>
+<span class="id" title="keyword">Proof</span> .<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">t</span> <span class="id" title="var">t'</span> <span class="id" title="var">T</span> <span class="id" title="var">HT</span>. <span class="id" title="tactic">generalize</span> <span class="id" title="tactic">dependent</span> <span class="id" title="var">t'</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">remember</span> <span class="id" title="var">empty</span> <span class="id" title="keyword">as</span> <span class="id" title="var">Gamma</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">HT</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">sauto</span> <span class="id" title="var">l</span>:<span class="id" title="var">on</span> <span class="id" title="var">use</span>:<span class="id" title="var">substitution_preserves_typing</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">Restart</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">(*&nbsp;all&nbsp;cases&nbsp;in&nbsp;detail&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">t</span> <span class="id" title="var">t'</span> <span class="id" title="var">T</span> <span class="id" title="var">HT</span>. <span class="id" title="tactic">generalize</span> <span class="id" title="tactic">dependent</span> <span class="id" title="var">t'</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="var">remember</span> <span class="id" title="var">empty</span> <span class="id" title="keyword">as</span> <span class="id" title="var">Gamma</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">HT</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">t'</span> <span class="id" title="var">HE</span>; <span class="id" title="tactic">subst</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <span class="id" title="tactic">inversion</span> <span class="id" title="var">HE</span>. <span class="comment">(*&nbsp;var,&nbsp;imposs*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <span class="id" title="tactic">inversion</span> <span class="id" title="var">HE</span>. <span class="comment">(*&nbsp;lam,&nbsp;imposs*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <span class="comment">(*&nbsp;app&nbsp;*)</span> <span class="id" title="tactic">inversion</span> <span class="id" title="var">HE</span>. <span class="id" title="tactic">subst</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="comment">(*&nbsp;beta&nbsp;*)</span>  <span class="id" title="tactic">inversion_clear</span> <span class="id" title="var">HT<sub>1</sub></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <span class="id" title="var">substitution_preserves_typing</span> <span class="id" title="keyword">with</span> <span class="id" title="var">T<sub>2</sub></span>; <span class="id" title="tactic">eauto</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="comment">(*&nbsp;cong&nbsp;1*)</span> <span class="id" title="tactic">subst</span>. <span class="id" title="tactic">apply</span> <span class="id" title="var">T_App</span> <span class="id" title="keyword">with</span> <span class="id" title="var">T<sub>2</sub></span>. <span class="id" title="tactic">apply</span> <span class="id" title="var">IHHT1</span>; <span class="id" title="tactic">auto</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++ <span class="id" title="tactic">assumption</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="comment">(*&nbsp;cong&nbsp;2&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">subst</span>. <span class="id" title="tactic">apply</span> <span class="id" title="var">T_App</span> <span class="id" title="keyword">with</span> <span class="id" title="var">T<sub>2</sub></span>; <span class="id" title="tactic">try</span> <span class="id" title="tactic">assumption</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++ <span class="id" title="tactic">apply</span> <span class="id" title="var">IHHT2</span>; <span class="id" title="tactic">auto</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-  <span class="id" title="tactic">inversion</span> <span class="id" title="var">HE</span>. <span class="comment">(*&nbsp;true,&nbsp;imposs*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <span class="id" title="tactic">inversion</span> <span class="id" title="var">HE</span>. <span class="comment">(*&nbsp;false,&nbsp;imposs&nbsp;*)</span><br/><hr class='doublespaceincode'/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <span class="comment">(*&nbsp;if&nbsp;*)</span> <span class="id" title="tactic">inversion</span> <span class="id" title="var">HE</span>; <span class="id" title="tactic">subst</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="comment">(*&nbsp;true&nbsp;*)</span> <span class="id" title="tactic">assumption</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="comment">(*&nbsp;false&nbsp;*)</span>  <span class="id" title="tactic">assumption</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+ <span class="comment">(*&nbsp;cong&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">constructor</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++  <span class="id" title="tactic">apply</span> <span class="id" title="var">IHHT1</span>; <span class="id" title="tactic">auto</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++ <span class="id" title="tactic">assumption</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++ <span class="id" title="tactic">assumption</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">Qed</span>.<br/>
+</div>
+</div>
+
+<div class="doc">
+Note that our choice of restricting substitutions to <i>closed</i> terms forced us to the above formulation, rather than the standard:
+
+<div class="paragraph"> </div>
+
+<br/>
+<span class="inlinecode"><span class="id" title="keyword">∀</span> <span class="id" title="var">t</span> <span class="id" title="var">t'</span> <span class="id" title="var">T</span> <span class="id" title="var">Gamma</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">Gamma</span> <span class="nowrap">&vert;--</span>  <span class="id" title="var">t</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">T</span>  →  <span class="id" title="var">t</span> <span class="nowrap"><span style='font-size:85%;'><span style='vertical-align:6%;'><span style='letter-spacing:-.2em;'>-</span><span style='letter-spacing:-.2em;'>-</span></span>&gt;</span></span> <span class="id" title="var">t'</span>  →  <span class="id" title="var">Gamma</span> <span class="nowrap">&vert;--</span>  <span class="id" title="var">t'</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">T</span>.
+</span>
+</div>
+
+<div class="doc">
+<a id="lab229"></a><h1 class="section">Uniqueness of Types</h1>
+
+<div class="paragraph"> </div>
+
+ Another nice property of the STLC is that types are unique: a
+    given term (in a given context) has at most one type. 
+</div>
+<div class="code">
+
+<span class="id" title="keyword">Theorem</span> <span class="id" title="var">unique_types</span> : <span class="id" title="keyword">∀</span> <span class="id" title="var">Gamma</span> <span class="id" title="var">e</span> <span class="id" title="var">T</span> <span class="id" title="var">T'</span>,<br/>
+&nbsp;&nbsp;<span class="id" title="var">Gamma</span> <span class="nowrap">&vert;--</span>  <span class="id" title="var">e</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">T</span>  →<br/>
+&nbsp;&nbsp;<span class="id" title="var">Gamma</span> <span class="nowrap">&vert;--</span>  <span class="id" title="var">e</span> \<span class="id" title="keyword">in</span> <span class="id" title="var">T'</span> →<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">T</span> = <span class="id" title="var">T'</span>.<br/>
+<div class="togglescript" id="proofcontrol7" onclick="toggleDisplay('proof7');toggleDisplay('proofcontrol7')"><span class="show"></span></div>
+<div class="proofscript" id="proof7" onclick="toggleDisplay('proof7');toggleDisplay('proofcontrol7')">
+<span class="id" title="keyword">Proof</span>.<br/>
+&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">Gamma</span> <span class="id" title="var">e</span> <span class="id" title="var">T</span> <span class="id" title="var">T'</span> <span class="id" title="var">Htyp</span>. <span class="id" title="tactic">generalize</span> <span class="id" title="tactic">dependent</span> <span class="id" title="var">T'</span>.<br/>
+&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">Htyp</span>; <span class="id" title="var">sauto</span>.<br/>
+&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">Restart</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">intros</span> <span class="id" title="var">Gamma</span> <span class="id" title="var">e</span> <span class="id" title="var">T</span> <span class="id" title="var">T'</span> <span class="id" title="var">Htyp</span>. <span class="id" title="tactic">generalize</span> <span class="id" title="tactic">dependent</span> <span class="id" title="var">T'</span>.<br/>
+&nbsp;&nbsp;<span class="id" title="tactic">induction</span> <span class="id" title="var">Htyp</span>; <span class="id" title="tactic">intros</span> <span class="id" title="var">T'</span> <span class="id" title="var">Htyp'</span>; <span class="id" title="tactic">inversion</span> <span class="id" title="var">Htyp'</span>; <span class="id" title="tactic">subst</span>; <span class="id" title="tactic">auto</span>.<br/>
+&nbsp;&nbsp;- <span class="comment">(*&nbsp;T_Var&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">rewrite</span> <span class="id" title="var">H</span> <span class="id" title="keyword">in</span> <span class="id" title="var">H<sub>2</sub></span>. <span class="id" title="tactic">congruence</span>.<br/>
+&nbsp;&nbsp;- <span class="comment">(*&nbsp;T_Abs&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <span class="id" title="var">IHHtyp</span> <span class="id" title="keyword">in</span> <span class="id" title="var">H<sub>4</sub></span>. <span class="id" title="tactic">subst</span>. <span class="id" title="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;- <span class="comment">(*&nbsp;T_App&nbsp;*)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="tactic">apply</span> <span class="id" title="var">IHHtyp1</span> <span class="id" title="keyword">in</span> <span class="id" title="var">H<sub>2</sub></span>. <span class="id" title="tactic">congruence</span>.<br/>
+<span class="id" title="keyword">Qed</span>.<br/>
+</div>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="coqindex.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

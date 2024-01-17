@@ -102,7 +102,7 @@ Module SimpleArith1.
 (* ----------------------------------------------------------------- *)
 (** *** Small-step evaluation relation
 
-
+    
                      -------------------------------        (ST_PlusConstConst)
                      P (C v1) (C v2) --> C (v1 + v2)
 
@@ -272,7 +272,7 @@ Inductive value : tm -> Prop :=
 
 (** This gives a more elegant way of writing the [ST_Plus2] rule:
 
-
+    
                      -------------------------------        (ST_PlusConstConst)
                      P (C v1) (C v2) --> C (v1 + v2)
 
@@ -426,12 +426,12 @@ Qed.
 
     Given a relation [R] (e.g., the step relation [-->]), we define a
     relation [multi R], called the _multi-step closure of [R]_ as
-    follows.
+    follows. 
 
 ---------------- multi_refl
-multi R x x
+multi R x x 
 
-R x y            multi R y z
+R x y            multi R y z 
 ---------------------------------- multi_step
 multi R x z
 
@@ -598,7 +598,7 @@ Theorem eval__multistep : forall t n,
          to a normal form, which must again be a term of the form [C
          v2] for some [v2].
        - Finally, we use [ST_PlusConstConst] one time to reduce [P (C
-         v1) (C v2)] to [C (v1 + v2)].
+         v1) (C v2)] to [C (v1 + v2)]. 
 
 To formalize this intuition, you'll need  some congruence
     lemmas  plus some basic
@@ -839,7 +839,7 @@ arithmetic and boolean expressions.
 
   - It is possible to show that big and the reflexive and transitive
   closure of small step presentations of Imp semantics, coincide but
-  it's lengthy.
+  it's lengthy.  
 
 *)
 

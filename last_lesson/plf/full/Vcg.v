@@ -7,7 +7,7 @@ From Coq Require Import Arith.EqNat.
 From Coq Require Import Arith.PeanoNat. Import Nat.
 From Coq Require Import Lia.
 From PLF Require Export   Imp.
-From PLF Require Export Hoare.
+From PLF Require Export HoareAM.
 Ltac verify_assn :=
   repeat split;
   simpl; unfold assert_implies;
@@ -445,4 +445,4 @@ Qed.
 
 
 
-(* 2023-12-19 17:48 *)
+(* 2024-01-09 19:26 *)
