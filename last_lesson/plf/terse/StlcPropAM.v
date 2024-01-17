@@ -66,7 +66,7 @@ Proof.
   - (* T_App *)
     (* [t] = [t1 t2].  Proceed by cases on whether [t1] is a
        value or steps... *)
-    right. destruct IHHt1; trivial. 
+    right. destruct IHHt1; trivial.
     + (* t1 is a value *)
       destruct IHHt2; trivial.
       * (* t2 is also a value *)
@@ -74,7 +74,7 @@ Proof.
         destruct Ht1 as [x [t0 H1]]. subst.
         eauto.
       * (* t2 steps *)
-        destruct H0 as [t2' Hstp]. eauto . 
+        destruct H0 as [t2' Hstp]. eauto .
     + (* t1 steps *)
       destruct H as [t1' Hstp]. eauto.
   - (* T_If *)
@@ -219,7 +219,7 @@ Proof .
        - inversion HE. (* var, imposs*)
        - inversion HE. (* lam, imposs*)
        - (* app *) inversion HE. subst.
-       + (* beta *)  inversion_clear HT1. 
+       + (* beta *)  inversion_clear HT1.
        apply substitution_preserves_typing with T2; eauto.
        + (* cong 1*) subst. apply T_App with T2. apply IHHT1; auto.
        ++ assumption.
@@ -228,15 +228,15 @@ Proof .
         ++ apply IHHT2; auto.
         -  inversion HE. (* true, imposs*)
         - inversion HE. (* false, imposs *)
-        
+
        - (* if *) inversion HE; subst.
        + (* true *) assumption.
        + (* false *)  assumption.
-       + (* cong *)  
-       constructor. 
+       + (* cong *)
+       constructor.
        ++  apply IHHT1; auto.
-       ++ assumption. 
-       ++ assumption.  
+       ++ assumption.
+       ++ assumption.
       Qed.
 
 (** Note that our choice of restricting substitutions to _closed_ terms forced us to the above formulation, rather than the standard:

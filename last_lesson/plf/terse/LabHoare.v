@@ -6,7 +6,7 @@ From Coq Require Import Arith.EqNat.
 From Coq Require Import Arith.PeanoNat. Import Nat.
 From Coq Require Import Lia.
 From PLF Require Export Imp.
-From PLF Require Export Hoare.
+From PLF Require Export HoareAM.
 From PLF Require Export Vcg.
 Ltac verify_assn :=
   repeat split;
